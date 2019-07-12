@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B105B5F7-D2A5-4DE0-A4DB-2A15065787B9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BibliotecaSoftware</RootNamespace>
+    <AssemblyName>BibliotecaSoftware</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=1.60.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.60.6\lib\net451\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.Firebird, Version=6.6.0.0, Culture=neutral, PublicKeyToken=42d22d092898e5f8, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.Firebird.6.6.0\lib\net452\EntityFramework.Firebird.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FirebirdSql.Data.FirebirdClient, Version=6.6.0.0, Culture=neutral, PublicKeyToken=3750abcc3150b00c, processorArchitecture=MSIL">
+      <HintPath>..\packages\FirebirdSql.Data.FirebirdClient.6.6.0\lib\net452\FirebirdSql.Data.FirebirdClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\AutorController.cs" />
+    <Compile Include="Conversoes.cs" />
+    <Compile Include="Dao\AutorDao.cs" />
+    <Compile Include="Dao\EdicaoDao.cs" />
+    <Compile Include="Dao\EditoraDao.cs" />
+    <Compile Include="Dao\IdiomaDao.cs" />
+    <Compile Include="Dao\LivroDao.cs" />
+    <Compile Include="Dao\TituloAutorDao.cs" />
+    <Compile Include="Dao\TituloDao.cs" />
+    <Compile Include="Model\Autor.cs" />
+    <Compile Include="Dao\Conexao.cs" />
+    <Compile Include="Model\Edicao.cs" />
+    <Compile Include="Model\Editora.cs" />
+    <Compile Include="Model\Idioma.cs" />
+    <Compile Include="Model\ListaLivro.cs" />
+    <Compile Include="Model\Livro.cs" />
+    <Compile Include="Model\Titulo.cs" />
+    <Compile Include="Model\TituloAutor.cs" />
+    <Compile Include="View\Biblioteca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Biblioteca.Designer.cs">
+      <DependentUpon>Biblioteca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Cadastro\TelaCadastroAutores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Cadastro\TelaCadastroAutores.Designer.cs">
+      <DependentUpon>TelaCadastroAutores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Cadastro\TelaCadastroEditoras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Cadastro\TelaCadastroEditoras.Designer.cs">
+      <DependentUpon>TelaCadastroEditoras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Cadastro\TelaCadastroLivros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Cadastro\TelaCadastroLivros.Designer.cs">
+      <DependentUpon>TelaCadastroLivros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Listagem\TelaListaDadosAutores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Listagem\TelaListaDadosAutores.Designer.cs">
+      <DependentUpon>TelaListaDadosAutores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Listagem\TelaListaDadosEditoras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Listagem\TelaListaDadosEditoras.Designer.cs">
+      <DependentUpon>TelaListaDadosEditoras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Listagem\TelaListaDadosLivros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Listagem\TelaListaDadosLivros.Designer.cs">
+      <DependentUpon>TelaListaDadosLivros.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\Biblioteca.resx">
+      <DependentUpon>Biblioteca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Cadastro\TelaCadastroAutores.resx">
+      <DependentUpon>TelaCadastroAutores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Cadastro\TelaCadastroEditoras.resx">
+      <DependentUpon>TelaCadastroEditoras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Cadastro\TelaCadastroLivros.resx">
+      <DependentUpon>TelaCadastroLivros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Listagem\TelaListaDadosAutores.resx">
+      <DependentUpon>TelaListaDadosAutores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Listagem\TelaListaDadosEditoras.resx">
+      <DependentUpon>TelaListaDadosEditoras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Listagem\TelaListaDadosLivros.resx">
+      <DependentUpon>TelaListaDadosLivros.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\BibliotecaSoftware.Model.Autor.datasource" />
+    <None Include="Properties\DataSources\BibliotecaSoftware.Model.Edicao.datasource" />
+    <None Include="Properties\DataSources\BibliotecaSoftware.Model.Editora.datasource" />
+    <None Include="Properties\DataSources\BibliotecaSoftware.Model.Idioma.datasource" />
+    <None Include="Properties\DataSources\BibliotecaSoftware.Model.ListaLivro.datasource" />
+    <None Include="Properties\DataSources\BibliotecaSoftware.Model.Livro.datasource" />
+    <None Include="Properties\DataSources\BibliotecaSoftware.Model.Titulo.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
