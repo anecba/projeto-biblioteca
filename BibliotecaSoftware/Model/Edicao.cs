@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BibliotecaSoftware.Model
 {
@@ -14,6 +10,5 @@ namespace BibliotecaSoftware.Model
         public DateTime DataLancamento { get; set; }
         public int QtdePagina { get; set; }
         public string NumeroEdicao { get; set; }
-
     }
 }

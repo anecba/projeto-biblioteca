@@ -35,6 +35,7 @@
             this.pesquisaTelaListarDadosLivrosBotao = new System.Windows.Forms.Button();
             this.pesquisaTelaListarDadosLivrosCaixatexto = new System.Windows.Forms.TextBox();
             this.mostrarListarDadosLivrosDataGridView = new System.Windows.Forms.DataGridView();
+            this.lblListaDeAutores = new System.Windows.Forms.Label();
             this.clnCodigoTitulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeTituloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeAutorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,7 +54,7 @@
             // 
             // alterarTelaListarDadosLivrosBotao
             // 
-            this.alterarTelaListarDadosLivrosBotao.Location = new System.Drawing.Point(1030, 658);
+            this.alterarTelaListarDadosLivrosBotao.Location = new System.Drawing.Point(1047, 710);
             this.alterarTelaListarDadosLivrosBotao.Name = "alterarTelaListarDadosLivrosBotao";
             this.alterarTelaListarDadosLivrosBotao.Size = new System.Drawing.Size(96, 31);
             this.alterarTelaListarDadosLivrosBotao.TabIndex = 15;
@@ -63,7 +64,7 @@
             // 
             // fecharTelaListarDadosLivrosBotao
             // 
-            this.fecharTelaListarDadosLivrosBotao.Location = new System.Drawing.Point(1234, 658);
+            this.fecharTelaListarDadosLivrosBotao.Location = new System.Drawing.Point(1251, 710);
             this.fecharTelaListarDadosLivrosBotao.Name = "fecharTelaListarDadosLivrosBotao";
             this.fecharTelaListarDadosLivrosBotao.Size = new System.Drawing.Size(96, 31);
             this.fecharTelaListarDadosLivrosBotao.TabIndex = 14;
@@ -73,7 +74,7 @@
             // 
             // apagarTelaListarDadosLivrosBotao
             // 
-            this.apagarTelaListarDadosLivrosBotao.Location = new System.Drawing.Point(1132, 658);
+            this.apagarTelaListarDadosLivrosBotao.Location = new System.Drawing.Point(1149, 710);
             this.apagarTelaListarDadosLivrosBotao.Name = "apagarTelaListarDadosLivrosBotao";
             this.apagarTelaListarDadosLivrosBotao.Size = new System.Drawing.Size(96, 31);
             this.apagarTelaListarDadosLivrosBotao.TabIndex = 13;
@@ -83,9 +84,9 @@
             // 
             // pesquisaTelaListarDadosLivrosBotao
             // 
-            this.pesquisaTelaListarDadosLivrosBotao.Location = new System.Drawing.Point(1211, 30);
+            this.pesquisaTelaListarDadosLivrosBotao.Location = new System.Drawing.Point(1233, 91);
             this.pesquisaTelaListarDadosLivrosBotao.Name = "pesquisaTelaListarDadosLivrosBotao";
-            this.pesquisaTelaListarDadosLivrosBotao.Size = new System.Drawing.Size(119, 34);
+            this.pesquisaTelaListarDadosLivrosBotao.Size = new System.Drawing.Size(114, 28);
             this.pesquisaTelaListarDadosLivrosBotao.TabIndex = 12;
             this.pesquisaTelaListarDadosLivrosBotao.Text = "Pesquisar";
             this.pesquisaTelaListarDadosLivrosBotao.UseVisualStyleBackColor = true;
@@ -93,13 +94,15 @@
             // 
             // pesquisaTelaListarDadosLivrosCaixatexto
             // 
-            this.pesquisaTelaListarDadosLivrosCaixatexto.Location = new System.Drawing.Point(12, 36);
+            this.pesquisaTelaListarDadosLivrosCaixatexto.Location = new System.Drawing.Point(29, 94);
             this.pesquisaTelaListarDadosLivrosCaixatexto.Name = "pesquisaTelaListarDadosLivrosCaixatexto";
             this.pesquisaTelaListarDadosLivrosCaixatexto.Size = new System.Drawing.Size(1193, 22);
             this.pesquisaTelaListarDadosLivrosCaixatexto.TabIndex = 11;
             // 
             // mostrarListarDadosLivrosDataGridView
             // 
+            this.mostrarListarDadosLivrosDataGridView.AllowUserToAddRows = false;
+            this.mostrarListarDadosLivrosDataGridView.AllowUserToDeleteRows = false;
             this.mostrarListarDadosLivrosDataGridView.AutoGenerateColumns = false;
             this.mostrarListarDadosLivrosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.mostrarListarDadosLivrosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -115,39 +118,54 @@
             this.nomeEditoraDataGridViewTextBoxColumn,
             this.descricaoDataGridViewTextBoxColumn});
             this.mostrarListarDadosLivrosDataGridView.DataSource = this.listaLivroBindingSource;
-            this.mostrarListarDadosLivrosDataGridView.Location = new System.Drawing.Point(12, 97);
+            this.mostrarListarDadosLivrosDataGridView.Location = new System.Drawing.Point(29, 149);
             this.mostrarListarDadosLivrosDataGridView.Name = "mostrarListarDadosLivrosDataGridView";
             this.mostrarListarDadosLivrosDataGridView.RowTemplate.Height = 24;
             this.mostrarListarDadosLivrosDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.mostrarListarDadosLivrosDataGridView.Size = new System.Drawing.Size(1318, 534);
             this.mostrarListarDadosLivrosDataGridView.TabIndex = 10;
             // 
+            // lblListaDeAutores
+            // 
+            this.lblListaDeAutores.AutoSize = true;
+            this.lblListaDeAutores.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblListaDeAutores.Location = new System.Drawing.Point(24, 30);
+            this.lblListaDeAutores.Name = "lblListaDeAutores";
+            this.lblListaDeAutores.Size = new System.Drawing.Size(167, 29);
+            this.lblListaDeAutores.TabIndex = 16;
+            this.lblListaDeAutores.Text = "Lista de Livros";
+            // 
             // clnCodigoTitulo
             // 
             this.clnCodigoTitulo.DataPropertyName = "CodigoTitulo";
-            this.clnCodigoTitulo.HeaderText = "CodigoTitulo";
+            this.clnCodigoTitulo.HeaderText = "Cód.";
             this.clnCodigoTitulo.Name = "clnCodigoTitulo";
+            this.clnCodigoTitulo.Width = 50;
             // 
             // nomeTituloDataGridViewTextBoxColumn
             // 
+            this.nomeTituloDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.nomeTituloDataGridViewTextBoxColumn.DataPropertyName = "NomeTitulo";
-            this.nomeTituloDataGridViewTextBoxColumn.HeaderText = "NomeTitulo";
+            this.nomeTituloDataGridViewTextBoxColumn.HeaderText = "Título";
             this.nomeTituloDataGridViewTextBoxColumn.Name = "nomeTituloDataGridViewTextBoxColumn";
             // 
             // nomeAutorDataGridViewTextBoxColumn
             // 
+            this.nomeAutorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.nomeAutorDataGridViewTextBoxColumn.DataPropertyName = "NomeAutor";
-            this.nomeAutorDataGridViewTextBoxColumn.HeaderText = "NomeAutor";
+            this.nomeAutorDataGridViewTextBoxColumn.HeaderText = "Autor";
             this.nomeAutorDataGridViewTextBoxColumn.Name = "nomeAutorDataGridViewTextBoxColumn";
             // 
             // linguaDataGridViewTextBoxColumn
             // 
+            this.linguaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.linguaDataGridViewTextBoxColumn.DataPropertyName = "Lingua";
             this.linguaDataGridViewTextBoxColumn.HeaderText = "Lingua";
             this.linguaDataGridViewTextBoxColumn.Name = "linguaDataGridViewTextBoxColumn";
             // 
             // paisDataGridViewTextBoxColumn
             // 
+            this.paisDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.paisDataGridViewTextBoxColumn.DataPropertyName = "Pais";
             this.paisDataGridViewTextBoxColumn.HeaderText = "Pais";
             this.paisDataGridViewTextBoxColumn.Name = "paisDataGridViewTextBoxColumn";
@@ -156,37 +174,45 @@
             // 
             this.anoDataGridViewTextBoxColumn.DataPropertyName = "Ano";
             this.anoDataGridViewTextBoxColumn.HeaderText = "Ano";
+            this.anoDataGridViewTextBoxColumn.MinimumWidth = 80;
             this.anoDataGridViewTextBoxColumn.Name = "anoDataGridViewTextBoxColumn";
+            this.anoDataGridViewTextBoxColumn.Width = 80;
             // 
             // dataLancamentoDataGridViewTextBoxColumn
             // 
             this.dataLancamentoDataGridViewTextBoxColumn.DataPropertyName = "DataLancamento";
-            this.dataLancamentoDataGridViewTextBoxColumn.HeaderText = "DataLancamento";
+            this.dataLancamentoDataGridViewTextBoxColumn.HeaderText = "Lançamento";
             this.dataLancamentoDataGridViewTextBoxColumn.Name = "dataLancamentoDataGridViewTextBoxColumn";
             // 
             // qtdePaginaDataGridViewTextBoxColumn
             // 
             this.qtdePaginaDataGridViewTextBoxColumn.DataPropertyName = "QtdePagina";
-            this.qtdePaginaDataGridViewTextBoxColumn.HeaderText = "QtdePagina";
+            this.qtdePaginaDataGridViewTextBoxColumn.HeaderText = "Páginas";
+            this.qtdePaginaDataGridViewTextBoxColumn.MinimumWidth = 60;
             this.qtdePaginaDataGridViewTextBoxColumn.Name = "qtdePaginaDataGridViewTextBoxColumn";
+            this.qtdePaginaDataGridViewTextBoxColumn.Width = 70;
             // 
             // numeroEdicaoDataGridViewTextBoxColumn
             // 
             this.numeroEdicaoDataGridViewTextBoxColumn.DataPropertyName = "NumeroEdicao";
-            this.numeroEdicaoDataGridViewTextBoxColumn.HeaderText = "NumeroEdicao";
+            this.numeroEdicaoDataGridViewTextBoxColumn.HeaderText = "Edição";
             this.numeroEdicaoDataGridViewTextBoxColumn.Name = "numeroEdicaoDataGridViewTextBoxColumn";
+            this.numeroEdicaoDataGridViewTextBoxColumn.Width = 60;
             // 
             // nomeEditoraDataGridViewTextBoxColumn
             // 
+            this.nomeEditoraDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.nomeEditoraDataGridViewTextBoxColumn.DataPropertyName = "NomeEditora";
-            this.nomeEditoraDataGridViewTextBoxColumn.HeaderText = "NomeEditora";
+            this.nomeEditoraDataGridViewTextBoxColumn.HeaderText = "Editora";
+            this.nomeEditoraDataGridViewTextBoxColumn.MinimumWidth = 120;
             this.nomeEditoraDataGridViewTextBoxColumn.Name = "nomeEditoraDataGridViewTextBoxColumn";
             // 
             // descricaoDataGridViewTextBoxColumn
             // 
             this.descricaoDataGridViewTextBoxColumn.DataPropertyName = "Descricao";
-            this.descricaoDataGridViewTextBoxColumn.HeaderText = "Descricao";
+            this.descricaoDataGridViewTextBoxColumn.HeaderText = "Descrição";
             this.descricaoDataGridViewTextBoxColumn.Name = "descricaoDataGridViewTextBoxColumn";
+            this.descricaoDataGridViewTextBoxColumn.Width = 150;
             // 
             // listaLivroBindingSource
             // 
@@ -196,7 +222,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1342, 710);
+            this.ClientSize = new System.Drawing.Size(1372, 764);
+            this.Controls.Add(this.lblListaDeAutores);
             this.Controls.Add(this.alterarTelaListarDadosLivrosBotao);
             this.Controls.Add(this.fecharTelaListarDadosLivrosBotao);
             this.Controls.Add(this.apagarTelaListarDadosLivrosBotao);
@@ -204,6 +231,7 @@
             this.Controls.Add(this.pesquisaTelaListarDadosLivrosCaixatexto);
             this.Controls.Add(this.mostrarListarDadosLivrosDataGridView);
             this.Name = "TelaListaDadosLivros";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TelaListaDadosLivros";
             ((System.ComponentModel.ISupportInitialize)(this.mostrarListarDadosLivrosDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaLivroBindingSource)).EndInit();
@@ -232,5 +260,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn numeroEdicaoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeEditoraDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descricaoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label lblListaDeAutores;
     }
 }

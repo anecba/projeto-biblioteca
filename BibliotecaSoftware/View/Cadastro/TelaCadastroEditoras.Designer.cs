@@ -58,7 +58,7 @@
             this.cadastrarCadastroEditorasBotao.TabIndex = 2;
             this.cadastrarCadastroEditorasBotao.Text = "Gravar";
             this.cadastrarCadastroEditorasBotao.UseVisualStyleBackColor = true;
-            this.cadastrarCadastroEditorasBotao.Click += new System.EventHandler(this.cadastrarCadastroEditorasBotao_Click);
+            this.cadastrarCadastroEditorasBotao.Click += new System.EventHandler(this.CadastrarCadastroEditorasBotao_Click);
             // 
             // cancelarCadastroEditorasBotao
             // 

@@ -49,7 +49,7 @@
             this.cancelarCadastroAutoresBotao.TabIndex = 7;
             this.cancelarCadastroAutoresBotao.Text = "Cancelar";
             this.cancelarCadastroAutoresBotao.UseVisualStyleBackColor = true;
-            this.cancelarCadastroAutoresBotao.Click += new System.EventHandler(this.cancelarCadastroAutoresBotao_Click);
+            this.cancelarCadastroAutoresBotao.Click += new System.EventHandler(this.CancelarCadastroAutoresBotao_Click);
             // 
             // cadastrarCadastroAutoresBotao
             // 
@@ -59,7 +59,7 @@
             this.cadastrarCadastroAutoresBotao.TabIndex = 6;
             this.cadastrarCadastroAutoresBotao.Text = "Gravar";
             this.cadastrarCadastroAutoresBotao.UseVisualStyleBackColor = true;
-            this.cadastrarCadastroAutoresBotao.Click += new System.EventHandler(this.cadastrarCadastroAutoresBotao_Click);
+            this.cadastrarCadastroAutoresBotao.Click += new System.EventHandler(this.CadastrarCadastroAutoresBotao_Click);
             // 
             // nomeCadastroAutoresCaixatexto
             // 

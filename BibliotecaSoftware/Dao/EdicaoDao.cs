@@ -1,10 +1,6 @@
 ﻿using BibliotecaSoftware.Model;
 using FirebirdSql.Data.FirebirdClient;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BibliotecaSoftware.Dao
@@ -18,11 +14,12 @@ namespace BibliotecaSoftware.Dao
                 try
                 {
                     conexaoFireBird.Open();
-                    var cmd = new FbCommand();
-                    cmd.Connection = conexaoFireBird;
-
-                    cmd.CommandText = @"INSERT INTO EDICAO (CODIGOIDIOMA, ANO, DATA_LANCAMENTO, QTDE_PAGINAS, EDICAO)
-                                 VALUES(@CODIGOIDIOMA, @ANO, @DATA_LANCAMENTO, @QTDE_PAGINAS, @EDICAO) RETURNING CODIGOEDICAO";
+                    FbCommand cmd = new FbCommand
+                    {
+                        Connection = conexaoFireBird,
+                        CommandText = @"INSERT INTO EDICAO (CODIGOIDIOMA, ANO, DATA_LANCAMENTO, QTDE_PAGINAS, EDICAO)
+                                 VALUES(@CODIGOIDIOMA, @ANO, @DATA_LANCAMENTO, @QTDE_PAGINAS, @EDICAO) RETURNING CODIGOEDICAO"
+                    };
 
                     cmd.Parameters.Add("@CODIGOIDIOMA", edicaoModel.CodigoIdioma);
                     cmd.Parameters.Add("@ANO", edicaoModel.Ano);
@@ -31,9 +28,7 @@ namespace BibliotecaSoftware.Dao
                     cmd.Parameters.Add("@EDICAO", edicaoModel.NumeroEdicao);
 
                     var retorno = Convert.ToInt32(cmd.ExecuteScalar());
-
                     return retorno;
-
                 }
                 catch (Exception e)
                 {
@@ -44,9 +39,7 @@ namespace BibliotecaSoftware.Dao
                 {
                     conexaoFireBird.Close();
                 }
-
             }
-
         }
 
         public void Alterar(Edicao edicaoModel)
@@ -56,12 +49,13 @@ namespace BibliotecaSoftware.Dao
                 try
                 {
                     conexaoFireBird.Open();
-                    var cmd = new FbCommand();
-                    cmd.Connection = conexaoFireBird;
-
-                    cmd.CommandText = @"UPDATE EDICAO SET CODIGOIDIOMA = @CODIGOIDIOMA, ANO = @ANO, 
-                                DATA_LANCAMENTO = @DATA_LANCAMENTO, QTDE_PAGINAS= @QTDE_PAGINAS, EDICAO = @EDICAO WHERE CODIGOEDICAO = @CODIGOEDICAO";
-
+                    FbCommand cmd = new FbCommand
+                    {
+                        Connection = conexaoFireBird,
+                        CommandText = @"UPDATE EDICAO SET CODIGOIDIOMA = @CODIGOIDIOMA, ANO = @ANO, 
+                                DATA_LANCAMENTO = @DATA_LANCAMENTO, QTDE_PAGINAS= @QTDE_PAGINAS, EDICAO = @EDICAO WHERE CODIGOEDICAO = @CODIGOEDICAO"
+                    };
+                    cmd.Parameters.Add("@CODIGOEDICAO", edicaoModel.CodigoEdicao);
                     cmd.Parameters.Add("@CODIGOIDIOMA", edicaoModel.CodigoIdioma);
                     cmd.Parameters.Add("@ANO", edicaoModel.Ano);
                     cmd.Parameters.Add("@DATA_LANCAMENTO", edicaoModel.DataLancamento);
@@ -77,10 +71,7 @@ namespace BibliotecaSoftware.Dao
                 {
                     conexaoFireBird.Close();
                 }
-
             }
-
         }
-
     }
 }

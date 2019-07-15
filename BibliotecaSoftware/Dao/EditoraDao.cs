@@ -8,10 +8,8 @@ namespace BibliotecaSoftware.Dao
 {
     public class EditoraDao
     {
-
         public bool Inserir(Editora editoraModel)
         {
-
             using (FbConnection conexaoFireBird = Conexao.getInstancia().getConexao())
             {
                 try
@@ -43,7 +41,6 @@ namespace BibliotecaSoftware.Dao
                 {
                     conexaoFireBird.Close();
                 }
-
             }
         }
 
@@ -67,7 +64,6 @@ namespace BibliotecaSoftware.Dao
                             Nome = dr["NOME"].ToString(),
                         };
                     }
-
                 }
                 catch (Exception e)
                 {
@@ -89,9 +85,7 @@ namespace BibliotecaSoftware.Dao
                 {
                     conexaoFireBird.Open();
                     string mSQL = "SELECT * FROM EDITORA WHERE DESABILITADO = 'N' ORDER BY NOME ASC";
-
                     FbCommand cmd = new FbCommand(mSQL, conexaoFireBird);
-
                     var dr = cmd.ExecuteReader();
 
                     while (dr.Read())
@@ -101,7 +95,6 @@ namespace BibliotecaSoftware.Dao
                             CodigoEditora = int.Parse(dr["CODIGOEDITORA"].ToString()),
                             Nome = dr["NOME"].ToString()
                         };
-
                         retorno.Add(editoraModel);
                     }
                 }
@@ -125,7 +118,6 @@ namespace BibliotecaSoftware.Dao
                     conexaoFireBird.Open();
                     var cmd = new FbCommand();
                     cmd.Connection = conexaoFireBird;
-
                     var mSQL = @"UPDATE EDITORA SET DESABILITADO = @DESABILITADO WHERE CODIGOEDITORA = @CODIGOEDITORA";
 
                     cmd.CommandText = mSQL;
@@ -143,7 +135,6 @@ namespace BibliotecaSoftware.Dao
                 {
                     conexaoFireBird.Close();
                 }
-                
             }
         }
     }

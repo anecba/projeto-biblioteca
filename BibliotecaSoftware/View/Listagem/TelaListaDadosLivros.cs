@@ -1,12 +1,5 @@
 ﻿using BibliotecaSoftware.Model;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BibliotecaSoftware.View.Listagem
@@ -35,12 +28,10 @@ namespace BibliotecaSoftware.View.Listagem
 
         private void AlterarTelaListarDadosLivrosBotao_Click(object sender, EventArgs e)
         {
-            //var codigoTitulo = Convert.ToInt32(mostrarListarDadosLivrosDataGridView.SelectedRows[0].Cells["clnCodigoTitulo"].Value);
-            //var livro = _livroDao.Carregar(codigoTitulo);
-
-            ////ADICIONAR A OPÇÃO DE UPDATE NA DAO
-            //var telaCadastrolivros = new telaCadastroLivros(livro);
-            //telaCadastrolivros.Show();
+            var codigoTitulo = Convert.ToInt32(mostrarListarDadosLivrosDataGridView.SelectedRows[0].Cells["clnCodigoTitulo"].Value);
+            var livro = _livroDao.Carregar(codigoTitulo);
+            var frm = new TelaCadastroLivros(livro);            
+            frm.Show();
         }
 
         private void ApagarTelaListarDadosLivrosBotao_Click(object sender, EventArgs e)
@@ -49,7 +40,6 @@ namespace BibliotecaSoftware.View.Listagem
             var listaLivro = new ListaLivro
             {
                 CodigoTitulo = codigoTitulo,
-
                 Desabilitado = true
             };
 

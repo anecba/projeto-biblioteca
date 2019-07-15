@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Drawing;
 using System.Windows.Forms;
-using BibliotecaSoftware.Controller;
 using BibliotecaSoftware.Dao;
 using BibliotecaSoftware.Model;
 
@@ -31,7 +29,6 @@ namespace BibliotecaSoftware.View
             _autorDao = new AutorDao();
         }
 
-
         private void AtribuirModelParaView()
         {
             nomeCadastroAutoresCaixatexto.Text = _autorModel.Nome;
@@ -40,9 +37,8 @@ namespace BibliotecaSoftware.View
             siteCadastroAutoresCaixatexto.Text = _autorModel.Site;
         }
 
-        private void cadastrarCadastroAutoresBotao_Click(object sender, EventArgs e)
+        private void CadastrarCadastroAutoresBotao_Click(object sender, EventArgs e)
         {
-            
             _autorModel.Nome = nomeCadastroAutoresCaixatexto.Text;
             _autorModel.DataNascimento = Convert.ToDateTime(datanascimentoCadastroAutoresTimepicker.Text);
             _autorModel.Bibliografia = bibliografiaCadastroAutoresCaixatexto.Text;
@@ -55,7 +51,7 @@ namespace BibliotecaSoftware.View
             }
         }
 
-        private void cancelarCadastroAutoresBotao_Click(object sender, EventArgs e)
+        private void CancelarCadastroAutoresBotao_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -84,6 +80,5 @@ namespace BibliotecaSoftware.View
             }
             return true;
         }
-
     }
 }

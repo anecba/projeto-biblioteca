@@ -1,12 +1,7 @@
 ﻿using BibliotecaSoftware.Model;
 using System;
 using FirebirdSql.Data.FirebirdClient;
-using System.Configuration;
-using System.Data;
-using System.Linq;
 using System.Collections.Generic;
-using Dapper;
-using BibliotecaSoftware.View;
 using System.Windows.Forms;
 
 namespace BibliotecaSoftware.Dao
@@ -20,8 +15,10 @@ namespace BibliotecaSoftware.Dao
                 try
                 {
                     conexaoFireBird.Open();
-                    var cmd = new FbCommand();
-                    cmd.Connection = conexaoFireBird;
+                    var cmd = new FbCommand
+                    {
+                        Connection = conexaoFireBird
+                    };
                     var mSQL = "";
                     if (0.Equals(autorModel.CodigoAutor))
                         mSQL = "INSERT INTO AUTOR(NOME, DATANASCIMENTO, BIBLIOGRAFIA, SITE, DESABILITADO) " +
@@ -33,7 +30,6 @@ namespace BibliotecaSoftware.Dao
                                 SITE = @SITE, DESABILITADO = @DESABILITADO WHERE CODIGOAUTOR = @CODIGOAUTOR";
                         cmd.Parameters.Add("@CODIGOAUTOR", autorModel.CodigoAutor);
                     }
-
                     cmd.CommandText = mSQL;
                     cmd.Parameters.Add("@NOME", autorModel.Nome);
                     cmd.Parameters.Add("@DATANASCIMENTO", FbDbType.Date).Value = autorModel.DataNascimento;
@@ -42,7 +38,6 @@ namespace BibliotecaSoftware.Dao
                     cmd.Parameters.Add("@DESABILITADO", FbDbType.Boolean).Value = autorModel.Desabilitado.ToChar();
                     cmd.ExecuteNonQuery();
                     return true;
-
                 }
                 catch (Exception e)
                 {
@@ -53,9 +48,7 @@ namespace BibliotecaSoftware.Dao
                 {
                     conexaoFireBird.Close();
                 }
-
             }
-
         }
 
         internal Autor Carregar(int codigoAutor)
@@ -67,9 +60,6 @@ namespace BibliotecaSoftware.Dao
                 {
                     conexaoFireBird.Open();
                     var mSQL = "SELECT * FROM AUTOR WHERE CODIGOAUTOR = @CODIGOAUTOR";
-
-
-
                     var cmd = new FbCommand(mSQL, conexaoFireBird);
                     cmd.Parameters.Add("@CODIGOAUTOR", codigoAutor);
                     var dr = cmd.ExecuteReader();
@@ -84,7 +74,6 @@ namespace BibliotecaSoftware.Dao
                             Site = dr["SITE"].ToString(),
                         };
                     }
-
                 }
                 catch (Exception e)
                 {
@@ -107,9 +96,7 @@ namespace BibliotecaSoftware.Dao
                 {
                     conexaoFireBird.Open();
                     string mSQL = "SELECT * FROM AUTOR WHERE DESABILITADO = 'N' ORDER BY NOME ASC";
-
                     FbCommand cmd = new FbCommand(mSQL, conexaoFireBird);
-
                     var dr = cmd.ExecuteReader();
 
                     while (dr.Read())
@@ -122,7 +109,6 @@ namespace BibliotecaSoftware.Dao
                             Bibliografia = dr["BIBLIOGRAFIA"].ToString(),
                             Site = dr["SITE"].ToString()
                         };
-
                         retorno.Add(autorModel);
                     }
                 }
@@ -137,7 +123,6 @@ namespace BibliotecaSoftware.Dao
                 return retorno;
             }
         }
-
         public bool Desabilitar(Autor autorModel)
         {
             using (FbConnection conexaoFireBird = Conexao.getInstancia().getConexao())
@@ -145,9 +130,10 @@ namespace BibliotecaSoftware.Dao
                 try
                 {
                     conexaoFireBird.Open();
-                    var cmd = new FbCommand();
-                    cmd.Connection = conexaoFireBird;
-
+                    FbCommand cmd = new FbCommand
+                    {
+                        Connection = conexaoFireBird
+                    };
                     var mSQL = @"UPDATE AUTOR SET DESABILITADO = @DESABILITADO WHERE CODIGOAUTOR = @CODIGOAUTOR";
 
                     cmd.CommandText = mSQL;
@@ -165,7 +151,6 @@ namespace BibliotecaSoftware.Dao
                 {
                     conexaoFireBird.Close();
                 }
-                
             }
         }
     }

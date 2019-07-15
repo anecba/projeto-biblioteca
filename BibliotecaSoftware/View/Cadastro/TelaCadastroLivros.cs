@@ -1,15 +1,13 @@
 ﻿using BibliotecaSoftware.Dao;
 using BibliotecaSoftware.Model;
 using System;
-
 using System.Windows.Forms;
 
 namespace BibliotecaSoftware.View
 {
-    public partial class telaCadastroLivros : Form
+    public partial class TelaCadastroLivros : Form
     {
         public Livro _livro;
-
         public TituloDao _tituloDao;
         public EdicaoDao _edicaoDao;
         public EditoraDao _editoraDao;
@@ -17,41 +15,22 @@ namespace BibliotecaSoftware.View
         public IdiomaDao _idiomaDao;
         public TituloAutorDao _tituloAutorDao;
 
-        public telaCadastroLivros()
+        public TelaCadastroLivros()
         {
-
-            ConstrutorPadrao();
-            autorCadastroLivrosCombobox.DataSource = _autorDao.Listar();
-            editoraCadastroLivrosCombobox.DataSource = _editoraDao.Listar();
-            idiomaCadastroLivrosCombobox.DataSource = _idiomaDao.Listar();
-            paisCadastroLivrosCombobox.DataSource = _idiomaDao.Listar();
-            
+            ConstrutorPadrao();            
         }
-        public telaCadastroLivros(Livro livro)
+
+        public TelaCadastroLivros(Livro livro)
         {
             ConstrutorPadrao();
             _livro = livro;
             AtribuirModelParaView();
         }
 
-        private void AtribuirModelParaView()
-        {
-            tituloCadastroLivrosCaixatexto.Text = _livro.Titulo.NomeTitulo;
-            idiomaCadastroLivrosCombobox.SelectedValue = _livro.Edicao.CodigoIdioma;
-            edicaoCadastroLivrosCaixatexto.Text = _livro.Edicao.NumeroEdicao;
-            anoCadastroLivrosCaixatexto.Text = _livro.Edicao.Ano.ToString();
-            paginasCadastroLivrosCaixatexto.Text = _livro.Edicao.QtdePagina.ToString();
-            datalancamentoCadastroLivrosTimepicker.Value = _livro.Edicao.DataLancamento;
-            descricaoCadastroLivrosCaixatexto.Text = _livro.Titulo.Descricao;
-            editoraCadastroLivrosCombobox.SelectedValue = _livro.Titulo.CodigoEditora;
-            autorCadastroLivrosCombobox.SelectedValue = _livro.TituloAutor.CodigoAutor;
-        }
-
         private void ConstrutorPadrao()
         {
             InitializeComponent();
             _livro = new Livro();
-
             _tituloDao = new TituloDao();
             _edicaoDao = new EdicaoDao();
             _autorDao = new AutorDao();
@@ -59,16 +38,29 @@ namespace BibliotecaSoftware.View
             _idiomaDao = new IdiomaDao();
             _tituloAutorDao = new TituloAutorDao();
             
+            autorCadastroLivrosCombobox.DataSource = _autorDao.Listar();
+            editoraCadastroLivrosCombobox.DataSource = _editoraDao.Listar();
+            idiomaCadastroLivrosCombobox.DataSource = _idiomaDao.Listar();
+            paisCadastroLivrosCombobox.DataSource = _idiomaDao.Listar();
         }
 
-        private void CancelarCadastroLivrosBotao_Click(object sender, EventArgs e)
+        public void AtribuirModelParaView()
         {
-            this.Close();
+            tituloCadastroLivrosCaixatexto.Text = _livro.Titulo.NomeTitulo;
+            idiomaCadastroLivrosCombobox.SelectedValue = _livro.Idioma.CodigoIdioma;
+            edicaoCadastroLivrosCaixatexto.Text = _livro.Edicao.NumeroEdicao;
+            anoCadastroLivrosCaixatexto.Text = _livro.Edicao.Ano.ToString();
+            paginasCadastroLivrosCaixatexto.Text = _livro.Edicao.QtdePagina.ToString();
+            datalancamentoCadastroLivrosTimepicker.Value = _livro.Edicao.DataLancamento;
+            descricaoCadastroLivrosCaixatexto.Text = _livro.Titulo.Descricao;
+            editoraCadastroLivrosCombobox.SelectedValue = _livro.Editora.CodigoEditora;
+            autorCadastroLivrosCombobox.SelectedValue = _livro.Autor.CodigoAutor;
+            txtCodigoTitulo.Text = _livro.Titulo.CodigoTitulo.ToString();
+            txtCodigoEditora.Text = _livro.Editora.CodigoEditora.ToString();
         }
 
         private void CadastrarCadastroLivrosBotao_Click(object sender, EventArgs e)
         {
-
             if (!Validacao()) return;
 
             AtribuirViewParaModel();
@@ -84,6 +76,7 @@ namespace BibliotecaSoftware.View
                     Close();
                 }
             }
+
             else
             {
                 _tituloDao.Alterar(_livro.Titulo);
@@ -108,6 +101,11 @@ namespace BibliotecaSoftware.View
             _livro.Titulo.Descricao = descricaoCadastroLivrosCaixatexto.Text;
             _livro.Titulo.CodigoEditora = Convert.ToInt32(editoraCadastroLivrosCombobox.SelectedValue);
             _livro.TituloAutor.CodigoAutor = Convert.ToInt32(autorCadastroLivrosCombobox.SelectedValue);
+        }
+
+        private void CancelarCadastroLivrosBotao_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private bool Validacao()

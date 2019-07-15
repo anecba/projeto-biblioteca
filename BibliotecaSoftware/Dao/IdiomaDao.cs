@@ -2,9 +2,6 @@
 using FirebirdSql.Data.FirebirdClient;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BibliotecaSoftware.Dao
@@ -20,9 +17,7 @@ namespace BibliotecaSoftware.Dao
                 {
                     conexaoFireBird.Open();
                     string mSQL = "SELECT * FROM IDIOMA ORDER BY LINGUA ASC";
-
                     FbCommand cmd = new FbCommand(mSQL, conexaoFireBird);
-
                     var dr = cmd.ExecuteReader();
 
                     while (dr.Read())
@@ -33,7 +28,6 @@ namespace BibliotecaSoftware.Dao
                             Lingua = dr["LINGUA"].ToString(),
                             Pais = dr["Pais"].ToString()
                         };
-
                         retorno.Add(idiomaModel);
                     }
                 }

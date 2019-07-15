@@ -19,7 +19,5 @@ namespace BibliotecaSoftware.Model
             string conn = ConfigurationManager.ConnectionStrings["FireBirdConnectionString"].ToString();
             return new FbConnection(conn);
         }
-
-
     }
 }

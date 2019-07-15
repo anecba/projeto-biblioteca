@@ -20,7 +20,6 @@ namespace BibliotecaSoftware.View
             ConstrutorPadrao();
             _editoraModel = editoraModel;
             AtribuirModelParaView();
-
         }
 
         private void AtribuirModelParaView()
@@ -34,7 +33,8 @@ namespace BibliotecaSoftware.View
             _editoraModel = new Editora();
             _editoraDao = new EditoraDao();
         }
-        private void cadastrarCadastroEditorasBotao_Click(object sender, EventArgs e)
+
+        private void CadastrarCadastroEditorasBotao_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(nomeCadastroEditorasCaixatexto.Text))
             {
@@ -42,10 +42,8 @@ namespace BibliotecaSoftware.View
                 return;
             }
             _editoraModel.Nome = nomeCadastroEditorasCaixatexto.Text;
-            
 
             if (_editoraDao.Inserir(_editoraModel))
-
             {
                 Close();
             }

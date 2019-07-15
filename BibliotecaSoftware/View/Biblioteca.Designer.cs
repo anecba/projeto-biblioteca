@@ -67,21 +67,21 @@
             this.editorasCadBibliotecaMenuitem.Name = "editorasCadBibliotecaMenuitem";
             this.editorasCadBibliotecaMenuitem.Size = new System.Drawing.Size(138, 26);
             this.editorasCadBibliotecaMenuitem.Text = "Editoras";
-            this.editorasCadBibliotecaMenuitem.Click += new System.EventHandler(this.editorasCadBibliotecaMenuitem_Click);
+            this.editorasCadBibliotecaMenuitem.Click += new System.EventHandler(this.EditorasCadBibliotecaMenuitem_Click);
             // 
             // autoresCadBibliotecaMenuitem
             // 
             this.autoresCadBibliotecaMenuitem.Name = "autoresCadBibliotecaMenuitem";
             this.autoresCadBibliotecaMenuitem.Size = new System.Drawing.Size(138, 26);
             this.autoresCadBibliotecaMenuitem.Text = "Autores";
-            this.autoresCadBibliotecaMenuitem.Click += new System.EventHandler(this.autoresCadBibliotecaMenuitem_Click);
+            this.autoresCadBibliotecaMenuitem.Click += new System.EventHandler(this.AutoresCadBibliotecaMenuitem_Click);
             // 
             // livrosCadBibliotecaMenuitem
             // 
             this.livrosCadBibliotecaMenuitem.Name = "livrosCadBibliotecaMenuitem";
             this.livrosCadBibliotecaMenuitem.Size = new System.Drawing.Size(138, 26);
             this.livrosCadBibliotecaMenuitem.Text = "Livros";
-            this.livrosCadBibliotecaMenuitem.Click += new System.EventHandler(this.livrosCadBibliotecaMenuitem_Click);
+            this.livrosCadBibliotecaMenuitem.Click += new System.EventHandler(this.LivrosCadBibliotecaMenuitem_Click);
             // 
             // controlelivrosContLivrosBibliotecaMenuitem
             // 
@@ -96,23 +96,23 @@
             // autoresContLivrosBibliotecaMenuitem
             // 
             this.autoresContLivrosBibliotecaMenuitem.Name = "autoresContLivrosBibliotecaMenuitem";
-            this.autoresContLivrosBibliotecaMenuitem.Size = new System.Drawing.Size(216, 26);
+            this.autoresContLivrosBibliotecaMenuitem.Size = new System.Drawing.Size(138, 26);
             this.autoresContLivrosBibliotecaMenuitem.Text = "Autores";
-            this.autoresContLivrosBibliotecaMenuitem.Click += new System.EventHandler(this.autoresContLivrosBibliotecaMenuitem_Click);
+            this.autoresContLivrosBibliotecaMenuitem.Click += new System.EventHandler(this.AutoresContLivrosBibliotecaMenuitem_Click);
             // 
             // editorasContLivrosBibliotecaMenuitem
             // 
             this.editorasContLivrosBibliotecaMenuitem.Name = "editorasContLivrosBibliotecaMenuitem";
-            this.editorasContLivrosBibliotecaMenuitem.Size = new System.Drawing.Size(216, 26);
+            this.editorasContLivrosBibliotecaMenuitem.Size = new System.Drawing.Size(138, 26);
             this.editorasContLivrosBibliotecaMenuitem.Text = "Editoras";
-            this.editorasContLivrosBibliotecaMenuitem.Click += new System.EventHandler(this.editorasContLivrosBibliotecaMenuitem_Click);
+            this.editorasContLivrosBibliotecaMenuitem.Click += new System.EventHandler(this.EditorasContLivrosBibliotecaMenuitem_Click);
             // 
             // titulosContLivrosBibliotecaMenuitem
             // 
             this.titulosContLivrosBibliotecaMenuitem.Name = "titulosContLivrosBibliotecaMenuitem";
-            this.titulosContLivrosBibliotecaMenuitem.Size = new System.Drawing.Size(216, 26);
+            this.titulosContLivrosBibliotecaMenuitem.Size = new System.Drawing.Size(138, 26);
             this.titulosContLivrosBibliotecaMenuitem.Text = "Títulos";
-            this.titulosContLivrosBibliotecaMenuitem.Click += new System.EventHandler(this.titulosContLivrosBibliotecaMenuitem_Click);
+            this.titulosContLivrosBibliotecaMenuitem.Click += new System.EventHandler(this.TitulosContLivrosBibliotecaMenuitem_Click);
             // 
             // telaBibliotecaPrincipal
             // 
@@ -124,7 +124,6 @@
             this.Name = "telaBibliotecaPrincipal";
             this.Text = "Biblioteca";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Biblioteca_Load);
             this.menuprincipalBibliotecaMenuitem.ResumeLayout(false);
             this.menuprincipalBibliotecaMenuitem.PerformLayout();
             this.ResumeLayout(false);

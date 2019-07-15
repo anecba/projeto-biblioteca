@@ -1,6 +1,6 @@
 ﻿namespace BibliotecaSoftware.View
 {
-    partial class telaCadastroLivros
+    partial class TelaCadastroLivros
     {
         /// <summary>
         /// Required designer variable.
@@ -52,11 +52,13 @@
             this.datalancamentoCadastroLivroEtiqueta = new System.Windows.Forms.Label();
             this.txtCodigoTitulo = new System.Windows.Forms.TextBox();
             this.txtCodigoEditora = new System.Windows.Forms.TextBox();
+            this.lblCodigoTitulo = new System.Windows.Forms.Label();
+            this.lblCodigoEditora = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cancelarCadastroLivrosBotao
             // 
-            this.cancelarCadastroLivrosBotao.Location = new System.Drawing.Point(381, 348);
+            this.cancelarCadastroLivrosBotao.Location = new System.Drawing.Point(389, 461);
             this.cancelarCadastroLivrosBotao.Name = "cancelarCadastroLivrosBotao";
             this.cancelarCadastroLivrosBotao.Size = new System.Drawing.Size(81, 31);
             this.cancelarCadastroLivrosBotao.TabIndex = 7;
@@ -66,7 +68,7 @@
             // 
             // cadastrarCadastroLivrosBotao
             // 
-            this.cadastrarCadastroLivrosBotao.Location = new System.Drawing.Point(294, 348);
+            this.cadastrarCadastroLivrosBotao.Location = new System.Drawing.Point(302, 461);
             this.cadastrarCadastroLivrosBotao.Name = "cadastrarCadastroLivrosBotao";
             this.cadastrarCadastroLivrosBotao.Size = new System.Drawing.Size(81, 31);
             this.cadastrarCadastroLivrosBotao.TabIndex = 6;
@@ -77,7 +79,7 @@
             // tituloCadastroLivroEtiqueta
             // 
             this.tituloCadastroLivroEtiqueta.AutoSize = true;
-            this.tituloCadastroLivroEtiqueta.Location = new System.Drawing.Point(19, 20);
+            this.tituloCadastroLivroEtiqueta.Location = new System.Drawing.Point(27, 72);
             this.tituloCadastroLivroEtiqueta.Name = "tituloCadastroLivroEtiqueta";
             this.tituloCadastroLivroEtiqueta.Size = new System.Drawing.Size(48, 17);
             this.tituloCadastroLivroEtiqueta.TabIndex = 8;
@@ -86,7 +88,7 @@
             // autorCadastroLivroEtiqueta
             // 
             this.autorCadastroLivroEtiqueta.AutoSize = true;
-            this.autorCadastroLivroEtiqueta.Location = new System.Drawing.Point(19, 65);
+            this.autorCadastroLivroEtiqueta.Location = new System.Drawing.Point(27, 117);
             this.autorCadastroLivroEtiqueta.Name = "autorCadastroLivroEtiqueta";
             this.autorCadastroLivroEtiqueta.Size = new System.Drawing.Size(47, 17);
             this.autorCadastroLivroEtiqueta.TabIndex = 9;
@@ -95,7 +97,7 @@
             // descricaoCadastroLivroEtiqueta
             // 
             this.descricaoCadastroLivroEtiqueta.AutoSize = true;
-            this.descricaoCadastroLivroEtiqueta.Location = new System.Drawing.Point(19, 246);
+            this.descricaoCadastroLivroEtiqueta.Location = new System.Drawing.Point(27, 301);
             this.descricaoCadastroLivroEtiqueta.Name = "descricaoCadastroLivroEtiqueta";
             this.descricaoCadastroLivroEtiqueta.Size = new System.Drawing.Size(76, 17);
             this.descricaoCadastroLivroEtiqueta.TabIndex = 10;
@@ -104,7 +106,7 @@
             // anoCadastroLivroEtiqueta
             // 
             this.anoCadastroLivroEtiqueta.AutoSize = true;
-            this.anoCadastroLivroEtiqueta.Location = new System.Drawing.Point(112, 157);
+            this.anoCadastroLivroEtiqueta.Location = new System.Drawing.Point(120, 209);
             this.anoCadastroLivroEtiqueta.Name = "anoCadastroLivroEtiqueta";
             this.anoCadastroLivroEtiqueta.Size = new System.Drawing.Size(38, 17);
             this.anoCadastroLivroEtiqueta.TabIndex = 11;
@@ -112,22 +114,22 @@
             // 
             // tituloCadastroLivrosCaixatexto
             // 
-            this.tituloCadastroLivrosCaixatexto.Location = new System.Drawing.Point(22, 40);
+            this.tituloCadastroLivrosCaixatexto.Location = new System.Drawing.Point(30, 92);
             this.tituloCadastroLivrosCaixatexto.Name = "tituloCadastroLivrosCaixatexto";
             this.tituloCadastroLivrosCaixatexto.Size = new System.Drawing.Size(440, 22);
             this.tituloCadastroLivrosCaixatexto.TabIndex = 13;
             // 
             // descricaoCadastroLivrosCaixatexto
             // 
-            this.descricaoCadastroLivrosCaixatexto.Location = new System.Drawing.Point(22, 266);
+            this.descricaoCadastroLivrosCaixatexto.Location = new System.Drawing.Point(30, 321);
             this.descricaoCadastroLivrosCaixatexto.Multiline = true;
             this.descricaoCadastroLivrosCaixatexto.Name = "descricaoCadastroLivrosCaixatexto";
-            this.descricaoCadastroLivrosCaixatexto.Size = new System.Drawing.Size(441, 67);
+            this.descricaoCadastroLivrosCaixatexto.Size = new System.Drawing.Size(440, 103);
             this.descricaoCadastroLivrosCaixatexto.TabIndex = 15;
             // 
             // anoCadastroLivrosCaixatexto
             // 
-            this.anoCadastroLivrosCaixatexto.Location = new System.Drawing.Point(115, 177);
+            this.anoCadastroLivrosCaixatexto.Location = new System.Drawing.Point(123, 229);
             this.anoCadastroLivrosCaixatexto.Name = "anoCadastroLivrosCaixatexto";
             this.anoCadastroLivrosCaixatexto.Size = new System.Drawing.Size(62, 22);
             this.anoCadastroLivrosCaixatexto.TabIndex = 16;
@@ -135,7 +137,7 @@
             // editoraCadastroLivroEtiqueta
             // 
             this.editoraCadastroLivroEtiqueta.AutoSize = true;
-            this.editoraCadastroLivroEtiqueta.Location = new System.Drawing.Point(19, 201);
+            this.editoraCadastroLivroEtiqueta.Location = new System.Drawing.Point(27, 253);
             this.editoraCadastroLivroEtiqueta.Name = "editoraCadastroLivroEtiqueta";
             this.editoraCadastroLivroEtiqueta.Size = new System.Drawing.Size(58, 17);
             this.editoraCadastroLivroEtiqueta.TabIndex = 18;
@@ -144,7 +146,7 @@
             // edicaoCadastroLivroEtiqueta
             // 
             this.edicaoCadastroLivroEtiqueta.AutoSize = true;
-            this.edicaoCadastroLivroEtiqueta.Location = new System.Drawing.Point(19, 157);
+            this.edicaoCadastroLivroEtiqueta.Location = new System.Drawing.Point(27, 209);
             this.edicaoCadastroLivroEtiqueta.Name = "edicaoCadastroLivroEtiqueta";
             this.edicaoCadastroLivroEtiqueta.Size = new System.Drawing.Size(56, 17);
             this.edicaoCadastroLivroEtiqueta.TabIndex = 24;
@@ -152,7 +154,7 @@
             // 
             // edicaoCadastroLivrosCaixatexto
             // 
-            this.edicaoCadastroLivrosCaixatexto.Location = new System.Drawing.Point(22, 177);
+            this.edicaoCadastroLivrosCaixatexto.Location = new System.Drawing.Point(30, 229);
             this.edicaoCadastroLivrosCaixatexto.Name = "edicaoCadastroLivrosCaixatexto";
             this.edicaoCadastroLivrosCaixatexto.Size = new System.Drawing.Size(87, 22);
             this.edicaoCadastroLivrosCaixatexto.TabIndex = 25;
@@ -160,7 +162,7 @@
             // idiomaCadastroLivroEtiqueta
             // 
             this.idiomaCadastroLivroEtiqueta.AutoSize = true;
-            this.idiomaCadastroLivroEtiqueta.Location = new System.Drawing.Point(19, 110);
+            this.idiomaCadastroLivroEtiqueta.Location = new System.Drawing.Point(27, 162);
             this.idiomaCadastroLivroEtiqueta.Name = "idiomaCadastroLivroEtiqueta";
             this.idiomaCadastroLivroEtiqueta.Size = new System.Drawing.Size(54, 17);
             this.idiomaCadastroLivroEtiqueta.TabIndex = 26;
@@ -169,7 +171,7 @@
             // paisCadastroLivroEtiqueta
             // 
             this.paisCadastroLivroEtiqueta.AutoSize = true;
-            this.paisCadastroLivroEtiqueta.Location = new System.Drawing.Point(245, 110);
+            this.paisCadastroLivroEtiqueta.Location = new System.Drawing.Point(253, 162);
             this.paisCadastroLivroEtiqueta.Name = "paisCadastroLivroEtiqueta";
             this.paisCadastroLivroEtiqueta.Size = new System.Drawing.Size(40, 17);
             this.paisCadastroLivroEtiqueta.TabIndex = 28;
@@ -177,7 +179,7 @@
             // 
             // paginasCadastroLivrosCaixatexto
             // 
-            this.paginasCadastroLivrosCaixatexto.Location = new System.Drawing.Point(183, 177);
+            this.paginasCadastroLivrosCaixatexto.Location = new System.Drawing.Point(191, 229);
             this.paginasCadastroLivrosCaixatexto.Name = "paginasCadastroLivrosCaixatexto";
             this.paginasCadastroLivrosCaixatexto.Size = new System.Drawing.Size(87, 22);
             this.paginasCadastroLivrosCaixatexto.TabIndex = 31;
@@ -185,7 +187,7 @@
             // paginasCadastroLivroEtiqueta
             // 
             this.paginasCadastroLivroEtiqueta.AutoSize = true;
-            this.paginasCadastroLivroEtiqueta.Location = new System.Drawing.Point(178, 157);
+            this.paginasCadastroLivroEtiqueta.Location = new System.Drawing.Point(186, 209);
             this.paginasCadastroLivroEtiqueta.Name = "paginasCadastroLivroEtiqueta";
             this.paginasCadastroLivroEtiqueta.Size = new System.Drawing.Size(64, 17);
             this.paginasCadastroLivroEtiqueta.TabIndex = 30;
@@ -195,7 +197,7 @@
             // 
             this.editoraCadastroLivrosCombobox.DisplayMember = "Nome";
             this.editoraCadastroLivrosCombobox.FormattingEnabled = true;
-            this.editoraCadastroLivrosCombobox.Location = new System.Drawing.Point(22, 222);
+            this.editoraCadastroLivrosCombobox.Location = new System.Drawing.Point(30, 274);
             this.editoraCadastroLivrosCombobox.Name = "editoraCadastroLivrosCombobox";
             this.editoraCadastroLivrosCombobox.Size = new System.Drawing.Size(440, 24);
             this.editoraCadastroLivrosCombobox.TabIndex = 32;
@@ -206,7 +208,7 @@
             this.idiomaCadastroLivrosCombobox.Cursor = System.Windows.Forms.Cursors.Default;
             this.idiomaCadastroLivrosCombobox.DisplayMember = "Lingua";
             this.idiomaCadastroLivrosCombobox.FormattingEnabled = true;
-            this.idiomaCadastroLivrosCombobox.Location = new System.Drawing.Point(22, 130);
+            this.idiomaCadastroLivrosCombobox.Location = new System.Drawing.Point(30, 182);
             this.idiomaCadastroLivrosCombobox.Name = "idiomaCadastroLivrosCombobox";
             this.idiomaCadastroLivrosCombobox.Size = new System.Drawing.Size(220, 24);
             this.idiomaCadastroLivrosCombobox.TabIndex = 33;
@@ -216,7 +218,7 @@
             // 
             this.paisCadastroLivrosCombobox.DisplayMember = "Pais";
             this.paisCadastroLivrosCombobox.FormattingEnabled = true;
-            this.paisCadastroLivrosCombobox.Location = new System.Drawing.Point(248, 130);
+            this.paisCadastroLivrosCombobox.Location = new System.Drawing.Point(256, 182);
             this.paisCadastroLivrosCombobox.Name = "paisCadastroLivrosCombobox";
             this.paisCadastroLivrosCombobox.Size = new System.Drawing.Size(214, 24);
             this.paisCadastroLivrosCombobox.TabIndex = 34;
@@ -226,7 +228,7 @@
             // 
             this.autorCadastroLivrosCombobox.DisplayMember = "Nome";
             this.autorCadastroLivrosCombobox.FormattingEnabled = true;
-            this.autorCadastroLivrosCombobox.Location = new System.Drawing.Point(22, 83);
+            this.autorCadastroLivrosCombobox.Location = new System.Drawing.Point(30, 135);
             this.autorCadastroLivrosCombobox.Name = "autorCadastroLivrosCombobox";
             this.autorCadastroLivrosCombobox.Size = new System.Drawing.Size(440, 24);
             this.autorCadastroLivrosCombobox.TabIndex = 35;
@@ -235,7 +237,7 @@
             // datalancamentoCadastroLivrosTimepicker
             // 
             this.datalancamentoCadastroLivrosTimepicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datalancamentoCadastroLivrosTimepicker.Location = new System.Drawing.Point(276, 177);
+            this.datalancamentoCadastroLivrosTimepicker.Location = new System.Drawing.Point(284, 229);
             this.datalancamentoCadastroLivrosTimepicker.Name = "datalancamentoCadastroLivrosTimepicker";
             this.datalancamentoCadastroLivrosTimepicker.Size = new System.Drawing.Size(114, 22);
             this.datalancamentoCadastroLivrosTimepicker.TabIndex = 36;
@@ -243,7 +245,7 @@
             // datalancamentoCadastroLivroEtiqueta
             // 
             this.datalancamentoCadastroLivroEtiqueta.AutoSize = true;
-            this.datalancamentoCadastroLivroEtiqueta.Location = new System.Drawing.Point(273, 157);
+            this.datalancamentoCadastroLivroEtiqueta.Location = new System.Drawing.Point(281, 209);
             this.datalancamentoCadastroLivroEtiqueta.Name = "datalancamentoCadastroLivroEtiqueta";
             this.datalancamentoCadastroLivroEtiqueta.Size = new System.Drawing.Size(145, 17);
             this.datalancamentoCadastroLivroEtiqueta.TabIndex = 37;
@@ -252,7 +254,7 @@
             // txtCodigoTitulo
             // 
             this.txtCodigoTitulo.Enabled = false;
-            this.txtCodigoTitulo.Location = new System.Drawing.Point(22, 401);
+            this.txtCodigoTitulo.Location = new System.Drawing.Point(30, 47);
             this.txtCodigoTitulo.Name = "txtCodigoTitulo";
             this.txtCodigoTitulo.Size = new System.Drawing.Size(100, 22);
             this.txtCodigoTitulo.TabIndex = 38;
@@ -260,16 +262,36 @@
             // txtCodigoEditora
             // 
             this.txtCodigoEditora.Enabled = false;
-            this.txtCodigoEditora.Location = new System.Drawing.Point(22, 429);
+            this.txtCodigoEditora.Location = new System.Drawing.Point(136, 47);
             this.txtCodigoEditora.Name = "txtCodigoEditora";
             this.txtCodigoEditora.Size = new System.Drawing.Size(100, 22);
             this.txtCodigoEditora.TabIndex = 39;
             // 
-            // telaCadastroLivros
+            // lblCodigoTitulo
+            // 
+            this.lblCodigoTitulo.AutoSize = true;
+            this.lblCodigoTitulo.Location = new System.Drawing.Point(27, 27);
+            this.lblCodigoTitulo.Name = "lblCodigoTitulo";
+            this.lblCodigoTitulo.Size = new System.Drawing.Size(91, 17);
+            this.lblCodigoTitulo.TabIndex = 40;
+            this.lblCodigoTitulo.Text = "Codigo Título";
+            // 
+            // lblCodigoEditora
+            // 
+            this.lblCodigoEditora.AutoSize = true;
+            this.lblCodigoEditora.Location = new System.Drawing.Point(133, 27);
+            this.lblCodigoEditora.Name = "lblCodigoEditora";
+            this.lblCodigoEditora.Size = new System.Drawing.Size(101, 17);
+            this.lblCodigoEditora.TabIndex = 41;
+            this.lblCodigoEditora.Text = "Codigo Editora";
+            // 
+            // TelaCadastroLivros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 483);
+            this.ClientSize = new System.Drawing.Size(499, 516);
+            this.Controls.Add(this.lblCodigoEditora);
+            this.Controls.Add(this.lblCodigoTitulo);
             this.Controls.Add(this.txtCodigoEditora);
             this.Controls.Add(this.txtCodigoTitulo);
             this.Controls.Add(this.datalancamentoCadastroLivroEtiqueta);
@@ -295,7 +317,7 @@
             this.Controls.Add(this.cancelarCadastroLivrosBotao);
             this.Controls.Add(this.cadastrarCadastroLivrosBotao);
             this.MaximizeBox = false;
-            this.Name = "telaCadastroLivros";
+            this.Name = "TelaCadastroLivros";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Livros";
             this.ResumeLayout(false);
@@ -329,5 +351,7 @@
         private System.Windows.Forms.Label datalancamentoCadastroLivroEtiqueta;
         private System.Windows.Forms.TextBox txtCodigoTitulo;
         private System.Windows.Forms.TextBox txtCodigoEditora;
+        private System.Windows.Forms.Label lblCodigoTitulo;
+        private System.Windows.Forms.Label lblCodigoEditora;
     }
 }
