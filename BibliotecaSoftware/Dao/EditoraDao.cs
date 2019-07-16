@@ -10,37 +10,46 @@ namespace BibliotecaSoftware.Dao
     {
         public bool Inserir(Editora editoraModel)
         {
+            var deuCerto = false;
             using (FbConnection conexaoFireBird = Conexao.getInstancia().getConexao())
             {
+                conexaoFireBird.Open();
+                var transacao = conexaoFireBird.BeginTransaction();
+
                 try
                 {
-                    conexaoFireBird.Open();
-                    var cmd = new FbCommand();
-                    cmd.Connection = conexaoFireBird;
-                    var mSQL = "";
+                    var cmd = new FbCommand
+                    {
+                        Connection = conexaoFireBird,
+                        Transaction = transacao 
+                    };
                     if (0.Equals(editoraModel.CodigoEditora))
-                        mSQL = "INSERT INTO EDITORA(NOME, DESABILITADO) VALUES (@NOME, @DESABILITADO)";
+                        cmd.CommandText = "INSERT INTO EDITORA(NOME, DESABILITADO) VALUES (@NOME, @DESABILITADO)";
                     else
                     {
-                        mSQL = @"UPDATE EDITORA SET NOME = @NOME WHERE CODIGOEDITORA = @CODIGOEDITORA";
+                        cmd.CommandText = @"UPDATE EDITORA SET NOME = @NOME WHERE CODIGOEDITORA = @CODIGOEDITORA";
                         cmd.Parameters.Add("@CODIGOEDITORA", editoraModel.CodigoEditora);
                     }
 
-                    cmd.CommandText = mSQL;
                     cmd.Parameters.Add("@NOME", editoraModel.Nome);
                     cmd.Parameters.Add("@DESABILITADO", FbDbType.Boolean).Value = editoraModel.Desabilitado.ToChar();
                     cmd.ExecuteNonQuery();
-                    return true;
+
+                    return deuCerto = true;
                 }
                 catch (Exception e)
                 {
                     MessageBox.Show(e.Message);
-                    return false;
                 }
                 finally
                 {
+                    if (deuCerto)
+                        transacao.Commit();
+                    else
+                        transacao.Rollback();
                     conexaoFireBird.Close();
                 }
+                return deuCerto;
             }
         }
 
@@ -76,6 +85,7 @@ namespace BibliotecaSoftware.Dao
                 return editoraModel;
             }
         }
+
         public List<Editora> Listar()
         {
             using (FbConnection conexaoFireBird = Conexao.getInstancia().getConexao())
@@ -109,32 +119,42 @@ namespace BibliotecaSoftware.Dao
                 return retorno;
             }
         }
+
         public bool Desabilitar(Editora editoraModel)
         {
+            var deuCerto = false;
             using (FbConnection conexaoFireBird = Conexao.getInstancia().getConexao())
             {
+                conexaoFireBird.Open();
+                var transacao = conexaoFireBird.BeginTransaction();
+
                 try
                 {
-                    conexaoFireBird.Open();
-                    var cmd = new FbCommand();
-                    cmd.Connection = conexaoFireBird;
-                    var mSQL = @"UPDATE EDITORA SET DESABILITADO = @DESABILITADO WHERE CODIGOEDITORA = @CODIGOEDITORA";
+                    var cmd = new FbCommand
+                    {
+                        Connection = conexaoFireBird,
+                        CommandText = @"UPDATE EDITORA SET DESABILITADO = @DESABILITADO WHERE CODIGOEDITORA = @CODIGOEDITORA"
+                    };
 
-                    cmd.CommandText = mSQL;
                     cmd.Parameters.Add("@CODIGOEDITORA", FbDbType.Integer).Value = editoraModel.CodigoEditora;
                     cmd.Parameters.Add("@DESABILITADO", FbDbType.Char).Value = editoraModel.Desabilitado.ToChar();
                     cmd.ExecuteNonQuery();
-                    return true;
+
+                    deuCerto = true;
                 }
                 catch (Exception e)
                 {
                     MessageBox.Show(e.Message);
-                    return false;
                 }
                 finally
                 {
+                    if (deuCerto)
+                        transacao.Commit();
+                    else
+                        transacao.Rollback();
                     conexaoFireBird.Close();
                 }
+                return deuCerto;
             }
         }
     }

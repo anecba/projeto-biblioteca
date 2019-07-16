@@ -32,12 +32,12 @@
             this.pesquisaTelaListarDadosBotao = new System.Windows.Forms.Button();
             this.pesquisaTelaListarDadosCaixatexto = new System.Windows.Forms.TextBox();
             this.mostrarListarDadosEditorasDataGridView = new System.Windows.Forms.DataGridView();
-            this.alterarTelaListarDadosBotao = new System.Windows.Forms.Button();
-            this.fecharTelaListarDadosBotao = new System.Windows.Forms.Button();
-            this.apagarTelaListarDadosBotao = new System.Windows.Forms.Button();
             this.clnCodigoEditora = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.editoraBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.alterarTelaListarDadosBotao = new System.Windows.Forms.Button();
+            this.fecharTelaListarDadosBotao = new System.Windows.Forms.Button();
+            this.apagarTelaListarDadosBotao = new System.Windows.Forms.Button();
             this.lblListaDeEditoras = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.mostrarListarDadosEditorasDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.editoraBindingSource)).BeginInit();
@@ -77,6 +77,25 @@
             this.mostrarListarDadosEditorasDataGridView.Size = new System.Drawing.Size(658, 216);
             this.mostrarListarDadosEditorasDataGridView.TabIndex = 4;
             // 
+            // clnCodigoEditora
+            // 
+            this.clnCodigoEditora.DataPropertyName = "CodigoEditora";
+            this.clnCodigoEditora.HeaderText = "Cód.";
+            this.clnCodigoEditora.Name = "clnCodigoEditora";
+            this.clnCodigoEditora.Width = 50;
+            // 
+            // nomeDataGridViewTextBoxColumn
+            // 
+            this.nomeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "Nome";
+            this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
+            this.nomeDataGridViewTextBoxColumn.MinimumWidth = 200;
+            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
+            // 
+            // editoraBindingSource
+            // 
+            this.editoraBindingSource.DataSource = typeof(BibliotecaSoftware.Model.Editora);
+            // 
             // alterarTelaListarDadosBotao
             // 
             this.alterarTelaListarDadosBotao.Location = new System.Drawing.Point(389, 375);
@@ -107,34 +126,15 @@
             this.apagarTelaListarDadosBotao.UseVisualStyleBackColor = true;
             this.apagarTelaListarDadosBotao.Click += new System.EventHandler(this.ApagarTelaListarDadosBotao_Click);
             // 
-            // clnCodigoEditora
-            // 
-            this.clnCodigoEditora.DataPropertyName = "CodigoEditora";
-            this.clnCodigoEditora.HeaderText = "Cód.";
-            this.clnCodigoEditora.Name = "clnCodigoEditora";
-            this.clnCodigoEditora.Width = 50;
-            // 
-            // nomeDataGridViewTextBoxColumn
-            // 
-            this.nomeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "Nome";
-            this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
-            this.nomeDataGridViewTextBoxColumn.MinimumWidth = 200;
-            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
-            // 
-            // editoraBindingSource
-            // 
-            this.editoraBindingSource.DataSource = typeof(BibliotecaSoftware.Model.Editora);
-            // 
             // lblListaDeEditoras
             // 
             this.lblListaDeEditoras.AutoSize = true;
             this.lblListaDeEditoras.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblListaDeEditoras.Location = new System.Drawing.Point(26, 26);
             this.lblListaDeEditoras.Name = "lblListaDeEditoras";
-            this.lblListaDeEditoras.Size = new System.Drawing.Size(185, 29);
+            this.lblListaDeEditoras.Size = new System.Drawing.Size(192, 29);
             this.lblListaDeEditoras.TabIndex = 10;
-            this.lblListaDeEditoras.Text = "Lista de Autores";
+            this.lblListaDeEditoras.Text = "Lista de Editoras";
             // 
             // telaListaDadosEditoras
             // 

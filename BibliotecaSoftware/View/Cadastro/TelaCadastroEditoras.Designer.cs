@@ -68,7 +68,7 @@
             this.cancelarCadastroEditorasBotao.TabIndex = 3;
             this.cancelarCadastroEditorasBotao.Text = "Cancelar";
             this.cancelarCadastroEditorasBotao.UseVisualStyleBackColor = true;
-            this.cancelarCadastroEditorasBotao.Click += new System.EventHandler(this.cancelarCadastroEditorasBotao_Click);
+            this.cancelarCadastroEditorasBotao.Click += new System.EventHandler(this.CancelarCadastroEditorasBotao_Click);
             // 
             // telaCadastroEditoras
             // 

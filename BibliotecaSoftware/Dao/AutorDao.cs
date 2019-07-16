@@ -10,15 +10,18 @@ namespace BibliotecaSoftware.Dao
     {
         public bool Inserir(Autor autorModel)
         {
+            var deuCerto = false;
             using (FbConnection conexaoFireBird = Conexao.getInstancia().getConexao())
             {
+                conexaoFireBird.Open();
+                var transaction = conexaoFireBird.BeginTransaction();
+                var cmd = new FbCommand
+                {
+                    Connection = conexaoFireBird,
+                    Transaction = transaction
+                };
                 try
                 {
-                    conexaoFireBird.Open();
-                    var cmd = new FbCommand
-                    {
-                        Connection = conexaoFireBird
-                    };
                     var mSQL = "";
                     if (0.Equals(autorModel.CodigoAutor))
                         mSQL = "INSERT INTO AUTOR(NOME, DATANASCIMENTO, BIBLIOGRAFIA, SITE, DESABILITADO) " +
@@ -37,17 +40,23 @@ namespace BibliotecaSoftware.Dao
                     cmd.Parameters.Add("@SITE", autorModel.Site);
                     cmd.Parameters.Add("@DESABILITADO", FbDbType.Boolean).Value = autorModel.Desabilitado.ToChar();
                     cmd.ExecuteNonQuery();
-                    return true;
+                    deuCerto = true;
                 }
                 catch (Exception e)
                 {
                     MessageBox.Show(e.Message);
-                    return false;
                 }
                 finally
                 {
+                    if (deuCerto)
+                        transaction.Commit();
+                    else
+                        transaction.Rollback();
+
+                    cmd.Dispose();
                     conexaoFireBird.Close();
                 }
+                return deuCerto;
             }
         }
 
@@ -123,34 +132,41 @@ namespace BibliotecaSoftware.Dao
                 return retorno;
             }
         }
+
         public bool Desabilitar(Autor autorModel)
         {
+            var deuCerto = false;
             using (FbConnection conexaoFireBird = Conexao.getInstancia().getConexao())
             {
+                conexaoFireBird.Open();
+                var transacao = conexaoFireBird.BeginTransaction();
                 try
                 {
-                    conexaoFireBird.Open();
                     FbCommand cmd = new FbCommand
                     {
-                        Connection = conexaoFireBird
+                        Connection = conexaoFireBird,
+                        CommandText = @"UPDATE AUTOR SET DESABILITADO = @DESABILITADO WHERE CODIGOAUTOR = @CODIGOAUTOR",
+                        Transaction = transacao
                     };
-                    var mSQL = @"UPDATE AUTOR SET DESABILITADO = @DESABILITADO WHERE CODIGOAUTOR = @CODIGOAUTOR";
 
-                    cmd.CommandText = mSQL;
                     cmd.Parameters.Add("@CODIGOAUTOR", FbDbType.Integer).Value = autorModel.CodigoAutor;
                     cmd.Parameters.Add("@DESABILITADO", FbDbType.Char).Value = autorModel.Desabilitado.ToChar();
                     cmd.ExecuteNonQuery();
-                    return true;
+                    deuCerto = true;
                 }
                 catch (Exception e)
                 {
                     MessageBox.Show(e.Message);
-                    return false;
                 }
                 finally
                 {
+                    if (deuCerto)
+                        transacao.Commit();
+                    else
+                        transacao.Rollback();
                     conexaoFireBird.Close();
                 }
+                return deuCerto;
             }
         }
     }

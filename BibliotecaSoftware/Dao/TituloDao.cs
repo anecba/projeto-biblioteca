@@ -11,6 +11,7 @@ namespace BibliotecaSoftware.Dao
         {
             using (FbConnection conexaoFireBird = Conexao.getInstancia().getConexao())
             {
+                //não está sendo utilizado
                 try
                 {
                     conexaoFireBird.Open();
@@ -43,6 +44,7 @@ namespace BibliotecaSoftware.Dao
 
         public void Alterar(Titulo tituloModel)
         {
+            //não está sendo utilizado
             using (FbConnection conexaoFireBird = Conexao.getInstancia().getConexao())
             {
                 try

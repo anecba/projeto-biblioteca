@@ -46,7 +46,7 @@ namespace BibliotecaSoftware.View
 
             if (_autorDao.Inserir(_autorModel))
             {
-                MessageBox.Show("Operação realizada com sucesso!!", "Mensagem de Notificação");
+                MessageBox.Show("Gravado com sucesso!", "Mensagem de Confirmação");
                 Close();
             }
         }

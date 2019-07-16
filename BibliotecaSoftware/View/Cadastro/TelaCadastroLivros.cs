@@ -67,10 +67,10 @@ namespace BibliotecaSoftware.View
 
             if (_livro.Titulo.CodigoTitulo == 0)
             {
-                _livro.TituloAutor.CodigoTitulo = _tituloDao.Inserir(_livro.Titulo);
-                _livro.TituloAutor.CodigoEdicao = _edicaoDao.Inserir(_livro.Edicao);
+                //_livro.TituloAutor.CodigoTitulo = _tituloDao.Inserir(_livro.Titulo);
+                //_livro.TituloAutor.CodigoEdicao = _edicaoDao.Inserir(_livro.Edicao);
 
-                if (_tituloAutorDao.Inserir(_livro.TituloAutor))
+                if (_tituloAutorDao.Inserir(_livro.TituloAutor, _livro.Titulo, _livro.Edicao))
                 {
                     MessageBox.Show("Cadastro realizado com sucesso!", "Mensagem de Confirmação");
                     Close();
@@ -79,8 +79,14 @@ namespace BibliotecaSoftware.View
 
             else
             {
-                _tituloDao.Alterar(_livro.Titulo);
-                _edicaoDao.Alterar(_livro.Edicao);
+                //_tituloDao.Alterar(_livro.Titulo);
+                //_edicaoDao.Alterar(_livro.Edicao);
+
+                if (_tituloAutorDao.Alterar(_livro.Titulo, _livro.Edicao))
+                {
+                    MessageBox.Show("Atualização realizada com sucesso!", "Mensagem de Confirmação");
+                    Close();
+                }
             }
         }
 

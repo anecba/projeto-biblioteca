@@ -41,15 +41,17 @@ namespace BibliotecaSoftware.View
                 MessageBox.Show("O campo nome precisa ser preenchido!","Mensagem de Aviso!");
                 return;
             }
+
             _editoraModel.Nome = nomeCadastroEditorasCaixatexto.Text;
 
             if (_editoraDao.Inserir(_editoraModel))
             {
+                MessageBox.Show("Gravado com sucesso!", "Mensagem de Confirmação");
                 Close();
             }
         }
 
-        private void cancelarCadastroEditorasBotao_Click(object sender, EventArgs e)
+        private void CancelarCadastroEditorasBotao_Click(object sender, EventArgs e)
         {
             this.Close();
         }

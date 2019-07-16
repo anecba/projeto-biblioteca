@@ -65,36 +65,46 @@ public class LivroDao : Conexao
 
     public bool Desabilitar(ListaLivro listaLivroModel)
     {
+        var deuCerto = false;
         using (FbConnection conexaoFireBird = Conexao.getInstancia().getConexao())
         {
+            conexaoFireBird.Open();
+            var transacao = conexaoFireBird.BeginTransaction();
+
             try
             {
-                conexaoFireBird.Open();
-                var cmd = new FbCommand();
-                cmd.Connection = conexaoFireBird;
-                var mSQL = @"UPDATE TITULO SET DESABILITAR = @DESABILITAR WHERE CODIGOTITULO = @CODIGOTITULO";
-
-                cmd.CommandText = mSQL;
+                var cmd = new FbCommand
+                {
+                    Connection = conexaoFireBird,
+                    CommandText = @"UPDATE TITULO SET DESABILITAR = @DESABILITAR WHERE CODIGOTITULO = @CODIGOTITULO",
+                    Transaction = transacao
+                };
+               
                 cmd.Parameters.Add("@CODIGOTITULO", FbDbType.Integer).Value = listaLivroModel.CodigoTitulo;
                 cmd.Parameters.Add("@DESABILITAR", FbDbType.Char).Value = listaLivroModel.Desabilitado.ToChar();
                 cmd.ExecuteNonQuery();
-                return true;
+
+                deuCerto = true;
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.Message);
-                return false;
             }
             finally
             {
+                if (deuCerto)
+                    transacao.Commit();
+                else
+                    transacao.Rollback();
                 conexaoFireBird.Close();
             }
+            return deuCerto;
         }
     }
 
     internal Livro Carregar(int codigoTitulo)
     {
-        using (FbConnection conexaoFireBird = Conexao.getInstancia().getConexao())
+        using ( FbConnection conexaoFireBird = Conexao.getInstancia().getConexao())
         {
             var listaLivroRetorno = new Livro();
             try
@@ -110,9 +120,10 @@ public class LivroDao : Conexao
                             RIGHT JOIN EDICAO ON TITULO_AUTOR.codigoedicao = EDICAO.codigoedicao
                             INNER JOIN IDIOMA ON  EDICAO.codigoidioma = IDIOMA.codigoidioma
                             INNER JOIN EDITORA ON TITULO.codigoeditora = EDITORA.codigoeditora
-                            WHERE TITULO.desabilitar = 'N'";
+                            WHERE TITULO.desabilitar = 'N' AND TITULO.codigotitulo = @codigoTitulo";
 
                 FbCommand cmd = new FbCommand(mSQL, conexaoFireBird);
+                cmd.Parameters.Add("@CODIGOTITULO", codigoTitulo);
 
                 var dr = cmd.ExecuteReader();
 

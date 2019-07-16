@@ -96,21 +96,21 @@
             // autoresContLivrosBibliotecaMenuitem
             // 
             this.autoresContLivrosBibliotecaMenuitem.Name = "autoresContLivrosBibliotecaMenuitem";
-            this.autoresContLivrosBibliotecaMenuitem.Size = new System.Drawing.Size(138, 26);
+            this.autoresContLivrosBibliotecaMenuitem.Size = new System.Drawing.Size(216, 26);
             this.autoresContLivrosBibliotecaMenuitem.Text = "Autores";
             this.autoresContLivrosBibliotecaMenuitem.Click += new System.EventHandler(this.AutoresContLivrosBibliotecaMenuitem_Click);
             // 
             // editorasContLivrosBibliotecaMenuitem
             // 
             this.editorasContLivrosBibliotecaMenuitem.Name = "editorasContLivrosBibliotecaMenuitem";
-            this.editorasContLivrosBibliotecaMenuitem.Size = new System.Drawing.Size(138, 26);
+            this.editorasContLivrosBibliotecaMenuitem.Size = new System.Drawing.Size(216, 26);
             this.editorasContLivrosBibliotecaMenuitem.Text = "Editoras";
             this.editorasContLivrosBibliotecaMenuitem.Click += new System.EventHandler(this.EditorasContLivrosBibliotecaMenuitem_Click);
             // 
             // titulosContLivrosBibliotecaMenuitem
             // 
             this.titulosContLivrosBibliotecaMenuitem.Name = "titulosContLivrosBibliotecaMenuitem";
-            this.titulosContLivrosBibliotecaMenuitem.Size = new System.Drawing.Size(138, 26);
+            this.titulosContLivrosBibliotecaMenuitem.Size = new System.Drawing.Size(216, 26);
             this.titulosContLivrosBibliotecaMenuitem.Text = "Títulos";
             this.titulosContLivrosBibliotecaMenuitem.Click += new System.EventHandler(this.TitulosContLivrosBibliotecaMenuitem_Click);
             // 
