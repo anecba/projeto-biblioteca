@@ -5,17 +5,17 @@ using System.Windows.Forms;
 
 namespace BibliotecaSoftware.View
 {
-    public partial class telaCadastroEditoras : Form
+    public partial class TelaCadastroEditoras : Form
     {
         private Editora _editoraModel;
         private EditoraDao _editoraDao;
 
-        public telaCadastroEditoras()
+        public TelaCadastroEditoras()
         {
             ConstrutorPadrao();
         }
         
-        public telaCadastroEditoras(Editora editoraModel)
+        public TelaCadastroEditoras(Editora editoraModel)
         {
             ConstrutorPadrao();
             _editoraModel = editoraModel;

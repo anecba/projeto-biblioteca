@@ -10,7 +10,7 @@ namespace BibliotecaSoftware.Dao
         public bool Inserir(TituloAutor tituloAutor, Titulo tituloModel, Edicao edicaoModel)
         {
             var deuCerto = false;
-            using (FbConnection conexaoFireBird = Conexao.getInstancia().getConexao())
+            using (FbConnection conexaoFireBird = Conexao.GetInstancia().GetConexao())
             {
                 conexaoFireBird.Open();
                 var transacao = conexaoFireBird.BeginTransaction();
@@ -51,7 +51,6 @@ namespace BibliotecaSoftware.Dao
                     cmd.Parameters.Add("@CODIGOEDICAO", tituloAutor.CodigoEdicao);
                     cmd.Parameters.Add("@CODIGOTITULO", tituloAutor.CodigoTitulo);
                     cmd.ExecuteNonQuery();
-
                     deuCerto = true;
                 }
                 catch (Exception e)
@@ -73,7 +72,7 @@ namespace BibliotecaSoftware.Dao
         public bool Alterar (Titulo tituloModel, Edicao edicaoModel)
         {
             var deuCerto = false;
-            using (FbConnection conexaoFireBird = Conexao.getInstancia().getConexao())
+            using (FbConnection conexaoFireBird = Conexao.GetInstancia().GetConexao())
             {
                 conexaoFireBird.Open();
                 var transacao = conexaoFireBird.BeginTransaction();
@@ -105,7 +104,6 @@ namespace BibliotecaSoftware.Dao
                     cmd.Parameters.Add("@QTDE_PAGINAS", edicaoModel.QtdePagina);
                     cmd.Parameters.Add("@EDICAO", edicaoModel.NumeroEdicao);
                     cmd.ExecuteNonQuery();
-
                     deuCerto = true;
                 }
                 catch (Exception e)

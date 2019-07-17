@@ -11,7 +11,7 @@ namespace BibliotecaSoftware.Dao
         public bool Inserir(Editora editoraModel)
         {
             var deuCerto = false;
-            using (FbConnection conexaoFireBird = Conexao.getInstancia().getConexao())
+            using (FbConnection conexaoFireBird = Conexao.GetInstancia().GetConexao())
             {
                 conexaoFireBird.Open();
                 var transacao = conexaoFireBird.BeginTransaction();
@@ -55,7 +55,7 @@ namespace BibliotecaSoftware.Dao
 
         internal Editora Carregar(int codigoEditora)
         {
-            using (FbConnection conexaoFireBird = Conexao.getInstancia().getConexao())
+            using (FbConnection conexaoFireBird = Conexao.GetInstancia().GetConexao())
             {
                 var editoraModel = new Editora();
                 try
@@ -88,7 +88,7 @@ namespace BibliotecaSoftware.Dao
 
         public List<Editora> Listar()
         {
-            using (FbConnection conexaoFireBird = Conexao.getInstancia().getConexao())
+            using (FbConnection conexaoFireBird = Conexao.GetInstancia().GetConexao())
             {
                 var retorno = new List<Editora>();
                 try
@@ -123,7 +123,7 @@ namespace BibliotecaSoftware.Dao
         public bool Desabilitar(Editora editoraModel)
         {
             var deuCerto = false;
-            using (FbConnection conexaoFireBird = Conexao.getInstancia().getConexao())
+            using (FbConnection conexaoFireBird = Conexao.GetInstancia().GetConexao())
             {
                 conexaoFireBird.Open();
                 var transacao = conexaoFireBird.BeginTransaction();

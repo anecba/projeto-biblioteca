@@ -11,7 +11,7 @@ namespace BibliotecaSoftware.Dao
         public bool Inserir(Autor autorModel)
         {
             var deuCerto = false;
-            using (FbConnection conexaoFireBird = Conexao.getInstancia().getConexao())
+            using (FbConnection conexaoFireBird = Conexao.GetInstancia().GetConexao())
             {
                 conexaoFireBird.Open();
                 var transaction = conexaoFireBird.BeginTransaction();
@@ -62,7 +62,7 @@ namespace BibliotecaSoftware.Dao
 
         internal Autor Carregar(int codigoAutor)
         {
-            using (FbConnection conexaoFireBird = Conexao.getInstancia().getConexao())
+            using (FbConnection conexaoFireBird = Conexao.GetInstancia().GetConexao())
             {
                 var autorModel = new Autor();
                 try
@@ -98,7 +98,7 @@ namespace BibliotecaSoftware.Dao
 
         public List<Autor> Listar()
         {
-            using (FbConnection conexaoFireBird = Conexao.getInstancia().getConexao())
+            using (FbConnection conexaoFireBird = Conexao.GetInstancia().GetConexao())
             {
                 var retorno = new List<Autor>();
                 try
@@ -136,7 +136,7 @@ namespace BibliotecaSoftware.Dao
         public bool Desabilitar(Autor autorModel)
         {
             var deuCerto = false;
-            using (FbConnection conexaoFireBird = Conexao.getInstancia().getConexao())
+            using (FbConnection conexaoFireBird = Conexao.GetInstancia().GetConexao())
             {
                 conexaoFireBird.Open();
                 var transacao = conexaoFireBird.BeginTransaction();

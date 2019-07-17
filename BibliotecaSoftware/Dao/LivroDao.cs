@@ -9,7 +9,7 @@ public class LivroDao : Conexao
 {
     public List<ListaLivro> Listar()
     {
-        using (FbConnection conexaoFireBird = Conexao.getInstancia().getConexao())
+        using (FbConnection conexaoFireBird = Conexao.GetInstancia().GetConexao())
         {
             var retorno = new List<ListaLivro>();
             try
@@ -66,7 +66,7 @@ public class LivroDao : Conexao
     public bool Desabilitar(ListaLivro listaLivroModel)
     {
         var deuCerto = false;
-        using (FbConnection conexaoFireBird = Conexao.getInstancia().getConexao())
+        using (FbConnection conexaoFireBird = Conexao.GetInstancia().GetConexao())
         {
             conexaoFireBird.Open();
             var transacao = conexaoFireBird.BeginTransaction();
@@ -83,7 +83,6 @@ public class LivroDao : Conexao
                 cmd.Parameters.Add("@CODIGOTITULO", FbDbType.Integer).Value = listaLivroModel.CodigoTitulo;
                 cmd.Parameters.Add("@DESABILITAR", FbDbType.Char).Value = listaLivroModel.Desabilitado.ToChar();
                 cmd.ExecuteNonQuery();
-
                 deuCerto = true;
             }
             catch (Exception e)
@@ -104,7 +103,7 @@ public class LivroDao : Conexao
 
     internal Livro Carregar(int codigoTitulo)
     {
-        using ( FbConnection conexaoFireBird = Conexao.getInstancia().getConexao())
+        using ( FbConnection conexaoFireBird = Conexao.GetInstancia().GetConexao())
         {
             var listaLivroRetorno = new Livro();
             try

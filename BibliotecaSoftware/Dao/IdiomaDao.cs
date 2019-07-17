@@ -10,7 +10,7 @@ namespace BibliotecaSoftware.Dao
     {
         public List<Idioma> Listar()
         {
-            using (FbConnection conexaoFireBird = Conexao.getInstancia().getConexao())
+            using (FbConnection conexaoFireBird = Conexao.GetInstancia().GetConexao())
             {
                 var retorno = new List<Idioma>();
                 try

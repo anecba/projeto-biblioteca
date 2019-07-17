@@ -8,8 +8,8 @@ namespace BibliotecaSoftware.View
     public partial class TelaCadastroLivros : Form
     {
         public Livro _livro;
-        public TituloDao _tituloDao;
-        public EdicaoDao _edicaoDao;
+        //public TituloDao _tituloDao;
+        //public EdicaoDao _edicaoDao;
         public EditoraDao _editoraDao;
         public AutorDao _autorDao;
         public IdiomaDao _idiomaDao;
@@ -31,8 +31,8 @@ namespace BibliotecaSoftware.View
         {
             InitializeComponent();
             _livro = new Livro();
-            _tituloDao = new TituloDao();
-            _edicaoDao = new EdicaoDao();
+            //_tituloDao = new TituloDao();
+            //_edicaoDao = new EdicaoDao();
             _autorDao = new AutorDao();
             _editoraDao = new EditoraDao();
             _idiomaDao = new IdiomaDao();
@@ -67,24 +67,18 @@ namespace BibliotecaSoftware.View
 
             if (_livro.Titulo.CodigoTitulo == 0)
             {
-                //_livro.TituloAutor.CodigoTitulo = _tituloDao.Inserir(_livro.Titulo);
-                //_livro.TituloAutor.CodigoEdicao = _edicaoDao.Inserir(_livro.Edicao);
-
                 if (_tituloAutorDao.Inserir(_livro.TituloAutor, _livro.Titulo, _livro.Edicao))
                 {
-                    MessageBox.Show("Cadastro realizado com sucesso!", "Mensagem de Confirmação");
+                    MessageBox.Show("Gravado com sucesso!", "Mensagem de Confirmação");
                     Close();
                 }
             }
 
             else
             {
-                //_tituloDao.Alterar(_livro.Titulo);
-                //_edicaoDao.Alterar(_livro.Edicao);
-
                 if (_tituloAutorDao.Alterar(_livro.Titulo, _livro.Edicao))
                 {
-                    MessageBox.Show("Atualização realizada com sucesso!", "Mensagem de Confirmação");
+                    MessageBox.Show("Gravado com sucesso!", "Mensagem de Confirmação");
                     Close();
                 }
             }

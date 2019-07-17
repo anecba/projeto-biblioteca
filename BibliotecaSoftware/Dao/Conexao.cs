@@ -9,12 +9,12 @@ namespace BibliotecaSoftware.Model
     {
         public static readonly Conexao instanciaFireBird = new Conexao();
 
-        public static Conexao getInstancia()
+        public static Conexao GetInstancia()
         {
             return instanciaFireBird;
         }
 
-        public FbConnection getConexao()
+        public FbConnection GetConexao()
         {
             string conn = ConfigurationManager.ConnectionStrings["FireBirdConnectionString"].ToString();
             return new FbConnection(conn);

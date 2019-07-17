@@ -1,6 +1,6 @@
 ﻿namespace BibliotecaSoftware.View
 {
-    partial class telaCadastroEditoras
+    partial class TelaCadastroEditoras
     {
         /// <summary>
         /// Required designer variable.

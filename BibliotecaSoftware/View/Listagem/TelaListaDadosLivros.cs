@@ -28,7 +28,7 @@ namespace BibliotecaSoftware.View.Listagem
 
         private void AlterarTelaListarDadosLivrosBotao_Click(object sender, EventArgs e)
         {
-            var codigoTitulo = Convert.ToInt32(mostrarListarDadosLivrosDataGridView.SelectedRows[0].Cells["clnCodigoTitulo"].Value);
+            int codigoTitulo = Convert.ToInt32(mostrarListarDadosLivrosDataGridView.SelectedRows[0].Cells["clnCodigoTitulo"].Value);
             var livro = _livroDao.Carregar(codigoTitulo);
             var frm = new TelaCadastroLivros(livro);            
             frm.Show();
@@ -36,7 +36,7 @@ namespace BibliotecaSoftware.View.Listagem
 
         private void ApagarTelaListarDadosLivrosBotao_Click(object sender, EventArgs e)
         {
-            var codigoTitulo = Convert.ToInt32(mostrarListarDadosLivrosDataGridView.SelectedRows[0].Cells["clnCodigoTitulo"].Value);
+            int codigoTitulo = Convert.ToInt32(mostrarListarDadosLivrosDataGridView.SelectedRows[0].Cells["clnCodigoTitulo"].Value);
             var listaLivro = new ListaLivro
             {
                 CodigoTitulo = codigoTitulo,

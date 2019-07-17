@@ -27,7 +27,7 @@ namespace BibliotecaSoftware
 
         private void EditorasCadBibliotecaMenuitem_Click(object sender, EventArgs e)
         {
-            telaCadastroEditoras telaCadastroEditoras = new telaCadastroEditoras();
+            TelaCadastroEditoras telaCadastroEditoras = new TelaCadastroEditoras();
             telaCadastroEditoras.Show();
         }
 

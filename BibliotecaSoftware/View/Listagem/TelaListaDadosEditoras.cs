@@ -25,7 +25,7 @@ namespace BibliotecaSoftware.View.Listagem
         {
             var codigoEditora = Convert.ToInt32(mostrarListarDadosEditorasDataGridView.SelectedRows[0].Cells["clnCodigoEditora"].Value);
             var editora = _editoraDao.Carregar(codigoEditora);
-            var telaCadastroEditoras = new telaCadastroEditoras(editora);
+            var telaCadastroEditoras = new TelaCadastroEditoras(editora);
             telaCadastroEditoras.Show();
         }
 
