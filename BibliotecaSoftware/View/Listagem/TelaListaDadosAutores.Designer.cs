@@ -32,69 +32,23 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.pesquisaTelaListarDadosCaixatexto = new System.Windows.Forms.TextBox();
-            this.pesquisaTelaListarDadosAutoresBotao = new System.Windows.Forms.Button();
-            this.apagarTelaListarDadosBotao = new System.Windows.Forms.Button();
-            this.fecharTelaListarDadosBotao = new System.Windows.Forms.Button();
-            this.alterarTelaListarDadosBotao = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaListaAutores));
             this.mostrarListarDadosDataGridView = new System.Windows.Forms.DataGridView();
             this.lblListaDeAutores = new System.Windows.Forms.Label();
-            this.autorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.alterarTelaListarDadosBotao = new System.Windows.Forms.Button();
+            this.fecharTelaListarDadosBotao = new System.Windows.Forms.Button();
+            this.apagarTelaListarDadosBotao = new System.Windows.Forms.Button();
+            this.pesquisaTelaListarDadosAutoresBotao = new System.Windows.Forms.Button();
             this.clnCodigoAutor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataNascimentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bibliografiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.siteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.autorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.mostrarListarDadosDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.autorBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pesquisaTelaListarDadosCaixatexto
-            // 
-            this.pesquisaTelaListarDadosCaixatexto.Location = new System.Drawing.Point(27, 85);
-            this.pesquisaTelaListarDadosCaixatexto.Name = "pesquisaTelaListarDadosCaixatexto";
-            this.pesquisaTelaListarDadosCaixatexto.Size = new System.Drawing.Size(1086, 22);
-            this.pesquisaTelaListarDadosCaixatexto.TabIndex = 2;
-            // 
-            // pesquisaTelaListarDadosAutoresBotao
-            // 
-            this.pesquisaTelaListarDadosAutoresBotao.Location = new System.Drawing.Point(1137, 81);
-            this.pesquisaTelaListarDadosAutoresBotao.Name = "pesquisaTelaListarDadosAutoresBotao";
-            this.pesquisaTelaListarDadosAutoresBotao.Size = new System.Drawing.Size(96, 31);
-            this.pesquisaTelaListarDadosAutoresBotao.TabIndex = 3;
-            this.pesquisaTelaListarDadosAutoresBotao.Text = "Pesquisar";
-            this.pesquisaTelaListarDadosAutoresBotao.UseVisualStyleBackColor = true;
-            this.pesquisaTelaListarDadosAutoresBotao.Click += new System.EventHandler(this.PesquisaTelaListarDadosAutoresBotao_Click);
-            // 
-            // apagarTelaListarDadosBotao
-            // 
-            this.apagarTelaListarDadosBotao.Location = new System.Drawing.Point(1035, 633);
-            this.apagarTelaListarDadosBotao.Name = "apagarTelaListarDadosBotao";
-            this.apagarTelaListarDadosBotao.Size = new System.Drawing.Size(96, 31);
-            this.apagarTelaListarDadosBotao.TabIndex = 4;
-            this.apagarTelaListarDadosBotao.Text = "Apagar";
-            this.apagarTelaListarDadosBotao.UseVisualStyleBackColor = true;
-            this.apagarTelaListarDadosBotao.Click += new System.EventHandler(this.ApagarTelaListarDadosBotao_Click);
-            // 
-            // fecharTelaListarDadosBotao
-            // 
-            this.fecharTelaListarDadosBotao.Location = new System.Drawing.Point(1137, 633);
-            this.fecharTelaListarDadosBotao.Name = "fecharTelaListarDadosBotao";
-            this.fecharTelaListarDadosBotao.Size = new System.Drawing.Size(96, 31);
-            this.fecharTelaListarDadosBotao.TabIndex = 5;
-            this.fecharTelaListarDadosBotao.Text = "Fechar";
-            this.fecharTelaListarDadosBotao.UseVisualStyleBackColor = true;
-            this.fecharTelaListarDadosBotao.Click += new System.EventHandler(this.FecharTelaListarDadosBotao_Click);
-            // 
-            // alterarTelaListarDadosBotao
-            // 
-            this.alterarTelaListarDadosBotao.Location = new System.Drawing.Point(933, 633);
-            this.alterarTelaListarDadosBotao.Name = "alterarTelaListarDadosBotao";
-            this.alterarTelaListarDadosBotao.Size = new System.Drawing.Size(96, 31);
-            this.alterarTelaListarDadosBotao.TabIndex = 6;
-            this.alterarTelaListarDadosBotao.Text = "Alterar";
-            this.alterarTelaListarDadosBotao.UseVisualStyleBackColor = true;
-            this.alterarTelaListarDadosBotao.Click += new System.EventHandler(this.AlterarTelaListarDadosBotao_Click);
             // 
             // mostrarListarDadosDataGridView
             // 
@@ -144,7 +98,7 @@
             this.mostrarListarDadosDataGridView.RowTemplate.Height = 24;
             this.mostrarListarDadosDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.mostrarListarDadosDataGridView.Size = new System.Drawing.Size(1206, 475);
-            this.mostrarListarDadosDataGridView.TabIndex = 0;
+            this.mostrarListarDadosDataGridView.TabIndex = 3;
             // 
             // lblListaDeAutores
             // 
@@ -152,13 +106,66 @@
             this.lblListaDeAutores.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblListaDeAutores.Location = new System.Drawing.Point(22, 29);
             this.lblListaDeAutores.Name = "lblListaDeAutores";
-            this.lblListaDeAutores.Size = new System.Drawing.Size(185, 29);
-            this.lblListaDeAutores.TabIndex = 7;
-            this.lblListaDeAutores.Text = "Lista de Autores";
+            this.lblListaDeAutores.Size = new System.Drawing.Size(183, 29);
+            this.lblListaDeAutores.TabIndex = 0;
+            this.lblListaDeAutores.Text = "Lista de autores";
             // 
-            // autorBindingSource
+            // notifyIcon1
             // 
-            this.autorBindingSource.DataSource = typeof(BibliotecaSoftware.Model.Autor);
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
+            // 
+            // alterarTelaListarDadosBotao
+            // 
+            this.alterarTelaListarDadosBotao.Image = global::BibliotecaSoftware.Properties.Resources._103539_20;
+            this.alterarTelaListarDadosBotao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.alterarTelaListarDadosBotao.Location = new System.Drawing.Point(885, 633);
+            this.alterarTelaListarDadosBotao.Name = "alterarTelaListarDadosBotao";
+            this.alterarTelaListarDadosBotao.Size = new System.Drawing.Size(112, 37);
+            this.alterarTelaListarDadosBotao.TabIndex = 4;
+            this.alterarTelaListarDadosBotao.Text = "Alterar";
+            this.alterarTelaListarDadosBotao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.alterarTelaListarDadosBotao.UseVisualStyleBackColor = true;
+            this.alterarTelaListarDadosBotao.Click += new System.EventHandler(this.AlterarTelaListarDadosBotao_Click);
+            // 
+            // fecharTelaListarDadosBotao
+            // 
+            this.fecharTelaListarDadosBotao.Image = global::BibliotecaSoftware.Properties.Resources._293668_20;
+            this.fecharTelaListarDadosBotao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.fecharTelaListarDadosBotao.Location = new System.Drawing.Point(1121, 633);
+            this.fecharTelaListarDadosBotao.Name = "fecharTelaListarDadosBotao";
+            this.fecharTelaListarDadosBotao.Size = new System.Drawing.Size(112, 37);
+            this.fecharTelaListarDadosBotao.TabIndex = 6;
+            this.fecharTelaListarDadosBotao.Text = "Fechar";
+            this.fecharTelaListarDadosBotao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.fecharTelaListarDadosBotao.UseVisualStyleBackColor = true;
+            this.fecharTelaListarDadosBotao.Click += new System.EventHandler(this.FecharTelaListarDadosBotao_Click);
+            // 
+            // apagarTelaListarDadosBotao
+            // 
+            this.apagarTelaListarDadosBotao.Image = global::BibliotecaSoftware.Properties.Resources._211934_20;
+            this.apagarTelaListarDadosBotao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.apagarTelaListarDadosBotao.Location = new System.Drawing.Point(1003, 633);
+            this.apagarTelaListarDadosBotao.Name = "apagarTelaListarDadosBotao";
+            this.apagarTelaListarDadosBotao.Size = new System.Drawing.Size(112, 37);
+            this.apagarTelaListarDadosBotao.TabIndex = 5;
+            this.apagarTelaListarDadosBotao.Text = "Apagar";
+            this.apagarTelaListarDadosBotao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.apagarTelaListarDadosBotao.UseVisualStyleBackColor = true;
+            this.apagarTelaListarDadosBotao.Click += new System.EventHandler(this.ApagarTelaListarDadosBotao_Click);
+            // 
+            // pesquisaTelaListarDadosAutoresBotao
+            // 
+            this.pesquisaTelaListarDadosAutoresBotao.Image = global::BibliotecaSoftware.Properties.Resources._106236_24;
+            this.pesquisaTelaListarDadosAutoresBotao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.pesquisaTelaListarDadosAutoresBotao.Location = new System.Drawing.Point(1121, 87);
+            this.pesquisaTelaListarDadosAutoresBotao.Name = "pesquisaTelaListarDadosAutoresBotao";
+            this.pesquisaTelaListarDadosAutoresBotao.Size = new System.Drawing.Size(112, 37);
+            this.pesquisaTelaListarDadosAutoresBotao.TabIndex = 2;
+            this.pesquisaTelaListarDadosAutoresBotao.Text = "Pesquisar";
+            this.pesquisaTelaListarDadosAutoresBotao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.pesquisaTelaListarDadosAutoresBotao.UseVisualStyleBackColor = true;
+            this.pesquisaTelaListarDadosAutoresBotao.Click += new System.EventHandler(this.PesquisaTelaListarDadosAutoresBotao_Click);
             // 
             // clnCodigoAutor
             // 
@@ -204,6 +211,10 @@
             this.siteDataGridViewTextBoxColumn.Name = "siteDataGridViewTextBoxColumn";
             this.siteDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // autorBindingSource
+            // 
+            this.autorBindingSource.DataSource = typeof(BibliotecaSoftware.Model.Autor);
+            // 
             // TelaListaAutores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -214,21 +225,22 @@
             this.Controls.Add(this.fecharTelaListarDadosBotao);
             this.Controls.Add(this.apagarTelaListarDadosBotao);
             this.Controls.Add(this.pesquisaTelaListarDadosAutoresBotao);
-            this.Controls.Add(this.pesquisaTelaListarDadosCaixatexto);
             this.Controls.Add(this.mostrarListarDadosDataGridView);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "TelaListaAutores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Lista de Autores";
+            this.Text = "Lista de autores";
             ((System.ComponentModel.ISupportInitialize)(this.mostrarListarDadosDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.autorBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion
-        private System.Windows.Forms.TextBox pesquisaTelaListarDadosCaixatexto;
         private System.Windows.Forms.Button pesquisaTelaListarDadosAutoresBotao;
         private System.Windows.Forms.Button apagarTelaListarDadosBotao;
         private System.Windows.Forms.Button fecharTelaListarDadosBotao;
@@ -241,5 +253,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataNascimentoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn bibliografiaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn siteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }

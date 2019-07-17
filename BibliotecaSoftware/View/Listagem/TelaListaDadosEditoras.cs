@@ -16,23 +16,21 @@ namespace BibliotecaSoftware.View.Listagem
             _editoraDao = new EditoraDao();
         }
 
-        private void PesquisaTelaListarDadosBotao_Click(object sender, EventArgs e)
-        {
-            mostrarListarDadosEditorasDataGridView.DataSource = _editoraDao.Listar();
-        }
+        private void PesquisaTelaListarDadosBotao_Click(object sender, EventArgs e) 
+            => Carregar();
+        
 
         private void AlterarTelaListarDadosBotao_Click(object sender, EventArgs e)
         {
             var codigoEditora = Convert.ToInt32(mostrarListarDadosEditorasDataGridView.SelectedRows[0].Cells["clnCodigoEditora"].Value);
             var editora = _editoraDao.Carregar(codigoEditora);
             var telaCadastroEditoras = new TelaCadastroEditoras(editora);
-            telaCadastroEditoras.Show();
+            telaCadastroEditoras.ShowDialog();
+            Carregar();
         }
 
-        private void FecharTelaListarDadosBotao_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
+        private void FecharTelaListarDadosBotao_Click(object sender, EventArgs e) 
+            => Close();
 
         private void ApagarTelaListarDadosBotao_Click(object sender, EventArgs e)
         {
@@ -50,6 +48,14 @@ namespace BibliotecaSoftware.View.Listagem
                 MessageBox.Show("Operação realizada com sucesso!!", "Mensagem de Notificação");
                 Close();
             }
+        }
+
+        private void Carregar() 
+            => mostrarListarDadosEditorasDataGridView.DataSource = _editoraDao.Listar();
+
+        private void telaListaDadosEditoras_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

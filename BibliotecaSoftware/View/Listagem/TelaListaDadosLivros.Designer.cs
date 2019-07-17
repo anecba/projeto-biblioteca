@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaListaDadosLivros));
             this.alterarTelaListarDadosLivrosBotao = new System.Windows.Forms.Button();
             this.fecharTelaListarDadosLivrosBotao = new System.Windows.Forms.Button();
             this.apagarTelaListarDadosLivrosBotao = new System.Windows.Forms.Button();
             this.pesquisaTelaListarDadosLivrosBotao = new System.Windows.Forms.Button();
-            this.pesquisaTelaListarDadosLivrosCaixatexto = new System.Windows.Forms.TextBox();
             this.mostrarListarDadosLivrosDataGridView = new System.Windows.Forms.DataGridView();
             this.lblListaDeAutores = new System.Windows.Forms.Label();
             this.clnCodigoTitulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,50 +54,55 @@
             // 
             // alterarTelaListarDadosLivrosBotao
             // 
-            this.alterarTelaListarDadosLivrosBotao.Location = new System.Drawing.Point(1047, 710);
+            this.alterarTelaListarDadosLivrosBotao.Image = global::BibliotecaSoftware.Properties.Resources._103539_20;
+            this.alterarTelaListarDadosLivrosBotao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.alterarTelaListarDadosLivrosBotao.Location = new System.Drawing.Point(999, 701);
             this.alterarTelaListarDadosLivrosBotao.Name = "alterarTelaListarDadosLivrosBotao";
-            this.alterarTelaListarDadosLivrosBotao.Size = new System.Drawing.Size(96, 31);
-            this.alterarTelaListarDadosLivrosBotao.TabIndex = 15;
+            this.alterarTelaListarDadosLivrosBotao.Size = new System.Drawing.Size(112, 37);
+            this.alterarTelaListarDadosLivrosBotao.TabIndex = 4;
             this.alterarTelaListarDadosLivrosBotao.Text = "Alterar";
+            this.alterarTelaListarDadosLivrosBotao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.alterarTelaListarDadosLivrosBotao.UseVisualStyleBackColor = true;
             this.alterarTelaListarDadosLivrosBotao.Click += new System.EventHandler(this.AlterarTelaListarDadosLivrosBotao_Click);
             // 
             // fecharTelaListarDadosLivrosBotao
             // 
-            this.fecharTelaListarDadosLivrosBotao.Location = new System.Drawing.Point(1251, 710);
+            this.fecharTelaListarDadosLivrosBotao.Image = global::BibliotecaSoftware.Properties.Resources._293668_20;
+            this.fecharTelaListarDadosLivrosBotao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.fecharTelaListarDadosLivrosBotao.Location = new System.Drawing.Point(1235, 701);
             this.fecharTelaListarDadosLivrosBotao.Name = "fecharTelaListarDadosLivrosBotao";
-            this.fecharTelaListarDadosLivrosBotao.Size = new System.Drawing.Size(96, 31);
-            this.fecharTelaListarDadosLivrosBotao.TabIndex = 14;
+            this.fecharTelaListarDadosLivrosBotao.Size = new System.Drawing.Size(112, 37);
+            this.fecharTelaListarDadosLivrosBotao.TabIndex = 6;
             this.fecharTelaListarDadosLivrosBotao.Text = "Fechar";
+            this.fecharTelaListarDadosLivrosBotao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.fecharTelaListarDadosLivrosBotao.UseVisualStyleBackColor = true;
             this.fecharTelaListarDadosLivrosBotao.Click += new System.EventHandler(this.FecharTelaListarDadosLivrosBotao_Click);
             // 
             // apagarTelaListarDadosLivrosBotao
             // 
-            this.apagarTelaListarDadosLivrosBotao.Location = new System.Drawing.Point(1149, 710);
+            this.apagarTelaListarDadosLivrosBotao.Image = global::BibliotecaSoftware.Properties.Resources._211934_20;
+            this.apagarTelaListarDadosLivrosBotao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.apagarTelaListarDadosLivrosBotao.Location = new System.Drawing.Point(1117, 701);
             this.apagarTelaListarDadosLivrosBotao.Name = "apagarTelaListarDadosLivrosBotao";
-            this.apagarTelaListarDadosLivrosBotao.Size = new System.Drawing.Size(96, 31);
-            this.apagarTelaListarDadosLivrosBotao.TabIndex = 13;
+            this.apagarTelaListarDadosLivrosBotao.Size = new System.Drawing.Size(112, 37);
+            this.apagarTelaListarDadosLivrosBotao.TabIndex = 5;
             this.apagarTelaListarDadosLivrosBotao.Text = "Apagar";
+            this.apagarTelaListarDadosLivrosBotao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.apagarTelaListarDadosLivrosBotao.UseVisualStyleBackColor = true;
             this.apagarTelaListarDadosLivrosBotao.Click += new System.EventHandler(this.ApagarTelaListarDadosLivrosBotao_Click);
             // 
             // pesquisaTelaListarDadosLivrosBotao
             // 
-            this.pesquisaTelaListarDadosLivrosBotao.Location = new System.Drawing.Point(1233, 91);
+            this.pesquisaTelaListarDadosLivrosBotao.Image = global::BibliotecaSoftware.Properties.Resources._106236_24;
+            this.pesquisaTelaListarDadosLivrosBotao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.pesquisaTelaListarDadosLivrosBotao.Location = new System.Drawing.Point(1235, 96);
             this.pesquisaTelaListarDadosLivrosBotao.Name = "pesquisaTelaListarDadosLivrosBotao";
-            this.pesquisaTelaListarDadosLivrosBotao.Size = new System.Drawing.Size(114, 28);
-            this.pesquisaTelaListarDadosLivrosBotao.TabIndex = 12;
+            this.pesquisaTelaListarDadosLivrosBotao.Size = new System.Drawing.Size(112, 37);
+            this.pesquisaTelaListarDadosLivrosBotao.TabIndex = 2;
             this.pesquisaTelaListarDadosLivrosBotao.Text = "Pesquisar";
+            this.pesquisaTelaListarDadosLivrosBotao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.pesquisaTelaListarDadosLivrosBotao.UseVisualStyleBackColor = true;
             this.pesquisaTelaListarDadosLivrosBotao.Click += new System.EventHandler(this.PesquisaTelaListarDadosLivrosBotao_Click);
-            // 
-            // pesquisaTelaListarDadosLivrosCaixatexto
-            // 
-            this.pesquisaTelaListarDadosLivrosCaixatexto.Location = new System.Drawing.Point(29, 94);
-            this.pesquisaTelaListarDadosLivrosCaixatexto.Name = "pesquisaTelaListarDadosLivrosCaixatexto";
-            this.pesquisaTelaListarDadosLivrosCaixatexto.Size = new System.Drawing.Size(1193, 22);
-            this.pesquisaTelaListarDadosLivrosCaixatexto.TabIndex = 11;
             // 
             // mostrarListarDadosLivrosDataGridView
             // 
@@ -123,16 +128,16 @@
             this.mostrarListarDadosLivrosDataGridView.RowTemplate.Height = 24;
             this.mostrarListarDadosLivrosDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.mostrarListarDadosLivrosDataGridView.Size = new System.Drawing.Size(1318, 534);
-            this.mostrarListarDadosLivrosDataGridView.TabIndex = 10;
+            this.mostrarListarDadosLivrosDataGridView.TabIndex = 3;
             // 
             // lblListaDeAutores
             // 
             this.lblListaDeAutores.AutoSize = true;
             this.lblListaDeAutores.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblListaDeAutores.Location = new System.Drawing.Point(24, 30);
+            this.lblListaDeAutores.Location = new System.Drawing.Point(24, 33);
             this.lblListaDeAutores.Name = "lblListaDeAutores";
             this.lblListaDeAutores.Size = new System.Drawing.Size(167, 29);
-            this.lblListaDeAutores.TabIndex = 16;
+            this.lblListaDeAutores.TabIndex = 0;
             this.lblListaDeAutores.Text = "Lista de Livros";
             // 
             // clnCodigoTitulo
@@ -228,11 +233,12 @@
             this.Controls.Add(this.fecharTelaListarDadosLivrosBotao);
             this.Controls.Add(this.apagarTelaListarDadosLivrosBotao);
             this.Controls.Add(this.pesquisaTelaListarDadosLivrosBotao);
-            this.Controls.Add(this.pesquisaTelaListarDadosLivrosCaixatexto);
             this.Controls.Add(this.mostrarListarDadosLivrosDataGridView);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(1390, 811);
             this.Name = "TelaListaDadosLivros";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TelaListaDadosLivros";
+            this.Text = "Lista de Livros";
             ((System.ComponentModel.ISupportInitialize)(this.mostrarListarDadosLivrosDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaLivroBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -246,7 +252,6 @@
         private System.Windows.Forms.Button fecharTelaListarDadosLivrosBotao;
         private System.Windows.Forms.Button apagarTelaListarDadosLivrosBotao;
         private System.Windows.Forms.Button pesquisaTelaListarDadosLivrosBotao;
-        private System.Windows.Forms.TextBox pesquisaTelaListarDadosLivrosCaixatexto;
         public System.Windows.Forms.DataGridView mostrarListarDadosLivrosDataGridView;
         private System.Windows.Forms.BindingSource listaLivroBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn clnCodigoTitulo;

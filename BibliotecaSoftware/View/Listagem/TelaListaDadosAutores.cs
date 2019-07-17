@@ -15,20 +15,19 @@ namespace BibliotecaSoftware.View.ControleLivros
             _autorDao = new AutorDao();
         }
 
-        private void PesquisaTelaListarDadosAutoresBotao_Click(object sender, EventArgs e) =>
-            mostrarListarDadosDataGridView.DataSource = _autorDao.Listar();
+        private void PesquisaTelaListarDadosAutoresBotao_Click(object sender, EventArgs e) 
+            => Carregar();
 
         private void FecharTelaListarDadosBotao_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
+            => Close();
+        
         private void AlterarTelaListarDadosBotao_Click(object sender, EventArgs e)
         {
             var codigoAutor = Convert.ToInt32(mostrarListarDadosDataGridView.SelectedRows[0].Cells["clnCodigoAutor"].Value);
             var autor = _autorDao.Carregar(codigoAutor);
             var telaCadastroAutores = new telaCadastroAutores(autor);
-            telaCadastroAutores.Show();
+            telaCadastroAutores.ShowDialog();
+            Carregar();
         }
 
         private void ApagarTelaListarDadosBotao_Click(object sender, EventArgs e)
@@ -47,5 +46,8 @@ namespace BibliotecaSoftware.View.ControleLivros
                 Close();
             }
         }
+
+        private void Carregar() 
+            => mostrarListarDadosDataGridView.DataSource = _autorDao.Listar();
     }
 }

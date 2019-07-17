@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(telaCadastroAutores));
             this.cancelarCadastroAutoresBotao = new System.Windows.Forms.Button();
             this.cadastrarCadastroAutoresBotao = new System.Windows.Forms.Button();
             this.nomeCadastroAutoresCaixatexto = new System.Windows.Forms.TextBox();
@@ -43,21 +44,27 @@
             // cancelarCadastroAutoresBotao
             // 
             this.cancelarCadastroAutoresBotao.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancelarCadastroAutoresBotao.Location = new System.Drawing.Point(358, 270);
+            this.cancelarCadastroAutoresBotao.Image = global::BibliotecaSoftware.Properties.Resources._293668_20;
+            this.cancelarCadastroAutoresBotao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cancelarCadastroAutoresBotao.Location = new System.Drawing.Point(327, 274);
             this.cancelarCadastroAutoresBotao.Name = "cancelarCadastroAutoresBotao";
-            this.cancelarCadastroAutoresBotao.Size = new System.Drawing.Size(81, 31);
-            this.cancelarCadastroAutoresBotao.TabIndex = 7;
+            this.cancelarCadastroAutoresBotao.Size = new System.Drawing.Size(112, 37);
+            this.cancelarCadastroAutoresBotao.TabIndex = 9;
             this.cancelarCadastroAutoresBotao.Text = "Cancelar";
+            this.cancelarCadastroAutoresBotao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cancelarCadastroAutoresBotao.UseVisualStyleBackColor = true;
             this.cancelarCadastroAutoresBotao.Click += new System.EventHandler(this.CancelarCadastroAutoresBotao_Click);
             // 
             // cadastrarCadastroAutoresBotao
             // 
-            this.cadastrarCadastroAutoresBotao.Location = new System.Drawing.Point(271, 270);
+            this.cadastrarCadastroAutoresBotao.Image = global::BibliotecaSoftware.Properties.Resources._2639912_20;
+            this.cadastrarCadastroAutoresBotao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cadastrarCadastroAutoresBotao.Location = new System.Drawing.Point(209, 274);
             this.cadastrarCadastroAutoresBotao.Name = "cadastrarCadastroAutoresBotao";
-            this.cadastrarCadastroAutoresBotao.Size = new System.Drawing.Size(81, 31);
-            this.cadastrarCadastroAutoresBotao.TabIndex = 6;
+            this.cadastrarCadastroAutoresBotao.Size = new System.Drawing.Size(112, 37);
+            this.cadastrarCadastroAutoresBotao.TabIndex = 8;
             this.cadastrarCadastroAutoresBotao.Text = "Gravar";
+            this.cadastrarCadastroAutoresBotao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cadastrarCadastroAutoresBotao.UseVisualStyleBackColor = true;
             this.cadastrarCadastroAutoresBotao.Click += new System.EventHandler(this.CadastrarCadastroAutoresBotao_Click);
             // 
@@ -66,7 +73,7 @@
             this.nomeCadastroAutoresCaixatexto.Location = new System.Drawing.Point(22, 42);
             this.nomeCadastroAutoresCaixatexto.Name = "nomeCadastroAutoresCaixatexto";
             this.nomeCadastroAutoresCaixatexto.Size = new System.Drawing.Size(417, 22);
-            this.nomeCadastroAutoresCaixatexto.TabIndex = 5;
+            this.nomeCadastroAutoresCaixatexto.TabIndex = 1;
             // 
             // nomeCadastroAutoresEtiqueta
             // 
@@ -74,7 +81,7 @@
             this.nomeCadastroAutoresEtiqueta.Location = new System.Drawing.Point(19, 22);
             this.nomeCadastroAutoresEtiqueta.Name = "nomeCadastroAutoresEtiqueta";
             this.nomeCadastroAutoresEtiqueta.Size = new System.Drawing.Size(51, 17);
-            this.nomeCadastroAutoresEtiqueta.TabIndex = 4;
+            this.nomeCadastroAutoresEtiqueta.TabIndex = 0;
             this.nomeCadastroAutoresEtiqueta.Text = "Autor *";
             // 
             // datanascimentoCadastroAutoresEtiqueta
@@ -82,9 +89,9 @@
             this.datanascimentoCadastroAutoresEtiqueta.AutoSize = true;
             this.datanascimentoCadastroAutoresEtiqueta.Location = new System.Drawing.Point(19, 67);
             this.datanascimentoCadastroAutoresEtiqueta.Name = "datanascimentoCadastroAutoresEtiqueta";
-            this.datanascimentoCadastroAutoresEtiqueta.Size = new System.Drawing.Size(141, 17);
-            this.datanascimentoCadastroAutoresEtiqueta.TabIndex = 8;
-            this.datanascimentoCadastroAutoresEtiqueta.Text = "Data de Nascimento*";
+            this.datanascimentoCadastroAutoresEtiqueta.Size = new System.Drawing.Size(139, 17);
+            this.datanascimentoCadastroAutoresEtiqueta.TabIndex = 2;
+            this.datanascimentoCadastroAutoresEtiqueta.Text = "Data de nascimento*";
             // 
             // datanascimentoCadastroAutoresTimepicker
             // 
@@ -92,7 +99,7 @@
             this.datanascimentoCadastroAutoresTimepicker.Location = new System.Drawing.Point(22, 88);
             this.datanascimentoCadastroAutoresTimepicker.Name = "datanascimentoCadastroAutoresTimepicker";
             this.datanascimentoCadastroAutoresTimepicker.Size = new System.Drawing.Size(113, 22);
-            this.datanascimentoCadastroAutoresTimepicker.TabIndex = 9;
+            this.datanascimentoCadastroAutoresTimepicker.TabIndex = 3;
             // 
             // bibliografiaCadastroAutoresCaixatexto
             // 
@@ -100,7 +107,7 @@
             this.bibliografiaCadastroAutoresCaixatexto.Multiline = true;
             this.bibliografiaCadastroAutoresCaixatexto.Name = "bibliografiaCadastroAutoresCaixatexto";
             this.bibliografiaCadastroAutoresCaixatexto.Size = new System.Drawing.Size(417, 75);
-            this.bibliografiaCadastroAutoresCaixatexto.TabIndex = 10;
+            this.bibliografiaCadastroAutoresCaixatexto.TabIndex = 7;
             // 
             // bibliografiaCadastroAutoresEtiqueta
             // 
@@ -108,7 +115,7 @@
             this.bibliografiaCadastroAutoresEtiqueta.Location = new System.Drawing.Point(19, 158);
             this.bibliografiaCadastroAutoresEtiqueta.Name = "bibliografiaCadastroAutoresEtiqueta";
             this.bibliografiaCadastroAutoresEtiqueta.Size = new System.Drawing.Size(78, 17);
-            this.bibliografiaCadastroAutoresEtiqueta.TabIndex = 11;
+            this.bibliografiaCadastroAutoresEtiqueta.TabIndex = 6;
             this.bibliografiaCadastroAutoresEtiqueta.Text = "Bibliografia";
             // 
             // siteCadastroAutoresEtiqueta
@@ -117,7 +124,7 @@
             this.siteCadastroAutoresEtiqueta.Location = new System.Drawing.Point(19, 113);
             this.siteCadastroAutoresEtiqueta.Name = "siteCadastroAutoresEtiqueta";
             this.siteCadastroAutoresEtiqueta.Size = new System.Drawing.Size(32, 17);
-            this.siteCadastroAutoresEtiqueta.TabIndex = 12;
+            this.siteCadastroAutoresEtiqueta.TabIndex = 4;
             this.siteCadastroAutoresEtiqueta.Text = "Site";
             // 
             // siteCadastroAutoresCaixatexto
@@ -125,7 +132,7 @@
             this.siteCadastroAutoresCaixatexto.Location = new System.Drawing.Point(22, 133);
             this.siteCadastroAutoresCaixatexto.Name = "siteCadastroAutoresCaixatexto";
             this.siteCadastroAutoresCaixatexto.Size = new System.Drawing.Size(417, 22);
-            this.siteCadastroAutoresCaixatexto.TabIndex = 13;
+            this.siteCadastroAutoresCaixatexto.TabIndex = 5;
             // 
             // telaCadastroAutores
             // 
@@ -143,13 +150,15 @@
             this.Controls.Add(this.cadastrarCadastroAutoresBotao);
             this.Controls.Add(this.nomeCadastroAutoresCaixatexto);
             this.Controls.Add(this.nomeCadastroAutoresEtiqueta);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(477, 370);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(477, 370);
             this.Name = "telaCadastroAutores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastro de Autores";
+            this.Text = "Cadastro de autores";
             this.ResumeLayout(false);
             this.PerformLayout();
 

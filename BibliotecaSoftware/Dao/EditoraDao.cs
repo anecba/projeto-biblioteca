@@ -130,10 +130,11 @@ namespace BibliotecaSoftware.Dao
 
                 try
                 {
-                    var cmd = new FbCommand
+                    FbCommand cmd = new FbCommand
                     {
                         Connection = conexaoFireBird,
-                        CommandText = @"UPDATE EDITORA SET DESABILITADO = @DESABILITADO WHERE CODIGOEDITORA = @CODIGOEDITORA"
+                        CommandText = @"UPDATE EDITORA SET DESABILITADO = @DESABILITADO WHERE CODIGOEDITORA = @CODIGOEDITORA",
+                        Transaction = transacao
                     };
 
                     cmd.Parameters.Add("@CODIGOEDITORA", FbDbType.Integer).Value = editoraModel.CodigoEditora;

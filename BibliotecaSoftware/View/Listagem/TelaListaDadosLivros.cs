@@ -22,16 +22,15 @@ namespace BibliotecaSoftware.View.Listagem
         }
 
         private void PesquisaTelaListarDadosLivrosBotao_Click(object sender, EventArgs e)
-        {
-            mostrarListarDadosLivrosDataGridView.DataSource = _livroDao.Listar();
-        }
+            => Carregar();
 
         private void AlterarTelaListarDadosLivrosBotao_Click(object sender, EventArgs e)
         {
             int codigoTitulo = Convert.ToInt32(mostrarListarDadosLivrosDataGridView.SelectedRows[0].Cells["clnCodigoTitulo"].Value);
             var livro = _livroDao.Carregar(codigoTitulo);
             var frm = new TelaCadastroLivros(livro);            
-            frm.Show();
+            frm.ShowDialog();
+            Carregar();
         }
 
         private void ApagarTelaListarDadosLivrosBotao_Click(object sender, EventArgs e)
@@ -54,5 +53,9 @@ namespace BibliotecaSoftware.View.Listagem
         {
             Close();
         }
+
+        private void Carregar()
+            => mostrarListarDadosLivrosDataGridView.DataSource = _livroDao.Listar();
     }
 }
+

@@ -28,15 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(telaBibliotecaPrincipal));
             this.menuprincipalBibliotecaMenuitem = new System.Windows.Forms.MenuStrip();
             this.cadastroCadBibliotecaMenuitem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editorasCadBibliotecaMenuitem = new System.Windows.Forms.ToolStripMenuItem();
-            this.autoresCadBibliotecaMenuitem = new System.Windows.Forms.ToolStripMenuItem();
-            this.livrosCadBibliotecaMenuitem = new System.Windows.Forms.ToolStripMenuItem();
             this.controlelivrosContLivrosBibliotecaMenuitem = new System.Windows.Forms.ToolStripMenuItem();
             this.autoresContLivrosBibliotecaMenuitem = new System.Windows.Forms.ToolStripMenuItem();
             this.editorasContLivrosBibliotecaMenuitem = new System.Windows.Forms.ToolStripMenuItem();
             this.titulosContLivrosBibliotecaMenuitem = new System.Windows.Forms.ToolStripMenuItem();
+            this.autoresCadBibliotecaMenuitem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editorasCadBibliotecaMenuitem = new System.Windows.Forms.ToolStripMenuItem();
+            this.livrosCadBibliotecaMenuitem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuprincipalBibliotecaMenuitem.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,33 +56,12 @@
             // cadastroCadBibliotecaMenuitem
             // 
             this.cadastroCadBibliotecaMenuitem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.editorasCadBibliotecaMenuitem,
             this.autoresCadBibliotecaMenuitem,
+            this.editorasCadBibliotecaMenuitem,
             this.livrosCadBibliotecaMenuitem});
             this.cadastroCadBibliotecaMenuitem.Name = "cadastroCadBibliotecaMenuitem";
             this.cadastroCadBibliotecaMenuitem.Size = new System.Drawing.Size(80, 24);
             this.cadastroCadBibliotecaMenuitem.Text = "Cadastro";
-            // 
-            // editorasCadBibliotecaMenuitem
-            // 
-            this.editorasCadBibliotecaMenuitem.Name = "editorasCadBibliotecaMenuitem";
-            this.editorasCadBibliotecaMenuitem.Size = new System.Drawing.Size(138, 26);
-            this.editorasCadBibliotecaMenuitem.Text = "Editoras";
-            this.editorasCadBibliotecaMenuitem.Click += new System.EventHandler(this.EditorasCadBibliotecaMenuitem_Click);
-            // 
-            // autoresCadBibliotecaMenuitem
-            // 
-            this.autoresCadBibliotecaMenuitem.Name = "autoresCadBibliotecaMenuitem";
-            this.autoresCadBibliotecaMenuitem.Size = new System.Drawing.Size(138, 26);
-            this.autoresCadBibliotecaMenuitem.Text = "Autores";
-            this.autoresCadBibliotecaMenuitem.Click += new System.EventHandler(this.AutoresCadBibliotecaMenuitem_Click);
-            // 
-            // livrosCadBibliotecaMenuitem
-            // 
-            this.livrosCadBibliotecaMenuitem.Name = "livrosCadBibliotecaMenuitem";
-            this.livrosCadBibliotecaMenuitem.Size = new System.Drawing.Size(138, 26);
-            this.livrosCadBibliotecaMenuitem.Text = "Livros";
-            this.livrosCadBibliotecaMenuitem.Click += new System.EventHandler(this.LivrosCadBibliotecaMenuitem_Click);
             // 
             // controlelivrosContLivrosBibliotecaMenuitem
             // 
@@ -95,6 +75,7 @@
             // 
             // autoresContLivrosBibliotecaMenuitem
             // 
+            this.autoresContLivrosBibliotecaMenuitem.Image = global::BibliotecaSoftware.Properties.Resources._309035_16;
             this.autoresContLivrosBibliotecaMenuitem.Name = "autoresContLivrosBibliotecaMenuitem";
             this.autoresContLivrosBibliotecaMenuitem.Size = new System.Drawing.Size(216, 26);
             this.autoresContLivrosBibliotecaMenuitem.Text = "Autores";
@@ -102,6 +83,7 @@
             // 
             // editorasContLivrosBibliotecaMenuitem
             // 
+            this.editorasContLivrosBibliotecaMenuitem.Image = global::BibliotecaSoftware.Properties.Resources._103266_16;
             this.editorasContLivrosBibliotecaMenuitem.Name = "editorasContLivrosBibliotecaMenuitem";
             this.editorasContLivrosBibliotecaMenuitem.Size = new System.Drawing.Size(216, 26);
             this.editorasContLivrosBibliotecaMenuitem.Text = "Editoras";
@@ -109,10 +91,35 @@
             // 
             // titulosContLivrosBibliotecaMenuitem
             // 
+            this.titulosContLivrosBibliotecaMenuitem.Image = global::BibliotecaSoftware.Properties.Resources._111113_16;
             this.titulosContLivrosBibliotecaMenuitem.Name = "titulosContLivrosBibliotecaMenuitem";
             this.titulosContLivrosBibliotecaMenuitem.Size = new System.Drawing.Size(216, 26);
-            this.titulosContLivrosBibliotecaMenuitem.Text = "Títulos";
+            this.titulosContLivrosBibliotecaMenuitem.Text = "Livros";
             this.titulosContLivrosBibliotecaMenuitem.Click += new System.EventHandler(this.TitulosContLivrosBibliotecaMenuitem_Click);
+            // 
+            // autoresCadBibliotecaMenuitem
+            // 
+            this.autoresCadBibliotecaMenuitem.Image = global::BibliotecaSoftware.Properties.Resources._309035_16;
+            this.autoresCadBibliotecaMenuitem.Name = "autoresCadBibliotecaMenuitem";
+            this.autoresCadBibliotecaMenuitem.Size = new System.Drawing.Size(216, 26);
+            this.autoresCadBibliotecaMenuitem.Text = "Autores";
+            this.autoresCadBibliotecaMenuitem.Click += new System.EventHandler(this.AutoresCadBibliotecaMenuitem_Click);
+            // 
+            // editorasCadBibliotecaMenuitem
+            // 
+            this.editorasCadBibliotecaMenuitem.Image = global::BibliotecaSoftware.Properties.Resources._103266_16;
+            this.editorasCadBibliotecaMenuitem.Name = "editorasCadBibliotecaMenuitem";
+            this.editorasCadBibliotecaMenuitem.Size = new System.Drawing.Size(216, 26);
+            this.editorasCadBibliotecaMenuitem.Text = "Editoras";
+            this.editorasCadBibliotecaMenuitem.Click += new System.EventHandler(this.EditorasCadBibliotecaMenuitem_Click);
+            // 
+            // livrosCadBibliotecaMenuitem
+            // 
+            this.livrosCadBibliotecaMenuitem.Image = global::BibliotecaSoftware.Properties.Resources._111113_16;
+            this.livrosCadBibliotecaMenuitem.Name = "livrosCadBibliotecaMenuitem";
+            this.livrosCadBibliotecaMenuitem.Size = new System.Drawing.Size(216, 26);
+            this.livrosCadBibliotecaMenuitem.Text = "Livros";
+            this.livrosCadBibliotecaMenuitem.Click += new System.EventHandler(this.LivrosCadBibliotecaMenuitem_Click);
             // 
             // telaBibliotecaPrincipal
             // 
@@ -120,6 +127,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuprincipalBibliotecaMenuitem);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuprincipalBibliotecaMenuitem;
             this.Name = "telaBibliotecaPrincipal";
             this.Text = "Biblioteca";

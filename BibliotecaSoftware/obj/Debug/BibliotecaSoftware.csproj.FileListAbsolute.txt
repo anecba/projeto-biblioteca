@@ -52,7 +52,6 @@ C:\Users\aneca\source\repos\projeto-biblioteca\BibliotecaSoftware\obj\Debug\Bibl
 C:\Users\aneca\source\repos\projeto-biblioteca\BibliotecaSoftware\obj\Debug\BibliotecaSoftware.csproj.CopyComplete
 C:\Users\aneca\source\repos\projeto-biblioteca\BibliotecaSoftware\obj\Debug\BibliotecaSoftware.exe
 C:\Users\aneca\source\repos\projeto-biblioteca\BibliotecaSoftware\obj\Debug\BibliotecaSoftware.pdb
-C:\Users\aneca\source\repos\bibliotecaprojeto\BibliotecaSoftware\obj\Debug\BibliotecaSoftware.csprojAssemblyReference.cache
 C:\Users\aneca\source\repos\bibliotecaprojeto\BibliotecaSoftware\obj\Debug\BibliotecaSoftware.Properties.Resources.resources
 C:\Users\aneca\source\repos\bibliotecaprojeto\BibliotecaSoftware\obj\Debug\BibliotecaSoftware.telaBibliotecaPrincipal.resources
 C:\Users\aneca\source\repos\bibliotecaprojeto\BibliotecaSoftware\obj\Debug\BibliotecaSoftware.View.telaCadastroAutores.resources

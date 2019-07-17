@@ -32,6 +32,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>3992482-64.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Dapper, Version=1.60.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Dapper.1.60.6\lib\net451\Dapper.dll</HintPath>
@@ -134,6 +140,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="View\Biblioteca.resx">
       <DependentUpon>Biblioteca.cs</DependentUpon>
@@ -179,6 +186,19 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="3992482-64.ico" />
+    <Content Include="mainIcon.ico" />
+    <None Include="Resources\111113-16.png" />
+    <None Include="Resources\103266-16.png" />
+    <None Include="Resources\309035-16.png" />
+    <None Include="Resources\2639912-20.png" />
+    <None Include="Resources\293668-20.png" />
+    <None Include="Resources\211934-20.png" />
+    <None Include="Resources\103539-20.png" />
+    <None Include="Resources\106236-24.png" />
+    <None Include="Resources\106236-32.png" />
+    <None Include="Resources\searchIcon2.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
