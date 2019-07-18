@@ -109,6 +109,7 @@
             // tituloCadastroLivrosCaixatexto
             // 
             this.tituloCadastroLivrosCaixatexto.Location = new System.Drawing.Point(30, 92);
+            this.tituloCadastroLivrosCaixatexto.MaxLength = 250;
             this.tituloCadastroLivrosCaixatexto.Name = "tituloCadastroLivrosCaixatexto";
             this.tituloCadastroLivrosCaixatexto.Size = new System.Drawing.Size(440, 22);
             this.tituloCadastroLivrosCaixatexto.TabIndex = 5;
@@ -116,6 +117,7 @@
             // descricaoCadastroLivrosCaixatexto
             // 
             this.descricaoCadastroLivrosCaixatexto.Location = new System.Drawing.Point(30, 321);
+            this.descricaoCadastroLivrosCaixatexto.MaxLength = 250;
             this.descricaoCadastroLivrosCaixatexto.Multiline = true;
             this.descricaoCadastroLivrosCaixatexto.Name = "descricaoCadastroLivrosCaixatexto";
             this.descricaoCadastroLivrosCaixatexto.Size = new System.Drawing.Size(440, 103);
@@ -124,6 +126,7 @@
             // anoCadastroLivrosCaixatexto
             // 
             this.anoCadastroLivrosCaixatexto.Location = new System.Drawing.Point(123, 229);
+            this.anoCadastroLivrosCaixatexto.MaxLength = 4;
             this.anoCadastroLivrosCaixatexto.Name = "anoCadastroLivrosCaixatexto";
             this.anoCadastroLivrosCaixatexto.Size = new System.Drawing.Size(62, 22);
             this.anoCadastroLivrosCaixatexto.TabIndex = 15;
@@ -174,6 +177,7 @@
             // paginasCadastroLivrosCaixatexto
             // 
             this.paginasCadastroLivrosCaixatexto.Location = new System.Drawing.Point(191, 229);
+            this.paginasCadastroLivrosCaixatexto.MaxLength = 5000;
             this.paginasCadastroLivrosCaixatexto.Name = "paginasCadastroLivrosCaixatexto";
             this.paginasCadastroLivrosCaixatexto.Size = new System.Drawing.Size(87, 22);
             this.paginasCadastroLivrosCaixatexto.TabIndex = 17;
@@ -296,7 +300,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(499, 516);
+            this.ClientSize = new System.Drawing.Size(501, 501);
             this.Controls.Add(this.lblCodigoEditora);
             this.Controls.Add(this.lblCodigoTitulo);
             this.Controls.Add(this.txtCodigoEditora);

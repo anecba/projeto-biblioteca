@@ -71,6 +71,7 @@
             // nomeCadastroAutoresCaixatexto
             // 
             this.nomeCadastroAutoresCaixatexto.Location = new System.Drawing.Point(22, 42);
+            this.nomeCadastroAutoresCaixatexto.MaxLength = 45;
             this.nomeCadastroAutoresCaixatexto.Name = "nomeCadastroAutoresCaixatexto";
             this.nomeCadastroAutoresCaixatexto.Size = new System.Drawing.Size(417, 22);
             this.nomeCadastroAutoresCaixatexto.TabIndex = 1;
@@ -104,6 +105,7 @@
             // bibliografiaCadastroAutoresCaixatexto
             // 
             this.bibliografiaCadastroAutoresCaixatexto.Location = new System.Drawing.Point(22, 178);
+            this.bibliografiaCadastroAutoresCaixatexto.MaxLength = 200;
             this.bibliografiaCadastroAutoresCaixatexto.Multiline = true;
             this.bibliografiaCadastroAutoresCaixatexto.Name = "bibliografiaCadastroAutoresCaixatexto";
             this.bibliografiaCadastroAutoresCaixatexto.Size = new System.Drawing.Size(417, 75);
@@ -130,6 +132,7 @@
             // siteCadastroAutoresCaixatexto
             // 
             this.siteCadastroAutoresCaixatexto.Location = new System.Drawing.Point(22, 133);
+            this.siteCadastroAutoresCaixatexto.MaxLength = 45;
             this.siteCadastroAutoresCaixatexto.Name = "siteCadastroAutoresCaixatexto";
             this.siteCadastroAutoresCaixatexto.Size = new System.Drawing.Size(417, 22);
             this.siteCadastroAutoresCaixatexto.TabIndex = 5;

@@ -56,7 +56,7 @@
             // 
             this.alterarTelaListarDadosLivrosBotao.Image = global::BibliotecaSoftware.Properties.Resources._103539_20;
             this.alterarTelaListarDadosLivrosBotao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.alterarTelaListarDadosLivrosBotao.Location = new System.Drawing.Point(999, 701);
+            this.alterarTelaListarDadosLivrosBotao.Location = new System.Drawing.Point(997, 683);
             this.alterarTelaListarDadosLivrosBotao.Name = "alterarTelaListarDadosLivrosBotao";
             this.alterarTelaListarDadosLivrosBotao.Size = new System.Drawing.Size(112, 37);
             this.alterarTelaListarDadosLivrosBotao.TabIndex = 4;
@@ -69,7 +69,7 @@
             // 
             this.fecharTelaListarDadosLivrosBotao.Image = global::BibliotecaSoftware.Properties.Resources._293668_20;
             this.fecharTelaListarDadosLivrosBotao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.fecharTelaListarDadosLivrosBotao.Location = new System.Drawing.Point(1235, 701);
+            this.fecharTelaListarDadosLivrosBotao.Location = new System.Drawing.Point(1233, 683);
             this.fecharTelaListarDadosLivrosBotao.Name = "fecharTelaListarDadosLivrosBotao";
             this.fecharTelaListarDadosLivrosBotao.Size = new System.Drawing.Size(112, 37);
             this.fecharTelaListarDadosLivrosBotao.TabIndex = 6;
@@ -82,7 +82,7 @@
             // 
             this.apagarTelaListarDadosLivrosBotao.Image = global::BibliotecaSoftware.Properties.Resources._211934_20;
             this.apagarTelaListarDadosLivrosBotao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.apagarTelaListarDadosLivrosBotao.Location = new System.Drawing.Point(1117, 701);
+            this.apagarTelaListarDadosLivrosBotao.Location = new System.Drawing.Point(1115, 683);
             this.apagarTelaListarDadosLivrosBotao.Name = "apagarTelaListarDadosLivrosBotao";
             this.apagarTelaListarDadosLivrosBotao.Size = new System.Drawing.Size(112, 37);
             this.apagarTelaListarDadosLivrosBotao.TabIndex = 5;
@@ -93,9 +93,9 @@
             // 
             // pesquisaTelaListarDadosLivrosBotao
             // 
-            this.pesquisaTelaListarDadosLivrosBotao.Image = global::BibliotecaSoftware.Properties.Resources._106236_24;
+            this.pesquisaTelaListarDadosLivrosBotao.Image = global::BibliotecaSoftware.Properties.Resources._126577_20;
             this.pesquisaTelaListarDadosLivrosBotao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.pesquisaTelaListarDadosLivrosBotao.Location = new System.Drawing.Point(1235, 96);
+            this.pesquisaTelaListarDadosLivrosBotao.Location = new System.Drawing.Point(1233, 78);
             this.pesquisaTelaListarDadosLivrosBotao.Name = "pesquisaTelaListarDadosLivrosBotao";
             this.pesquisaTelaListarDadosLivrosBotao.Size = new System.Drawing.Size(112, 37);
             this.pesquisaTelaListarDadosLivrosBotao.TabIndex = 2;
@@ -123,7 +123,7 @@
             this.nomeEditoraDataGridViewTextBoxColumn,
             this.descricaoDataGridViewTextBoxColumn});
             this.mostrarListarDadosLivrosDataGridView.DataSource = this.listaLivroBindingSource;
-            this.mostrarListarDadosLivrosDataGridView.Location = new System.Drawing.Point(29, 149);
+            this.mostrarListarDadosLivrosDataGridView.Location = new System.Drawing.Point(27, 131);
             this.mostrarListarDadosLivrosDataGridView.Name = "mostrarListarDadosLivrosDataGridView";
             this.mostrarListarDadosLivrosDataGridView.RowTemplate.Height = 24;
             this.mostrarListarDadosLivrosDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -227,7 +227,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1372, 764);
+            this.ClientSize = new System.Drawing.Size(1372, 743);
             this.Controls.Add(this.lblListaDeAutores);
             this.Controls.Add(this.alterarTelaListarDadosLivrosBotao);
             this.Controls.Add(this.fecharTelaListarDadosLivrosBotao);
@@ -235,7 +235,6 @@
             this.Controls.Add(this.pesquisaTelaListarDadosLivrosBotao);
             this.Controls.Add(this.mostrarListarDadosLivrosDataGridView);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(1390, 811);
             this.Name = "TelaListaDadosLivros";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista de Livros";

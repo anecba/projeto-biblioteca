@@ -82,7 +82,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.mostrarListarDadosDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.mostrarListarDadosDataGridView.EnableHeadersVisualStyles = false;
-            this.mostrarListarDadosDataGridView.Location = new System.Drawing.Point(27, 143);
+            this.mostrarListarDadosDataGridView.Location = new System.Drawing.Point(22, 119);
             this.mostrarListarDadosDataGridView.MultiSelect = false;
             this.mostrarListarDadosDataGridView.Name = "mostrarListarDadosDataGridView";
             this.mostrarListarDadosDataGridView.ReadOnly = true;
@@ -119,7 +119,7 @@
             // 
             this.alterarTelaListarDadosBotao.Image = global::BibliotecaSoftware.Properties.Resources._103539_20;
             this.alterarTelaListarDadosBotao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.alterarTelaListarDadosBotao.Location = new System.Drawing.Point(885, 633);
+            this.alterarTelaListarDadosBotao.Location = new System.Drawing.Point(880, 609);
             this.alterarTelaListarDadosBotao.Name = "alterarTelaListarDadosBotao";
             this.alterarTelaListarDadosBotao.Size = new System.Drawing.Size(112, 37);
             this.alterarTelaListarDadosBotao.TabIndex = 4;
@@ -132,7 +132,7 @@
             // 
             this.fecharTelaListarDadosBotao.Image = global::BibliotecaSoftware.Properties.Resources._293668_20;
             this.fecharTelaListarDadosBotao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.fecharTelaListarDadosBotao.Location = new System.Drawing.Point(1121, 633);
+            this.fecharTelaListarDadosBotao.Location = new System.Drawing.Point(1116, 609);
             this.fecharTelaListarDadosBotao.Name = "fecharTelaListarDadosBotao";
             this.fecharTelaListarDadosBotao.Size = new System.Drawing.Size(112, 37);
             this.fecharTelaListarDadosBotao.TabIndex = 6;
@@ -145,7 +145,7 @@
             // 
             this.apagarTelaListarDadosBotao.Image = global::BibliotecaSoftware.Properties.Resources._211934_20;
             this.apagarTelaListarDadosBotao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.apagarTelaListarDadosBotao.Location = new System.Drawing.Point(1003, 633);
+            this.apagarTelaListarDadosBotao.Location = new System.Drawing.Point(998, 609);
             this.apagarTelaListarDadosBotao.Name = "apagarTelaListarDadosBotao";
             this.apagarTelaListarDadosBotao.Size = new System.Drawing.Size(112, 37);
             this.apagarTelaListarDadosBotao.TabIndex = 5;
@@ -156,9 +156,9 @@
             // 
             // pesquisaTelaListarDadosAutoresBotao
             // 
-            this.pesquisaTelaListarDadosAutoresBotao.Image = global::BibliotecaSoftware.Properties.Resources._106236_24;
+            this.pesquisaTelaListarDadosAutoresBotao.Image = global::BibliotecaSoftware.Properties.Resources._126577_20;
             this.pesquisaTelaListarDadosAutoresBotao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.pesquisaTelaListarDadosAutoresBotao.Location = new System.Drawing.Point(1121, 87);
+            this.pesquisaTelaListarDadosAutoresBotao.Location = new System.Drawing.Point(1116, 63);
             this.pesquisaTelaListarDadosAutoresBotao.Name = "pesquisaTelaListarDadosAutoresBotao";
             this.pesquisaTelaListarDadosAutoresBotao.Size = new System.Drawing.Size(112, 37);
             this.pesquisaTelaListarDadosAutoresBotao.TabIndex = 2;
@@ -219,7 +219,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1260, 688);
+            this.ClientSize = new System.Drawing.Size(1252, 666);
             this.Controls.Add(this.lblListaDeAutores);
             this.Controls.Add(this.alterarTelaListarDadosBotao);
             this.Controls.Add(this.fecharTelaListarDadosBotao);

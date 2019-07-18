@@ -113,6 +113,16 @@ namespace BibliotecaSoftware.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _126577_20 {
+            get {
+                object obj = ResourceManager.GetObject("126577-20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _211934_20 {
             get {
                 object obj = ResourceManager.GetObject("211934-20", resourceCulture);

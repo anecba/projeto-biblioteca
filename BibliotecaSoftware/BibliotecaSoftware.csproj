@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>3992482-64.ico</ApplicationIcon>
+    <ApplicationIcon>mainIcon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <NoWin32Manifest>true</NoWin32Manifest>
@@ -189,6 +189,7 @@
   <ItemGroup>
     <Content Include="3992482-64.ico" />
     <Content Include="mainIcon.ico" />
+    <None Include="Resources\126577-20.png" />
     <None Include="Resources\111113-16.png" />
     <None Include="Resources\103266-16.png" />
     <None Include="Resources\309035-16.png" />

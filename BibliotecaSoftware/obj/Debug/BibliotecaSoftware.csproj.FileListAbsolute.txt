@@ -78,3 +78,4 @@ C:\Users\aneca\source\repos\bibliotecaprojeto\BibliotecaSoftware\bin\Debug\Entit
 C:\Users\aneca\source\repos\bibliotecaprojeto\BibliotecaSoftware\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\aneca\source\repos\bibliotecaprojeto\BibliotecaSoftware\bin\Debug\FirebirdSql.Data.FirebirdClient.pdb
 C:\Users\aneca\source\repos\bibliotecaprojeto\BibliotecaSoftware\obj\Debug\BibliotecaSoftware.csproj.CopyComplete
+C:\Users\aneca\source\repos\bibliotecaprojeto\BibliotecaSoftware\obj\Debug\BibliotecaSoftware.csprojAssemblyReference.cache
