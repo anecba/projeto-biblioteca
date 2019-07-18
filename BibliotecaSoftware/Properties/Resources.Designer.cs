@@ -63,6 +63,26 @@ namespace BibliotecaSoftware.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _103172_24 {
+            get {
+                object obj = ResourceManager.GetObject("103172-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _103172_32 {
+            get {
+                object obj = ResourceManager.GetObject("103172-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _103266_16 {
             get {
                 object obj = ResourceManager.GetObject("103266-16", resourceCulture);
@@ -123,6 +143,26 @@ namespace BibliotecaSoftware.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _172525_32 {
+            get {
+                object obj = ResourceManager.GetObject("172525-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _183234_128 {
+            get {
+                object obj = ResourceManager.GetObject("183234-128", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _211934_20 {
             get {
                 object obj = ResourceManager.GetObject("211934-20", resourceCulture);
@@ -153,9 +193,29 @@ namespace BibliotecaSoftware.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _298815_32 {
+            get {
+                object obj = ResourceManager.GetObject("298815-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _309035_16 {
             get {
                 object obj = ResourceManager.GetObject("309035-16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mainIcon {
+            get {
+                object obj = ResourceManager.GetObject("mainIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

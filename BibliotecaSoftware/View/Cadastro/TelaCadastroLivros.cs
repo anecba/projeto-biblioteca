@@ -31,8 +31,6 @@ namespace BibliotecaSoftware.View
         {
             InitializeComponent();
             _livro = new Livro();
-            //_tituloDao = new TituloDao();
-            //_edicaoDao = new EdicaoDao();
             _autorDao = new AutorDao();
             _editoraDao = new EditoraDao();
             _idiomaDao = new IdiomaDao();

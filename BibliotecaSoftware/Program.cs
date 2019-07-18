@@ -10,7 +10,7 @@ namespace BibliotecaSoftware
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new telaBibliotecaPrincipal());
+            Application.Run(new TelaBibliotecaPrincipal());
         }
     }
 }

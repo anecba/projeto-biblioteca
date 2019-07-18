@@ -133,14 +133,22 @@ namespace BibliotecaSoftware.Dao
                     FbCommand cmd = new FbCommand
                     {
                         Connection = conexaoFireBird,
-                        CommandText = @"UPDATE EDITORA SET DESABILITADO = @DESABILITADO WHERE CODIGOEDITORA = @CODIGOEDITORA",
                         Transaction = transacao
                     };
-
+                    cmd.CommandText = @"select COUNT(codigoeditora) from TITULO WHERE CODIGOEDITORA = @CODIGOEDITORA";
                     cmd.Parameters.Add("@CODIGOEDITORA", FbDbType.Integer).Value = editoraModel.CodigoEditora;
+
+                    var contador = Convert.ToInt32(cmd.ExecuteScalar());
+
+                    if (contador > 0)
+                    {
+                        MessageBox.Show("Esta editora não pode ser desabilitada por possuir livros cadastrados.", "Mensagem de Notificação");
+                        return deuCerto;
+                    }
+
+                    cmd.CommandText = @"UPDATE EDITORA SET DESABILITADO = @DESABILITADO WHERE CODIGOEDITORA = @CODIGOEDITORA";
                     cmd.Parameters.Add("@DESABILITADO", FbDbType.Char).Value = editoraModel.Desabilitado.ToChar();
                     cmd.ExecuteNonQuery();
-
                     deuCerto = true;
                 }
                 catch (Exception e)

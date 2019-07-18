@@ -145,11 +145,20 @@ namespace BibliotecaSoftware.Dao
                     FbCommand cmd = new FbCommand
                     {
                         Connection = conexaoFireBird,
-                        CommandText = @"UPDATE AUTOR SET DESABILITADO = @DESABILITADO WHERE CODIGOAUTOR = @CODIGOAUTOR",
                         Transaction = transacao
                     };
-
+                    cmd.CommandText = @"select COUNT(codigoautor) from TITULO_AUTOR WHERE CODIGOAUTOR = @CODIGOAUTOR";
                     cmd.Parameters.Add("@CODIGOAUTOR", FbDbType.Integer).Value = autorModel.CodigoAutor;
+
+                    var contador = Convert.ToInt32(cmd.ExecuteScalar());
+
+                    if (contador > 0)
+                    {
+                        MessageBox.Show("Este autor não pode ser desabilitado por possuir livros cadastrados.", "Mensagem de Notificação");
+                        return deuCerto;
+                    }
+
+                    cmd.CommandText = @"UPDATE AUTOR SET DESABILITADO = @DESABILITADO WHERE CODIGOAUTOR = @CODIGOAUTOR";
                     cmd.Parameters.Add("@DESABILITADO", FbDbType.Char).Value = autorModel.Desabilitado.ToChar();
                     cmd.ExecuteNonQuery();
                     deuCerto = true;

@@ -6,9 +6,9 @@ using BibliotecaSoftware.View.Listagem;
 
 namespace BibliotecaSoftware
 {
-    public partial class telaBibliotecaPrincipal : Form
+    public partial class TelaBibliotecaPrincipal : Form
     {
-        public telaBibliotecaPrincipal()
+        public TelaBibliotecaPrincipal()
         {
             InitializeComponent();
         }
