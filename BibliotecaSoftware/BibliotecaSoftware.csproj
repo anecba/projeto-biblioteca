@@ -186,9 +186,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="1055108-64.ico" />
-    <Content Include="3992482-64.ico" />
-    <Content Include="kisspng-book-icon-blue-books-5aa9773210f188.6897663515210555380694_689766.ico" />
-    <Content Include="mainIcon.ico" />
     <None Include="Resources\mainIcon.png" />
     <None Include="Resources\183234-128.png" />
     <None Include="Resources\103172-24.png" />

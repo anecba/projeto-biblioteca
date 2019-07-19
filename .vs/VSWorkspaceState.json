@@ -1,10 +1,7 @@
 {
   "ExpandedNodes": [
     "",
-    "\\BibliotecaSoftware",
-    "\\BibliotecaSoftware\\Controller",
-    "\\BibliotecaSoftware\\Dao",
-    "\\BibliotecaSoftware\\Model"
+    "\\BibliotecaSoftware"
   ],
   "SelectedNode": "\\BibliotecaSoftware.sln",
   "PreviewInSolutionExplorer": false
