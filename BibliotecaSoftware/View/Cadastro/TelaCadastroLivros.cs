@@ -2,23 +2,21 @@
 using BibliotecaSoftware.Model;
 using System;
 using System.Windows.Forms;
+using BibliotecaSoftware.Controller;
 
 namespace BibliotecaSoftware.View
 {
     public partial class TelaCadastroLivros : Form
     {
         public Livro _livro;
-        //public TituloDao _tituloDao;
-        //public EdicaoDao _edicaoDao;
         public EditoraDao _editoraDao;
         public AutorDao _autorDao;
         public IdiomaDao _idiomaDao;
         public TituloAutorDao _tituloAutorDao;
+        public TituloAutorController _tituloAutorController;
 
         public TelaCadastroLivros()
-        {
-            ConstrutorPadrao();            
-        }
+            => ConstrutorPadrao();
 
         public TelaCadastroLivros(Livro livro)
         {
@@ -35,6 +33,7 @@ namespace BibliotecaSoftware.View
             _editoraDao = new EditoraDao();
             _idiomaDao = new IdiomaDao();
             _tituloAutorDao = new TituloAutorDao();
+            _tituloAutorController = new TituloAutorController();
             
             autorCadastroLivrosCombobox.DataSource = _autorDao.Listar();
             editoraCadastroLivrosCombobox.DataSource = _editoraDao.Listar();
@@ -46,6 +45,7 @@ namespace BibliotecaSoftware.View
         {
             tituloCadastroLivrosCaixatexto.Text = _livro.Titulo.NomeTitulo;
             idiomaCadastroLivrosCombobox.SelectedValue = _livro.Idioma.CodigoIdioma;
+            paisCadastroLivrosCombobox.SelectedValue = _livro.Idioma.CodigoIdioma;
             edicaoCadastroLivrosCaixatexto.Text = _livro.Edicao.NumeroEdicao;
             anoCadastroLivrosCaixatexto.Text = _livro.Edicao.Ano.ToString();
             paginasCadastroLivrosCaixatexto.Text = _livro.Edicao.QtdePagina.ToString();
@@ -63,32 +63,14 @@ namespace BibliotecaSoftware.View
 
             AtribuirViewParaModel();
 
-            if (_livro.Titulo.CodigoTitulo == 0)
-            {
-                if (_tituloAutorDao.Inserir(_livro.TituloAutor, _livro.Titulo, _livro.Edicao))
-                {
-                    MessageBox.Show("Gravado com sucesso!", "Mensagem de Confirmação");
-                    Close();
-                }
-            }
-
-            else
-            {
-                if (_tituloAutorDao.Alterar(_livro.Titulo, _livro.Edicao))
-                {
-                    MessageBox.Show("Gravado com sucesso!", "Mensagem de Confirmação");
-                    Close();
-                }
-            }
+            if (_tituloAutorController.GravarCadastroTitulo(_livro))
+                Close();
         }
 
         private void AtribuirViewParaModel()
         {
             if (!string.IsNullOrWhiteSpace(txtCodigoTitulo.Text))
                 _livro.Titulo.CodigoTitulo = int.Parse(txtCodigoTitulo.Text);
-
-            if (!string.IsNullOrWhiteSpace(txtCodigoEditora.Text))
-                _livro.Edicao.CodigoEdicao = int.Parse(txtCodigoEditora.Text);
 
             _livro.Titulo.NomeTitulo = tituloCadastroLivrosCaixatexto.Text;
             _livro.Edicao.CodigoIdioma = Convert.ToInt32(idiomaCadastroLivrosCombobox.SelectedValue);
@@ -102,9 +84,7 @@ namespace BibliotecaSoftware.View
         }
 
         private void CancelarCadastroLivrosBotao_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+            => Close();
 
         private bool Validacao()
         {
