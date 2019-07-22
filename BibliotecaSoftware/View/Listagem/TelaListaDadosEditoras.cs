@@ -1,4 +1,5 @@
-﻿using BibliotecaSoftware.Dao;
+﻿using BibliotecaSoftware.Controller;
+using BibliotecaSoftware.Dao;
 using BibliotecaSoftware.Model;
 using System;
 
@@ -9,21 +10,22 @@ namespace BibliotecaSoftware.View.Listagem
     public partial class telaListaDadosEditoras : Form
     {
         private EditoraDao _editoraDao;
+        private ListaEditoraController _listaEditoraController;
 
         public telaListaDadosEditoras()
         {
             InitializeComponent();
             _editoraDao = new EditoraDao();
+            _listaEditoraController = new ListaEditoraController();
         }
 
         private void PesquisaTelaListarDadosBotao_Click(object sender, EventArgs e) 
             => Carregar();
-        
 
         private void AlterarTelaListarDadosBotao_Click(object sender, EventArgs e)
         {
             var codigoEditora = Convert.ToInt32(mostrarListarDadosEditorasDataGridView.SelectedRows[0].Cells["clnCodigoEditora"].Value);
-            var editora = _editoraDao.Carregar(codigoEditora);
+            var editora = _listaEditoraController.AlterarListaEditora(codigoEditora);
             var telaCadastroEditoras = new TelaCadastroEditoras(editora);
             telaCadastroEditoras.ShowDialog();
             Carregar();

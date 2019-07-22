@@ -72,6 +72,7 @@
     <Compile Include="Controller\EditoraController.cs" />
     <Compile Include="Controller\ListaAutorController.cs" />
     <Compile Include="Controller\TituloAutorController.cs" />
+    <Compile Include="Controller\ListaEditoraController.cs" />
     <Compile Include="Conversoes.cs" />
     <Compile Include="Dao\AutorDao.cs" />
     <Compile Include="Dao\EdicaoDao.cs" />

@@ -1,5 +1,6 @@
 ﻿using BibliotecaSoftware.Dao;
 using BibliotecaSoftware.Model;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace BibliotecaSoftware.Controller
@@ -34,5 +35,8 @@ namespace BibliotecaSoftware.Controller
             }
             return false;
         }
+
+        public List<Autor> Carregar()
+            =>_autorDao.Listar();
     }
 }
