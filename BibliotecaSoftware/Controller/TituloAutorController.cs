@@ -7,6 +7,7 @@ namespace BibliotecaSoftware.Controller
     public class TituloAutorController
     {
         private readonly TituloAutorDao _tituloAutorDao;
+        //private readonly TituloAutor _tituloAutorModel;
 
         public TituloAutorController()
         {
@@ -27,7 +28,7 @@ namespace BibliotecaSoftware.Controller
 
             else
             {
-                if (_tituloAutorDao.Alterar(livroModel.Titulo, livroModel.Edicao))
+                if (_tituloAutorDao.Alterar(livroModel.Titulo, livroModel.Edicao, livroModel.TituloAutor))
                 {
                     MessageBox.Show("Gravado com sucesso!", "Mensagem de Confirmação");
                     return true;
