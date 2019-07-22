@@ -5,7 +5,13 @@ namespace BibliotecaSoftware.Controller
 {
     public class AutorController : AutorDao
     {
-        public bool InserirAutor(Autor autorModel) => new AutorDao().Inserir(autorModel);
-            
+        private readonly AutorDao _autorDao;
+
+        public AutorController()
+        {
+            _autorDao = new AutorDao();
+        }
+        public bool GravarCadastroAutor(Autor autorModel)
+           => _autorDao.Inserir(autorModel);
     }
 }

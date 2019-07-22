@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using BibliotecaSoftware.Dao;
 using BibliotecaSoftware.Model;
+using BibliotecaSoftware.Controller;
 
 namespace BibliotecaSoftware.View
 {
@@ -9,11 +10,10 @@ namespace BibliotecaSoftware.View
     {
         private Autor _autorModel;
         private AutorDao _autorDao;
+        private AutorController _autorController;
 
         public telaCadastroAutores()
-        {
-            ConstrutorPadrao();
-        }
+            => ConstrutorPadrao();
 
         public telaCadastroAutores(Autor autorModel)
         {
@@ -27,6 +27,7 @@ namespace BibliotecaSoftware.View
             InitializeComponent();
             _autorModel = new Autor();
             _autorDao = new AutorDao();
+            _autorController = new AutorController();
         }
 
         private void AtribuirModelParaView()
@@ -44,7 +45,7 @@ namespace BibliotecaSoftware.View
             _autorModel.Bibliografia = bibliografiaCadastroAutoresCaixatexto.Text;
             _autorModel.Site = siteCadastroAutoresCaixatexto.Text;
 
-            if (_autorDao.Inserir(_autorModel))
+            if (_autorController.GravarCadastroAutor(_autorModel))
             {
                 MessageBox.Show("Gravado com sucesso!", "Mensagem de Confirmação");
                 Close();
@@ -52,9 +53,7 @@ namespace BibliotecaSoftware.View
         }
 
         private void CancelarCadastroAutoresBotao_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+            => Close();
 
         private bool Validacao()
         {
