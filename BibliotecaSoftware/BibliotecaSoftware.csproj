@@ -69,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\AutorController.cs" />
+    <Compile Include="Controller\EditoraController.cs" />
     <Compile Include="Conversoes.cs" />
     <Compile Include="Dao\AutorDao.cs" />
     <Compile Include="Dao\EdicaoDao.cs" />

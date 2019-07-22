@@ -1,4 +1,5 @@
-﻿using BibliotecaSoftware.Dao;
+﻿using BibliotecaSoftware.Controller;
+using BibliotecaSoftware.Dao;
 using BibliotecaSoftware.Model;
 using System;
 using System.Windows.Forms;
@@ -8,12 +9,10 @@ namespace BibliotecaSoftware.View
     public partial class TelaCadastroEditoras : Form
     {
         private Editora _editoraModel;
-        private EditoraDao _editoraDao;
+        private EditoraController _editoraController;
 
         public TelaCadastroEditoras()
-        {
-            ConstrutorPadrao();
-        }
+            => ConstrutorPadrao();
         
         public TelaCadastroEditoras(Editora editoraModel)
         {
@@ -22,17 +21,15 @@ namespace BibliotecaSoftware.View
             AtribuirModelParaView();
         }
 
-        private void AtribuirModelParaView()
-        {
-            nomeCadastroEditorasCaixatexto.Text = _editoraModel.Nome;
-        }
-
         private void ConstrutorPadrao()
         {
             InitializeComponent();
             _editoraModel = new Editora();
-            _editoraDao = new EditoraDao();
+            _editoraController = new EditoraController();
         }
+
+        private void AtribuirModelParaView()
+            => nomeCadastroEditorasCaixatexto.Text = _editoraModel.Nome;
 
         private void CadastrarCadastroEditorasBotao_Click(object sender, EventArgs e)
         {
@@ -44,7 +41,7 @@ namespace BibliotecaSoftware.View
 
             _editoraModel.Nome = nomeCadastroEditorasCaixatexto.Text;
 
-            if (_editoraDao.Inserir(_editoraModel))
+            if (_editoraController.GravarCadastroEditora(_editoraModel))
             {
                 MessageBox.Show("Gravado com sucesso!", "Mensagem de Confirmação");
                 Close();
@@ -52,8 +49,6 @@ namespace BibliotecaSoftware.View
         }
 
         private void CancelarCadastroEditorasBotao_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+            => Close();
     }
 }
