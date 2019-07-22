@@ -33,6 +33,7 @@ namespace BibliotecaSoftware.View.ControleLivros
         {
             if (mostrarListarDadosDataGridView.SelectedRows.Count <= 0) return;
             var codigoAutor = Convert.ToInt32(mostrarListarDadosDataGridView.SelectedRows[0].Cells["clnCodigoAutor"].Value);
+
             if (_listaAutorController.ApagarListaAutor(codigoAutor))
                 Close();
         }

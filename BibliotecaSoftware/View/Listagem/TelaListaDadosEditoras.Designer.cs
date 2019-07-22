@@ -158,7 +158,6 @@
             this.Name = "telaListaDadosEditoras";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista de editoras";
-            this.Load += new System.EventHandler(this.telaListaDadosEditoras_Load);
             ((System.ComponentModel.ISupportInitialize)(this.mostrarListarDadosEditorasDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.editoraBindingSource)).EndInit();
             this.ResumeLayout(false);

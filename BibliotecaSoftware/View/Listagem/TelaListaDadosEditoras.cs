@@ -1,6 +1,4 @@
 ﻿using BibliotecaSoftware.Controller;
-using BibliotecaSoftware.Dao;
-using BibliotecaSoftware.Model;
 using System;
 
 using System.Windows.Forms;
@@ -9,13 +7,11 @@ namespace BibliotecaSoftware.View.Listagem
 {
     public partial class telaListaDadosEditoras : Form
     {
-        private EditoraDao _editoraDao;
         private ListaEditoraController _listaEditoraController;
 
         public telaListaDadosEditoras()
         {
             InitializeComponent();
-            _editoraDao = new EditoraDao();
             _listaEditoraController = new ListaEditoraController();
         }
 
@@ -38,26 +34,12 @@ namespace BibliotecaSoftware.View.Listagem
         {
             if (mostrarListarDadosEditorasDataGridView.SelectedRows.Count <= 0) return;
             var codigoEditora = Convert.ToInt32(mostrarListarDadosEditorasDataGridView.SelectedRows[0].Cells["clnCodigoEditora"].Value);
-            Editora editora = new Editora
-            {
-                CodigoEditora = codigoEditora,
-                Desabilitado = true
-            };
-            _editoraDao.Desabilitar(editora);
 
-            if (_editoraDao.Desabilitar(editora))
-            {
-                MessageBox.Show("Operação realizada com sucesso!!", "Mensagem de Notificação");
+            if (_listaEditoraController.ApagarListaEditora(codigoEditora))
                 Close();
-            }
         }
 
-        private void Carregar() 
-            => mostrarListarDadosEditorasDataGridView.DataSource = _editoraDao.Listar();
-
-        private void telaListaDadosEditoras_Load(object sender, EventArgs e)
-        {
-
-        }
+        private void Carregar()
+            => mostrarListarDadosEditorasDataGridView.DataSource = _listaEditoraController.Carregar();
     }
 }
