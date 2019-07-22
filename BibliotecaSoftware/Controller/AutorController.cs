@@ -1,5 +1,6 @@
 ﻿using BibliotecaSoftware.Dao;
 using BibliotecaSoftware.Model;
+using System.Collections.Generic;
 
 namespace BibliotecaSoftware.Controller
 {
@@ -13,5 +14,8 @@ namespace BibliotecaSoftware.Controller
         }
         public bool GravarCadastroAutor(Autor autorModel)
            => _autorDao.Inserir(autorModel);
+
+        public List<Autor> ComboboxListar()
+            => _autorDao.Listar();
     }
 }

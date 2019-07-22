@@ -70,7 +70,9 @@
   <ItemGroup>
     <Compile Include="Controller\AutorController.cs" />
     <Compile Include="Controller\EditoraController.cs" />
+    <Compile Include="Controller\IdiomaController.cs" />
     <Compile Include="Controller\ListaAutorController.cs" />
+    <Compile Include="Controller\ListaLivroController.cs" />
     <Compile Include="Controller\TituloAutorController.cs" />
     <Compile Include="Controller\ListaEditoraController.cs" />
     <Compile Include="Conversoes.cs" />

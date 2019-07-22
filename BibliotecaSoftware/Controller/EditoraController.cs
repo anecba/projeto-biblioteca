@@ -1,5 +1,6 @@
 ﻿using BibliotecaSoftware.Dao;
 using BibliotecaSoftware.Model;
+using System.Collections.Generic;
 
 namespace BibliotecaSoftware.Controller
 {
@@ -12,5 +13,8 @@ namespace BibliotecaSoftware.Controller
 
         public bool GravarCadastroEditora(Editora editoraModel) =>
             _editoraDao.Inserir(editoraModel);
+
+        public List<Editora> ComboboxListar()
+            => _editoraDao.Listar();
     }
 }

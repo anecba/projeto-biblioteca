@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using BibliotecaSoftware.Dao;
 using BibliotecaSoftware.Model;
 using BibliotecaSoftware.Controller;
 
@@ -9,7 +8,6 @@ namespace BibliotecaSoftware.View
     public partial class telaCadastroAutores : Form
     {
         private Autor _autorModel;
-        private AutorDao _autorDao;
         private AutorController _autorController;
 
         public telaCadastroAutores()
@@ -26,7 +24,6 @@ namespace BibliotecaSoftware.View
         {
             InitializeComponent();
             _autorModel = new Autor();
-            _autorDao = new AutorDao();
             _autorController = new AutorController();
         }
 

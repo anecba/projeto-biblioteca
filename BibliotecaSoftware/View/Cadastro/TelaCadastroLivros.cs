@@ -1,5 +1,4 @@
-﻿using BibliotecaSoftware.Dao;
-using BibliotecaSoftware.Model;
+﻿using BibliotecaSoftware.Model;
 using System;
 using System.Windows.Forms;
 using BibliotecaSoftware.Controller;
@@ -9,11 +8,10 @@ namespace BibliotecaSoftware.View
     public partial class TelaCadastroLivros : Form
     {
         public Livro _livro;
-        public EditoraDao _editoraDao;
-        public AutorDao _autorDao;
-        public IdiomaDao _idiomaDao;
-        public TituloAutorDao _tituloAutorDao;
         public TituloAutorController _tituloAutorController;
+        public AutorController _autorController;
+        public EditoraController _editoraController;
+        public IdiomaController _idiomaController;
 
         public TelaCadastroLivros()
             => ConstrutorPadrao();
@@ -29,16 +27,15 @@ namespace BibliotecaSoftware.View
         {
             InitializeComponent();
             _livro = new Livro();
-            _autorDao = new AutorDao();
-            _editoraDao = new EditoraDao();
-            _idiomaDao = new IdiomaDao();
-            _tituloAutorDao = new TituloAutorDao();
             _tituloAutorController = new TituloAutorController();
+            _autorController = new AutorController();
+            _editoraController = new EditoraController();
+            _idiomaController = new IdiomaController();
             
-            autorCadastroLivrosCombobox.DataSource = _autorDao.Listar();
-            editoraCadastroLivrosCombobox.DataSource = _editoraDao.Listar();
-            idiomaCadastroLivrosCombobox.DataSource = _idiomaDao.Listar();
-            paisCadastroLivrosCombobox.DataSource = _idiomaDao.Listar();
+            autorCadastroLivrosCombobox.DataSource = _autorController.ComboboxListar();
+            editoraCadastroLivrosCombobox.DataSource = _editoraController.ComboboxListar();
+            idiomaCadastroLivrosCombobox.DataSource = _idiomaController.ComboboxListar();
+            paisCadastroLivrosCombobox.DataSource = _idiomaController.ComboboxListar();
         }
 
         public void AtribuirModelParaView()
