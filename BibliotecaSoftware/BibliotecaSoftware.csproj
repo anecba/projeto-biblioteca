@@ -146,11 +146,23 @@
     <Compile Include="View\Cadastro\TelaCadastroEditoras.Designer.cs">
       <DependentUpon>TelaCadastroEditoras.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Cadastro\TelaCadastroEditorasDev.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Cadastro\TelaCadastroEditorasDev.Designer.cs">
+      <DependentUpon>TelaCadastroEditorasDev.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Cadastro\TelaCadastroLivros.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\Cadastro\TelaCadastroLivros.Designer.cs">
       <DependentUpon>TelaCadastroLivros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Cadastro\TelaCadastroLivrosDev.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Cadastro\TelaCadastroLivrosDev.Designer.cs">
+      <DependentUpon>TelaCadastroLivrosDev.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Listagem\TelaListaDadosAutores.cs">
       <SubType>Form</SubType>
@@ -205,8 +217,14 @@
     <EmbeddedResource Include="View\Cadastro\TelaCadastroEditoras.resx">
       <DependentUpon>TelaCadastroEditoras.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Cadastro\TelaCadastroEditorasDev.resx">
+      <DependentUpon>TelaCadastroEditorasDev.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Cadastro\TelaCadastroLivros.resx">
       <DependentUpon>TelaCadastroLivros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Cadastro\TelaCadastroLivrosDev.resx">
+      <DependentUpon>TelaCadastroLivrosDev.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Listagem\TelaListaDadosAutores.resx">
       <DependentUpon>TelaListaDadosAutores.cs</DependentUpon>

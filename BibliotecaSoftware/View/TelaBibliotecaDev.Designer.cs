@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaBibliotecaDev));
             DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaBibliotecaDev));
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rbpBiblioteca = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgCadastro = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -68,7 +68,6 @@
             // 
             // rpgCadastro
             // 
-            this.rpgCadastro.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rpgCadastro.ImageOptions.Image")));
             this.rpgCadastro.ItemLinks.Add(this.barButtonItem8);
             this.rpgCadastro.ItemLinks.Add(this.barButtonItem9);
             this.rpgCadastro.ItemLinks.Add(this.barButtonItem10);
@@ -77,6 +76,7 @@
             superToolTip2.Items.Add(toolTipItem2);
             superToolTip2.Items.Add(toolTipTitleItem2);
             this.rpgCadastro.SuperTip = superToolTip2;
+            this.rpgCadastro.Tag = "Para realizar os cadastros";
             this.rpgCadastro.Text = "Cadastro";
             // 
             // barButtonItem8
@@ -214,7 +214,7 @@
             this.ClientSize = new System.Drawing.Size(830, 570);
             this.Controls.Add(this.ribbonControl1);
             this.Name = "TelaBibliotecaDev";
-            this.Text = "TelaBiblioteca";
+            this.Text = "Biblioteca";
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

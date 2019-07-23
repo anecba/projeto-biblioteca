@@ -11,21 +11,11 @@ using DevExpress.XtraEditors;
 
 namespace BibliotecaSoftware.View.Cadastro
 {
-    public partial class TelaCadastroAutoresDev : DevExpress.XtraEditors.XtraForm
+    public partial class TelaCadastroLivrosDev : DevExpress.XtraEditors.XtraForm
     {
-        public TelaCadastroAutoresDev()
+        public TelaCadastroLivrosDev()
         {
             InitializeComponent();
-        }
-
-        private void panelControl1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void labelControl2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
