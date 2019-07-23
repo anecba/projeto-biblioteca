@@ -95,6 +95,7 @@
             this.barbtnEditoras.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barbtnEditoras.ImageOptions.Image")));
             this.barbtnEditoras.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barbtnEditoras.ImageOptions.LargeImage")));
             this.barbtnEditoras.Name = "barbtnEditoras";
+            this.barbtnEditoras.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BarbtnEditoras_ItemClick);
             // 
             // barbtnLivros
             // 
@@ -103,6 +104,7 @@
             this.barbtnLivros.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barbtnLivros.ImageOptions.Image")));
             this.barbtnLivros.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barbtnLivros.ImageOptions.LargeImage")));
             this.barbtnLivros.Name = "barbtnLivros";
+            this.barbtnLivros.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BarbtnLivros_ItemClick);
             // 
             // rpgListagem
             // 
@@ -119,6 +121,7 @@
             this.barbtnListaAutores.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barbtnListaAutores.ImageOptions.Image")));
             this.barbtnListaAutores.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barbtnListaAutores.ImageOptions.LargeImage")));
             this.barbtnListaAutores.Name = "barbtnListaAutores";
+            this.barbtnListaAutores.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BarbtnListaAutores_ItemClick);
             // 
             // barbtnListaEditoras
             // 
@@ -127,6 +130,7 @@
             this.barbtnListaEditoras.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barbtnListaEditoras.ImageOptions.Image")));
             this.barbtnListaEditoras.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barbtnListaEditoras.ImageOptions.LargeImage")));
             this.barbtnListaEditoras.Name = "barbtnListaEditoras";
+            this.barbtnListaEditoras.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BarbtnListaEditoras_ItemClick);
             // 
             // barbtnListaLivros
             // 
@@ -135,6 +139,7 @@
             this.barbtnListaLivros.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barbtnListaLivros.ImageOptions.Image")));
             this.barbtnListaLivros.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barbtnListaLivros.ImageOptions.LargeImage")));
             this.barbtnListaLivros.Name = "barbtnListaLivros";
+            this.barbtnListaLivros.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BarbtnListaLivros_ItemClick);
             // 
             // barButtonItem3
             // 
@@ -171,6 +176,7 @@
             this.rbcontrolBiblioteca.ExpandCollapseItem.Id = 0;
             this.rbcontrolBiblioteca.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.rbcontrolBiblioteca.ExpandCollapseItem,
+            this.rbcontrolBiblioteca.SearchEditItem,
             this.barButtonItem1,
             this.barButtonItem2,
             this.barButtonItem3,
@@ -183,8 +189,7 @@
             this.barbtnLivros,
             this.barbtnListaAutores,
             this.barbtnListaEditoras,
-            this.barbtnListaLivros,
-            this.rbcontrolBiblioteca.SearchEditItem});
+            this.barbtnListaLivros});
             this.rbcontrolBiblioteca.Location = new System.Drawing.Point(0, 0);
             this.rbcontrolBiblioteca.MaxItemId = 20;
             this.rbcontrolBiblioteca.Name = "rbcontrolBiblioteca";

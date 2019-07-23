@@ -92,7 +92,7 @@
             this.Controls.Add(this.grdDados);
             this.Controls.Add(this.panelControl1);
             this.Name = "TelaListaDadosLivrosDev";
-            this.Text = "TelaListaDadosLivrosDev";
+            this.Text = "Lista de livros";
             ((System.ComponentModel.ISupportInitialize)(this.grdDados)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();

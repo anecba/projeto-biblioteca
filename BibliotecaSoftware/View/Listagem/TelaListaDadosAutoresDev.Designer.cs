@@ -111,7 +111,7 @@
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.Name = "TelaListaDadosAutoresDev";
-            this.Text = "TelaListaDadosAutoresDev";
+            this.Text = "Lista de Autores";
             ((System.ComponentModel.ISupportInitialize)(this.grdDados)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();

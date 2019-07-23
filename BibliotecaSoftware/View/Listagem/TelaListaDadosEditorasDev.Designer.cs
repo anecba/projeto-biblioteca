@@ -56,7 +56,7 @@
             this.ClientSize = new System.Drawing.Size(966, 720);
             this.Controls.Add(this.gridControl1);
             this.Name = "TelaListaDadosEditorasDev";
-            this.Text = "TelaListaDadosEditorasDev";
+            this.Text = "Lista de editoras";
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
