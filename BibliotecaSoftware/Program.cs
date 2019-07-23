@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BibliotecaSoftware.View;
+using System;
 using System.Windows.Forms;
 
 namespace BibliotecaSoftware
@@ -10,7 +11,7 @@ namespace BibliotecaSoftware
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TelaBibliotecaPrincipal());
+            Application.Run(new TelaBibliotecaDev());
         }
     }
 }

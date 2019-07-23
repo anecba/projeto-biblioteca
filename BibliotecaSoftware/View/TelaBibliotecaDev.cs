@@ -11,9 +11,9 @@ using DevExpress.XtraEditors;
 
 namespace BibliotecaSoftware.View
 {
-    public partial class TelaBiblioteca : DevExpress.XtraEditors.XtraForm
+    public partial class TelaBibliotecaDev : DevExpress.XtraEditors.XtraForm
     {
-        public TelaBiblioteca()
+        public TelaBibliotecaDev()
         {
             InitializeComponent();
         }
