@@ -69,7 +69,7 @@ namespace BibliotecaSoftware.Dao
             }
         }
 
-        public bool Alterar (Titulo tituloModel, Edicao edicaoModel)
+        public bool Alterar (Titulo tituloModel, Edicao edicaoModel, TituloAutor tituloAutorModel)
         {
             var deuCerto = false;
             using (FbConnection conexaoFireBird = Conexao.GetInstancia().GetConexao())
@@ -103,6 +103,10 @@ namespace BibliotecaSoftware.Dao
                     cmd.Parameters.Add("@DATA_LANCAMENTO", edicaoModel.DataLancamento);
                     cmd.Parameters.Add("@QTDE_PAGINAS", edicaoModel.QtdePagina);
                     cmd.Parameters.Add("@EDICAO", edicaoModel.NumeroEdicao);
+                    cmd.ExecuteNonQuery();
+
+                    cmd.CommandText = @"UPDATE TITULO_AUTOR SET CODIGOAUTOR = @CODIGOAUTOR where CODIGOTITULO = @CODIGOTITULO";
+                    cmd.Parameters.Add("@CODIGOAUTOR", tituloAutorModel.CodigoAutor);
                     cmd.ExecuteNonQuery();
                     deuCerto = true;
                 }

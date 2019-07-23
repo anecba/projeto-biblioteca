@@ -112,7 +112,7 @@ public class LivroDao : Conexao
                 string mSQL = @"SELECT TITULO.codigotitulo, TITULO.nometitulo AS TITULO, AUTOR.nome AS AUTOR, 
                     IDIOMA.lingua, IDIOMA.pais, EDICAO.edicao, EDICAO.ano, 
                     EDICAO.qtde_paginas, EDICAO.data_lancamento, EDITORA.nome AS EDITORA, EDITORA.codigoeditora, IDIOMA.codigoidioma,
-                    TITULO.descricao, AUTOR.codigoautor 
+                    TITULO.descricao, AUTOR.codigoautor, EDICAO.codigoidioma, EDICAO.codigoedicao 
                             FROM TITULO_AUTOR
                             INNER JOIN AUTOR ON TITULO_AUTOR.codigoautor = AUTOR.codigoautor
                             RIGHT JOIN TITULO ON TITULO_AUTOR.codigotitulo = TITULO.codigotitulo
@@ -149,6 +149,8 @@ public class LivroDao : Conexao
                         },
                         Edicao =
                         {
+                            CodigoEdicao = int.Parse(dr["codigoedicao"].ToString()),
+                            CodigoIdioma = int.Parse(dr["CODIGOIDIOMA"].ToString()),
                             NumeroEdicao = dr["EDICAO"].ToString(),
                             Ano = int.Parse(dr["ANO"].ToString()),
                             QtdePagina = int.Parse(dr["QTDE_PAGINAS"].ToString()),
