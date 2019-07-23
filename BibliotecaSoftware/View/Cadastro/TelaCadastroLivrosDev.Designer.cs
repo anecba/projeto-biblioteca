@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.TileItemElement tileItemElement5 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement9 = new DevExpress.XtraEditors.TileItemElement();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaCadastroLivrosDev));
-            DevExpress.XtraEditors.TileItemElement tileItemElement6 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement10 = new DevExpress.XtraEditors.TileItemElement();
             this.lblDatanascimento = new DevExpress.XtraEditors.LabelControl();
             this.dteDatanascimento = new DevExpress.XtraEditors.DateEdit();
             this.lblBibliografia = new DevExpress.XtraEditors.LabelControl();
@@ -53,6 +53,14 @@
             this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.comboBoxEdit2 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.comboBoxEdit3 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
+            this.comboBoxEdit4 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.dteDatanascimento.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteDatanascimento.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt.Properties)).BeginInit();
@@ -62,13 +70,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblDatanascimento
             // 
             this.lblDatanascimento.Appearance.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDatanascimento.Appearance.Options.UseFont = true;
-            this.lblDatanascimento.Location = new System.Drawing.Point(436, 151);
+            this.lblDatanascimento.Location = new System.Drawing.Point(436, 379);
             this.lblDatanascimento.Name = "lblDatanascimento";
             this.lblDatanascimento.Size = new System.Drawing.Size(178, 24);
             this.lblDatanascimento.TabIndex = 19;
@@ -77,7 +89,7 @@
             // dteDatanascimento
             // 
             this.dteDatanascimento.EditValue = null;
-            this.dteDatanascimento.Location = new System.Drawing.Point(436, 181);
+            this.dteDatanascimento.Location = new System.Drawing.Point(436, 409);
             this.dteDatanascimento.Name = "dteDatanascimento";
             this.dteDatanascimento.Properties.Appearance.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dteDatanascimento.Properties.Appearance.Options.UseFont = true;
@@ -92,7 +104,7 @@
             // 
             this.lblBibliografia.Appearance.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBibliografia.Appearance.Options.UseFont = true;
-            this.lblBibliografia.Location = new System.Drawing.Point(38, 372);
+            this.lblBibliografia.Location = new System.Drawing.Point(38, 445);
             this.lblBibliografia.Name = "lblBibliografia";
             this.lblBibliografia.Size = new System.Drawing.Size(104, 24);
             this.lblBibliografia.TabIndex = 16;
@@ -100,7 +112,7 @@
             // 
             // txt
             // 
-            this.txt.Location = new System.Drawing.Point(300, 181);
+            this.txt.Location = new System.Drawing.Point(300, 409);
             this.txt.Name = "txt";
             this.txt.Properties.Appearance.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt.Properties.Appearance.Options.UseFont = true;
@@ -111,7 +123,7 @@
             // 
             this.lblSite.Appearance.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSite.Appearance.Options.UseFont = true;
-            this.lblSite.Location = new System.Drawing.Point(300, 151);
+            this.lblSite.Location = new System.Drawing.Point(300, 379);
             this.lblSite.Name = "lblSite";
             this.lblSite.Size = new System.Drawing.Size(78, 24);
             this.lblSite.TabIndex = 14;
@@ -124,7 +136,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblAutor.Appearance.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAutor.Appearance.Options.UseFont = true;
-            this.lblAutor.Location = new System.Drawing.Point(38, 85);
+            this.lblAutor.Location = new System.Drawing.Point(38, 113);
             this.lblAutor.Name = "lblAutor";
             this.lblAutor.Size = new System.Drawing.Size(63, 24);
             this.lblAutor.TabIndex = 12;
@@ -135,7 +147,7 @@
             this.tileBar1.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
             this.tileBar1.Groups.Add(this.tileBarGroup2);
             this.tileBar1.Groups.Add(this.tileBarGroup1);
-            this.tileBar1.Location = new System.Drawing.Point(436, 576);
+            this.tileBar1.Location = new System.Drawing.Point(313, 599);
             this.tileBar1.MaxId = 2;
             this.tileBar1.Name = "tileBar1";
             this.tileBar1.Padding = new System.Windows.Forms.Padding(25, 7, 25, 7);
@@ -152,11 +164,11 @@
             // tileBarItem1
             // 
             this.tileBarItem1.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            tileItemElement5.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
-            tileItemElement5.Text = "Confirmar";
-            tileItemElement5.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.tileBarItem1.Elements.Add(tileItemElement5);
+            tileItemElement9.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            tileItemElement9.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
+            tileItemElement9.Text = "Confirmar";
+            tileItemElement9.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            this.tileBarItem1.Elements.Add(tileItemElement9);
             this.tileBarItem1.Id = 0;
             this.tileBarItem1.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.tileBarItem1.Name = "tileBarItem1";
@@ -169,17 +181,17 @@
             // tileBarItem2
             // 
             this.tileBarItem2.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
-            tileItemElement6.Text = "Cancelar";
-            tileItemElement6.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.tileBarItem2.Elements.Add(tileItemElement6);
+            tileItemElement10.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            tileItemElement10.Text = "Cancelar";
+            tileItemElement10.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            this.tileBarItem2.Elements.Add(tileItemElement10);
             this.tileBarItem2.Id = 1;
             this.tileBarItem2.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.tileBarItem2.Name = "tileBarItem2";
             // 
             // textEdit4
             // 
-            this.textEdit4.Location = new System.Drawing.Point(38, 41);
+            this.textEdit4.Location = new System.Drawing.Point(38, 69);
             this.textEdit4.Name = "textEdit4";
             this.textEdit4.Properties.Appearance.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit4.Properties.Appearance.Options.UseFont = true;
@@ -193,15 +205,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(38, 12);
+            this.labelControl1.Location = new System.Drawing.Point(38, 40);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(60, 24);
+            this.labelControl1.Size = new System.Drawing.Size(116, 24);
             this.labelControl1.TabIndex = 20;
-            this.labelControl1.Text = "Autor*";
+            this.labelControl1.Text = "Código título";
             // 
             // textEdit5
             // 
-            this.textEdit5.Location = new System.Drawing.Point(192, 41);
+            this.textEdit5.Location = new System.Drawing.Point(192, 69);
             this.textEdit5.Name = "textEdit5";
             this.textEdit5.Properties.Appearance.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit5.Properties.Appearance.Options.UseFont = true;
@@ -215,16 +227,16 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(192, 12);
+            this.labelControl2.Location = new System.Drawing.Point(192, 40);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(60, 24);
+            this.labelControl2.Size = new System.Drawing.Size(130, 24);
             this.labelControl2.TabIndex = 22;
-            this.labelControl2.Text = "Autor*";
+            this.labelControl2.Text = "Código editora";
             // 
             // rtbBibliografia
             // 
             this.rtbBibliografia.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtbBibliografia.Location = new System.Drawing.Point(38, 402);
+            this.rtbBibliografia.Location = new System.Drawing.Point(38, 475);
             this.rtbBibliografia.Name = "rtbBibliografia";
             this.rtbBibliografia.Size = new System.Drawing.Size(656, 96);
             this.rtbBibliografia.TabIndex = 24;
@@ -232,7 +244,7 @@
             // 
             // textEdit1
             // 
-            this.textEdit1.Location = new System.Drawing.Point(38, 115);
+            this.textEdit1.Location = new System.Drawing.Point(38, 143);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit1.Properties.Appearance.Options.UseFont = true;
@@ -241,7 +253,7 @@
             // 
             // textEdit2
             // 
-            this.textEdit2.Location = new System.Drawing.Point(38, 181);
+            this.textEdit2.Location = new System.Drawing.Point(38, 409);
             this.textEdit2.Name = "textEdit2";
             this.textEdit2.Properties.Appearance.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit2.Properties.Appearance.Options.UseFont = true;
@@ -255,7 +267,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(38, 151);
+            this.labelControl3.Location = new System.Drawing.Point(38, 379);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(69, 24);
             this.labelControl3.TabIndex = 26;
@@ -263,11 +275,11 @@
             // 
             // textEdit3
             // 
-            this.textEdit3.Location = new System.Drawing.Point(187, 181);
+            this.textEdit3.Location = new System.Drawing.Point(187, 409);
             this.textEdit3.Name = "textEdit3";
             this.textEdit3.Properties.Appearance.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit3.Properties.Appearance.Options.UseFont = true;
-            this.textEdit3.Size = new System.Drawing.Size(104, 30);
+            this.textEdit3.Size = new System.Drawing.Size(102, 30);
             this.textEdit3.TabIndex = 29;
             // 
             // labelControl4
@@ -277,7 +289,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(187, 151);
+            this.labelControl4.Location = new System.Drawing.Point(187, 379);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(45, 24);
             this.labelControl4.TabIndex = 28;
@@ -285,20 +297,120 @@
             // 
             // comboBoxEdit1
             // 
-            this.comboBoxEdit1.Location = new System.Drawing.Point(38, 275);
+            this.comboBoxEdit1.Location = new System.Drawing.Point(38, 211);
             this.comboBoxEdit1.Name = "comboBoxEdit1";
             this.comboBoxEdit1.Properties.Appearance.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxEdit1.Properties.Appearance.Options.UseFont = true;
             this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit1.Size = new System.Drawing.Size(425, 30);
+            this.comboBoxEdit1.Size = new System.Drawing.Size(656, 30);
             this.comboBoxEdit1.TabIndex = 30;
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl5.Appearance.Options.UseFont = true;
+            this.labelControl5.Location = new System.Drawing.Point(38, 181);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(60, 24);
+            this.labelControl5.TabIndex = 31;
+            this.labelControl5.Text = "Autor*";
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl6.Appearance.Options.UseFont = true;
+            this.labelControl6.Location = new System.Drawing.Point(38, 247);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(75, 24);
+            this.labelControl6.TabIndex = 33;
+            this.labelControl6.Text = "Editora*";
+            // 
+            // comboBoxEdit2
+            // 
+            this.comboBoxEdit2.Location = new System.Drawing.Point(38, 277);
+            this.comboBoxEdit2.Name = "comboBoxEdit2";
+            this.comboBoxEdit2.Properties.Appearance.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxEdit2.Properties.Appearance.Options.UseFont = true;
+            this.comboBoxEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxEdit2.Size = new System.Drawing.Size(656, 30);
+            this.comboBoxEdit2.TabIndex = 32;
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl7.Appearance.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl7.Appearance.Options.UseFont = true;
+            this.labelControl7.Location = new System.Drawing.Point(38, 313);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(73, 24);
+            this.labelControl7.TabIndex = 35;
+            this.labelControl7.Text = "Idioma*";
+            // 
+            // comboBoxEdit3
+            // 
+            this.comboBoxEdit3.Location = new System.Drawing.Point(38, 343);
+            this.comboBoxEdit3.Name = "comboBoxEdit3";
+            this.comboBoxEdit3.Properties.Appearance.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxEdit3.Properties.Appearance.Options.UseFont = true;
+            this.comboBoxEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxEdit3.Size = new System.Drawing.Size(323, 30);
+            this.comboBoxEdit3.TabIndex = 34;
+            // 
+            // labelControl8
+            // 
+            this.labelControl8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl8.Appearance.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl8.Appearance.Options.UseFont = true;
+            this.labelControl8.Location = new System.Drawing.Point(367, 313);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(46, 24);
+            this.labelControl8.TabIndex = 37;
+            this.labelControl8.Text = "País*";
+            // 
+            // comboBoxEdit4
+            // 
+            this.comboBoxEdit4.Location = new System.Drawing.Point(367, 343);
+            this.comboBoxEdit4.Name = "comboBoxEdit4";
+            this.comboBoxEdit4.Properties.Appearance.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxEdit4.Properties.Appearance.Options.UseFont = true;
+            this.comboBoxEdit4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxEdit4.Size = new System.Drawing.Size(327, 30);
+            this.comboBoxEdit4.TabIndex = 36;
+            // 
+            // panelControl1
+            // 
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl1.Location = new System.Drawing.Point(0, 0);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(729, 718);
+            this.panelControl1.TabIndex = 38;
             // 
             // TelaCadastroLivrosDev
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(969, 718);
+            this.ClientSize = new System.Drawing.Size(729, 718);
+            this.Controls.Add(this.labelControl8);
+            this.Controls.Add(this.comboBoxEdit4);
+            this.Controls.Add(this.labelControl7);
+            this.Controls.Add(this.comboBoxEdit3);
+            this.Controls.Add(this.labelControl6);
+            this.Controls.Add(this.comboBoxEdit2);
+            this.Controls.Add(this.labelControl5);
             this.Controls.Add(this.comboBoxEdit1);
             this.Controls.Add(this.textEdit3);
             this.Controls.Add(this.labelControl4);
@@ -317,6 +429,7 @@
             this.Controls.Add(this.lblSite);
             this.Controls.Add(this.lblAutor);
             this.Controls.Add(this.tileBar1);
+            this.Controls.Add(this.panelControl1);
             this.Name = "TelaCadastroLivrosDev";
             this.Text = "TelaCadastroLivrosDev";
             ((System.ComponentModel.ISupportInitialize)(this.dteDatanascimento.Properties.CalendarTimeProperties)).EndInit();
@@ -328,6 +441,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -357,5 +474,13 @@
         private DevExpress.XtraEditors.TextEdit textEdit3;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
+        private DevExpress.XtraEditors.LabelControl labelControl6;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit2;
+        private DevExpress.XtraEditors.LabelControl labelControl7;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit3;
+        private DevExpress.XtraEditors.LabelControl labelControl8;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit4;
+        private DevExpress.XtraEditors.PanelControl panelControl1;
     }
 }

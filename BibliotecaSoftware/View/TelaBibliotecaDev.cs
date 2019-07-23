@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using BibliotecaSoftware.View.Cadastro;
 
 namespace BibliotecaSoftware.View
 {
@@ -16,6 +17,12 @@ namespace BibliotecaSoftware.View
         public TelaBibliotecaDev()
         {
             InitializeComponent();
+        }
+
+        private void BarbtnAutores_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            TelaCadastroAutoresDev telaCadastroAutoresDev = new TelaCadastroAutoresDev();
+            telaCadastroAutoresDev.Show();
         }
     }
 }

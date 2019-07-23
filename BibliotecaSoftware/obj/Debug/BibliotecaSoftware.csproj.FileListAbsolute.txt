@@ -174,3 +174,7 @@ C:\Users\aneca\source\repos\bibliotecaprojeto\BibliotecaSoftware\bin\Debug\ja\De
 C:\Users\aneca\source\repos\bibliotecaprojeto\BibliotecaSoftware\bin\Debug\ru\DevExpress.Office.v19.1.Core.resources.dll
 C:\Users\aneca\source\repos\bibliotecaprojeto\BibliotecaSoftware\obj\Debug\BibliotecaSoftware.View.Listagem.TelaListaDadosAutoresDev.resources
 C:\Users\aneca\source\repos\bibliotecaprojeto\BibliotecaSoftware\obj\Debug\BibliotecaSoftware.View.TelaBibliotecaDev.resources
+C:\Users\aneca\source\repos\bibliotecaprojeto\BibliotecaSoftware\obj\Debug\BibliotecaSoftware.View.Cadastro.TelaCadastroEditorasDev.resources
+C:\Users\aneca\source\repos\bibliotecaprojeto\BibliotecaSoftware\obj\Debug\BibliotecaSoftware.View.Cadastro.TelaCadastroLivrosDev.resources
+C:\Users\aneca\source\repos\bibliotecaprojeto\BibliotecaSoftware\obj\Debug\BibliotecaSoftware.View.Listagem.TelaListaDadosEditorasDev.resources
+C:\Users\aneca\source\repos\bibliotecaprojeto\BibliotecaSoftware\obj\Debug\BibliotecaSoftware.View.Listagem.TelaListaDadosLivrosDev.resources
