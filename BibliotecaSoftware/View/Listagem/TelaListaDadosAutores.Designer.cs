@@ -158,7 +158,7 @@
             // 
             this.pesquisaTelaListarDadosAutoresBotao.Image = global::BibliotecaSoftware.Properties.Resources._126577_20;
             this.pesquisaTelaListarDadosAutoresBotao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.pesquisaTelaListarDadosAutoresBotao.Location = new System.Drawing.Point(1116, 63);
+            this.pesquisaTelaListarDadosAutoresBotao.Location = new System.Drawing.Point(998, 76);
             this.pesquisaTelaListarDadosAutoresBotao.Name = "pesquisaTelaListarDadosAutoresBotao";
             this.pesquisaTelaListarDadosAutoresBotao.Size = new System.Drawing.Size(112, 37);
             this.pesquisaTelaListarDadosAutoresBotao.TabIndex = 2;

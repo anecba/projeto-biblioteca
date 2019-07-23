@@ -40,6 +40,16 @@
     <Reference Include="Dapper, Version=1.60.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Dapper.1.60.6\lib\net451\Dapper.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.Data.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v19.1.Core, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v19.1.Core, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -106,6 +116,12 @@
     <Compile Include="View\Cadastro\TelaCadastroAutores.Designer.cs">
       <DependentUpon>TelaCadastroAutores.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Cadastro\TelaCadastroAutoresDev.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Cadastro\TelaCadastroAutoresDev.Designer.cs">
+      <DependentUpon>TelaCadastroAutoresDev.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Cadastro\TelaCadastroEditoras.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +140,12 @@
     <Compile Include="View\Listagem\TelaListaDadosAutores.Designer.cs">
       <DependentUpon>TelaListaDadosAutores.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Listagem\TelaListaDadosAutoresDev.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Listagem\TelaListaDadosAutoresDev.Designer.cs">
+      <DependentUpon>TelaListaDadosAutoresDev.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Listagem\TelaListaDadosEditoras.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +158,13 @@
     <Compile Include="View\Listagem\TelaListaDadosLivros.Designer.cs">
       <DependentUpon>TelaListaDadosLivros.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\TelaBiblioteca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaBiblioteca.Designer.cs">
+      <DependentUpon>TelaBiblioteca.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -152,6 +181,9 @@
     <EmbeddedResource Include="View\Cadastro\TelaCadastroAutores.resx">
       <DependentUpon>TelaCadastroAutores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Cadastro\TelaCadastroAutoresDev.resx">
+      <DependentUpon>TelaCadastroAutoresDev.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Cadastro\TelaCadastroEditoras.resx">
       <DependentUpon>TelaCadastroEditoras.cs</DependentUpon>
     </EmbeddedResource>
@@ -161,11 +193,17 @@
     <EmbeddedResource Include="View\Listagem\TelaListaDadosAutores.resx">
       <DependentUpon>TelaListaDadosAutores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Listagem\TelaListaDadosAutoresDev.resx">
+      <DependentUpon>TelaListaDadosAutoresDev.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Listagem\TelaListaDadosEditoras.resx">
       <DependentUpon>TelaListaDadosEditoras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Listagem\TelaListaDadosLivros.resx">
       <DependentUpon>TelaListaDadosLivros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaBiblioteca.resx">
+      <DependentUpon>TelaBiblioteca.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\BibliotecaSoftware.Model.Autor.datasource" />
