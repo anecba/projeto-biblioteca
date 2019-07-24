@@ -28,73 +28,101 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement5 = new DevExpress.XtraEditors.TileItemElement();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaCadastroAutoresDev));
-            DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.tileBar1 = new DevExpress.XtraBars.Navigation.TileBar();
-            this.tileBarGroup2 = new DevExpress.XtraBars.Navigation.TileBarGroup();
-            this.tileBarGroup1 = new DevExpress.XtraBars.Navigation.TileBarGroup();
-            this.lblAutor = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.lblSite = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
-            this.lblBibliografia = new DevExpress.XtraEditors.LabelControl();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
+            DevExpress.XtraEditors.TileItemElement tileItemElement6 = new DevExpress.XtraEditors.TileItemElement();
+            this.pncCadastroAutores = new DevExpress.XtraEditors.PanelControl();
             this.lblDatanascimento = new DevExpress.XtraEditors.LabelControl();
-            this.tileBarItem1 = new DevExpress.XtraBars.Navigation.TileBarItem();
-            this.tileBarItem2 = new DevExpress.XtraBars.Navigation.TileBarItem();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
+            this.dteDataNascimento = new DevExpress.XtraEditors.DateEdit();
+            this.txtSite = new DevExpress.XtraEditors.TextEdit();
+            this.lblSite = new DevExpress.XtraEditors.LabelControl();
+            this.txtAutor = new DevExpress.XtraEditors.TextEdit();
+            this.lblAutor = new DevExpress.XtraEditors.LabelControl();
+            this.tileBar1 = new DevExpress.XtraBars.Navigation.TileBar();
+            this.tlbgConfirmar = new DevExpress.XtraBars.Navigation.TileBarGroup();
+            this.tlbiConfirmar = new DevExpress.XtraBars.Navigation.TileBarItem();
+            this.tlbiCancelar = new DevExpress.XtraBars.Navigation.TileBarItem();
+            this.tileBarGroup1 = new DevExpress.XtraBars.Navigation.TileBarGroup();
+            this.rtbBibliografia = new System.Windows.Forms.RichTextBox();
+            this.lblBibliografia = new DevExpress.XtraEditors.LabelControl();
+            ((System.ComponentModel.ISupportInitialize)(this.pncCadastroAutores)).BeginInit();
+            this.pncCadastroAutores.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dteDataNascimento.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dteDataNascimento.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSite.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAutor.Properties)).BeginInit();
             this.SuspendLayout();
             // 
-            // panelControl1
+            // pncCadastroAutores
             // 
-            this.panelControl1.Controls.Add(this.lblDatanascimento);
-            this.panelControl1.Controls.Add(this.dateEdit1);
-            this.panelControl1.Controls.Add(this.textEdit3);
-            this.panelControl1.Controls.Add(this.lblBibliografia);
-            this.panelControl1.Controls.Add(this.textEdit2);
-            this.panelControl1.Controls.Add(this.lblSite);
-            this.panelControl1.Controls.Add(this.textEdit1);
-            this.panelControl1.Controls.Add(this.lblAutor);
-            this.panelControl1.Controls.Add(this.tileBar1);
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(622, 479);
-            this.panelControl1.TabIndex = 1;
-            this.panelControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl1_Paint);
+            this.pncCadastroAutores.Controls.Add(this.rtbBibliografia);
+            this.pncCadastroAutores.Controls.Add(this.lblBibliografia);
+            this.pncCadastroAutores.Controls.Add(this.lblDatanascimento);
+            this.pncCadastroAutores.Controls.Add(this.dteDataNascimento);
+            this.pncCadastroAutores.Controls.Add(this.txtSite);
+            this.pncCadastroAutores.Controls.Add(this.lblSite);
+            this.pncCadastroAutores.Controls.Add(this.txtAutor);
+            this.pncCadastroAutores.Controls.Add(this.lblAutor);
+            this.pncCadastroAutores.Controls.Add(this.tileBar1);
+            this.pncCadastroAutores.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pncCadastroAutores.Location = new System.Drawing.Point(0, 0);
+            this.pncCadastroAutores.Name = "pncCadastroAutores";
+            this.pncCadastroAutores.Size = new System.Drawing.Size(622, 541);
+            this.pncCadastroAutores.TabIndex = 1;
+            this.pncCadastroAutores.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl1_Paint);
             // 
-            // tileBar1
+            // lblDatanascimento
             // 
-            this.tileBar1.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            this.tileBar1.Groups.Add(this.tileBarGroup2);
-            this.tileBar1.Groups.Add(this.tileBarGroup1);
-            this.tileBar1.Location = new System.Drawing.Point(142, 332);
-            this.tileBar1.MaxId = 2;
-            this.tileBar1.Name = "tileBar1";
-            this.tileBar1.Padding = new System.Windows.Forms.Padding(25, 7, 25, 7);
-            this.tileBar1.ScrollMode = DevExpress.XtraEditors.TileControlScrollMode.ScrollButtons;
-            this.tileBar1.Size = new System.Drawing.Size(440, 107);
-            this.tileBar1.TabIndex = 2;
-            this.tileBar1.Text = "tileBar1";
+            this.lblDatanascimento.Appearance.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDatanascimento.Appearance.Options.UseFont = true;
+            this.lblDatanascimento.Location = new System.Drawing.Point(32, 106);
+            this.lblDatanascimento.Name = "lblDatanascimento";
+            this.lblDatanascimento.Size = new System.Drawing.Size(186, 24);
+            this.lblDatanascimento.TabIndex = 10;
+            this.lblDatanascimento.Text = "Data de nascimento*";
             // 
-            // tileBarGroup2
+            // dteDataNascimento
             // 
-            this.tileBarGroup2.Items.Add(this.tileBarItem1);
-            this.tileBarGroup2.Name = "tileBarGroup2";
+            this.dteDataNascimento.EditValue = null;
+            this.dteDataNascimento.Location = new System.Drawing.Point(32, 136);
+            this.dteDataNascimento.Name = "dteDataNascimento";
+            this.dteDataNascimento.Properties.Appearance.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dteDataNascimento.Properties.Appearance.Options.UseFont = true;
+            this.dteDataNascimento.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dteDataNascimento.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dteDataNascimento.Size = new System.Drawing.Size(284, 30);
+            this.dteDataNascimento.TabIndex = 9;
             // 
-            // tileBarGroup1
+            // txtSite
             // 
-            this.tileBarGroup1.Items.Add(this.tileBarItem2);
-            this.tileBarGroup1.Name = "tileBarGroup1";
+            this.txtSite.Location = new System.Drawing.Point(32, 207);
+            this.txtSite.Name = "txtSite";
+            this.txtSite.Properties.Appearance.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSite.Properties.Appearance.Options.UseFont = true;
+            this.txtSite.Size = new System.Drawing.Size(550, 30);
+            this.txtSite.TabIndex = 6;
+            // 
+            // lblSite
+            // 
+            this.lblSite.Appearance.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSite.Appearance.Options.UseFont = true;
+            this.lblSite.Location = new System.Drawing.Point(32, 172);
+            this.lblSite.Name = "lblSite";
+            this.lblSite.Size = new System.Drawing.Size(34, 24);
+            this.lblSite.TabIndex = 5;
+            this.lblSite.Text = "Site";
+            this.lblSite.Click += new System.EventHandler(this.labelControl2_Click);
+            // 
+            // txtAutor
+            // 
+            this.txtAutor.Location = new System.Drawing.Point(32, 61);
+            this.txtAutor.Name = "txtAutor";
+            this.txtAutor.Properties.Appearance.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAutor.Properties.Appearance.Options.UseFont = true;
+            this.txtAutor.Size = new System.Drawing.Size(550, 30);
+            this.txtAutor.TabIndex = 4;
             // 
             // lblAutor
             // 
@@ -109,43 +137,61 @@
             this.lblAutor.TabIndex = 3;
             this.lblAutor.Text = "Autor*";
             // 
-            // textEdit1
+            // tileBar1
             // 
-            this.textEdit1.Location = new System.Drawing.Point(32, 61);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit1.Properties.Appearance.Options.UseFont = true;
-            this.textEdit1.Size = new System.Drawing.Size(550, 30);
-            this.textEdit1.TabIndex = 4;
+            this.tileBar1.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
+            this.tileBar1.Groups.Add(this.tlbgConfirmar);
+            this.tileBar1.Groups.Add(this.tileBarGroup1);
+            this.tileBar1.Location = new System.Drawing.Point(142, 396);
+            this.tileBar1.MaxId = 2;
+            this.tileBar1.Name = "tileBar1";
+            this.tileBar1.Padding = new System.Windows.Forms.Padding(25, 7, 25, 7);
+            this.tileBar1.ScrollMode = DevExpress.XtraEditors.TileControlScrollMode.ScrollButtons;
+            this.tileBar1.Size = new System.Drawing.Size(440, 107);
+            this.tileBar1.TabIndex = 2;
+            this.tileBar1.Text = "tileBar1";
             // 
-            // textEdit2
+            // tlbgConfirmar
             // 
-            this.textEdit2.Location = new System.Drawing.Point(32, 207);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Properties.Appearance.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit2.Properties.Appearance.Options.UseFont = true;
-            this.textEdit2.Size = new System.Drawing.Size(550, 30);
-            this.textEdit2.TabIndex = 6;
+            this.tlbgConfirmar.Items.Add(this.tlbiConfirmar);
+            this.tlbgConfirmar.Name = "tlbgConfirmar";
             // 
-            // lblSite
+            // tlbiConfirmar
             // 
-            this.lblSite.Appearance.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSite.Appearance.Options.UseFont = true;
-            this.lblSite.Location = new System.Drawing.Point(32, 172);
-            this.lblSite.Name = "lblSite";
-            this.lblSite.Size = new System.Drawing.Size(34, 24);
-            this.lblSite.TabIndex = 5;
-            this.lblSite.Text = "Site";
-            this.lblSite.Click += new System.EventHandler(this.labelControl2_Click);
+            this.tlbiConfirmar.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
+            tileItemElement5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            tileItemElement5.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
+            tileItemElement5.Text = "Confirmar";
+            tileItemElement5.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            this.tlbiConfirmar.Elements.Add(tileItemElement5);
+            this.tlbiConfirmar.Id = 0;
+            this.tlbiConfirmar.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
+            this.tlbiConfirmar.Name = "tlbiConfirmar";
             // 
-            // textEdit3
+            // tlbiCancelar
             // 
-            this.textEdit3.Location = new System.Drawing.Point(32, 278);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Properties.Appearance.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit3.Properties.Appearance.Options.UseFont = true;
-            this.textEdit3.Size = new System.Drawing.Size(550, 30);
-            this.textEdit3.TabIndex = 8;
+            this.tlbiCancelar.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
+            tileItemElement6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            tileItemElement6.Text = "Cancelar";
+            tileItemElement6.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            this.tlbiCancelar.Elements.Add(tileItemElement6);
+            this.tlbiCancelar.Id = 1;
+            this.tlbiCancelar.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
+            this.tlbiCancelar.Name = "tlbiCancelar";
+            // 
+            // tileBarGroup1
+            // 
+            this.tileBarGroup1.Items.Add(this.tlbiCancelar);
+            this.tileBarGroup1.Name = "tileBarGroup1";
+            // 
+            // rtbBibliografia
+            // 
+            this.rtbBibliografia.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtbBibliografia.Location = new System.Drawing.Point(32, 273);
+            this.rtbBibliografia.Name = "rtbBibliografia";
+            this.rtbBibliografia.Size = new System.Drawing.Size(550, 96);
+            this.rtbBibliografia.TabIndex = 26;
+            this.rtbBibliografia.Text = "";
             // 
             // lblBibliografia
             // 
@@ -154,92 +200,44 @@
             this.lblBibliografia.Location = new System.Drawing.Point(32, 243);
             this.lblBibliografia.Name = "lblBibliografia";
             this.lblBibliografia.Size = new System.Drawing.Size(104, 24);
-            this.lblBibliografia.TabIndex = 7;
+            this.lblBibliografia.TabIndex = 25;
             this.lblBibliografia.Text = "Bibliografia";
-            // 
-            // dateEdit1
-            // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(32, 136);
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.Appearance.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateEdit1.Properties.Appearance.Options.UseFont = true;
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Size = new System.Drawing.Size(284, 30);
-            this.dateEdit1.TabIndex = 9;
-            // 
-            // lblDatanascimento
-            // 
-            this.lblDatanascimento.Appearance.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDatanascimento.Appearance.Options.UseFont = true;
-            this.lblDatanascimento.Location = new System.Drawing.Point(32, 106);
-            this.lblDatanascimento.Name = "lblDatanascimento";
-            this.lblDatanascimento.Size = new System.Drawing.Size(177, 24);
-            this.lblDatanascimento.TabIndex = 10;
-            this.lblDatanascimento.Text = "Data de nascimento";
-            // 
-            // tileBarItem1
-            // 
-            this.tileBarItem1.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            tileItemElement1.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
-            tileItemElement1.Text = "Confirmar";
-            tileItemElement1.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.tileBarItem1.Elements.Add(tileItemElement1);
-            this.tileBarItem1.Id = 0;
-            this.tileBarItem1.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.tileBarItem1.Name = "tileBarItem1";
-            // 
-            // tileBarItem2
-            // 
-            this.tileBarItem2.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
-            tileItemElement2.Text = "Cancelar";
-            tileItemElement2.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.tileBarItem2.Elements.Add(tileItemElement2);
-            this.tileBarItem2.Id = 1;
-            this.tileBarItem2.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.tileBarItem2.Name = "tileBarItem2";
             // 
             // TelaCadastroAutoresDev
             // 
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(622, 479);
-            this.Controls.Add(this.panelControl1);
+            this.ClientSize = new System.Drawing.Size(622, 541);
+            this.Controls.Add(this.pncCadastroAutores);
             this.Font = new System.Drawing.Font("Georgia", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "TelaCadastroAutoresDev";
             this.Text = "Cadastro de autores";
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
-            this.panelControl1.ResumeLayout(false);
-            this.panelControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pncCadastroAutores)).EndInit();
+            this.pncCadastroAutores.ResumeLayout(false);
+            this.pncCadastroAutores.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dteDataNascimento.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dteDataNascimento.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSite.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAutor.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private DevExpress.XtraEditors.PanelControl panelControl1;
+        private DevExpress.XtraEditors.PanelControl pncCadastroAutores;
         private DevExpress.XtraBars.Navigation.TileBar tileBar1;
-        private DevExpress.XtraBars.Navigation.TileBarGroup tileBarGroup2;
-        private DevExpress.XtraBars.Navigation.TileBarItem tileBarItem1;
-        private DevExpress.XtraBars.Navigation.TileBarItem tileBarItem2;
-        private DevExpress.XtraBars.Navigation.TileBarGroup tileBarGroup1;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraBars.Navigation.TileBarGroup tlbgConfirmar;
+        private DevExpress.XtraBars.Navigation.TileBarItem tlbiConfirmar;
+        private DevExpress.XtraBars.Navigation.TileBarItem tlbiCancelar;
+        private DevExpress.XtraEditors.TextEdit txtAutor;
         private DevExpress.XtraEditors.LabelControl lblAutor;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
-        private DevExpress.XtraEditors.LabelControl lblBibliografia;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraEditors.TextEdit txtSite;
         private DevExpress.XtraEditors.LabelControl lblSite;
         private DevExpress.XtraEditors.LabelControl lblDatanascimento;
-        private DevExpress.XtraEditors.DateEdit dateEdit1;
+        private DevExpress.XtraEditors.DateEdit dteDataNascimento;
+        private DevExpress.XtraBars.Navigation.TileBarGroup tileBarGroup1;
+        private System.Windows.Forms.RichTextBox rtbBibliografia;
+        private DevExpress.XtraEditors.LabelControl lblBibliografia;
     }
 }

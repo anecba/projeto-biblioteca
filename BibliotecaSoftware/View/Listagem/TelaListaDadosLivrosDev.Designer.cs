@@ -29,12 +29,22 @@
         private void InitializeComponent()
         {
             this.grdDados = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.clnCodigo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grdvLivros = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.clnCodigoTitulo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.clnTitulo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.clnAutor = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.clnIdioma = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.clnPais = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.clnEdicao = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.clnAno = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.clnPaginas = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.clnDatalancamento = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.clnEditora = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.clnDescricao = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grdDados)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdvLivros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.SuspendLayout();
@@ -43,29 +53,37 @@
             // 
             this.grdDados.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdDados.Location = new System.Drawing.Point(0, 100);
-            this.grdDados.MainView = this.gridView1;
+            this.grdDados.MainView = this.grdvLivros;
             this.grdDados.Name = "grdDados";
             this.grdDados.Size = new System.Drawing.Size(961, 624);
             this.grdDados.TabIndex = 2;
             this.grdDados.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.grdvLivros});
             // 
-            // gridView1
+            // grdvLivros
             // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.clnCodigo});
-            this.gridView1.GridControl = this.grdDados;
-            this.gridView1.Name = "gridView1";
+            this.grdvLivros.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.clnCodigoTitulo,
+            this.clnTitulo,
+            this.clnAutor,
+            this.clnIdioma,
+            this.clnPais,
+            this.clnEdicao,
+            this.clnAno,
+            this.clnPaginas,
+            this.clnDatalancamento,
+            this.clnEditora,
+            this.clnDescricao});
+            this.grdvLivros.GridControl = this.grdDados;
+            this.grdvLivros.Name = "grdvLivros";
             // 
-            // clnCodigo
+            // clnCodigoTitulo
             // 
-            this.clnCodigo.Caption = "Código";
-            this.clnCodigo.FieldName = "Codigo";
-            this.clnCodigo.MinWidth = 25;
-            this.clnCodigo.Name = "clnCodigo";
-            this.clnCodigo.Visible = true;
-            this.clnCodigo.VisibleIndex = 0;
-            this.clnCodigo.Width = 94;
+            this.clnCodigoTitulo.Caption = "Cód.";
+            this.clnCodigoTitulo.FieldName = "Codigo";
+            this.clnCodigoTitulo.MinWidth = 25;
+            this.clnCodigoTitulo.Name = "clnCodigoTitulo";
+            this.clnCodigoTitulo.Width = 94;
             // 
             // simpleButton1
             // 
@@ -84,6 +102,86 @@
             this.panelControl1.Size = new System.Drawing.Size(961, 100);
             this.panelControl1.TabIndex = 3;
             // 
+            // clnTitulo
+            // 
+            this.clnTitulo.Caption = "Título";
+            this.clnTitulo.FieldName = "Titulo";
+            this.clnTitulo.MinWidth = 25;
+            this.clnTitulo.Name = "clnTitulo";
+            this.clnTitulo.Width = 94;
+            // 
+            // clnAutor
+            // 
+            this.clnAutor.Caption = "Autor";
+            this.clnAutor.FieldName = "Autor";
+            this.clnAutor.MinWidth = 25;
+            this.clnAutor.Name = "clnAutor";
+            this.clnAutor.Width = 94;
+            // 
+            // clnIdioma
+            // 
+            this.clnIdioma.Caption = "Idioma";
+            this.clnIdioma.FieldName = "Idioma";
+            this.clnIdioma.MinWidth = 25;
+            this.clnIdioma.Name = "clnIdioma";
+            this.clnIdioma.Width = 94;
+            // 
+            // clnPais
+            // 
+            this.clnPais.Caption = "País";
+            this.clnPais.FieldName = "Pais";
+            this.clnPais.MinWidth = 25;
+            this.clnPais.Name = "clnPais";
+            this.clnPais.Width = 94;
+            // 
+            // clnEdicao
+            // 
+            this.clnEdicao.Caption = "Edição";
+            this.clnEdicao.FieldName = "Edicao";
+            this.clnEdicao.MinWidth = 25;
+            this.clnEdicao.Name = "clnEdicao";
+            this.clnEdicao.Width = 94;
+            // 
+            // clnAno
+            // 
+            this.clnAno.Caption = "Ano";
+            this.clnAno.FieldName = "Ano";
+            this.clnAno.MinWidth = 25;
+            this.clnAno.Name = "clnAno";
+            this.clnAno.Width = 94;
+            // 
+            // clnPaginas
+            // 
+            this.clnPaginas.Caption = "Páginas";
+            this.clnPaginas.FieldName = "Paginas";
+            this.clnPaginas.MinWidth = 25;
+            this.clnPaginas.Name = "clnPaginas";
+            this.clnPaginas.Width = 94;
+            // 
+            // clnDatalancamento
+            // 
+            this.clnDatalancamento.Caption = "Lançamento";
+            this.clnDatalancamento.FieldName = "DataLancamento";
+            this.clnDatalancamento.MinWidth = 25;
+            this.clnDatalancamento.Name = "clnDatalancamento";
+            this.clnDatalancamento.Width = 94;
+            // 
+            // clnEditora
+            // 
+            this.clnEditora.Caption = "Editora";
+            this.clnEditora.FieldName = "Editora";
+            this.clnEditora.MinWidth = 25;
+            this.clnEditora.Name = "clnEditora";
+            this.clnEditora.Width = 94;
+            // 
+            // clnDescricao
+            // 
+            this.clnDescricao.Caption = "Descrição";
+            this.clnDescricao.FieldName = "Descricao";
+            this.clnDescricao.MinWidth = 25;
+            this.clnDescricao.Name = "clnDescricao";
+            this.clnDescricao.Width = 94;
+            // 
             // TelaListaDadosLivrosDev
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -94,7 +192,7 @@
             this.Name = "TelaListaDadosLivrosDev";
             this.Text = "Lista de livros";
             ((System.ComponentModel.ISupportInitialize)(this.grdDados)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdvLivros)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -104,9 +202,19 @@
         #endregion
 
         private DevExpress.XtraGrid.GridControl grdDados;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn clnCodigo;
+        private DevExpress.XtraGrid.Views.Grid.GridView grdvLivros;
+        private DevExpress.XtraGrid.Columns.GridColumn clnCodigoTitulo;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.PanelControl panelControl1;
+        private DevExpress.XtraGrid.Columns.GridColumn clnTitulo;
+        private DevExpress.XtraGrid.Columns.GridColumn clnAutor;
+        private DevExpress.XtraGrid.Columns.GridColumn clnIdioma;
+        private DevExpress.XtraGrid.Columns.GridColumn clnPais;
+        private DevExpress.XtraGrid.Columns.GridColumn clnEdicao;
+        private DevExpress.XtraGrid.Columns.GridColumn clnAno;
+        private DevExpress.XtraGrid.Columns.GridColumn clnPaginas;
+        private DevExpress.XtraGrid.Columns.GridColumn clnDatalancamento;
+        private DevExpress.XtraGrid.Columns.GridColumn clnEditora;
+        private DevExpress.XtraGrid.Columns.GridColumn clnDescricao;
     }
 }
