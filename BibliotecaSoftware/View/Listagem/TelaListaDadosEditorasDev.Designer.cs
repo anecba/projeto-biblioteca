@@ -45,7 +45,7 @@
             this.gridControl1.Location = new System.Drawing.Point(0, 101);
             this.gridControl1.MainView = this.grdvEditora;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(961, 607);
+            this.gridControl1.Size = new System.Drawing.Size(961, 492);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grdvEditora});

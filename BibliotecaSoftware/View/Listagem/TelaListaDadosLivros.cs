@@ -1,12 +1,14 @@
 ﻿using BibliotecaSoftware.Controller;
 using BibliotecaSoftware.Model;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace BibliotecaSoftware.View.Listagem
 {
     public partial class TelaListaDadosLivros : Form
     {
+        public IList<ListaLivro> _ilistalivro; 
         public ListaLivro _listaLivro;
         public ListaLivroController _listaLivroController;
 
@@ -18,12 +20,15 @@ namespace BibliotecaSoftware.View.Listagem
         private void ConstrutorPadrao()
         {
             InitializeComponent();
+            Carregar();
             _listaLivro = new ListaLivro();
             _listaLivroController = new ListaLivroController();
         }
 
         private void PesquisaTelaListarDadosLivrosBotao_Click(object sender, EventArgs e)
-            => Carregar();
+        {
+
+        }
 
         private void AlterarTelaListarDadosLivrosBotao_Click(object sender, EventArgs e)
         {
@@ -46,7 +51,10 @@ namespace BibliotecaSoftware.View.Listagem
             => Close();
 
         private void Carregar()
-            => mostrarListarDadosLivrosDataGridView.DataSource = _listaLivroController.Carregar();
+        {
+            _listaLivro = _listaLivroController.Carregar();
+            mostrarListarDadosLivrosDataGridView.DataSource = _listaLivro;
+        } 
     }
 }
 

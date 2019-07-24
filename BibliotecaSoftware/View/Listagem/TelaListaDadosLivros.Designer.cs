@@ -35,7 +35,6 @@
             this.apagarTelaListarDadosLivrosBotao = new System.Windows.Forms.Button();
             this.pesquisaTelaListarDadosLivrosBotao = new System.Windows.Forms.Button();
             this.mostrarListarDadosLivrosDataGridView = new System.Windows.Forms.DataGridView();
-            this.lblListaDeAutores = new System.Windows.Forms.Label();
             this.clnCodigoTitulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeTituloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeAutorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,6 +47,9 @@
             this.nomeEditoraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.listaLivroBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lblListaDeAutores = new System.Windows.Forms.Label();
+            this.nomeTelaListaLivrosTextbox = new System.Windows.Forms.TextBox();
+            this.nomeTelaListaLivrosEtiqueta = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.mostrarListarDadosLivrosDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaLivroBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -129,16 +131,6 @@
             this.mostrarListarDadosLivrosDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.mostrarListarDadosLivrosDataGridView.Size = new System.Drawing.Size(1318, 534);
             this.mostrarListarDadosLivrosDataGridView.TabIndex = 3;
-            // 
-            // lblListaDeAutores
-            // 
-            this.lblListaDeAutores.AutoSize = true;
-            this.lblListaDeAutores.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblListaDeAutores.Location = new System.Drawing.Point(24, 33);
-            this.lblListaDeAutores.Name = "lblListaDeAutores";
-            this.lblListaDeAutores.Size = new System.Drawing.Size(167, 29);
-            this.lblListaDeAutores.TabIndex = 0;
-            this.lblListaDeAutores.Text = "Lista de Livros";
             // 
             // clnCodigoTitulo
             // 
@@ -223,11 +215,41 @@
             // 
             this.listaLivroBindingSource.DataSource = typeof(BibliotecaSoftware.Model.ListaLivro);
             // 
+            // lblListaDeAutores
+            // 
+            this.lblListaDeAutores.AutoSize = true;
+            this.lblListaDeAutores.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblListaDeAutores.Location = new System.Drawing.Point(22, 23);
+            this.lblListaDeAutores.Name = "lblListaDeAutores";
+            this.lblListaDeAutores.Size = new System.Drawing.Size(167, 29);
+            this.lblListaDeAutores.TabIndex = 0;
+            this.lblListaDeAutores.Text = "Lista de Livros";
+            // 
+            // nomeTelaListaLivrosTextbox
+            // 
+            this.nomeTelaListaLivrosTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nomeTelaListaLivrosTextbox.Location = new System.Drawing.Point(118, 85);
+            this.nomeTelaListaLivrosTextbox.Name = "nomeTelaListaLivrosTextbox";
+            this.nomeTelaListaLivrosTextbox.Size = new System.Drawing.Size(1100, 27);
+            this.nomeTelaListaLivrosTextbox.TabIndex = 7;
+            // 
+            // nomeTelaListaLivrosEtiqueta
+            // 
+            this.nomeTelaListaLivrosEtiqueta.AutoSize = true;
+            this.nomeTelaListaLivrosEtiqueta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nomeTelaListaLivrosEtiqueta.Location = new System.Drawing.Point(32, 85);
+            this.nomeTelaListaLivrosEtiqueta.Name = "nomeTelaListaLivrosEtiqueta";
+            this.nomeTelaListaLivrosEtiqueta.Size = new System.Drawing.Size(64, 25);
+            this.nomeTelaListaLivrosEtiqueta.TabIndex = 8;
+            this.nomeTelaListaLivrosEtiqueta.Text = "Nome";
+            // 
             // TelaListaDadosLivros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1372, 743);
+            this.Controls.Add(this.nomeTelaListaLivrosEtiqueta);
+            this.Controls.Add(this.nomeTelaListaLivrosTextbox);
             this.Controls.Add(this.lblListaDeAutores);
             this.Controls.Add(this.alterarTelaListarDadosLivrosBotao);
             this.Controls.Add(this.fecharTelaListarDadosLivrosBotao);
@@ -265,5 +287,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeEditoraDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descricaoDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label lblListaDeAutores;
+        private System.Windows.Forms.TextBox nomeTelaListaLivrosTextbox;
+        private System.Windows.Forms.Label nomeTelaListaLivrosEtiqueta;
     }
 }
