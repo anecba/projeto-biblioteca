@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraEditors.TileItemElement tileItemElement7 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement3 = new DevExpress.XtraEditors.TileItemElement();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaCadastroLivrosDev));
-            DevExpress.XtraEditors.TileItemElement tileItemElement8 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement4 = new DevExpress.XtraEditors.TileItemElement();
             this.lblDatanascimento = new DevExpress.XtraEditors.LabelControl();
             this.dteDatanascimento = new DevExpress.XtraEditors.DateEdit();
             this.lblDescricao = new DevExpress.XtraEditors.LabelControl();
@@ -184,11 +184,11 @@
             // tbiConfirmar
             // 
             this.tbiConfirmar.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement7.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            tileItemElement7.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
-            tileItemElement7.Text = "Confirmar";
-            tileItemElement7.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.tbiConfirmar.Elements.Add(tileItemElement7);
+            tileItemElement3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            tileItemElement3.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
+            tileItemElement3.Text = "Confirmar";
+            tileItemElement3.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            this.tbiConfirmar.Elements.Add(tileItemElement3);
             this.tbiConfirmar.Id = 0;
             this.tbiConfirmar.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.tbiConfirmar.Name = "tbiConfirmar";
@@ -201,10 +201,10 @@
             // tbiCancelar
             // 
             this.tbiCancelar.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement8.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
-            tileItemElement8.Text = "Cancelar";
-            tileItemElement8.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.tbiCancelar.Elements.Add(tileItemElement8);
+            tileItemElement4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            tileItemElement4.Text = "Cancelar";
+            tileItemElement4.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            this.tbiCancelar.Elements.Add(tileItemElement4);
             this.tbiCancelar.Id = 1;
             this.tbiCancelar.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.tbiCancelar.Name = "tbiCancelar";
@@ -488,7 +488,11 @@
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.tlbCadastrosLivros);
             this.Controls.Add(this.pncCadastroLivros);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "TelaCadastroLivrosDev";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de livros";
             ((System.ComponentModel.ISupportInitialize)(this.dteDatanascimento.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteDatanascimento.Properties)).EndInit();

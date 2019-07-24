@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement5 = new DevExpress.XtraEditors.TileItemElement();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaCadastroEditorasDev));
-            DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement6 = new DevExpress.XtraEditors.TileItemElement();
             this.pncCadastroEditoras = new DevExpress.XtraEditors.PanelControl();
             this.txtEditora = new DevExpress.XtraEditors.TextEdit();
             this.lblEditora = new DevExpress.XtraEditors.LabelControl();
@@ -99,11 +99,11 @@
             // tileBarItem1
             // 
             this.tileBarItem1.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            tileItemElement1.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
-            tileItemElement1.Text = "Confirmar";
-            tileItemElement1.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.tileBarItem1.Elements.Add(tileItemElement1);
+            tileItemElement5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            tileItemElement5.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
+            tileItemElement5.Text = "Confirmar";
+            tileItemElement5.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            this.tileBarItem1.Elements.Add(tileItemElement5);
             this.tileBarItem1.Id = 0;
             this.tileBarItem1.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.tileBarItem1.Name = "tileBarItem1";
@@ -116,10 +116,10 @@
             // tileBarItem2
             // 
             this.tileBarItem2.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
-            tileItemElement2.Text = "Cancelar";
-            tileItemElement2.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.tileBarItem2.Elements.Add(tileItemElement2);
+            tileItemElement6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            tileItemElement6.Text = "Cancelar";
+            tileItemElement6.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            this.tileBarItem2.Elements.Add(tileItemElement6);
             this.tileBarItem2.Id = 1;
             this.tileBarItem2.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.tileBarItem2.Name = "tileBarItem2";
@@ -130,7 +130,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(622, 254);
             this.Controls.Add(this.pncCadastroEditoras);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "TelaCadastroEditorasDev";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de editoras";
             ((System.ComponentModel.ISupportInitialize)(this.pncCadastroEditoras)).EndInit();
             this.pncCadastroEditoras.ResumeLayout(false);

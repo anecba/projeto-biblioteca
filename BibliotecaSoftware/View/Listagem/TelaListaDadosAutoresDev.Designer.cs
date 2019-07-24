@@ -33,13 +33,13 @@
             this.grdv = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.clnCodigo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clnAutores = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.clnDataNascimento = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.clnSite = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.clnBibliografia = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.btnPesquisar = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.autorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.clnDataNascimento = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.clnSite = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.clnBibliografia = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grdDados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -91,36 +91,6 @@
             this.clnAutores.VisibleIndex = 1;
             this.clnAutores.Width = 94;
             // 
-            // panelControl1
-            // 
-            this.panelControl1.Controls.Add(this.btnPesquisar);
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(893, 100);
-            this.panelControl1.TabIndex = 1;
-            // 
-            // btnPesquisar
-            // 
-            this.btnPesquisar.Location = new System.Drawing.Point(724, 12);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(145, 69);
-            this.btnPesquisar.TabIndex = 0;
-            this.btnPesquisar.Text = "Pesquisar";
-            // 
-            // panelControl2
-            // 
-            this.panelControl2.Controls.Add(this.grdDados);
-            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl2.Location = new System.Drawing.Point(0, 100);
-            this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(893, 491);
-            this.panelControl2.TabIndex = 2;
-            // 
-            // autorBindingSource
-            // 
-            this.autorBindingSource.DataSource = typeof(BibliotecaSoftware.Model.Autor);
-            // 
             // clnDataNascimento
             // 
             this.clnDataNascimento.Caption = "Data de nascimento";
@@ -151,6 +121,36 @@
             this.clnBibliografia.VisibleIndex = 4;
             this.clnBibliografia.Width = 94;
             // 
+            // panelControl1
+            // 
+            this.panelControl1.Controls.Add(this.btnPesquisar);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl1.Location = new System.Drawing.Point(0, 0);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(893, 100);
+            this.panelControl1.TabIndex = 1;
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Location = new System.Drawing.Point(724, 12);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(145, 69);
+            this.btnPesquisar.TabIndex = 0;
+            this.btnPesquisar.Text = "Pesquisar";
+            // 
+            // panelControl2
+            // 
+            this.panelControl2.Controls.Add(this.grdDados);
+            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl2.Location = new System.Drawing.Point(0, 100);
+            this.panelControl2.Name = "panelControl2";
+            this.panelControl2.Size = new System.Drawing.Size(893, 491);
+            this.panelControl2.TabIndex = 2;
+            // 
+            // autorBindingSource
+            // 
+            this.autorBindingSource.DataSource = typeof(BibliotecaSoftware.Model.Autor);
+            // 
             // TelaListaDadosAutoresDev
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -158,7 +158,11 @@
             this.ClientSize = new System.Drawing.Size(893, 591);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "TelaListaDadosAutoresDev";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista de Autores";
             ((System.ComponentModel.ISupportInitialize)(this.grdDados)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdv)).EndInit();

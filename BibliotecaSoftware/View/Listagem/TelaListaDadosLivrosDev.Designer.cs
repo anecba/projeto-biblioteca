@@ -31,8 +31,6 @@
             this.grdDados = new DevExpress.XtraGrid.GridControl();
             this.grdvLivros = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.clnCodigoTitulo = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.clnTitulo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clnAutor = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clnIdioma = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -43,6 +41,8 @@
             this.clnDatalancamento = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clnEditora = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clnDescricao = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.grdDados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdvLivros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -83,15 +83,117 @@
             this.clnCodigoTitulo.FieldName = "Codigo";
             this.clnCodigoTitulo.MinWidth = 25;
             this.clnCodigoTitulo.Name = "clnCodigoTitulo";
+            this.clnCodigoTitulo.Visible = true;
+            this.clnCodigoTitulo.VisibleIndex = 0;
             this.clnCodigoTitulo.Width = 94;
+            // 
+            // clnTitulo
+            // 
+            this.clnTitulo.Caption = "Título";
+            this.clnTitulo.FieldName = "Titulo";
+            this.clnTitulo.MinWidth = 25;
+            this.clnTitulo.Name = "clnTitulo";
+            this.clnTitulo.Visible = true;
+            this.clnTitulo.VisibleIndex = 1;
+            this.clnTitulo.Width = 94;
+            // 
+            // clnAutor
+            // 
+            this.clnAutor.Caption = "Autor";
+            this.clnAutor.FieldName = "Autor";
+            this.clnAutor.MinWidth = 25;
+            this.clnAutor.Name = "clnAutor";
+            this.clnAutor.Visible = true;
+            this.clnAutor.VisibleIndex = 2;
+            this.clnAutor.Width = 94;
+            // 
+            // clnIdioma
+            // 
+            this.clnIdioma.Caption = "Idioma";
+            this.clnIdioma.FieldName = "Idioma";
+            this.clnIdioma.MinWidth = 25;
+            this.clnIdioma.Name = "clnIdioma";
+            this.clnIdioma.Visible = true;
+            this.clnIdioma.VisibleIndex = 3;
+            this.clnIdioma.Width = 94;
+            // 
+            // clnPais
+            // 
+            this.clnPais.Caption = "País";
+            this.clnPais.FieldName = "Pais";
+            this.clnPais.MinWidth = 25;
+            this.clnPais.Name = "clnPais";
+            this.clnPais.Visible = true;
+            this.clnPais.VisibleIndex = 4;
+            this.clnPais.Width = 94;
+            // 
+            // clnEdicao
+            // 
+            this.clnEdicao.Caption = "Edição";
+            this.clnEdicao.FieldName = "Edicao";
+            this.clnEdicao.MinWidth = 25;
+            this.clnEdicao.Name = "clnEdicao";
+            this.clnEdicao.Visible = true;
+            this.clnEdicao.VisibleIndex = 5;
+            this.clnEdicao.Width = 94;
+            // 
+            // clnAno
+            // 
+            this.clnAno.Caption = "Ano";
+            this.clnAno.FieldName = "Ano";
+            this.clnAno.MinWidth = 25;
+            this.clnAno.Name = "clnAno";
+            this.clnAno.Visible = true;
+            this.clnAno.VisibleIndex = 6;
+            this.clnAno.Width = 94;
+            // 
+            // clnPaginas
+            // 
+            this.clnPaginas.Caption = "Páginas";
+            this.clnPaginas.FieldName = "Paginas";
+            this.clnPaginas.MinWidth = 25;
+            this.clnPaginas.Name = "clnPaginas";
+            this.clnPaginas.Visible = true;
+            this.clnPaginas.VisibleIndex = 7;
+            this.clnPaginas.Width = 94;
+            // 
+            // clnDatalancamento
+            // 
+            this.clnDatalancamento.Caption = "Lançamento";
+            this.clnDatalancamento.FieldName = "DataLancamento";
+            this.clnDatalancamento.MinWidth = 25;
+            this.clnDatalancamento.Name = "clnDatalancamento";
+            this.clnDatalancamento.Visible = true;
+            this.clnDatalancamento.VisibleIndex = 8;
+            this.clnDatalancamento.Width = 94;
+            // 
+            // clnEditora
+            // 
+            this.clnEditora.Caption = "Editora";
+            this.clnEditora.FieldName = "Editora";
+            this.clnEditora.MinWidth = 25;
+            this.clnEditora.Name = "clnEditora";
+            this.clnEditora.Visible = true;
+            this.clnEditora.VisibleIndex = 9;
+            this.clnEditora.Width = 94;
+            // 
+            // clnDescricao
+            // 
+            this.clnDescricao.Caption = "Descrição";
+            this.clnDescricao.FieldName = "Descricao";
+            this.clnDescricao.MinWidth = 25;
+            this.clnDescricao.Name = "clnDescricao";
+            this.clnDescricao.Visible = true;
+            this.clnDescricao.VisibleIndex = 10;
+            this.clnDescricao.Width = 94;
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(724, 12);
+            this.simpleButton1.Location = new System.Drawing.Point(804, 12);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(145, 69);
             this.simpleButton1.TabIndex = 0;
-            this.simpleButton1.Text = "simpleButton1";
+            this.simpleButton1.Text = "Pesquisar";
             // 
             // panelControl1
             // 
@@ -102,86 +204,6 @@
             this.panelControl1.Size = new System.Drawing.Size(961, 100);
             this.panelControl1.TabIndex = 3;
             // 
-            // clnTitulo
-            // 
-            this.clnTitulo.Caption = "Título";
-            this.clnTitulo.FieldName = "Titulo";
-            this.clnTitulo.MinWidth = 25;
-            this.clnTitulo.Name = "clnTitulo";
-            this.clnTitulo.Width = 94;
-            // 
-            // clnAutor
-            // 
-            this.clnAutor.Caption = "Autor";
-            this.clnAutor.FieldName = "Autor";
-            this.clnAutor.MinWidth = 25;
-            this.clnAutor.Name = "clnAutor";
-            this.clnAutor.Width = 94;
-            // 
-            // clnIdioma
-            // 
-            this.clnIdioma.Caption = "Idioma";
-            this.clnIdioma.FieldName = "Idioma";
-            this.clnIdioma.MinWidth = 25;
-            this.clnIdioma.Name = "clnIdioma";
-            this.clnIdioma.Width = 94;
-            // 
-            // clnPais
-            // 
-            this.clnPais.Caption = "País";
-            this.clnPais.FieldName = "Pais";
-            this.clnPais.MinWidth = 25;
-            this.clnPais.Name = "clnPais";
-            this.clnPais.Width = 94;
-            // 
-            // clnEdicao
-            // 
-            this.clnEdicao.Caption = "Edição";
-            this.clnEdicao.FieldName = "Edicao";
-            this.clnEdicao.MinWidth = 25;
-            this.clnEdicao.Name = "clnEdicao";
-            this.clnEdicao.Width = 94;
-            // 
-            // clnAno
-            // 
-            this.clnAno.Caption = "Ano";
-            this.clnAno.FieldName = "Ano";
-            this.clnAno.MinWidth = 25;
-            this.clnAno.Name = "clnAno";
-            this.clnAno.Width = 94;
-            // 
-            // clnPaginas
-            // 
-            this.clnPaginas.Caption = "Páginas";
-            this.clnPaginas.FieldName = "Paginas";
-            this.clnPaginas.MinWidth = 25;
-            this.clnPaginas.Name = "clnPaginas";
-            this.clnPaginas.Width = 94;
-            // 
-            // clnDatalancamento
-            // 
-            this.clnDatalancamento.Caption = "Lançamento";
-            this.clnDatalancamento.FieldName = "DataLancamento";
-            this.clnDatalancamento.MinWidth = 25;
-            this.clnDatalancamento.Name = "clnDatalancamento";
-            this.clnDatalancamento.Width = 94;
-            // 
-            // clnEditora
-            // 
-            this.clnEditora.Caption = "Editora";
-            this.clnEditora.FieldName = "Editora";
-            this.clnEditora.MinWidth = 25;
-            this.clnEditora.Name = "clnEditora";
-            this.clnEditora.Width = 94;
-            // 
-            // clnDescricao
-            // 
-            this.clnDescricao.Caption = "Descrição";
-            this.clnDescricao.FieldName = "Descricao";
-            this.clnDescricao.MinWidth = 25;
-            this.clnDescricao.Name = "clnDescricao";
-            this.clnDescricao.Width = 94;
-            // 
             // TelaListaDadosLivrosDev
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -189,7 +211,11 @@
             this.ClientSize = new System.Drawing.Size(961, 724);
             this.Controls.Add(this.grdDados);
             this.Controls.Add(this.panelControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "TelaListaDadosLivrosDev";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista de livros";
             ((System.ComponentModel.ISupportInitialize)(this.grdDados)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdvLivros)).EndInit();

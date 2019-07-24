@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip6 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem6 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem6 = new DevExpress.Utils.ToolTipTitleItem();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaBibliotecaDev));
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rbpBiblioteca = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -50,7 +50,11 @@
             this.rbcontrolBiblioteca = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.rbcontrolBiblioteca)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ribbonPageGroup5
@@ -72,10 +76,10 @@
             this.rpgCadastro.ItemLinks.Add(this.barbtnEditoras);
             this.rpgCadastro.ItemLinks.Add(this.barbtnLivros);
             this.rpgCadastro.Name = "rpgCadastro";
-            toolTipTitleItem1.Text = "Cadastros ";
-            superToolTip1.Items.Add(toolTipItem1);
-            superToolTip1.Items.Add(toolTipTitleItem1);
-            this.rpgCadastro.SuperTip = superToolTip1;
+            toolTipTitleItem6.Text = "Cadastros ";
+            superToolTip6.Items.Add(toolTipItem6);
+            superToolTip6.Items.Add(toolTipTitleItem6);
+            this.rpgCadastro.SuperTip = superToolTip6;
             this.rpgCadastro.Tag = "Para realizar os cadastros";
             this.rpgCadastro.Text = "Cadastro";
             // 
@@ -195,7 +199,7 @@
             this.rbcontrolBiblioteca.Name = "rbcontrolBiblioteca";
             this.rbcontrolBiblioteca.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rbpBiblioteca});
-            this.rbcontrolBiblioteca.Size = new System.Drawing.Size(830, 176);
+            this.rbcontrolBiblioteca.Size = new System.Drawing.Size(1001, 176);
             // 
             // barButtonItem6
             // 
@@ -213,15 +217,42 @@
             this.barButtonItem7.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem7.ImageOptions.LargeImage")));
             this.barButtonItem7.Name = "barButtonItem7";
             // 
+            // panelControl1
+            // 
+            this.panelControl1.Controls.Add(this.labelControl1);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl1.Location = new System.Drawing.Point(0, 176);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(1001, 477);
+            this.panelControl1.TabIndex = 1;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(522, 287);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(425, 145);
+            this.labelControl1.TabIndex = 0;
+            this.labelControl1.Text = "SigeAne";
+            // 
             // TelaBibliotecaDev
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(830, 570);
+            this.ClientSize = new System.Drawing.Size(1001, 653);
+            this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.rbcontrolBiblioteca);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "TelaBibliotecaDev";
             this.Text = "Biblioteca";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.rbcontrolBiblioteca)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
+            this.panelControl1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,5 +277,7 @@
         private DevExpress.XtraBars.BarButtonItem barbtnListaAutores;
         private DevExpress.XtraBars.BarButtonItem barbtnListaEditoras;
         private DevExpress.XtraBars.BarButtonItem barbtnListaLivros;
+        private DevExpress.XtraEditors.PanelControl panelControl1;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
     }
 }

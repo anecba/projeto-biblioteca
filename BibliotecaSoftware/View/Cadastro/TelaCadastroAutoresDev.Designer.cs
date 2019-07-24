@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.TileItemElement tileItemElement5 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement7 = new DevExpress.XtraEditors.TileItemElement();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaCadastroAutoresDev));
-            DevExpress.XtraEditors.TileItemElement tileItemElement6 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement8 = new DevExpress.XtraEditors.TileItemElement();
             this.pncCadastroAutores = new DevExpress.XtraEditors.PanelControl();
+            this.rtbBibliografia = new System.Windows.Forms.RichTextBox();
+            this.lblBibliografia = new DevExpress.XtraEditors.LabelControl();
             this.lblDatanascimento = new DevExpress.XtraEditors.LabelControl();
             this.dteDataNascimento = new DevExpress.XtraEditors.DateEdit();
             this.txtSite = new DevExpress.XtraEditors.TextEdit();
@@ -41,10 +43,8 @@
             this.tileBar1 = new DevExpress.XtraBars.Navigation.TileBar();
             this.tlbgConfirmar = new DevExpress.XtraBars.Navigation.TileBarGroup();
             this.tlbiConfirmar = new DevExpress.XtraBars.Navigation.TileBarItem();
-            this.tlbiCancelar = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.tileBarGroup1 = new DevExpress.XtraBars.Navigation.TileBarGroup();
-            this.rtbBibliografia = new System.Windows.Forms.RichTextBox();
-            this.lblBibliografia = new DevExpress.XtraEditors.LabelControl();
+            this.tlbiCancelar = new DevExpress.XtraBars.Navigation.TileBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.pncCadastroAutores)).BeginInit();
             this.pncCadastroAutores.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dteDataNascimento.Properties.CalendarTimeProperties)).BeginInit();
@@ -70,6 +70,25 @@
             this.pncCadastroAutores.Size = new System.Drawing.Size(622, 541);
             this.pncCadastroAutores.TabIndex = 1;
             this.pncCadastroAutores.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl1_Paint);
+            // 
+            // rtbBibliografia
+            // 
+            this.rtbBibliografia.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtbBibliografia.Location = new System.Drawing.Point(32, 273);
+            this.rtbBibliografia.Name = "rtbBibliografia";
+            this.rtbBibliografia.Size = new System.Drawing.Size(550, 96);
+            this.rtbBibliografia.TabIndex = 26;
+            this.rtbBibliografia.Text = "";
+            // 
+            // lblBibliografia
+            // 
+            this.lblBibliografia.Appearance.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBibliografia.Appearance.Options.UseFont = true;
+            this.lblBibliografia.Location = new System.Drawing.Point(32, 243);
+            this.lblBibliografia.Name = "lblBibliografia";
+            this.lblBibliografia.Size = new System.Drawing.Size(104, 24);
+            this.lblBibliografia.TabIndex = 25;
+            this.lblBibliografia.Text = "Bibliografia";
             // 
             // lblDatanascimento
             // 
@@ -159,49 +178,30 @@
             // tlbiConfirmar
             // 
             this.tlbiConfirmar.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            tileItemElement5.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
-            tileItemElement5.Text = "Confirmar";
-            tileItemElement5.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.tlbiConfirmar.Elements.Add(tileItemElement5);
+            tileItemElement7.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            tileItemElement7.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
+            tileItemElement7.Text = "Confirmar";
+            tileItemElement7.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            this.tlbiConfirmar.Elements.Add(tileItemElement7);
             this.tlbiConfirmar.Id = 0;
             this.tlbiConfirmar.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.tlbiConfirmar.Name = "tlbiConfirmar";
-            // 
-            // tlbiCancelar
-            // 
-            this.tlbiCancelar.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
-            tileItemElement6.Text = "Cancelar";
-            tileItemElement6.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.tlbiCancelar.Elements.Add(tileItemElement6);
-            this.tlbiCancelar.Id = 1;
-            this.tlbiCancelar.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.tlbiCancelar.Name = "tlbiCancelar";
             // 
             // tileBarGroup1
             // 
             this.tileBarGroup1.Items.Add(this.tlbiCancelar);
             this.tileBarGroup1.Name = "tileBarGroup1";
             // 
-            // rtbBibliografia
+            // tlbiCancelar
             // 
-            this.rtbBibliografia.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtbBibliografia.Location = new System.Drawing.Point(32, 273);
-            this.rtbBibliografia.Name = "rtbBibliografia";
-            this.rtbBibliografia.Size = new System.Drawing.Size(550, 96);
-            this.rtbBibliografia.TabIndex = 26;
-            this.rtbBibliografia.Text = "";
-            // 
-            // lblBibliografia
-            // 
-            this.lblBibliografia.Appearance.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBibliografia.Appearance.Options.UseFont = true;
-            this.lblBibliografia.Location = new System.Drawing.Point(32, 243);
-            this.lblBibliografia.Name = "lblBibliografia";
-            this.lblBibliografia.Size = new System.Drawing.Size(104, 24);
-            this.lblBibliografia.TabIndex = 25;
-            this.lblBibliografia.Text = "Bibliografia";
+            this.tlbiCancelar.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
+            tileItemElement8.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            tileItemElement8.Text = "Cancelar";
+            tileItemElement8.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            this.tlbiCancelar.Elements.Add(tileItemElement8);
+            this.tlbiCancelar.Id = 1;
+            this.tlbiCancelar.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
+            this.tlbiCancelar.Name = "tlbiCancelar";
             // 
             // TelaCadastroAutoresDev
             // 
@@ -211,7 +211,11 @@
             this.ClientSize = new System.Drawing.Size(622, 541);
             this.Controls.Add(this.pncCadastroAutores);
             this.Font = new System.Drawing.Font("Georgia", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "TelaCadastroAutoresDev";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de autores";
             ((System.ComponentModel.ISupportInitialize)(this.pncCadastroAutores)).EndInit();
             this.pncCadastroAutores.ResumeLayout(false);

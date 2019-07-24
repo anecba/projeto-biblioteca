@@ -29,7 +29,7 @@ namespace BibliotecaSoftware.View
         private void BarbtnEditoras_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             TelaCadastroEditorasDev telaCadastroEditorasDev = new TelaCadastroEditorasDev();
-            telaCadastroEditorasDev.Show();
+            telaCadastroEditorasDev.ShowDialog();
         }
 
         private void BarbtnLivros_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
