@@ -73,53 +73,58 @@
             // 
             // clnCodigo
             // 
-            this.clnCodigo.Caption = "Código";
+            this.clnCodigo.Caption = "Cód.";
             this.clnCodigo.FieldName = "Codigo";
-            this.clnCodigo.MinWidth = 25;
+            this.clnCodigo.MaxWidth = 50;
+            this.clnCodigo.MinWidth = 40;
             this.clnCodigo.Name = "clnCodigo";
             this.clnCodigo.Visible = true;
             this.clnCodigo.VisibleIndex = 0;
-            this.clnCodigo.Width = 94;
+            this.clnCodigo.Width = 50;
             // 
             // clnAutores
             // 
             this.clnAutores.Caption = "Autor";
             this.clnAutores.FieldName = "Autor";
-            this.clnAutores.MinWidth = 25;
+            this.clnAutores.MaxWidth = 300;
+            this.clnAutores.MinWidth = 150;
             this.clnAutores.Name = "clnAutores";
             this.clnAutores.Visible = true;
             this.clnAutores.VisibleIndex = 1;
-            this.clnAutores.Width = 94;
+            this.clnAutores.Width = 200;
             // 
             // clnDataNascimento
             // 
             this.clnDataNascimento.Caption = "Data de nascimento";
             this.clnDataNascimento.FieldName = "Data de Nascimento";
+            this.clnDataNascimento.MaxWidth = 50;
             this.clnDataNascimento.MinWidth = 25;
             this.clnDataNascimento.Name = "clnDataNascimento";
             this.clnDataNascimento.Visible = true;
             this.clnDataNascimento.VisibleIndex = 2;
-            this.clnDataNascimento.Width = 94;
+            this.clnDataNascimento.Width = 50;
             // 
             // clnSite
             // 
             this.clnSite.Caption = "Site";
             this.clnSite.FieldName = "Site";
+            this.clnSite.MaxWidth = 200;
             this.clnSite.MinWidth = 25;
             this.clnSite.Name = "clnSite";
             this.clnSite.Visible = true;
             this.clnSite.VisibleIndex = 3;
-            this.clnSite.Width = 94;
+            this.clnSite.Width = 168;
             // 
             // clnBibliografia
             // 
             this.clnBibliografia.Caption = "Bibliografia";
             this.clnBibliografia.FieldName = "Bibliografia";
+            this.clnBibliografia.MaxWidth = 400;
             this.clnBibliografia.MinWidth = 25;
             this.clnBibliografia.Name = "clnBibliografia";
             this.clnBibliografia.Visible = true;
             this.clnBibliografia.VisibleIndex = 4;
-            this.clnBibliografia.Width = 94;
+            this.clnBibliografia.Width = 283;
             // 
             // panelControl1
             // 
@@ -132,7 +137,7 @@
             // 
             // btnPesquisar
             // 
-            this.btnPesquisar.Location = new System.Drawing.Point(724, 12);
+            this.btnPesquisar.Location = new System.Drawing.Point(743, 12);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(145, 69);
             this.btnPesquisar.TabIndex = 0;

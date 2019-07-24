@@ -12,6 +12,7 @@ namespace BibliotecaSoftware
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new TelaBibliotecaDev());
+            //Application.Run(new TelaBibliotecaPrincipal());
         }
     }
 }

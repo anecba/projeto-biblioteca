@@ -62,25 +62,26 @@
             // 
             this.clnCodigoEditora.Caption = "Cód.";
             this.clnCodigoEditora.FieldName = "CodigoEditora";
-            this.clnCodigoEditora.MinWidth = 25;
+            this.clnCodigoEditora.MaxWidth = 50;
+            this.clnCodigoEditora.MinWidth = 40;
             this.clnCodigoEditora.Name = "clnCodigoEditora";
             this.clnCodigoEditora.Visible = true;
             this.clnCodigoEditora.VisibleIndex = 0;
-            this.clnCodigoEditora.Width = 94;
+            this.clnCodigoEditora.Width = 50;
             // 
             // clnEditora
             // 
             this.clnEditora.Caption = "Editora";
             this.clnEditora.FieldName = "Editora";
-            this.clnEditora.MinWidth = 25;
+            this.clnEditora.MinWidth = 50;
             this.clnEditora.Name = "clnEditora";
             this.clnEditora.Visible = true;
             this.clnEditora.VisibleIndex = 1;
-            this.clnEditora.Width = 94;
+            this.clnEditora.Width = 891;
             // 
             // btnPesquisar
             // 
-            this.btnPesquisar.Location = new System.Drawing.Point(816, 26);
+            this.btnPesquisar.Location = new System.Drawing.Point(816, 12);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(145, 69);
             this.btnPesquisar.TabIndex = 0;

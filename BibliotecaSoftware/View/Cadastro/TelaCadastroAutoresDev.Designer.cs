@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.TileItemElement tileItemElement7 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaCadastroAutoresDev));
-            DevExpress.XtraEditors.TileItemElement tileItemElement8 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
             this.pncCadastroAutores = new DevExpress.XtraEditors.PanelControl();
             this.rtbBibliografia = new System.Windows.Forms.RichTextBox();
             this.lblBibliografia = new DevExpress.XtraEditors.LabelControl();
@@ -161,12 +161,12 @@
             this.tileBar1.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
             this.tileBar1.Groups.Add(this.tlbgConfirmar);
             this.tileBar1.Groups.Add(this.tileBarGroup1);
-            this.tileBar1.Location = new System.Drawing.Point(142, 396);
+            this.tileBar1.Location = new System.Drawing.Point(199, 398);
             this.tileBar1.MaxId = 2;
             this.tileBar1.Name = "tileBar1";
             this.tileBar1.Padding = new System.Windows.Forms.Padding(25, 7, 25, 7);
             this.tileBar1.ScrollMode = DevExpress.XtraEditors.TileControlScrollMode.ScrollButtons;
-            this.tileBar1.Size = new System.Drawing.Size(440, 107);
+            this.tileBar1.Size = new System.Drawing.Size(383, 107);
             this.tileBar1.TabIndex = 2;
             this.tileBar1.Text = "tileBar1";
             // 
@@ -178,11 +178,11 @@
             // tlbiConfirmar
             // 
             this.tlbiConfirmar.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement7.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            tileItemElement7.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
-            tileItemElement7.Text = "Confirmar";
-            tileItemElement7.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.tlbiConfirmar.Elements.Add(tileItemElement7);
+            tileItemElement1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            tileItemElement1.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
+            tileItemElement1.Text = "Confirmar";
+            tileItemElement1.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            this.tlbiConfirmar.Elements.Add(tileItemElement1);
             this.tlbiConfirmar.Id = 0;
             this.tlbiConfirmar.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.tlbiConfirmar.Name = "tlbiConfirmar";
@@ -195,13 +195,14 @@
             // tlbiCancelar
             // 
             this.tlbiCancelar.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement8.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
-            tileItemElement8.Text = "Cancelar";
-            tileItemElement8.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.tlbiCancelar.Elements.Add(tileItemElement8);
+            tileItemElement2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            tileItemElement2.Text = "Cancelar";
+            tileItemElement2.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            this.tlbiCancelar.Elements.Add(tileItemElement2);
             this.tlbiCancelar.Id = 1;
             this.tlbiCancelar.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.tlbiCancelar.Name = "tlbiCancelar";
+            this.tlbiCancelar.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.TlbiCancelar_ItemClick);
             // 
             // TelaCadastroAutoresDev
             // 

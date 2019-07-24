@@ -17,5 +17,10 @@ namespace BibliotecaSoftware.View.Cadastro
         {
             InitializeComponent();
         }
+
+        private void TbiCancelar_ItemClick(object sender, TileItemEventArgs e)
+        {
+            Close();
+        }
     }
 }

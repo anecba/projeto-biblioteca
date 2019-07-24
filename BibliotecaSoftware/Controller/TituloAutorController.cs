@@ -12,7 +12,6 @@ namespace BibliotecaSoftware.Controller
         public TituloAutorController()
         {
             _tituloAutorDao = new TituloAutorDao();
-
         }
 
         public bool GravarCadastroTitulo(Livro livroModel)
@@ -25,7 +24,6 @@ namespace BibliotecaSoftware.Controller
                     return true;
                 }
             }
-
             else
             {
                 if (_tituloAutorDao.Alterar(livroModel.Titulo, livroModel.Edicao, livroModel.TituloAutor))
