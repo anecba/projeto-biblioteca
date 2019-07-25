@@ -167,7 +167,7 @@
             this.tlbCadastrosLivros.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
             this.tlbCadastrosLivros.Groups.Add(this.tileBarGroup2);
             this.tlbCadastrosLivros.Groups.Add(this.tileBarGroup1);
-            this.tlbCadastrosLivros.Location = new System.Drawing.Point(313, 599);
+            this.tlbCadastrosLivros.Location = new System.Drawing.Point(313, 586);
             this.tlbCadastrosLivros.MaxId = 2;
             this.tlbCadastrosLivros.Name = "tlbCadastrosLivros";
             this.tlbCadastrosLivros.Padding = new System.Windows.Forms.Padding(25, 7, 25, 7);
@@ -423,6 +423,7 @@
             this.pncCadastroLivros.Controls.Add(this.txtPaginas);
             this.pncCadastroLivros.Controls.Add(this.lblPaginas);
             this.pncCadastroLivros.Controls.Add(this.txtAno);
+            this.pncCadastroLivros.Controls.Add(this.tlbCadastrosLivros);
             this.pncCadastroLivros.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pncCadastroLivros.Location = new System.Drawing.Point(0, 0);
             this.pncCadastroLivros.Name = "pncCadastroLivros";
@@ -487,7 +488,6 @@
             this.Controls.Add(this.lblCodTitulo);
             this.Controls.Add(this.lblDescricao);
             this.Controls.Add(this.lblTitulo);
-            this.Controls.Add(this.tlbCadastrosLivros);
             this.Controls.Add(this.pncCadastroLivros);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;

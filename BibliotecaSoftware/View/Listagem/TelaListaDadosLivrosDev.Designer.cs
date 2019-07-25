@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaListaDadosLivrosDev));
+            DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement3 = new DevExpress.XtraEditors.TileItemElement();
             this.grdDados = new DevExpress.XtraGrid.GridControl();
             this.grdvLivros = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.clnCodigoTitulo = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -43,19 +47,25 @@
             this.clnDescricao = new DevExpress.XtraGrid.Columns.GridColumn();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.tbiCancelar = new DevExpress.XtraBars.Navigation.TileBarItem();
+            this.tbiConfirmar = new DevExpress.XtraBars.Navigation.TileBarItem();
+            this.tlbCadastrosLivros = new DevExpress.XtraBars.Navigation.TileBar();
+            this.tileBarGroup4 = new DevExpress.XtraBars.Navigation.TileBarGroup();
+            this.tileBarItem2 = new DevExpress.XtraBars.Navigation.TileBarItem();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.grdDados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdvLivros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // grdDados
             // 
-            this.grdDados.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdDados.Location = new System.Drawing.Point(0, 100);
             this.grdDados.MainView = this.grdvLivros;
             this.grdDados.Name = "grdDados";
-            this.grdDados.Size = new System.Drawing.Size(961, 624);
+            this.grdDados.Size = new System.Drawing.Size(961, 486);
             this.grdDados.TabIndex = 2;
             this.grdDados.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grdvLivros});
@@ -197,6 +207,7 @@
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.textEdit1);
             this.panelControl1.Controls.Add(this.simpleButton1);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
@@ -204,11 +215,75 @@
             this.panelControl1.Size = new System.Drawing.Size(961, 100);
             this.panelControl1.TabIndex = 3;
             // 
+            // tbiCancelar
+            // 
+            this.tbiCancelar.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
+            tileItemElement1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            tileItemElement1.Text = "Cancelar";
+            tileItemElement1.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            this.tbiCancelar.Elements.Add(tileItemElement1);
+            this.tbiCancelar.Id = 1;
+            this.tbiCancelar.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
+            this.tbiCancelar.Name = "tbiCancelar";
+            // 
+            // tbiConfirmar
+            // 
+            this.tbiConfirmar.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
+            tileItemElement2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            tileItemElement2.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
+            tileItemElement2.Text = "Apagar";
+            tileItemElement2.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            this.tbiConfirmar.Elements.Add(tileItemElement2);
+            this.tbiConfirmar.Id = 0;
+            this.tbiConfirmar.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
+            this.tbiConfirmar.Name = "tbiConfirmar";
+            // 
+            // tlbCadastrosLivros
+            // 
+            this.tlbCadastrosLivros.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
+            this.tlbCadastrosLivros.Groups.Add(this.tileBarGroup4);
+            this.tlbCadastrosLivros.Location = new System.Drawing.Point(395, 592);
+            this.tlbCadastrosLivros.MaxId = 6;
+            this.tlbCadastrosLivros.Name = "tlbCadastrosLivros";
+            this.tlbCadastrosLivros.Padding = new System.Windows.Forms.Padding(25, 7, 25, 7);
+            this.tlbCadastrosLivros.ScrollMode = DevExpress.XtraEditors.TileControlScrollMode.ScrollButtons;
+            this.tlbCadastrosLivros.Size = new System.Drawing.Size(554, 107);
+            this.tlbCadastrosLivros.TabIndex = 12;
+            this.tlbCadastrosLivros.Text = "tileBar1";
+            this.tlbCadastrosLivros.Click += new System.EventHandler(this.tlbCadastrosLivros_Click);
+            // 
+            // tileBarGroup4
+            // 
+            this.tileBarGroup4.Items.Add(this.tileBarItem2);
+            this.tileBarGroup4.Items.Add(this.tbiConfirmar);
+            this.tileBarGroup4.Items.Add(this.tbiCancelar);
+            this.tileBarGroup4.Name = "tileBarGroup4";
+            this.tileBarGroup4.Text = "mmm";
+            // 
+            // tileBarItem2
+            // 
+            this.tileBarItem2.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
+            tileItemElement3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
+            tileItemElement3.Text = "Alterar";
+            tileItemElement3.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            this.tileBarItem2.Elements.Add(tileItemElement3);
+            this.tileBarItem2.Id = 5;
+            this.tileBarItem2.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
+            this.tileBarItem2.Name = "tileBarItem2";
+            // 
+            // textEdit1
+            // 
+            this.textEdit1.Location = new System.Drawing.Point(5, 31);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Size = new System.Drawing.Size(775, 22);
+            this.textEdit1.TabIndex = 1;
+            // 
             // TelaListaDadosLivrosDev
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(961, 724);
+            this.ClientSize = new System.Drawing.Size(961, 711);
+            this.Controls.Add(this.tlbCadastrosLivros);
             this.Controls.Add(this.grdDados);
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -221,6 +296,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdvLivros)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -242,5 +318,11 @@
         private DevExpress.XtraGrid.Columns.GridColumn clnDatalancamento;
         private DevExpress.XtraGrid.Columns.GridColumn clnEditora;
         private DevExpress.XtraGrid.Columns.GridColumn clnDescricao;
+        private DevExpress.XtraBars.Navigation.TileBarItem tbiCancelar;
+        private DevExpress.XtraBars.Navigation.TileBarItem tbiConfirmar;
+        private DevExpress.XtraBars.Navigation.TileBar tlbCadastrosLivros;
+        private DevExpress.XtraBars.Navigation.TileBarGroup tileBarGroup4;
+        private DevExpress.XtraBars.Navigation.TileBarItem tileBarItem2;
+        private DevExpress.XtraEditors.TextEdit textEdit1;
     }
 }

@@ -8,8 +8,8 @@ namespace BibliotecaSoftware.View.Listagem
 {
     public partial class TelaListaDadosLivros : Form
     {
-        public IList<ListaLivro> _ilistalivro; 
-        public ListaLivro _listaLivro;
+        public IList<ListaLivro> _listaLivro; 
+        public ListaLivro _lista;
         public ListaLivroController _listaLivroController;
 
         public TelaListaDadosLivros()
@@ -20,9 +20,10 @@ namespace BibliotecaSoftware.View.Listagem
         private void ConstrutorPadrao()
         {
             InitializeComponent();
-            Carregar();
-            _listaLivro = new ListaLivro();
+            _listaLivro = new List<ListaLivro>();
+            _lista = new ListaLivro();
             _listaLivroController = new ListaLivroController();
+            Carregar();
         }
 
         private void PesquisaTelaListarDadosLivrosBotao_Click(object sender, EventArgs e)

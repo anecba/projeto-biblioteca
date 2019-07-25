@@ -17,5 +17,10 @@ namespace BibliotecaSoftware.View.Listagem
         {
             InitializeComponent();
         }
+
+        private void tlbCadastrosLivros_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
