@@ -45,7 +45,6 @@
             this.clnDatalancamento = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clnEditora = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clnDescricao = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.btnPesquisa = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.txtPesquisa = new DevExpress.XtraEditors.TextEdit();
             this.tbiCancelar = new DevExpress.XtraBars.Navigation.TileBarItem();
@@ -197,21 +196,9 @@
             this.clnDescricao.VisibleIndex = 10;
             this.clnDescricao.Width = 94;
             // 
-            // btnPesquisa
-            // 
-            this.btnPesquisa.Appearance.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPesquisa.Appearance.Options.UseFont = true;
-            this.btnPesquisa.Location = new System.Drawing.Point(811, 12);
-            this.btnPesquisa.Name = "btnPesquisa";
-            this.btnPesquisa.Size = new System.Drawing.Size(145, 69);
-            this.btnPesquisa.TabIndex = 0;
-            this.btnPesquisa.Text = "Pesquisar";
-            this.btnPesquisa.Click += new System.EventHandler(this.BtnPesquisa_Click);
-            // 
             // panelControl1
             // 
             this.panelControl1.Controls.Add(this.txtPesquisa);
-            this.panelControl1.Controls.Add(this.btnPesquisa);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
@@ -220,12 +207,13 @@
             // 
             // txtPesquisa
             // 
-            this.txtPesquisa.Location = new System.Drawing.Point(5, 31);
+            this.txtPesquisa.Location = new System.Drawing.Point(172, 31);
             this.txtPesquisa.Name = "txtPesquisa";
             this.txtPesquisa.Properties.Appearance.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPesquisa.Properties.Appearance.Options.UseFont = true;
             this.txtPesquisa.Size = new System.Drawing.Size(784, 30);
             this.txtPesquisa.TabIndex = 1;
+            this.txtPesquisa.TextChanged += new System.EventHandler(this.TxtPesquisa_TextChanged);
             // 
             // tbiCancelar
             // 
@@ -312,7 +300,6 @@
         private DevExpress.XtraGrid.GridControl grdDados;
         private DevExpress.XtraGrid.Views.Grid.GridView grdvLivros;
         private DevExpress.XtraGrid.Columns.GridColumn clnCodigoTitulo;
-        private DevExpress.XtraEditors.SimpleButton btnPesquisa;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraGrid.Columns.GridColumn clnTitulo;
         private DevExpress.XtraGrid.Columns.GridColumn clnAutor;

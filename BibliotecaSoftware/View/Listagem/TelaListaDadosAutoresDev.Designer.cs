@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement4 = new DevExpress.XtraEditors.TileItemElement();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaListaDadosAutoresDev));
-            DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement3 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement5 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement6 = new DevExpress.XtraEditors.TileItemElement();
             this.grdDados = new DevExpress.XtraGrid.GridControl();
             this.grdvAutores = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.clnCodigoAutor = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -148,11 +148,11 @@
             // 
             // txtPesquisa
             // 
-            this.txtPesquisa.Location = new System.Drawing.Point(516, 30);
+            this.txtPesquisa.Location = new System.Drawing.Point(279, 31);
             this.txtPesquisa.Name = "txtPesquisa";
             this.txtPesquisa.Properties.Appearance.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPesquisa.Properties.Appearance.Options.UseFont = true;
-            this.txtPesquisa.Size = new System.Drawing.Size(365, 30);
+            this.txtPesquisa.Size = new System.Drawing.Size(602, 30);
             this.txtPesquisa.TabIndex = 17;
             this.txtPesquisa.TextChanged += new System.EventHandler(this.TxtPesquisa_TextChanged);
             // 
@@ -179,10 +179,10 @@
             // tbiAlterar
             // 
             this.tbiAlterar.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            tileItemElement1.Text = "Alterar";
-            tileItemElement1.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.tbiAlterar.Elements.Add(tileItemElement1);
+            tileItemElement4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            tileItemElement4.Text = "Alterar";
+            tileItemElement4.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            this.tbiAlterar.Elements.Add(tileItemElement4);
             this.tbiAlterar.Id = 5;
             this.tbiAlterar.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.tbiAlterar.Name = "tbiAlterar";
@@ -191,11 +191,11 @@
             // tbiApagar
             // 
             this.tbiApagar.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
-            tileItemElement2.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
-            tileItemElement2.Text = "Apagar";
-            tileItemElement2.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.tbiApagar.Elements.Add(tileItemElement2);
+            tileItemElement5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            tileItemElement5.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
+            tileItemElement5.Text = "Apagar";
+            tileItemElement5.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            this.tbiApagar.Elements.Add(tileItemElement5);
             this.tbiApagar.Id = 0;
             this.tbiApagar.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.tbiApagar.Name = "tbiApagar";
@@ -204,10 +204,10 @@
             // tbiCancelar
             // 
             this.tbiCancelar.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
-            tileItemElement3.Text = "Cancelar";
-            tileItemElement3.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.tbiCancelar.Elements.Add(tileItemElement3);
+            tileItemElement6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
+            tileItemElement6.Text = "Cancelar";
+            tileItemElement6.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            this.tbiCancelar.Elements.Add(tileItemElement6);
             this.tbiCancelar.Id = 1;
             this.tbiCancelar.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.tbiCancelar.Name = "tbiCancelar";

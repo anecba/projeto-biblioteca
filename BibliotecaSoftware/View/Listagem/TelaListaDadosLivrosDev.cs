@@ -50,8 +50,8 @@ namespace BibliotecaSoftware.View.Listagem
 
         private void TbiCancelar_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
             => Close();
-
-        private void BtnPesquisa_Click(object sender, EventArgs e)
+        
+        private void TxtPesquisa_TextChanged(object sender, EventArgs e)
         {
             if (txtPesquisa.EditValue != null)
                 grdDados.DataSource = _listaLivro.Where(l => l.NomeTitulo.StartsWith(txtPesquisa.EditValue.ToString().Trim())).ToList();
