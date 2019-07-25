@@ -34,8 +34,8 @@
             DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement3 = new DevExpress.XtraEditors.TileItemElement();
             this.grdDados = new DevExpress.XtraGrid.GridControl();
-            this.grdv = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.clnCodigo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grdvAutores = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.clnCodigoAutor = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clnAutores = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clnDataNascimento = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clnSite = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -52,7 +52,7 @@
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.autorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.grdDados)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdvAutores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPesquisa.Properties)).BeginInit();
@@ -64,34 +64,34 @@
             // grdDados
             // 
             this.grdDados.Location = new System.Drawing.Point(2, 28);
-            this.grdDados.MainView = this.grdv;
+            this.grdDados.MainView = this.grdvAutores;
             this.grdDados.Name = "grdDados";
             this.grdDados.Size = new System.Drawing.Size(889, 475);
             this.grdDados.TabIndex = 0;
             this.grdDados.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.grdv});
+            this.grdvAutores});
             // 
-            // grdv
+            // grdvAutores
             // 
-            this.grdv.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.clnCodigo,
+            this.grdvAutores.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.clnCodigoAutor,
             this.clnAutores,
             this.clnDataNascimento,
             this.clnSite,
             this.clnBibliografia});
-            this.grdv.GridControl = this.grdDados;
-            this.grdv.Name = "grdv";
+            this.grdvAutores.GridControl = this.grdDados;
+            this.grdvAutores.Name = "grdvAutores";
             // 
-            // clnCodigo
+            // clnCodigoAutor
             // 
-            this.clnCodigo.Caption = "Cód.";
-            this.clnCodigo.FieldName = "Codigo";
-            this.clnCodigo.MaxWidth = 50;
-            this.clnCodigo.MinWidth = 40;
-            this.clnCodigo.Name = "clnCodigo";
-            this.clnCodigo.Visible = true;
-            this.clnCodigo.VisibleIndex = 0;
-            this.clnCodigo.Width = 50;
+            this.clnCodigoAutor.Caption = "Cód.";
+            this.clnCodigoAutor.FieldName = "Codigo";
+            this.clnCodigoAutor.MaxWidth = 50;
+            this.clnCodigoAutor.MinWidth = 40;
+            this.clnCodigoAutor.Name = "clnCodigoAutor";
+            this.clnCodigoAutor.Visible = true;
+            this.clnCodigoAutor.VisibleIndex = 0;
+            this.clnCodigoAutor.Width = 50;
             // 
             // clnAutores
             // 
@@ -166,6 +166,7 @@
             this.btnPesquisa.Size = new System.Drawing.Size(151, 69);
             this.btnPesquisa.TabIndex = 16;
             this.btnPesquisa.Text = "Pesquisar";
+            this.btnPesquisa.Click += new System.EventHandler(this.BtnPesquisa_Click);
             // 
             // tlbCadastrosLivros
             // 
@@ -197,6 +198,7 @@
             this.tbiAlterar.Id = 5;
             this.tbiAlterar.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.tbiAlterar.Name = "tbiAlterar";
+            this.tbiAlterar.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.TbiAlterar_ItemClick);
             // 
             // tbiApagar
             // 
@@ -209,6 +211,7 @@
             this.tbiApagar.Id = 0;
             this.tbiApagar.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.tbiApagar.Name = "tbiApagar";
+            this.tbiApagar.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.TbiApagar_ItemClick);
             // 
             // tbiCancelar
             // 
@@ -258,7 +261,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista de Autores";
             ((System.ComponentModel.ISupportInitialize)(this.grdDados)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdvAutores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtPesquisa.Properties)).EndInit();
@@ -272,8 +275,8 @@
         #endregion
 
         private DevExpress.XtraGrid.GridControl grdDados;
-        private DevExpress.XtraGrid.Views.Grid.GridView grdv;
-        private DevExpress.XtraGrid.Columns.GridColumn clnCodigo;
+        private DevExpress.XtraGrid.Views.Grid.GridView grdvAutores;
+        private DevExpress.XtraGrid.Columns.GridColumn clnCodigoAutor;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.SimpleButton btnPesquisar;
         private DevExpress.XtraEditors.PanelControl panelControl2;

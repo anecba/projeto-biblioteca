@@ -22,7 +22,7 @@ namespace BibliotecaSoftware
 
         private void AutoresCadBibliotecaMenuitem_Click(object sender, EventArgs e)
         {
-            var telaCadastroAutores = new telaCadastroAutores();
+            var telaCadastroAutores = new telaCadastroAutoresDev();
             telaCadastroAutores.Show();
         }
 

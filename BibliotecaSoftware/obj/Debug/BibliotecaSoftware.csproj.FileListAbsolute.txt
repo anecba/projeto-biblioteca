@@ -67,7 +67,6 @@ C:\Users\aneca\source\repos\bibliotecaprojeto\BibliotecaSoftware\bin\Debug\Entit
 C:\Users\aneca\source\repos\bibliotecaprojeto\BibliotecaSoftware\bin\Debug\FirebirdSql.Data.FirebirdClient.pdb
 C:\Users\aneca\source\repos\bibliotecaprojeto\BibliotecaSoftware\obj\Debug\BibliotecaSoftware.Properties.Resources.resources
 C:\Users\aneca\source\repos\bibliotecaprojeto\BibliotecaSoftware\obj\Debug\BibliotecaSoftware.TelaBibliotecaPrincipal.resources
-C:\Users\aneca\source\repos\bibliotecaprojeto\BibliotecaSoftware\obj\Debug\BibliotecaSoftware.View.telaCadastroAutores.resources
 C:\Users\aneca\source\repos\bibliotecaprojeto\BibliotecaSoftware\obj\Debug\BibliotecaSoftware.View.TelaCadastroEditoras.resources
 C:\Users\aneca\source\repos\bibliotecaprojeto\BibliotecaSoftware\obj\Debug\BibliotecaSoftware.View.TelaCadastroLivros.resources
 C:\Users\aneca\source\repos\bibliotecaprojeto\BibliotecaSoftware\obj\Debug\BibliotecaSoftware.View.ControleLivros.TelaListaAutores.resources
@@ -178,3 +177,4 @@ C:\Users\aneca\source\repos\bibliotecaprojeto\BibliotecaSoftware\obj\Debug\Bibli
 C:\Users\aneca\source\repos\bibliotecaprojeto\BibliotecaSoftware\obj\Debug\BibliotecaSoftware.View.Cadastro.TelaCadastroLivrosDev.resources
 C:\Users\aneca\source\repos\bibliotecaprojeto\BibliotecaSoftware\obj\Debug\BibliotecaSoftware.View.Listagem.TelaListaDadosEditorasDev.resources
 C:\Users\aneca\source\repos\bibliotecaprojeto\BibliotecaSoftware\obj\Debug\BibliotecaSoftware.View.Listagem.TelaListaDadosLivrosDev.resources
+C:\Users\aneca\source\repos\bibliotecaprojeto\BibliotecaSoftware\obj\Debug\BibliotecaSoftware.View.telaCadastroAutoresDev.resources
