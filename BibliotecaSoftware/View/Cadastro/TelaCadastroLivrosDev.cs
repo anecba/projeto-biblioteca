@@ -22,9 +22,7 @@ namespace BibliotecaSoftware.View.Cadastro
         public IdiomaController _idiomaController;
 
         public TelaCadastroLivrosDev()
-        {
-            ExecutarConstrutorPadrao();
-        }
+            => ExecutarConstrutorPadrao();
 
         private void ExecutarConstrutorPadrao()
         {
@@ -56,10 +54,6 @@ namespace BibliotecaSoftware.View.Cadastro
             txtCodTitulo.Text = _livro.Titulo.CodigoTitulo.ToString();
             txtCodEditora.Text = _livro.Editora.CodigoEditora.ToString();
         }
-        private void TbiCancelar_ItemClick(object sender, TileItemEventArgs e)
-        {
-            Close();
-        }
 
         private void TbiConfirmar_ItemClick(object sender, TileItemEventArgs e)
         {
@@ -69,22 +63,6 @@ namespace BibliotecaSoftware.View.Cadastro
 
             if (_tituloAutorController.GravarCadastroTitulo(_livro))
                 Close();
-        }
-
-        private void AtribuirViewParaModel()
-        {
-            if (!string.IsNullOrWhiteSpace(txtCodTitulo.Text))
-                _livro.Titulo.CodigoTitulo = int.Parse(txtCodTitulo.Text);
-
-            _livro.Titulo.NomeTitulo = txtTitulo.Text;
-            _livro.Edicao.CodigoIdioma = Convert.ToInt32(cboIdioma.EditValue);
-            _livro.Edicao.NumeroEdicao = txtEdicao.Text;
-            _livro.Edicao.Ano = Convert.ToInt32(txtAno.Text);
-            _livro.Edicao.QtdePagina = Convert.ToInt32(txtPaginas.Text);
-            _livro.Edicao.DataLancamento = Convert.ToDateTime(dteDatanascimento.Text);
-            _livro.Titulo.Descricao = rtbDescricao.Text;
-            _livro.Titulo.CodigoEditora = Convert.ToInt32(cboEditora.EditValue);
-            _livro.TituloAutor.CodigoAutor = Convert.ToInt32(cboAutor.EditValue);
         }
 
         private bool Validacao()
@@ -106,5 +84,24 @@ namespace BibliotecaSoftware.View.Cadastro
             }
             return true;
         }
+
+        private void AtribuirViewParaModel()
+        {
+            if (!string.IsNullOrWhiteSpace(txtCodTitulo.Text))
+                _livro.Titulo.CodigoTitulo = int.Parse(txtCodTitulo.Text);
+
+            _livro.Titulo.NomeTitulo = txtTitulo.Text;
+            _livro.Edicao.CodigoIdioma = Convert.ToInt32(cboIdioma.EditValue);
+            _livro.Edicao.NumeroEdicao = txtEdicao.Text;
+            _livro.Edicao.Ano = Convert.ToInt32(txtAno.Text);
+            _livro.Edicao.QtdePagina = Convert.ToInt32(txtPaginas.Text);
+            _livro.Edicao.DataLancamento = Convert.ToDateTime(dteDatanascimento.Text);
+            _livro.Titulo.Descricao = rtbDescricao.Text;
+            _livro.Titulo.CodigoEditora = Convert.ToInt32(cboEditora.EditValue);
+            _livro.TituloAutor.CodigoAutor = Convert.ToInt32(cboAutor.EditValue);
+        }
+
+        private void TbiCancelar_ItemClick(object sender, TileItemEventArgs e)
+            => Close();
     }
 }

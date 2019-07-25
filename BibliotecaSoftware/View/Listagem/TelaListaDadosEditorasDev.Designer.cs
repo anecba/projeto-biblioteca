@@ -83,7 +83,7 @@
             // clnEditora
             // 
             this.clnEditora.Caption = "Editora";
-            this.clnEditora.FieldName = "Editora";
+            this.clnEditora.FieldName = "Nome";
             this.clnEditora.MinWidth = 50;
             this.clnEditora.Name = "clnEditora";
             this.clnEditora.Visible = true;
@@ -108,6 +108,7 @@
             this.txtPesquisa.Properties.Appearance.Options.UseFont = true;
             this.txtPesquisa.Size = new System.Drawing.Size(789, 30);
             this.txtPesquisa.TabIndex = 3;
+            this.txtPesquisa.TextChanged += new System.EventHandler(this.TxtPesquisa_TextChanged);
             // 
             // btnPesquisa
             // 
@@ -149,6 +150,7 @@
             this.tbiAlterar.Id = 5;
             this.tbiAlterar.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.tbiAlterar.Name = "tbiAlterar";
+            this.tbiAlterar.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.TbiAlterar_ItemClick);
             // 
             // tbiApagar
             // 
@@ -161,6 +163,7 @@
             this.tbiApagar.Id = 0;
             this.tbiApagar.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.tbiApagar.Name = "tbiApagar";
+            this.tbiApagar.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.TbiApagar_ItemClick);
             // 
             // tbiCancelar
             // 
@@ -172,6 +175,7 @@
             this.tbiCancelar.Id = 1;
             this.tbiCancelar.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.tbiCancelar.Name = "tbiCancelar";
+            this.tbiCancelar.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.TbiCancelar_ItemClick);
             // 
             // TelaListaDadosEditorasDev
             // 

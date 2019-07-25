@@ -15,9 +15,7 @@ namespace BibliotecaSoftware.View.Listagem
         public IList<Autor> _listaAutor;
 
         public TelaListaDadosAutoresDev()
-        {
-            ExecutarConstrutorPadrao();
-        }
+            => ExecutarConstrutorPadrao();
 
         private void ExecutarConstrutorPadrao()
         {
@@ -30,12 +28,6 @@ namespace BibliotecaSoftware.View.Listagem
         {
             _listaAutor = _listaAutorController.Carregar();
             grdDados.DataSource = _listaAutor;
-        }
-
-        private void BtnPesquisa_Click(object sender, EventArgs e)
-        {
-            if (txtPesquisa.EditValue != null)
-                grdDados.DataSource = _listaAutor.Where(l => l.Nome.StartsWith(txtPesquisa.EditValue.ToString().Trim())).ToList();
         }
 
         private void TbiAlterar_ItemClick(object sender, TileItemEventArgs e)
