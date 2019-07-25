@@ -69,7 +69,6 @@
             this.pncCadastroAutores.Name = "pncCadastroAutores";
             this.pncCadastroAutores.Size = new System.Drawing.Size(622, 541);
             this.pncCadastroAutores.TabIndex = 1;
-            this.pncCadastroAutores.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl1_Paint);
             // 
             // rtbBibliografia
             // 
@@ -132,7 +131,6 @@
             this.lblSite.Size = new System.Drawing.Size(34, 24);
             this.lblSite.TabIndex = 5;
             this.lblSite.Text = "Site";
-            this.lblSite.Click += new System.EventHandler(this.labelControl2_Click);
             // 
             // txtAutor
             // 
@@ -186,6 +184,7 @@
             this.tlbiConfirmar.Id = 0;
             this.tlbiConfirmar.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.tlbiConfirmar.Name = "tlbiConfirmar";
+            this.tlbiConfirmar.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.TlbiConfirmar_ItemClick);
             // 
             // tileBarGroup1
             // 
