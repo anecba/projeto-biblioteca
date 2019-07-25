@@ -42,7 +42,6 @@
             this.clnBibliografia = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.txtPesquisa = new DevExpress.XtraEditors.TextEdit();
-            this.btnPesquisa = new DevExpress.XtraEditors.SimpleButton();
             this.tlbCadastrosLivros = new DevExpress.XtraBars.Navigation.TileBar();
             this.tileBarGroup4 = new DevExpress.XtraBars.Navigation.TileBarGroup();
             this.tbiAlterar = new DevExpress.XtraBars.Navigation.TileBarItem();
@@ -85,7 +84,7 @@
             // clnCodigoAutor
             // 
             this.clnCodigoAutor.Caption = "Cód.";
-            this.clnCodigoAutor.FieldName = "Codigo";
+            this.clnCodigoAutor.FieldName = "CodigoAutor";
             this.clnCodigoAutor.MaxWidth = 50;
             this.clnCodigoAutor.MinWidth = 40;
             this.clnCodigoAutor.Name = "clnCodigoAutor";
@@ -96,7 +95,7 @@
             // clnAutores
             // 
             this.clnAutores.Caption = "Autor";
-            this.clnAutores.FieldName = "Autor";
+            this.clnAutores.FieldName = "Nome";
             this.clnAutores.MaxWidth = 300;
             this.clnAutores.MinWidth = 150;
             this.clnAutores.Name = "clnAutores";
@@ -107,7 +106,7 @@
             // clnDataNascimento
             // 
             this.clnDataNascimento.Caption = "Data de nascimento";
-            this.clnDataNascimento.FieldName = "Data de Nascimento";
+            this.clnDataNascimento.FieldName = "DataNascimento";
             this.clnDataNascimento.MaxWidth = 130;
             this.clnDataNascimento.MinWidth = 120;
             this.clnDataNascimento.Name = "clnDataNascimento";
@@ -139,8 +138,8 @@
             // 
             // panelControl1
             // 
+            this.panelControl1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panelControl1.Controls.Add(this.txtPesquisa);
-            this.panelControl1.Controls.Add(this.btnPesquisa);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
@@ -149,24 +148,13 @@
             // 
             // txtPesquisa
             // 
-            this.txtPesquisa.Location = new System.Drawing.Point(12, 33);
+            this.txtPesquisa.Location = new System.Drawing.Point(516, 30);
             this.txtPesquisa.Name = "txtPesquisa";
             this.txtPesquisa.Properties.Appearance.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPesquisa.Properties.Appearance.Options.UseFont = true;
-            this.txtPesquisa.Size = new System.Drawing.Size(702, 30);
+            this.txtPesquisa.Size = new System.Drawing.Size(365, 30);
             this.txtPesquisa.TabIndex = 17;
-            // 
-            // btnPesquisa
-            // 
-            this.btnPesquisa.Appearance.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPesquisa.Appearance.Options.UseFont = true;
-            this.btnPesquisa.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopLeft;
-            this.btnPesquisa.Location = new System.Drawing.Point(730, 12);
-            this.btnPesquisa.Name = "btnPesquisa";
-            this.btnPesquisa.Size = new System.Drawing.Size(151, 69);
-            this.btnPesquisa.TabIndex = 16;
-            this.btnPesquisa.Text = "Pesquisar";
-            this.btnPesquisa.Click += new System.EventHandler(this.BtnPesquisa_Click);
+            this.txtPesquisa.TextChanged += new System.EventHandler(this.TxtPesquisa_TextChanged);
             // 
             // tlbCadastrosLivros
             // 
@@ -290,7 +278,6 @@
         private DevExpress.XtraBars.Navigation.TileBarItem tbiAlterar;
         private DevExpress.XtraBars.Navigation.TileBarItem tbiApagar;
         private DevExpress.XtraBars.Navigation.TileBarItem tbiCancelar;
-        private DevExpress.XtraEditors.SimpleButton btnPesquisa;
         private DevExpress.XtraEditors.TextEdit txtPesquisa;
     }
 }

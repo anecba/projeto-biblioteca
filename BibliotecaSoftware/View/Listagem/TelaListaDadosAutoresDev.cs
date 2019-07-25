@@ -59,5 +59,11 @@ namespace BibliotecaSoftware.View.Listagem
             if (_listaAutorController.ApagarListaAutor(codigoAutor))
                 Close();
         }
+
+        private void TxtPesquisa_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPesquisa.EditValue != null)
+                grdDados.DataSource = _listaAutor.Where(l => l.Nome.StartsWith(txtPesquisa.EditValue.ToString().Trim())).ToList();
+        }
     }
 }
