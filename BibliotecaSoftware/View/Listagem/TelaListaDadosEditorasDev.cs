@@ -20,10 +20,7 @@ namespace BibliotecaSoftware.View.Listagem
         public IList<Editora> _listaEditora;
 
         public TelaListaDadosEditorasDev()
-        {
-            ExecutarConstrutorPadrao();
-            _listaEditoraController = new ListaEditoraController();
-        }
+            => ExecutarConstrutorPadrao();
 
         private void ExecutarConstrutorPadrao()
         {
@@ -34,7 +31,10 @@ namespace BibliotecaSoftware.View.Listagem
         }
 
         private void CarregarEditoras()
-            => grdDados.DataSource = _listaEditoraController.Carregar();
+        {
+            _listaEditora = _listaEditoraController.Carregar();
+            grdDados.DataSource = _listaEditoraController.Carregar();
+        }
 
         private void TbiAlterar_ItemClick(object sender, TileItemEventArgs e)
         {
@@ -45,10 +45,6 @@ namespace BibliotecaSoftware.View.Listagem
             CarregarEditoras();
         }
 
-
-        private void TbiCancelar_ItemClick(object sender, TileItemEventArgs e)
-            => Close();
-
         private void TbiApagar_ItemClick(object sender, TileItemEventArgs e)
         {
             //if (mostrarListarDadosEditorasDataGridView.SelectedRows.Count <= 0) return;
@@ -57,6 +53,9 @@ namespace BibliotecaSoftware.View.Listagem
             if (_listaEditoraController.ApagarListaEditora(codigoEditora))
                 Close();
         }
+
+        private void TbiCancelar_ItemClick(object sender, TileItemEventArgs e)
+            => Close();
 
         private void TxtPesquisa_TextChanged(object sender, EventArgs e)
         {
