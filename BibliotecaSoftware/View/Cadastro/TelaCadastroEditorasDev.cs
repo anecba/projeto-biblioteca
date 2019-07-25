@@ -18,7 +18,7 @@ namespace BibliotecaSoftware.View.Cadastro
             InitializeComponent();
         }
 
-        private void tileBarItem2_ItemClick(object sender, TileItemEventArgs e)
+        private void TileBarItem2_ItemClick(object sender, TileItemEventArgs e)
         {
             Close();
         }

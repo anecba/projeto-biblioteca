@@ -45,19 +45,19 @@
             this.clnDatalancamento = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clnEditora = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clnDescricao = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnPesquisa = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.txtPesquisa = new DevExpress.XtraEditors.TextEdit();
             this.tbiCancelar = new DevExpress.XtraBars.Navigation.TileBarItem();
-            this.tbiConfirmar = new DevExpress.XtraBars.Navigation.TileBarItem();
+            this.tbiApagar = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.tlbCadastrosLivros = new DevExpress.XtraBars.Navigation.TileBar();
             this.tileBarGroup4 = new DevExpress.XtraBars.Navigation.TileBarGroup();
-            this.tileBarItem2 = new DevExpress.XtraBars.Navigation.TileBarItem();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.tbiAlterar = new DevExpress.XtraBars.Navigation.TileBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.grdDados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdvLivros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPesquisa.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // grdDados
@@ -65,7 +65,7 @@
             this.grdDados.Location = new System.Drawing.Point(0, 100);
             this.grdDados.MainView = this.grdvLivros;
             this.grdDados.Name = "grdDados";
-            this.grdDados.Size = new System.Drawing.Size(961, 486);
+            this.grdDados.Size = new System.Drawing.Size(961, 515);
             this.grdDados.TabIndex = 2;
             this.grdDados.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grdvLivros});
@@ -90,7 +90,7 @@
             // clnCodigoTitulo
             // 
             this.clnCodigoTitulo.Caption = "Cód.";
-            this.clnCodigoTitulo.FieldName = "Codigo";
+            this.clnCodigoTitulo.FieldName = "CodigoTitulo";
             this.clnCodigoTitulo.MinWidth = 25;
             this.clnCodigoTitulo.Name = "clnCodigoTitulo";
             this.clnCodigoTitulo.Visible = true;
@@ -100,7 +100,7 @@
             // clnTitulo
             // 
             this.clnTitulo.Caption = "Título";
-            this.clnTitulo.FieldName = "Titulo";
+            this.clnTitulo.FieldName = "NomeTitulo";
             this.clnTitulo.MinWidth = 25;
             this.clnTitulo.Name = "clnTitulo";
             this.clnTitulo.Visible = true;
@@ -110,7 +110,7 @@
             // clnAutor
             // 
             this.clnAutor.Caption = "Autor";
-            this.clnAutor.FieldName = "Autor";
+            this.clnAutor.FieldName = "Nome";
             this.clnAutor.MinWidth = 25;
             this.clnAutor.Name = "clnAutor";
             this.clnAutor.Visible = true;
@@ -120,7 +120,7 @@
             // clnIdioma
             // 
             this.clnIdioma.Caption = "Idioma";
-            this.clnIdioma.FieldName = "Idioma";
+            this.clnIdioma.FieldName = "Lingua";
             this.clnIdioma.MinWidth = 25;
             this.clnIdioma.Name = "clnIdioma";
             this.clnIdioma.Visible = true;
@@ -140,7 +140,7 @@
             // clnEdicao
             // 
             this.clnEdicao.Caption = "Edição";
-            this.clnEdicao.FieldName = "Edicao";
+            this.clnEdicao.FieldName = "NumeroEdicao";
             this.clnEdicao.MinWidth = 25;
             this.clnEdicao.Name = "clnEdicao";
             this.clnEdicao.Visible = true;
@@ -160,7 +160,7 @@
             // clnPaginas
             // 
             this.clnPaginas.Caption = "Páginas";
-            this.clnPaginas.FieldName = "Paginas";
+            this.clnPaginas.FieldName = "QtdePagina";
             this.clnPaginas.MinWidth = 25;
             this.clnPaginas.Name = "clnPaginas";
             this.clnPaginas.Visible = true;
@@ -180,7 +180,7 @@
             // clnEditora
             // 
             this.clnEditora.Caption = "Editora";
-            this.clnEditora.FieldName = "Editora";
+            this.clnEditora.FieldName = "Nome";
             this.clnEditora.MinWidth = 25;
             this.clnEditora.Name = "clnEditora";
             this.clnEditora.Visible = true;
@@ -197,23 +197,35 @@
             this.clnDescricao.VisibleIndex = 10;
             this.clnDescricao.Width = 94;
             // 
-            // simpleButton1
+            // btnPesquisa
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(811, 12);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(145, 69);
-            this.simpleButton1.TabIndex = 0;
-            this.simpleButton1.Text = "Pesquisar";
+            this.btnPesquisa.Appearance.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPesquisa.Appearance.Options.UseFont = true;
+            this.btnPesquisa.Location = new System.Drawing.Point(811, 12);
+            this.btnPesquisa.Name = "btnPesquisa";
+            this.btnPesquisa.Size = new System.Drawing.Size(145, 69);
+            this.btnPesquisa.TabIndex = 0;
+            this.btnPesquisa.Text = "Pesquisar";
+            this.btnPesquisa.Click += new System.EventHandler(this.BtnPesquisa_Click);
             // 
             // panelControl1
             // 
-            this.panelControl1.Controls.Add(this.textEdit1);
-            this.panelControl1.Controls.Add(this.simpleButton1);
+            this.panelControl1.Controls.Add(this.txtPesquisa);
+            this.panelControl1.Controls.Add(this.btnPesquisa);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(961, 100);
             this.panelControl1.TabIndex = 3;
+            // 
+            // txtPesquisa
+            // 
+            this.txtPesquisa.Location = new System.Drawing.Point(5, 31);
+            this.txtPesquisa.Name = "txtPesquisa";
+            this.txtPesquisa.Properties.Appearance.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPesquisa.Properties.Appearance.Options.UseFont = true;
+            this.txtPesquisa.Size = new System.Drawing.Size(784, 30);
+            this.txtPesquisa.TabIndex = 1;
             // 
             // tbiCancelar
             // 
@@ -225,24 +237,26 @@
             this.tbiCancelar.Id = 1;
             this.tbiCancelar.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.tbiCancelar.Name = "tbiCancelar";
+            this.tbiCancelar.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.TbiCancelar_ItemClick);
             // 
-            // tbiConfirmar
+            // tbiApagar
             // 
-            this.tbiConfirmar.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
+            this.tbiApagar.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
             tileItemElement2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
             tileItemElement2.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
             tileItemElement2.Text = "Apagar";
             tileItemElement2.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.tbiConfirmar.Elements.Add(tileItemElement2);
-            this.tbiConfirmar.Id = 0;
-            this.tbiConfirmar.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.tbiConfirmar.Name = "tbiConfirmar";
+            this.tbiApagar.Elements.Add(tileItemElement2);
+            this.tbiApagar.Id = 0;
+            this.tbiApagar.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
+            this.tbiApagar.Name = "tbiApagar";
+            this.tbiApagar.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.TbiApagar_ItemClick);
             // 
             // tlbCadastrosLivros
             // 
             this.tlbCadastrosLivros.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
             this.tlbCadastrosLivros.Groups.Add(this.tileBarGroup4);
-            this.tlbCadastrosLivros.Location = new System.Drawing.Point(395, 592);
+            this.tlbCadastrosLivros.Location = new System.Drawing.Point(402, 621);
             this.tlbCadastrosLivros.MaxId = 6;
             this.tlbCadastrosLivros.Name = "tlbCadastrosLivros";
             this.tlbCadastrosLivros.Padding = new System.Windows.Forms.Padding(25, 7, 25, 7);
@@ -250,39 +264,31 @@
             this.tlbCadastrosLivros.Size = new System.Drawing.Size(554, 107);
             this.tlbCadastrosLivros.TabIndex = 12;
             this.tlbCadastrosLivros.Text = "tileBar1";
-            this.tlbCadastrosLivros.Click += new System.EventHandler(this.tlbCadastrosLivros_Click);
             // 
             // tileBarGroup4
             // 
-            this.tileBarGroup4.Items.Add(this.tileBarItem2);
-            this.tileBarGroup4.Items.Add(this.tbiConfirmar);
+            this.tileBarGroup4.Items.Add(this.tbiAlterar);
+            this.tileBarGroup4.Items.Add(this.tbiApagar);
             this.tileBarGroup4.Items.Add(this.tbiCancelar);
             this.tileBarGroup4.Name = "tileBarGroup4";
-            this.tileBarGroup4.Text = "mmm";
             // 
-            // tileBarItem2
+            // tbiAlterar
             // 
-            this.tileBarItem2.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
+            this.tbiAlterar.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
             tileItemElement3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
             tileItemElement3.Text = "Alterar";
             tileItemElement3.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.tileBarItem2.Elements.Add(tileItemElement3);
-            this.tileBarItem2.Id = 5;
-            this.tileBarItem2.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.tileBarItem2.Name = "tileBarItem2";
-            // 
-            // textEdit1
-            // 
-            this.textEdit1.Location = new System.Drawing.Point(5, 31);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(775, 22);
-            this.textEdit1.TabIndex = 1;
+            this.tbiAlterar.Elements.Add(tileItemElement3);
+            this.tbiAlterar.Id = 5;
+            this.tbiAlterar.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
+            this.tbiAlterar.Name = "tbiAlterar";
+            this.tbiAlterar.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.TbiAlterar_ItemClick);
             // 
             // TelaListaDadosLivrosDev
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(961, 711);
+            this.ClientSize = new System.Drawing.Size(961, 740);
             this.Controls.Add(this.tlbCadastrosLivros);
             this.Controls.Add(this.grdDados);
             this.Controls.Add(this.panelControl1);
@@ -296,7 +302,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdvLivros)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPesquisa.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -306,7 +312,7 @@
         private DevExpress.XtraGrid.GridControl grdDados;
         private DevExpress.XtraGrid.Views.Grid.GridView grdvLivros;
         private DevExpress.XtraGrid.Columns.GridColumn clnCodigoTitulo;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnPesquisa;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraGrid.Columns.GridColumn clnTitulo;
         private DevExpress.XtraGrid.Columns.GridColumn clnAutor;
@@ -319,10 +325,10 @@
         private DevExpress.XtraGrid.Columns.GridColumn clnEditora;
         private DevExpress.XtraGrid.Columns.GridColumn clnDescricao;
         private DevExpress.XtraBars.Navigation.TileBarItem tbiCancelar;
-        private DevExpress.XtraBars.Navigation.TileBarItem tbiConfirmar;
+        private DevExpress.XtraBars.Navigation.TileBarItem tbiApagar;
         private DevExpress.XtraBars.Navigation.TileBar tlbCadastrosLivros;
         private DevExpress.XtraBars.Navigation.TileBarGroup tileBarGroup4;
-        private DevExpress.XtraBars.Navigation.TileBarItem tileBarItem2;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraBars.Navigation.TileBarItem tbiAlterar;
+        private DevExpress.XtraEditors.TextEdit txtPesquisa;
     }
 }
