@@ -8,19 +8,54 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using BibliotecaSoftware.Model;
+using BibliotecaSoftware.Controller;
 
 namespace BibliotecaSoftware.View.Cadastro
 {
     public partial class TelaCadastroEditorasDev : DevExpress.XtraEditors.XtraForm
     {
+        private Editora _editoraModel;
+        private EditoraController _editoraController;
+
         public TelaCadastroEditorasDev()
+            => ExecutarConstrutorPadrao();
+
+        public TelaCadastroEditorasDev(Editora editoraModel)
         {
-            InitializeComponent();
+            ExecutarConstrutorPadrao();
+            _editoraModel = editoraModel;
+            AtribuirModelParaView();
         }
 
-        private void TileBarItem2_ItemClick(object sender, TileItemEventArgs e)
+        private void AtribuirModelParaView()
+            => txtEditora.Text = _editoraModel.Nome;
+
+        private void ExecutarConstrutorPadrao()
         {
-            Close();
+            InitializeComponent();
+            _editoraModel = new Editora();
+            _editoraController = new EditoraController();
         }
+
+        private void TbiConfirmar_ItemClick(object sender, TileItemEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtEditora.Text))
+            {
+                MessageBox.Show("O campo nome precisa ser preenchido!", "Mensagem de Aviso!");
+                return;
+            }
+
+            _editoraModel.Nome = txtEditora.Text;
+
+            if (_editoraController.GravarCadastroEditora(_editoraModel))
+            {
+                MessageBox.Show("Gravado com sucesso!", "Mensagem de Confirmação");
+                Close();
+            }
+        }
+
+        private void TbiCancelar_ItemClick(object sender, TileItemEventArgs e)
+            => Close();
     }
 }

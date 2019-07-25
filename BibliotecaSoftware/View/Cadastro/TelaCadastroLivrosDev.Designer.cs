@@ -192,6 +192,7 @@
             this.tbiConfirmar.Id = 0;
             this.tbiConfirmar.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.tbiConfirmar.Name = "tbiConfirmar";
+            this.tbiConfirmar.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.TbiConfirmar_ItemClick);
             // 
             // tileBarGroup1
             // 

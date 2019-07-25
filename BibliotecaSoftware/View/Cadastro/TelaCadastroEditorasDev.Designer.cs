@@ -36,9 +36,9 @@
             this.lblEditora = new DevExpress.XtraEditors.LabelControl();
             this.tlbCadastroEditoras = new DevExpress.XtraBars.Navigation.TileBar();
             this.tlbgConfirmar = new DevExpress.XtraBars.Navigation.TileBarGroup();
-            this.tileBarItem1 = new DevExpress.XtraBars.Navigation.TileBarItem();
+            this.tbiConfirmar = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.tlbgCancelar = new DevExpress.XtraBars.Navigation.TileBarGroup();
-            this.tileBarItem2 = new DevExpress.XtraBars.Navigation.TileBarItem();
+            this.tbiCancelar = new DevExpress.XtraBars.Navigation.TileBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.pncCadastroEditoras)).BeginInit();
             this.pncCadastroEditoras.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtEditora.Properties)).BeginInit();
@@ -93,37 +93,38 @@
             // 
             // tlbgConfirmar
             // 
-            this.tlbgConfirmar.Items.Add(this.tileBarItem1);
+            this.tlbgConfirmar.Items.Add(this.tbiConfirmar);
             this.tlbgConfirmar.Name = "tlbgConfirmar";
             // 
-            // tileBarItem1
+            // tbiConfirmar
             // 
-            this.tileBarItem1.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
+            this.tbiConfirmar.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
             tileItemElement1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             tileItemElement1.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
             tileItemElement1.Text = "Confirmar";
             tileItemElement1.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.tileBarItem1.Elements.Add(tileItemElement1);
-            this.tileBarItem1.Id = 0;
-            this.tileBarItem1.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.tileBarItem1.Name = "tileBarItem1";
+            this.tbiConfirmar.Elements.Add(tileItemElement1);
+            this.tbiConfirmar.Id = 0;
+            this.tbiConfirmar.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
+            this.tbiConfirmar.Name = "tbiConfirmar";
+            this.tbiConfirmar.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.TbiConfirmar_ItemClick);
             // 
             // tlbgCancelar
             // 
-            this.tlbgCancelar.Items.Add(this.tileBarItem2);
+            this.tlbgCancelar.Items.Add(this.tbiCancelar);
             this.tlbgCancelar.Name = "tlbgCancelar";
             // 
-            // tileBarItem2
+            // tbiCancelar
             // 
-            this.tileBarItem2.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
+            this.tbiCancelar.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
             tileItemElement2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
             tileItemElement2.Text = "Cancelar";
             tileItemElement2.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.tileBarItem2.Elements.Add(tileItemElement2);
-            this.tileBarItem2.Id = 1;
-            this.tileBarItem2.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.tileBarItem2.Name = "tileBarItem2";
-            this.tileBarItem2.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.TileBarItem2_ItemClick);
+            this.tbiCancelar.Elements.Add(tileItemElement2);
+            this.tbiCancelar.Id = 1;
+            this.tbiCancelar.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
+            this.tbiCancelar.Name = "tbiCancelar";
+            this.tbiCancelar.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.TbiCancelar_ItemClick);
             // 
             // TelaCadastroEditorasDev
             // 
@@ -152,8 +153,8 @@
         private DevExpress.XtraEditors.LabelControl lblEditora;
         private DevExpress.XtraBars.Navigation.TileBar tlbCadastroEditoras;
         private DevExpress.XtraBars.Navigation.TileBarGroup tlbgConfirmar;
-        private DevExpress.XtraBars.Navigation.TileBarItem tileBarItem1;
+        private DevExpress.XtraBars.Navigation.TileBarItem tbiConfirmar;
         private DevExpress.XtraBars.Navigation.TileBarGroup tlbgCancelar;
-        private DevExpress.XtraBars.Navigation.TileBarItem tileBarItem2;
+        private DevExpress.XtraBars.Navigation.TileBarItem tbiCancelar;
     }
 }

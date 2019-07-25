@@ -48,7 +48,6 @@ namespace BibliotecaSoftware.View.Cadastro
 
         private void TlbiConfirmar_ItemClick(object sender, TileItemEventArgs e)
         {
-
             _autorModel.Nome = txtAutor.Text;
             _autorModel.DataNascimento = Convert.ToDateTime(dteDataNascimento.Text);
             _autorModel.Bibliografia = rtbBibliografia.Text;
