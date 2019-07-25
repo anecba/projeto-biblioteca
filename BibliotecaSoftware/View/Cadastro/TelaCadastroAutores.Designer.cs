@@ -1,6 +1,6 @@
 ﻿namespace BibliotecaSoftware.View
 {
-    partial class telaCadastroAutoresDev
+    partial class telaCadastroAutores
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(telaCadastroAutoresDev));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(telaCadastroAutores));
             this.cancelarCadastroAutoresBotao = new System.Windows.Forms.Button();
             this.cadastrarCadastroAutoresBotao = new System.Windows.Forms.Button();
             this.nomeCadastroAutoresCaixatexto = new System.Windows.Forms.TextBox();

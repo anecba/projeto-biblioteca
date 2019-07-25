@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraEditors.TileItemElement tileItemElement7 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaListaDadosAutoresDev));
-            DevExpress.XtraEditors.TileItemElement tileItemElement8 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement9 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement3 = new DevExpress.XtraEditors.TileItemElement();
             this.grdDados = new DevExpress.XtraGrid.GridControl();
             this.grdvAutores = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.clnCodigoAutor = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -179,10 +179,10 @@
             // tbiAlterar
             // 
             this.tbiAlterar.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement7.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            tileItemElement7.Text = "Alterar";
-            tileItemElement7.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.tbiAlterar.Elements.Add(tileItemElement7);
+            tileItemElement1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            tileItemElement1.Text = "Alterar";
+            tileItemElement1.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            this.tbiAlterar.Elements.Add(tileItemElement1);
             this.tbiAlterar.Id = 5;
             this.tbiAlterar.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.tbiAlterar.Name = "tbiAlterar";
@@ -191,11 +191,11 @@
             // tbiApagar
             // 
             this.tbiApagar.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement8.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
-            tileItemElement8.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
-            tileItemElement8.Text = "Apagar";
-            tileItemElement8.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.tbiApagar.Elements.Add(tileItemElement8);
+            tileItemElement2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            tileItemElement2.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
+            tileItemElement2.Text = "Apagar";
+            tileItemElement2.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            this.tbiApagar.Elements.Add(tileItemElement2);
             this.tbiApagar.Id = 0;
             this.tbiApagar.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.tbiApagar.Name = "tbiApagar";
@@ -204,13 +204,14 @@
             // tbiCancelar
             // 
             this.tbiCancelar.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement9.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
-            tileItemElement9.Text = "Cancelar";
-            tileItemElement9.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.tbiCancelar.Elements.Add(tileItemElement9);
+            tileItemElement3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
+            tileItemElement3.Text = "Cancelar";
+            tileItemElement3.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            this.tbiCancelar.Elements.Add(tileItemElement3);
             this.tbiCancelar.Id = 1;
             this.tbiCancelar.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.tbiCancelar.Name = "tbiCancelar";
+            this.tbiCancelar.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.TbiCancelar_ItemClick);
             // 
             // btnPesquisar
             // 

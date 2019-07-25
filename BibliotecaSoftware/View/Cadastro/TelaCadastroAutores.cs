@@ -5,15 +5,15 @@ using BibliotecaSoftware.Controller;
 
 namespace BibliotecaSoftware.View
 {
-    public partial class telaCadastroAutoresDev : Form
+    public partial class telaCadastroAutores : Form
     {
         private Autor _autorModel;
         private AutorController _autorController;
 
-        public telaCadastroAutoresDev()
+        public telaCadastroAutores()
             => ConstrutorPadrao();
 
-        public telaCadastroAutoresDev(Autor autorModel)
+        public telaCadastroAutores(Autor autorModel)
         {
             ConstrutorPadrao();
             _autorModel = autorModel;

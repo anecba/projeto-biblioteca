@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DevExpress.XtraEditors;
-using BibliotecaSoftware.Controller;
+﻿using BibliotecaSoftware.Controller;
 using BibliotecaSoftware.Model;
+using BibliotecaSoftware.View.Cadastro;
+using DevExpress.XtraEditors;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
 
 namespace BibliotecaSoftware.View.Listagem
 {
@@ -46,7 +42,7 @@ namespace BibliotecaSoftware.View.Listagem
         {
             var codigoAutor = Convert.ToInt32(grdvAutores.GetFocusedRowCellValue(clnCodigoAutor));
             var autor = _listaAutorController.AlterarListaAutor(codigoAutor);
-            var telaCadastroAutoresDev = new telaCadastroAutoresDev(autor);
+            var telaCadastroAutoresDev = new TelaCadastroAutoresDev(autor);
             telaCadastroAutoresDev.ShowDialog();
             CarregarAutores();
         }
@@ -64,6 +60,11 @@ namespace BibliotecaSoftware.View.Listagem
         {
             if (txtPesquisa.EditValue != null)
                 grdDados.DataSource = _listaAutor.Where(l => l.Nome.StartsWith(txtPesquisa.EditValue.ToString().Trim())).ToList();
+        }
+
+        private void TbiCancelar_ItemClick(object sender, TileItemEventArgs e)
+        {
+            Close();
         }
     }
 }

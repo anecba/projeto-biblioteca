@@ -44,12 +44,11 @@ namespace BibliotecaSoftware.View.Cadastro
         }
 
         private void TlbiCancelar_ItemClick(object sender, TileItemEventArgs e)
-        {
-            Close();
-        }
+            => Close();
 
         private void TlbiConfirmar_ItemClick(object sender, TileItemEventArgs e)
         {
+
             _autorModel.Nome = txtAutor.Text;
             _autorModel.DataNascimento = Convert.ToDateTime(dteDataNascimento.Text);
             _autorModel.Bibliografia = rtbBibliografia.Text;
@@ -60,6 +59,31 @@ namespace BibliotecaSoftware.View.Cadastro
                 MessageBox.Show("Gravado com sucesso!", "Mensagem de Confirmação");
                 Close();
             }
+        }
+
+        private bool Validacao()
+        {
+            if (string.IsNullOrWhiteSpace(txtAutor.Text))
+            {
+                MessageBox.Show("O campo nome precisa ser preenchido!", "Mensagem de Aviso!");
+                return false;
+            }
+            if (string.IsNullOrWhiteSpace(dteDataNascimento.Text))
+            {
+                MessageBox.Show("O campo data de nascimento precisa ser selecionado!", "Mensagem de Aviso!");
+                return false;
+            }
+            if (string.IsNullOrWhiteSpace(txtSite.Text))
+            {
+                MessageBox.Show("O campo site precisa ser preenchido!", "Mensagem de Aviso!");
+                return false;
+            }
+            if (string.IsNullOrWhiteSpace(rtbBibliografia.Text))
+            {
+                MessageBox.Show("O campo bibliografia precisa ser preenchido!", "Mensagem de Aviso!");
+                return false;
+            }
+            return true;
         }
     }
 }

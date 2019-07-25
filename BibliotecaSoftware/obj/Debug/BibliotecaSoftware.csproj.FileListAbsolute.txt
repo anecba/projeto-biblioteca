@@ -177,4 +177,4 @@ C:\Users\aneca\source\repos\bibliotecaprojeto\BibliotecaSoftware\obj\Debug\Bibli
 C:\Users\aneca\source\repos\bibliotecaprojeto\BibliotecaSoftware\obj\Debug\BibliotecaSoftware.View.Cadastro.TelaCadastroLivrosDev.resources
 C:\Users\aneca\source\repos\bibliotecaprojeto\BibliotecaSoftware\obj\Debug\BibliotecaSoftware.View.Listagem.TelaListaDadosEditorasDev.resources
 C:\Users\aneca\source\repos\bibliotecaprojeto\BibliotecaSoftware\obj\Debug\BibliotecaSoftware.View.Listagem.TelaListaDadosLivrosDev.resources
-C:\Users\aneca\source\repos\bibliotecaprojeto\BibliotecaSoftware\obj\Debug\BibliotecaSoftware.View.telaCadastroAutoresDev.resources
+C:\Users\aneca\source\repos\bibliotecaprojeto\BibliotecaSoftware\obj\Debug\BibliotecaSoftware.View.telaCadastroAutores.resources

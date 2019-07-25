@@ -24,7 +24,7 @@ namespace BibliotecaSoftware.View.ControleLivros
         {
             var codigoAutor = Convert.ToInt32(mostrarListarDadosDataGridView.SelectedRows[0].Cells["clnCodigoAutor"].Value);
             var autor = _listaAutorController.AlterarListaAutor(codigoAutor); 
-            var telaCadastroAutores = new telaCadastroAutoresDev(autor);
+            var telaCadastroAutores = new telaCadastroAutores(autor);
             telaCadastroAutores.ShowDialog();
             Carregar();
         }
