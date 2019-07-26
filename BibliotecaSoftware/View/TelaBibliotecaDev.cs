@@ -23,7 +23,7 @@ namespace BibliotecaSoftware.View
         private void BarbtnAutores_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             TelaCadastroAutoresDev telaCadastroAutoresDev = new TelaCadastroAutoresDev();
-            telaCadastroAutoresDev.Show();
+            telaCadastroAutoresDev.ShowDialog();
         }
 
         private void BarbtnEditoras_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -35,25 +35,25 @@ namespace BibliotecaSoftware.View
         private void BarbtnLivros_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             TelaCadastroLivrosDev telaCadastroLivrosDev = new TelaCadastroLivrosDev();
-            telaCadastroLivrosDev.Show();
+            telaCadastroLivrosDev.ShowDialog();
         }
 
         private void BarbtnListaAutores_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             TelaListaDadosAutoresDev telaListaDadosAutoresDev = new TelaListaDadosAutoresDev();
-            telaListaDadosAutoresDev.Show();
+            telaListaDadosAutoresDev.ShowDialog();
         }
 
         private void BarbtnListaEditoras_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             TelaListaDadosEditorasDev telaListaDadosEditorasDev = new TelaListaDadosEditorasDev();
-            telaListaDadosEditorasDev.Show();
+            telaListaDadosEditorasDev.ShowDialog();
         }
 
         private void BarbtnListaLivros_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             TelaListaDadosLivrosDev telaListaDadosLivrosDev = new TelaListaDadosLivrosDev();
-            telaListaDadosLivrosDev.Show();
+            telaListaDadosLivrosDev.ShowDialog();
         }
     }
 }

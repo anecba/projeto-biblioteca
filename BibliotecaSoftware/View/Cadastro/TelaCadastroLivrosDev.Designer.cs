@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.TileItemElement tileItemElement3 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement5 = new DevExpress.XtraEditors.TileItemElement();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaCadastroLivrosDev));
-            DevExpress.XtraEditors.TileItemElement tileItemElement4 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement6 = new DevExpress.XtraEditors.TileItemElement();
             this.lblDatanascimento = new DevExpress.XtraEditors.LabelControl();
             this.dteDatanascimento = new DevExpress.XtraEditors.DateEdit();
             this.lblDescricao = new DevExpress.XtraEditors.LabelControl();
@@ -99,7 +99,7 @@
             this.dteDatanascimento.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dteDatanascimento.Size = new System.Drawing.Size(187, 30);
-            this.dteDatanascimento.TabIndex = 18;
+            this.dteDatanascimento.TabIndex = 6;
             // 
             // lblDescricao
             // 
@@ -108,7 +108,7 @@
             this.lblDescricao.Location = new System.Drawing.Point(38, 445);
             this.lblDescricao.Name = "lblDescricao";
             this.lblDescricao.Size = new System.Drawing.Size(104, 24);
-            this.lblDescricao.TabIndex = 16;
+            this.lblDescricao.TabIndex = 11;
             this.lblDescricao.Text = "Bibliografia";
             // 
             // txtPaginas
@@ -118,7 +118,7 @@
             this.txtPaginas.Properties.Appearance.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPaginas.Properties.Appearance.Options.UseFont = true;
             this.txtPaginas.Size = new System.Drawing.Size(125, 30);
-            this.txtPaginas.TabIndex = 15;
+            this.txtPaginas.TabIndex = 5;
             // 
             // lblPaginas
             // 
@@ -140,7 +140,7 @@
             this.lblTitulo.Location = new System.Drawing.Point(38, 113);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(63, 24);
-            this.lblTitulo.TabIndex = 12;
+            this.lblTitulo.TabIndex = 4;
             this.lblTitulo.Text = "Título*";
             // 
             // tlbCadastrosLivros
@@ -154,7 +154,7 @@
             this.tlbCadastrosLivros.Padding = new System.Windows.Forms.Padding(25, 7, 25, 7);
             this.tlbCadastrosLivros.ScrollMode = DevExpress.XtraEditors.TileControlScrollMode.ScrollButtons;
             this.tlbCadastrosLivros.Size = new System.Drawing.Size(381, 107);
-            this.tlbCadastrosLivros.TabIndex = 11;
+            this.tlbCadastrosLivros.TabIndex = 8;
             this.tlbCadastrosLivros.Text = "tileBar1";
             // 
             // tileBarGroup2
@@ -165,11 +165,11 @@
             // tbiConfirmar
             // 
             this.tbiConfirmar.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            tileItemElement3.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
-            tileItemElement3.Text = "Confirmar";
-            tileItemElement3.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.tbiConfirmar.Elements.Add(tileItemElement3);
+            tileItemElement5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            tileItemElement5.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
+            tileItemElement5.Text = "Confirmar";
+            tileItemElement5.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            this.tbiConfirmar.Elements.Add(tileItemElement5);
             this.tbiConfirmar.Id = 0;
             this.tbiConfirmar.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.tbiConfirmar.Name = "tbiConfirmar";
@@ -183,10 +183,10 @@
             // tbiCancelar
             // 
             this.tbiCancelar.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
-            tileItemElement4.Text = "Cancelar";
-            tileItemElement4.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.tbiCancelar.Elements.Add(tileItemElement4);
+            tileItemElement6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            tileItemElement6.Text = "Cancelar";
+            tileItemElement6.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            this.tbiCancelar.Elements.Add(tileItemElement6);
             this.tbiCancelar.Id = 1;
             this.tbiCancelar.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.tbiCancelar.Name = "tbiCancelar";
@@ -200,7 +200,7 @@
             this.txtCodTitulo.Properties.Appearance.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodTitulo.Properties.Appearance.Options.UseFont = true;
             this.txtCodTitulo.Size = new System.Drawing.Size(140, 30);
-            this.txtCodTitulo.TabIndex = 21;
+            this.txtCodTitulo.TabIndex = 5;
             // 
             // lblCodTitulo
             // 
@@ -212,7 +212,7 @@
             this.lblCodTitulo.Location = new System.Drawing.Point(38, 40);
             this.lblCodTitulo.Name = "lblCodTitulo";
             this.lblCodTitulo.Size = new System.Drawing.Size(116, 24);
-            this.lblCodTitulo.TabIndex = 20;
+            this.lblCodTitulo.TabIndex = 0;
             this.lblCodTitulo.Text = "Código título";
             // 
             // txtCodEditora
@@ -223,7 +223,7 @@
             this.txtCodEditora.Properties.Appearance.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodEditora.Properties.Appearance.Options.UseFont = true;
             this.txtCodEditora.Size = new System.Drawing.Size(140, 30);
-            this.txtCodEditora.TabIndex = 23;
+            this.txtCodEditora.TabIndex = 1;
             // 
             // lblCodEditora
             // 
@@ -235,7 +235,7 @@
             this.lblCodEditora.Location = new System.Drawing.Point(192, 40);
             this.lblCodEditora.Name = "lblCodEditora";
             this.lblCodEditora.Size = new System.Drawing.Size(130, 24);
-            this.lblCodEditora.TabIndex = 22;
+            this.lblCodEditora.TabIndex = 2;
             this.lblCodEditora.Text = "Código editora";
             // 
             // rtbDescricao
@@ -244,7 +244,7 @@
             this.rtbDescricao.Location = new System.Drawing.Point(38, 475);
             this.rtbDescricao.Name = "rtbDescricao";
             this.rtbDescricao.Size = new System.Drawing.Size(656, 96);
-            this.rtbDescricao.TabIndex = 24;
+            this.rtbDescricao.TabIndex = 4;
             this.rtbDescricao.Text = "";
             // 
             // txtTitulo
@@ -254,7 +254,7 @@
             this.txtTitulo.Properties.Appearance.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTitulo.Properties.Appearance.Options.UseFont = true;
             this.txtTitulo.Size = new System.Drawing.Size(656, 30);
-            this.txtTitulo.TabIndex = 25;
+            this.txtTitulo.TabIndex = 6;
             // 
             // txtEdicao
             // 
@@ -263,7 +263,7 @@
             this.txtEdicao.Properties.Appearance.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEdicao.Properties.Appearance.Options.UseFont = true;
             this.txtEdicao.Size = new System.Drawing.Size(140, 30);
-            this.txtEdicao.TabIndex = 27;
+            this.txtEdicao.TabIndex = 3;
             // 
             // lblEdicao
             // 
@@ -275,7 +275,7 @@
             this.lblEdicao.Location = new System.Drawing.Point(38, 379);
             this.lblEdicao.Name = "lblEdicao";
             this.lblEdicao.Size = new System.Drawing.Size(69, 24);
-            this.lblEdicao.TabIndex = 26;
+            this.lblEdicao.TabIndex = 9;
             this.lblEdicao.Text = "Edição*";
             // 
             // txtAno
@@ -285,7 +285,7 @@
             this.txtAno.Properties.Appearance.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAno.Properties.Appearance.Options.UseFont = true;
             this.txtAno.Size = new System.Drawing.Size(102, 30);
-            this.txtAno.TabIndex = 29;
+            this.txtAno.TabIndex = 4;
             // 
             // lblAno
             // 
@@ -310,7 +310,7 @@
             this.lblAutor.Location = new System.Drawing.Point(38, 181);
             this.lblAutor.Name = "lblAutor";
             this.lblAutor.Size = new System.Drawing.Size(60, 24);
-            this.lblAutor.TabIndex = 31;
+            this.lblAutor.TabIndex = 6;
             this.lblAutor.Text = "Autor*";
             // 
             // lblEditora
@@ -323,7 +323,7 @@
             this.lblEditora.Location = new System.Drawing.Point(38, 247);
             this.lblEditora.Name = "lblEditora";
             this.lblEditora.Size = new System.Drawing.Size(75, 24);
-            this.lblEditora.TabIndex = 33;
+            this.lblEditora.TabIndex = 7;
             this.lblEditora.Text = "Editora*";
             // 
             // lblIdioma
@@ -336,7 +336,7 @@
             this.lblIdioma.Location = new System.Drawing.Point(38, 313);
             this.lblIdioma.Name = "lblIdioma";
             this.lblIdioma.Size = new System.Drawing.Size(73, 24);
-            this.lblIdioma.TabIndex = 35;
+            this.lblIdioma.TabIndex = 8;
             this.lblIdioma.Text = "Idioma*";
             // 
             // lblPais
@@ -370,7 +370,7 @@
             this.pncCadastroLivros.Location = new System.Drawing.Point(0, 0);
             this.pncCadastroLivros.Name = "pncCadastroLivros";
             this.pncCadastroLivros.Size = new System.Drawing.Size(729, 718);
-            this.pncCadastroLivros.TabIndex = 38;
+            this.pncCadastroLivros.TabIndex = 13;
             // 
             // luePais
             // 
@@ -380,6 +380,9 @@
             this.luePais.Properties.Appearance.Options.UseFont = true;
             this.luePais.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.luePais.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Pais", "País"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CodigoIdioma", "Cód", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.luePais.Properties.DisplayMember = "Pais";
             this.luePais.Properties.DropDownRows = 4;
             this.luePais.Properties.NullText = "";
@@ -387,7 +390,7 @@
             this.luePais.Properties.ShowHeader = false;
             this.luePais.Properties.ValueMember = "CodigoIdioma";
             this.luePais.Size = new System.Drawing.Size(301, 30);
-            this.luePais.TabIndex = 43;
+            this.luePais.TabIndex = 3;
             // 
             // lueIdioma
             // 
@@ -407,7 +410,7 @@
             this.lueIdioma.Properties.ShowHeader = false;
             this.lueIdioma.Properties.ValueMember = "CodigoIdioma";
             this.lueIdioma.Size = new System.Drawing.Size(294, 30);
-            this.lueIdioma.TabIndex = 42;
+            this.lueIdioma.TabIndex = 2;
             // 
             // lueEditora
             // 
@@ -417,6 +420,9 @@
             this.lueEditora.Properties.Appearance.Options.UseFont = true;
             this.lueEditora.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lueEditora.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Nome", "Editora"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CodigoEditora", "Cód")});
             this.lueEditora.Properties.DisplayMember = "Nome";
             this.lueEditora.Properties.DropDownRows = 4;
             this.lueEditora.Properties.NullText = "";
@@ -424,7 +430,7 @@
             this.lueEditora.Properties.ShowHeader = false;
             this.lueEditora.Properties.ValueMember = "CodigoEditora";
             this.lueEditora.Size = new System.Drawing.Size(656, 30);
-            this.lueEditora.TabIndex = 41;
+            this.lueEditora.TabIndex = 1;
             // 
             // lueAutor
             // 
@@ -434,13 +440,16 @@
             this.lueAutor.Properties.Appearance.Options.UseFont = true;
             this.lueAutor.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lueAutor.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Nome", "Autor"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CodigoAutor", "Cód", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.lueAutor.Properties.DisplayMember = "Nome";
             this.lueAutor.Properties.NullText = "";
             this.lueAutor.Properties.ShowFooter = false;
             this.lueAutor.Properties.ShowHeader = false;
             this.lueAutor.Properties.ValueMember = "CodigoAutor";
             this.lueAutor.Size = new System.Drawing.Size(656, 30);
-            this.lueAutor.TabIndex = 40;
+            this.lueAutor.TabIndex = 9;
             // 
             // TelaCadastroLivrosDev
             // 
