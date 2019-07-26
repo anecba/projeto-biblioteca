@@ -11,9 +11,7 @@ namespace BibliotecaSoftware.Controller
         private readonly EditoraDao _editoraDao;
 
         public ListaEditoraController()
-        {
-            _editoraDao = new EditoraDao();
-        }
+            => _editoraDao = new EditoraDao();
 
         public Editora AlterarListaEditora(int codigoEditora)
         {

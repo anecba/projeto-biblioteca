@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement4 = new DevExpress.XtraEditors.TileItemElement();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaListaDadosLivrosDev));
-            DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement3 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement5 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement6 = new DevExpress.XtraEditors.TileItemElement();
             this.grdDados = new DevExpress.XtraGrid.GridControl();
             this.grdvLivros = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.clnCodigoTitulo = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -85,6 +85,7 @@
             this.clnDescricao});
             this.grdvLivros.GridControl = this.grdDados;
             this.grdvLivros.Name = "grdvLivros";
+            this.grdvLivros.OptionsBehavior.Editable = false;
             // 
             // clnCodigoTitulo
             // 
@@ -92,6 +93,8 @@
             this.clnCodigoTitulo.FieldName = "CodigoTitulo";
             this.clnCodigoTitulo.MinWidth = 25;
             this.clnCodigoTitulo.Name = "clnCodigoTitulo";
+            this.clnCodigoTitulo.OptionsColumn.AllowEdit = false;
+            this.clnCodigoTitulo.OptionsColumn.AllowFocus = false;
             this.clnCodigoTitulo.Visible = true;
             this.clnCodigoTitulo.VisibleIndex = 0;
             this.clnCodigoTitulo.Width = 94;
@@ -102,6 +105,8 @@
             this.clnTitulo.FieldName = "NomeTitulo";
             this.clnTitulo.MinWidth = 25;
             this.clnTitulo.Name = "clnTitulo";
+            this.clnTitulo.OptionsColumn.AllowEdit = false;
+            this.clnTitulo.OptionsColumn.AllowFocus = false;
             this.clnTitulo.Visible = true;
             this.clnTitulo.VisibleIndex = 1;
             this.clnTitulo.Width = 94;
@@ -112,6 +117,8 @@
             this.clnAutor.FieldName = "Nome";
             this.clnAutor.MinWidth = 25;
             this.clnAutor.Name = "clnAutor";
+            this.clnAutor.OptionsColumn.AllowEdit = false;
+            this.clnAutor.OptionsColumn.AllowFocus = false;
             this.clnAutor.Visible = true;
             this.clnAutor.VisibleIndex = 2;
             this.clnAutor.Width = 94;
@@ -122,6 +129,8 @@
             this.clnIdioma.FieldName = "Lingua";
             this.clnIdioma.MinWidth = 25;
             this.clnIdioma.Name = "clnIdioma";
+            this.clnIdioma.OptionsColumn.AllowEdit = false;
+            this.clnIdioma.OptionsColumn.AllowFocus = false;
             this.clnIdioma.Visible = true;
             this.clnIdioma.VisibleIndex = 3;
             this.clnIdioma.Width = 94;
@@ -132,6 +141,8 @@
             this.clnPais.FieldName = "Pais";
             this.clnPais.MinWidth = 25;
             this.clnPais.Name = "clnPais";
+            this.clnPais.OptionsColumn.AllowEdit = false;
+            this.clnPais.OptionsColumn.AllowFocus = false;
             this.clnPais.Visible = true;
             this.clnPais.VisibleIndex = 4;
             this.clnPais.Width = 94;
@@ -142,6 +153,8 @@
             this.clnEdicao.FieldName = "NumeroEdicao";
             this.clnEdicao.MinWidth = 25;
             this.clnEdicao.Name = "clnEdicao";
+            this.clnEdicao.OptionsColumn.AllowEdit = false;
+            this.clnEdicao.OptionsColumn.AllowFocus = false;
             this.clnEdicao.Visible = true;
             this.clnEdicao.VisibleIndex = 5;
             this.clnEdicao.Width = 94;
@@ -152,6 +165,8 @@
             this.clnAno.FieldName = "Ano";
             this.clnAno.MinWidth = 25;
             this.clnAno.Name = "clnAno";
+            this.clnAno.OptionsColumn.AllowEdit = false;
+            this.clnAno.OptionsColumn.AllowFocus = false;
             this.clnAno.Visible = true;
             this.clnAno.VisibleIndex = 6;
             this.clnAno.Width = 94;
@@ -162,6 +177,8 @@
             this.clnPaginas.FieldName = "QtdePagina";
             this.clnPaginas.MinWidth = 25;
             this.clnPaginas.Name = "clnPaginas";
+            this.clnPaginas.OptionsColumn.AllowEdit = false;
+            this.clnPaginas.OptionsColumn.AllowFocus = false;
             this.clnPaginas.Visible = true;
             this.clnPaginas.VisibleIndex = 7;
             this.clnPaginas.Width = 94;
@@ -172,6 +189,8 @@
             this.clnDatalancamento.FieldName = "DataLancamento";
             this.clnDatalancamento.MinWidth = 25;
             this.clnDatalancamento.Name = "clnDatalancamento";
+            this.clnDatalancamento.OptionsColumn.AllowEdit = false;
+            this.clnDatalancamento.OptionsColumn.AllowFocus = false;
             this.clnDatalancamento.Visible = true;
             this.clnDatalancamento.VisibleIndex = 8;
             this.clnDatalancamento.Width = 94;
@@ -182,6 +201,8 @@
             this.clnEditora.FieldName = "Nome";
             this.clnEditora.MinWidth = 25;
             this.clnEditora.Name = "clnEditora";
+            this.clnEditora.OptionsColumn.AllowEdit = false;
+            this.clnEditora.OptionsColumn.AllowFocus = false;
             this.clnEditora.Visible = true;
             this.clnEditora.VisibleIndex = 9;
             this.clnEditora.Width = 94;
@@ -192,6 +213,8 @@
             this.clnDescricao.FieldName = "Descricao";
             this.clnDescricao.MinWidth = 25;
             this.clnDescricao.Name = "clnDescricao";
+            this.clnDescricao.OptionsColumn.AllowEdit = false;
+            this.clnDescricao.OptionsColumn.AllowFocus = false;
             this.clnDescricao.Visible = true;
             this.clnDescricao.VisibleIndex = 10;
             this.clnDescricao.Width = 94;
@@ -207,7 +230,7 @@
             // 
             // txtPesquisa
             // 
-            this.txtPesquisa.Location = new System.Drawing.Point(172, 31);
+            this.txtPesquisa.Location = new System.Drawing.Point(12, 38);
             this.txtPesquisa.Name = "txtPesquisa";
             this.txtPesquisa.Properties.Appearance.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPesquisa.Properties.Appearance.Options.UseFont = true;
@@ -218,10 +241,10 @@
             // tbiCancelar
             // 
             this.tbiCancelar.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            tileItemElement1.Text = "Cancelar";
-            tileItemElement1.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.tbiCancelar.Elements.Add(tileItemElement1);
+            tileItemElement4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            tileItemElement4.Text = "Cancelar";
+            tileItemElement4.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            this.tbiCancelar.Elements.Add(tileItemElement4);
             this.tbiCancelar.Id = 1;
             this.tbiCancelar.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.tbiCancelar.Name = "tbiCancelar";
@@ -230,11 +253,11 @@
             // tbiApagar
             // 
             this.tbiApagar.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
-            tileItemElement2.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
-            tileItemElement2.Text = "Apagar";
-            tileItemElement2.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.tbiApagar.Elements.Add(tileItemElement2);
+            tileItemElement5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            tileItemElement5.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
+            tileItemElement5.Text = "Apagar";
+            tileItemElement5.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            this.tbiApagar.Elements.Add(tileItemElement5);
             this.tbiApagar.Id = 0;
             this.tbiApagar.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.tbiApagar.Name = "tbiApagar";
@@ -263,10 +286,10 @@
             // tbiAlterar
             // 
             this.tbiAlterar.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
-            tileItemElement3.Text = "Alterar";
-            tileItemElement3.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.tbiAlterar.Elements.Add(tileItemElement3);
+            tileItemElement6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
+            tileItemElement6.Text = "Alterar";
+            tileItemElement6.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            this.tbiAlterar.Elements.Add(tileItemElement6);
             this.tbiAlterar.Id = 5;
             this.tbiAlterar.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.tbiAlterar.Name = "tbiAlterar";

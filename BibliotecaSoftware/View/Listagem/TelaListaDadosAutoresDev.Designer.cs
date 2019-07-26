@@ -159,7 +159,7 @@
             // 
             // txtPesquisa
             // 
-            this.txtPesquisa.Location = new System.Drawing.Point(218, 31);
+            this.txtPesquisa.Location = new System.Drawing.Point(12, 30);
             this.txtPesquisa.Name = "txtPesquisa";
             this.txtPesquisa.Properties.Appearance.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPesquisa.Properties.Appearance.Options.UseFont = true;
