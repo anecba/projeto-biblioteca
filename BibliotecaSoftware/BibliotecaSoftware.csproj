@@ -58,6 +58,9 @@
     <Reference Include="Dapper, Version=1.60.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Dapper.1.60.6\lib\net451\Dapper.dll</HintPath>
     </Reference>
+    <Reference Include="Dapper.FluentMap, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.FluentMap.1.6.0\lib\net451\Dapper.FluentMap.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.Data.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v19.1.Core, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -105,6 +108,7 @@
     <Compile Include="Controller\ListaEditoraController.cs" />
     <Compile Include="Conversoes.cs" />
     <Compile Include="Dao\AutorDao.cs" />
+    <Compile Include="Dao\AutorDevDAO.cs" />
     <Compile Include="Dao\EdicaoDao.cs" />
     <Compile Include="Dao\EditoraDao.cs" />
     <Compile Include="Dao\IdiomaDao.cs" />
