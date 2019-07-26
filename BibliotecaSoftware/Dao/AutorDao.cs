@@ -91,6 +91,7 @@ namespace BibliotecaSoftware.Dao
                             DataNascimento = DateTime.Parse(dr["DATANASCIMENTO"].ToString()),
                             Bibliografia = dr["BIBLIOGRAFIA"].ToString(),
                             Site = dr["SITE"].ToString(),
+                            Desabilitado = char.Parse(dr["Desabilitado"].ToString())
                         };
                     }
                 }
@@ -126,7 +127,8 @@ namespace BibliotecaSoftware.Dao
                             Nome = dr["NOME"].ToString(),
                             DataNascimento = DateTime.Parse(dr["DATANASCIMENTO"].ToString()),
                             Bibliografia = dr["BIBLIOGRAFIA"].ToString(),
-                            Site = dr["SITE"].ToString()
+                            Site = dr["SITE"].ToString(),
+                            Desabilitado = char.Parse(dr["Desabilitado"].ToString())
                         };
                         retorno.Add(autorModel);
                     }
@@ -169,7 +171,7 @@ namespace BibliotecaSoftware.Dao
                     }
 
                     cmd.CommandText = @"UPDATE AUTOR SET DESABILITADO = @DESABILITADO WHERE CODIGOAUTOR = @CODIGOAUTOR";
-                    cmd.Parameters.Add("@DESABILITADO", FbDbType.Char).Value = autorModel.Desabilitado.ToChar();
+                    cmd.Parameters.Add("@DESABILITADO", FbDbType.Char).Value = autorModel.Desativado.ToChar();
                     cmd.ExecuteNonQuery();
                     deuCerto = true;
                 }

@@ -42,6 +42,7 @@ namespace BibliotecaSoftware.View
             _autorModel.DataNascimento = Convert.ToDateTime(datanascimentoCadastroAutoresTimepicker.Text);
             _autorModel.Bibliografia = bibliografiaCadastroAutoresCaixatexto.Text;
             _autorModel.Site = siteCadastroAutoresCaixatexto.Text;
+            _autorModel.Desativado = false;
 
             if (_autorController.GravarCadastroAutor(_autorModel))
             {

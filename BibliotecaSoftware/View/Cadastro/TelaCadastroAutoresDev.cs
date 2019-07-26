@@ -54,6 +54,7 @@ namespace BibliotecaSoftware.View.Cadastro
             _autorModel.DataNascimento = Convert.ToDateTime(dteDataNascimento.Text);
             _autorModel.Bibliografia = rtbBibliografia.Text;
             _autorModel.Site = txtSite.Text;
+            _autorModel.Desativado = false;
 
             if (_autorController.GravarCadastroAutor(_autorModel))
             {

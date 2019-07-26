@@ -26,7 +26,7 @@ namespace BibliotecaSoftware.Controller
             var autor = new Autor
             {
                 CodigoAutor = codigoAutor,
-                Desabilitado = true
+                Desativado = true
             };
 
             if (_autorDao.Desabilitar(autor))
