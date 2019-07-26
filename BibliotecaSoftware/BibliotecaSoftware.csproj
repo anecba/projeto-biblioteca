@@ -108,7 +108,6 @@
     <Compile Include="Controller\ListaEditoraController.cs" />
     <Compile Include="Conversoes.cs" />
     <Compile Include="Dao\AutorDao.cs" />
-    <Compile Include="Dao\AutorDevDAO.cs" />
     <Compile Include="Dao\EdicaoDao.cs" />
     <Compile Include="Dao\EditoraDao.cs" />
     <Compile Include="Dao\IdiomaDao.cs" />

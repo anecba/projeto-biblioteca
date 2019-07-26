@@ -1,9 +1,9 @@
 ﻿using BibliotecaSoftware.Model;
-using System;
-using FirebirdSql.Data.FirebirdClient;
-using System.Collections.Generic;
-using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using FirebirdSql.Data.FirebirdClient;
+using System;
+using Dapper;
+using System.Collections.Generic;
 
 namespace BibliotecaSoftware.Dao
 {
@@ -23,24 +23,33 @@ namespace BibliotecaSoftware.Dao
                 };
                 try
                 {
-                    var mSQL = "";
-                    if (0.Equals(autorModel.CodigoAutor))
-                        mSQL = "INSERT INTO AUTOR(NOME, DATANASCIMENTO, BIBLIOGRAFIA, SITE, DESABILITADO) " +
-                            "VALUES (@NOME, @DATANASCIMENTO, @BIBLIOGRAFIA, @SITE, @DESABILITADO)";
-                    else
-                    {
-                        mSQL = @"UPDATE AUTOR SET NOME = @NOME, DATANASCIMENTO = @DATANASCIMENTO, 
+                    var mSQL = 0.Equals(autorModel.CodigoAutor)
+                        ? @"INSERT INTO AUTOR(NOME, DATANASCIMENTO, BIBLIOGRAFIA, SITE, DESABILITADO)
+                            VALUES (@NOME, @DATANASCIMENTO, @BIBLIOGRAFIA, @SITE, @DESABILITADO)"
+                        : @"UPDATE AUTOR SET NOME = @NOME, DATANASCIMENTO = @DATANASCIMENTO, 
                                 BIBLIOGRAFIA = @BIBLIOGRAFIA,
                                 SITE = @SITE, DESABILITADO = @DESABILITADO WHERE CODIGOAUTOR = @CODIGOAUTOR";
-                        cmd.Parameters.Add("@CODIGOAUTOR", autorModel.CodigoAutor);
-                    }
-                    cmd.CommandText = mSQL;
-                    cmd.Parameters.Add("@NOME", autorModel.Nome);
-                    cmd.Parameters.Add("@DATANASCIMENTO", FbDbType.Date).Value = autorModel.DataNascimento;
-                    cmd.Parameters.Add("@BIBLIOGRAFIA", autorModel.Bibliografia);
-                    cmd.Parameters.Add("@SITE", autorModel.Site);
-                    cmd.Parameters.Add("@DESABILITADO", FbDbType.Boolean).Value = autorModel.Desabilitado.ToChar();
-                    cmd.ExecuteNonQuery();
+
+                    cmd.Connection.Execute(mSQL, autorModel, transaction);
+                    //var mSQL = "";
+                    //if (0.Equals(autorModel.CodigoAutor))
+                    //    mSQL = "INSERT INTO AUTOR(NOME, DATANASCIMENTO, BIBLIOGRAFIA, SITE, DESABILITADO) " +
+                    //        "VALUES (@NOME, @DATANASCIMENTO, @BIBLIOGRAFIA, @SITE, @DESABILITADO)";
+                    //else
+                    //{
+                    //    mSQL = @"UPDATE AUTOR SET NOME = @NOME, DATANASCIMENTO = @DATANASCIMENTO, 
+                    //            BIBLIOGRAFIA = @BIBLIOGRAFIA,
+                    //            SITE = @SITE, DESABILITADO = @DESABILITADO WHERE CODIGOAUTOR = @CODIGOAUTOR";
+                    //    cmd.Parameters.Add("@CODIGOAUTOR", autorModel.CodigoAutor);
+                    //}
+                    //cmd.CommandText = mSQL;
+                    //cmd.Parameters.Add("@NOME", autorModel.Nome);
+                    //cmd.Parameters.Add("@DATANASCIMENTO", FbDbType.Date).Value = autorModel.DataNascimento;
+                    //cmd.Parameters.Add("@BIBLIOGRAFIA", autorModel.Bibliografia);
+                    //cmd.Parameters.Add("@SITE", autorModel.Site);
+                    //cmd.Parameters.Add("@DESABILITADO", FbDbType.Boolean).Value = autorModel.Desabilitado.ToChar();
+                    //cmd.ExecuteNonQuery();
+
                     deuCerto = true;
                 }
                 catch (Exception e)
