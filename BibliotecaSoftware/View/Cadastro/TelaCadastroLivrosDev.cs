@@ -49,7 +49,7 @@ namespace BibliotecaSoftware.View.Cadastro
         public void AtribuirModelParaView()
         {
             txtTitulo.Text = _livro.Titulo.NomeTitulo;
-            lueIdioma.SelectedText = Convert.ToString(_livro.Idioma.CodigoIdioma);
+            lueIdioma.EditValue = _livro.Idioma.CodigoIdioma;
             luePais.EditValue = _livro.Idioma.CodigoIdioma;
             txtEdicao.Text = _livro.Edicao.NumeroEdicao;
             txtAno.Text = _livro.Edicao.Ano.ToString();

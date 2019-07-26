@@ -380,6 +380,12 @@
             this.luePais.Properties.Appearance.Options.UseFont = true;
             this.luePais.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.luePais.Properties.DisplayMember = "Pais";
+            this.luePais.Properties.DropDownRows = 4;
+            this.luePais.Properties.NullText = "";
+            this.luePais.Properties.ShowFooter = false;
+            this.luePais.Properties.ShowHeader = false;
+            this.luePais.Properties.ValueMember = "CodigoIdioma";
             this.luePais.Size = new System.Drawing.Size(294, 30);
             this.luePais.TabIndex = 43;
             // 
@@ -391,6 +397,15 @@
             this.lueIdioma.Properties.Appearance.Options.UseFont = true;
             this.lueIdioma.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lueIdioma.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CodigoIdioma", "Cód", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Lingua", "Idioma")});
+            this.lueIdioma.Properties.DisplayMember = "Lingua";
+            this.lueIdioma.Properties.DropDownRows = 4;
+            this.lueIdioma.Properties.NullText = "";
+            this.lueIdioma.Properties.ShowFooter = false;
+            this.lueIdioma.Properties.ShowHeader = false;
+            this.lueIdioma.Properties.ValueMember = "CodigoIdioma";
             this.lueIdioma.Size = new System.Drawing.Size(294, 30);
             this.lueIdioma.TabIndex = 42;
             // 
@@ -402,6 +417,12 @@
             this.lueEditora.Properties.Appearance.Options.UseFont = true;
             this.lueEditora.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lueEditora.Properties.DisplayMember = "Nome";
+            this.lueEditora.Properties.DropDownRows = 4;
+            this.lueEditora.Properties.NullText = "";
+            this.lueEditora.Properties.ShowFooter = false;
+            this.lueEditora.Properties.ShowHeader = false;
+            this.lueEditora.Properties.ValueMember = "CodigoEditora";
             this.lueEditora.Size = new System.Drawing.Size(656, 30);
             this.lueEditora.TabIndex = 41;
             // 
@@ -413,6 +434,11 @@
             this.lueAutor.Properties.Appearance.Options.UseFont = true;
             this.lueAutor.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lueAutor.Properties.DisplayMember = "Nome";
+            this.lueAutor.Properties.NullText = "";
+            this.lueAutor.Properties.ShowFooter = false;
+            this.lueAutor.Properties.ShowHeader = false;
+            this.lueAutor.Properties.ValueMember = "CodigoAutor";
             this.lueAutor.Size = new System.Drawing.Size(656, 30);
             this.lueAutor.TabIndex = 40;
             // 
