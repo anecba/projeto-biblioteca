@@ -42,7 +42,7 @@ namespace BibliotecaSoftware.View.Cadastro
         {
             if (string.IsNullOrWhiteSpace(txtEditora.Text))
             {
-                MessageBox.Show("O campo nome precisa ser preenchido!", "Mensagem de Aviso!");
+                XtraMessageBox.Show("O campo nome precisa ser preenchido!", "Mensagem de Aviso!");
                 return;
             }
 
@@ -50,7 +50,7 @@ namespace BibliotecaSoftware.View.Cadastro
 
             if (_editoraController.GravarCadastroEditora(_editoraModel))
             {
-                MessageBox.Show("Gravado com sucesso!", "Mensagem de Confirmação");
+                XtraMessageBox.Show("Gravado com sucesso!", "Mensagem de Confirmação");
                 Close();
             }
         }

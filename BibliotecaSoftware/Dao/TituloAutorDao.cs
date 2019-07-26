@@ -1,4 +1,5 @@
 ﻿using BibliotecaSoftware.Model;
+using DevExpress.XtraEditors;
 using FirebirdSql.Data.FirebirdClient;
 using System;
 using System.Windows.Forms;
@@ -55,7 +56,7 @@ namespace BibliotecaSoftware.Dao
                 }
                 catch (Exception e)
                 {
-                    MessageBox.Show(e.Message);
+                    XtraMessageBox.Show(e.Message);
                 }
                 finally
                 {
@@ -112,7 +113,7 @@ namespace BibliotecaSoftware.Dao
                 }
                 catch (Exception e)
                 {
-                    MessageBox.Show(e.Message);
+                    XtraMessageBox.Show(e.Message);
                 }
                 finally
                 {

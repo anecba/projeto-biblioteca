@@ -80,6 +80,7 @@
             this.clnBibliografia});
             this.grdvAutores.GridControl = this.grdDados;
             this.grdvAutores.Name = "grdvAutores";
+            this.grdvAutores.OptionsBehavior.Editable = false;
             // 
             // clnCodigoAutor
             // 
@@ -88,6 +89,8 @@
             this.clnCodigoAutor.MaxWidth = 50;
             this.clnCodigoAutor.MinWidth = 40;
             this.clnCodigoAutor.Name = "clnCodigoAutor";
+            this.clnCodigoAutor.OptionsColumn.AllowEdit = false;
+            this.clnCodigoAutor.OptionsColumn.AllowFocus = false;
             this.clnCodigoAutor.Visible = true;
             this.clnCodigoAutor.VisibleIndex = 0;
             this.clnCodigoAutor.Width = 50;
@@ -99,6 +102,8 @@
             this.clnAutores.MaxWidth = 300;
             this.clnAutores.MinWidth = 150;
             this.clnAutores.Name = "clnAutores";
+            this.clnAutores.OptionsColumn.AllowEdit = false;
+            this.clnAutores.OptionsColumn.AllowFocus = false;
             this.clnAutores.Visible = true;
             this.clnAutores.VisibleIndex = 1;
             this.clnAutores.Width = 236;
@@ -110,6 +115,8 @@
             this.clnDataNascimento.MaxWidth = 130;
             this.clnDataNascimento.MinWidth = 120;
             this.clnDataNascimento.Name = "clnDataNascimento";
+            this.clnDataNascimento.OptionsColumn.AllowEdit = false;
+            this.clnDataNascimento.OptionsColumn.AllowFocus = false;
             this.clnDataNascimento.Visible = true;
             this.clnDataNascimento.VisibleIndex = 2;
             this.clnDataNascimento.Width = 130;
@@ -121,6 +128,8 @@
             this.clnSite.MaxWidth = 200;
             this.clnSite.MinWidth = 25;
             this.clnSite.Name = "clnSite";
+            this.clnSite.OptionsColumn.AllowEdit = false;
+            this.clnSite.OptionsColumn.AllowFocus = false;
             this.clnSite.Visible = true;
             this.clnSite.VisibleIndex = 3;
             this.clnSite.Width = 158;
@@ -132,6 +141,8 @@
             this.clnBibliografia.MaxWidth = 400;
             this.clnBibliografia.MinWidth = 25;
             this.clnBibliografia.Name = "clnBibliografia";
+            this.clnBibliografia.OptionsColumn.AllowEdit = false;
+            this.clnBibliografia.OptionsColumn.AllowFocus = false;
             this.clnBibliografia.Visible = true;
             this.clnBibliografia.VisibleIndex = 4;
             this.clnBibliografia.Width = 292;

@@ -3,6 +3,7 @@ using System;
 using FirebirdSql.Data.FirebirdClient;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using DevExpress.XtraEditors;
 
 namespace BibliotecaSoftware.Dao
 {
@@ -44,7 +45,7 @@ namespace BibliotecaSoftware.Dao
                 }
                 catch (Exception e)
                 {
-                    MessageBox.Show(e.Message);
+                    XtraMessageBox.Show(e.Message);
                 }
                 finally
                 {
@@ -86,7 +87,7 @@ namespace BibliotecaSoftware.Dao
                 }
                 catch (Exception e)
                 {
-                    MessageBox.Show(e.Message);
+                    XtraMessageBox.Show(e.Message);
                 }
                 finally
                 {
@@ -123,7 +124,7 @@ namespace BibliotecaSoftware.Dao
                 }
                 catch (Exception e)
                 {
-                    MessageBox.Show(e.Message);
+                    XtraMessageBox.Show(e.Message);
                 }
                 finally
                 {
@@ -154,7 +155,7 @@ namespace BibliotecaSoftware.Dao
 
                     if (contador > 0)
                     {
-                        MessageBox.Show("Este autor não pode ser desabilitado por possuir livros cadastrados.", "Mensagem de Notificação");
+                        XtraMessageBox.Show("Este autor não pode ser desabilitado por possuir livros cadastrados.", "Mensagem de Notificação");
                         return deuCerto;
                     }
 
@@ -165,7 +166,7 @@ namespace BibliotecaSoftware.Dao
                 }
                 catch (Exception e)
                 {
-                    MessageBox.Show(e.Message);
+                    XtraMessageBox.Show(e.Message);
                 }
                 finally
                 {

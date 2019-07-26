@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using BibliotecaSoftware.Model;
 using BibliotecaSoftware.Controller;
+using DevExpress.XtraEditors;
 
 namespace BibliotecaSoftware.View
 {
@@ -44,7 +45,7 @@ namespace BibliotecaSoftware.View
 
             if (_autorController.GravarCadastroAutor(_autorModel))
             {
-                MessageBox.Show("Gravado com sucesso!", "Mensagem de Confirmação");
+                XtraMessageBox.Show("Gravado com sucesso!", "Mensagem de Confirmação");
                 Close();
             }
         }
@@ -56,22 +57,22 @@ namespace BibliotecaSoftware.View
         {
             if (string.IsNullOrWhiteSpace(nomeCadastroAutoresCaixatexto.Text))
             {
-                MessageBox.Show("O campo nome precisa ser preenchido!", "Mensagem de Aviso!");
+                XtraMessageBox.Show("O campo nome precisa ser preenchido!", "Mensagem de Aviso!");
                 return false;
             }
             if (string.IsNullOrWhiteSpace(datanascimentoCadastroAutoresTimepicker.Text))
             {
-                MessageBox.Show("O campo data de nascimento precisa ser selecionado!", "Mensagem de Aviso!");
+                XtraMessageBox.Show("O campo data de nascimento precisa ser selecionado!", "Mensagem de Aviso!");
                 return false;
             }
             if (string.IsNullOrWhiteSpace(siteCadastroAutoresCaixatexto.Text))
             {
-                MessageBox.Show("O campo site precisa ser preenchido!", "Mensagem de Aviso!");
+                XtraMessageBox.Show("O campo site precisa ser preenchido!", "Mensagem de Aviso!");
                 return false;
             }
             if (string.IsNullOrWhiteSpace(bibliografiaCadastroAutoresCaixatexto.Text))
             {
-                MessageBox.Show("O campo bibliografia precisa ser preenchido!", "Mensagem de Aviso!");
+                XtraMessageBox.Show("O campo bibliografia precisa ser preenchido!", "Mensagem de Aviso!");
                 return false;
             }
             return true;

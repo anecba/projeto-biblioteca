@@ -2,6 +2,7 @@
 using System;
 using System.Windows.Forms;
 using BibliotecaSoftware.Controller;
+using DevExpress.XtraEditors;
 
 namespace BibliotecaSoftware.View
 {
@@ -87,17 +88,17 @@ namespace BibliotecaSoftware.View
         {
             if (string.IsNullOrWhiteSpace(idiomaCadastroLivrosCombobox.Text))
             {
-                MessageBox.Show("O campo idioma precisa ser selecionado!", "Mensagem de Aviso!");
+                XtraMessageBox.Show("O campo idioma precisa ser selecionado!", "Mensagem de Aviso!");
                 return false;
             }
             if (string.IsNullOrWhiteSpace(editoraCadastroLivrosCombobox.Text))
             {
-                MessageBox.Show("O campo editora precisa ser selecionado!", "Mensagem de Aviso!");
+                XtraMessageBox.Show("O campo editora precisa ser selecionado!", "Mensagem de Aviso!");
                 return false;
             }
             if (string.IsNullOrWhiteSpace(descricaoCadastroLivrosCaixatexto.Text))
             {
-                MessageBox.Show("O campo nome precisa ser preenchido!", "Mensagem de Aviso!");
+                XtraMessageBox.Show("O campo nome precisa ser preenchido!", "Mensagem de Aviso!");
                 return false;
             }
             return true;

@@ -1,5 +1,6 @@
 ﻿using BibliotecaSoftware.Dao;
 using BibliotecaSoftware.Model;
+using DevExpress.XtraEditors;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
@@ -30,7 +31,7 @@ namespace BibliotecaSoftware.Controller
 
             if (_editoraDao.Desabilitar(editora))
             {
-                MessageBox.Show("Operação realizada com sucesso!!", "Mensagem de Notificação");
+                XtraMessageBox.Show("Operação realizada com sucesso!!", "Mensagem de Notificação");
                 return true;
             }
             return false;

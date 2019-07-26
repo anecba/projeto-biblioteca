@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DevExpress.XtraEditors;
+﻿using BibliotecaSoftware.Controller;
 using BibliotecaSoftware.Model;
-using BibliotecaSoftware.Controller;
+using DevExpress.XtraEditors;
+using System;
+using System.Windows.Forms;
 
 namespace BibliotecaSoftware.View.Cadastro
 {
@@ -76,17 +69,17 @@ namespace BibliotecaSoftware.View.Cadastro
         {
             if (string.IsNullOrWhiteSpace(lueIdioma.Text))
             {
-                MessageBox.Show("O campo idioma precisa ser selecionado!", "Mensagem de Aviso!");
+                XtraMessageBox.Show("O campo idioma precisa ser selecionado!", "Mensagem de Aviso!");
                 return false;
             }
             if (string.IsNullOrWhiteSpace(lueEditora.Text))
             {
-                MessageBox.Show("O campo editora precisa ser selecionado!", "Mensagem de Aviso!");
+                XtraMessageBox.Show("O campo editora precisa ser selecionado!", "Mensagem de Aviso!");
                 return false;
             }
             if (string.IsNullOrWhiteSpace(lueAutor.Text))
             {
-                MessageBox.Show("O campo nome precisa ser preenchido!", "Mensagem de Aviso!");
+                XtraMessageBox.Show("O campo nome precisa ser preenchido!", "Mensagem de Aviso!");
                 return false;
             }
             return true;

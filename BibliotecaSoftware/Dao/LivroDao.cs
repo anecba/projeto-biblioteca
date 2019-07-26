@@ -1,5 +1,6 @@
 ﻿using BibliotecaSoftware;
 using BibliotecaSoftware.Model;
+using DevExpress.XtraEditors;
 using FirebirdSql.Data.FirebirdClient;
 using System;
 using System.Collections.Generic;
@@ -53,7 +54,7 @@ public class LivroDao : Conexao
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message);
+                XtraMessageBox.Show(e.Message);
             }
             finally
             {
@@ -87,7 +88,7 @@ public class LivroDao : Conexao
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message);
+                XtraMessageBox.Show(e.Message);
             }
             finally
             {
@@ -166,7 +167,7 @@ public class LivroDao : Conexao
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message);
+                XtraMessageBox.Show(e.Message);
             }
             finally
             {

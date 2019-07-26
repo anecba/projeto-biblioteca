@@ -1,4 +1,5 @@
 ﻿using BibliotecaSoftware.Model;
+using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,7 +31,7 @@ namespace BibliotecaSoftware.Controller
 
             if (_livroDao.Desabilitar(listaLivro))
             {
-                MessageBox.Show("Operação realizada com sucesso!!", "Mensagem de Notificação");
+                XtraMessageBox.Show("Operação realizada com sucesso!!", "Mensagem de Notificação");
                 return true;
             }
             return false;
