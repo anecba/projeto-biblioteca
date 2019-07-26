@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaCadastroLivrosDev));
             DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
@@ -53,24 +52,15 @@
             this.lblEdicao = new DevExpress.XtraEditors.LabelControl();
             this.txtAno = new DevExpress.XtraEditors.TextEdit();
             this.lblAno = new DevExpress.XtraEditors.LabelControl();
-            this.cboAutor = new DevExpress.XtraEditors.ComboBoxEdit();
             this.lblAutor = new DevExpress.XtraEditors.LabelControl();
             this.lblEditora = new DevExpress.XtraEditors.LabelControl();
-            this.cboEditora = new DevExpress.XtraEditors.ComboBoxEdit();
             this.lblIdioma = new DevExpress.XtraEditors.LabelControl();
-            this.cboIdioma = new DevExpress.XtraEditors.ComboBoxEdit();
             this.lblPais = new DevExpress.XtraEditors.LabelControl();
-            this.cboPais = new DevExpress.XtraEditors.ComboBoxEdit();
             this.pncCadastroLivros = new DevExpress.XtraEditors.PanelControl();
-            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
-            this.dxErrorProvider2 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
-            this.dxErrorProvider3 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
-            this.dxErrorProvider4 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
-            this.dxErrorProvider5 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
-            this.dxErrorProvider6 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
-            this.dxErrorProvider7 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
-            this.dxErrorProvider8 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
-            this.dxErrorProvider9 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
+            this.luePais = new DevExpress.XtraEditors.LookUpEdit();
+            this.lueIdioma = new DevExpress.XtraEditors.LookUpEdit();
+            this.lueEditora = new DevExpress.XtraEditors.LookUpEdit();
+            this.lueAutor = new DevExpress.XtraEditors.LookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.dteDatanascimento.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteDatanascimento.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPaginas.Properties)).BeginInit();
@@ -79,21 +69,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtTitulo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEdicao.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAno.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cboAutor.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cboEditora.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cboIdioma.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cboPais.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pncCadastroLivros)).BeginInit();
             this.pncCadastroLivros.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.luePais.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueIdioma.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueEditora.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueAutor.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // lblDatanascimento
@@ -319,17 +300,6 @@
             this.lblAno.TabIndex = 28;
             this.lblAno.Text = "Ano*";
             // 
-            // cboAutor
-            // 
-            this.cboAutor.Location = new System.Drawing.Point(38, 211);
-            this.cboAutor.Name = "cboAutor";
-            this.cboAutor.Properties.Appearance.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboAutor.Properties.Appearance.Options.UseFont = true;
-            this.cboAutor.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cboAutor.Size = new System.Drawing.Size(656, 30);
-            this.cboAutor.TabIndex = 30;
-            // 
             // lblAutor
             // 
             this.lblAutor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -356,17 +326,6 @@
             this.lblEditora.TabIndex = 33;
             this.lblEditora.Text = "Editora*";
             // 
-            // cboEditora
-            // 
-            this.cboEditora.Location = new System.Drawing.Point(38, 277);
-            this.cboEditora.Name = "cboEditora";
-            this.cboEditora.Properties.Appearance.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboEditora.Properties.Appearance.Options.UseFont = true;
-            this.cboEditora.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cboEditora.Size = new System.Drawing.Size(656, 30);
-            this.cboEditora.TabIndex = 32;
-            // 
             // lblIdioma
             // 
             this.lblIdioma.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -379,17 +338,6 @@
             this.lblIdioma.Size = new System.Drawing.Size(73, 24);
             this.lblIdioma.TabIndex = 35;
             this.lblIdioma.Text = "Idioma*";
-            // 
-            // cboIdioma
-            // 
-            this.cboIdioma.Location = new System.Drawing.Point(38, 343);
-            this.cboIdioma.Name = "cboIdioma";
-            this.cboIdioma.Properties.Appearance.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboIdioma.Properties.Appearance.Options.UseFont = true;
-            this.cboIdioma.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cboIdioma.Size = new System.Drawing.Size(294, 30);
-            this.cboIdioma.TabIndex = 34;
             // 
             // lblPais
             // 
@@ -404,19 +352,12 @@
             this.lblPais.TabIndex = 37;
             this.lblPais.Text = "País*";
             // 
-            // cboPais
-            // 
-            this.cboPais.Location = new System.Drawing.Point(393, 343);
-            this.cboPais.Name = "cboPais";
-            this.cboPais.Properties.Appearance.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboPais.Properties.Appearance.Options.UseFont = true;
-            this.cboPais.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cboPais.Size = new System.Drawing.Size(301, 30);
-            this.cboPais.TabIndex = 36;
-            // 
             // pncCadastroLivros
             // 
+            this.pncCadastroLivros.Controls.Add(this.luePais);
+            this.pncCadastroLivros.Controls.Add(this.lueIdioma);
+            this.pncCadastroLivros.Controls.Add(this.lueEditora);
+            this.pncCadastroLivros.Controls.Add(this.lueAutor);
             this.pncCadastroLivros.Controls.Add(this.lblPais);
             this.pncCadastroLivros.Controls.Add(this.lblAno);
             this.pncCadastroLivros.Controls.Add(this.dteDatanascimento);
@@ -431,54 +372,58 @@
             this.pncCadastroLivros.Size = new System.Drawing.Size(729, 718);
             this.pncCadastroLivros.TabIndex = 38;
             // 
-            // dxErrorProvider1
+            // luePais
             // 
-            this.dxErrorProvider1.ContainerControl = this;
+            this.luePais.Location = new System.Drawing.Point(393, 343);
+            this.luePais.Name = "luePais";
+            this.luePais.Properties.Appearance.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.luePais.Properties.Appearance.Options.UseFont = true;
+            this.luePais.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.luePais.Size = new System.Drawing.Size(294, 30);
+            this.luePais.TabIndex = 43;
             // 
-            // dxErrorProvider2
+            // lueIdioma
             // 
-            this.dxErrorProvider2.ContainerControl = this;
+            this.lueIdioma.Location = new System.Drawing.Point(38, 343);
+            this.lueIdioma.Name = "lueIdioma";
+            this.lueIdioma.Properties.Appearance.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lueIdioma.Properties.Appearance.Options.UseFont = true;
+            this.lueIdioma.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lueIdioma.Size = new System.Drawing.Size(294, 30);
+            this.lueIdioma.TabIndex = 42;
             // 
-            // dxErrorProvider3
+            // lueEditora
             // 
-            this.dxErrorProvider3.ContainerControl = this;
+            this.lueEditora.Location = new System.Drawing.Point(38, 277);
+            this.lueEditora.Name = "lueEditora";
+            this.lueEditora.Properties.Appearance.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lueEditora.Properties.Appearance.Options.UseFont = true;
+            this.lueEditora.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lueEditora.Size = new System.Drawing.Size(656, 30);
+            this.lueEditora.TabIndex = 41;
             // 
-            // dxErrorProvider4
+            // lueAutor
             // 
-            this.dxErrorProvider4.ContainerControl = this;
-            // 
-            // dxErrorProvider5
-            // 
-            this.dxErrorProvider5.ContainerControl = this;
-            // 
-            // dxErrorProvider6
-            // 
-            this.dxErrorProvider6.ContainerControl = this;
-            // 
-            // dxErrorProvider7
-            // 
-            this.dxErrorProvider7.ContainerControl = this;
-            // 
-            // dxErrorProvider8
-            // 
-            this.dxErrorProvider8.ContainerControl = this;
-            // 
-            // dxErrorProvider9
-            // 
-            this.dxErrorProvider9.ContainerControl = this;
+            this.lueAutor.Location = new System.Drawing.Point(38, 211);
+            this.lueAutor.Name = "lueAutor";
+            this.lueAutor.Properties.Appearance.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lueAutor.Properties.Appearance.Options.UseFont = true;
+            this.lueAutor.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lueAutor.Size = new System.Drawing.Size(656, 30);
+            this.lueAutor.TabIndex = 40;
             // 
             // TelaCadastroLivrosDev
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(729, 718);
-            this.Controls.Add(this.cboPais);
             this.Controls.Add(this.lblIdioma);
-            this.Controls.Add(this.cboIdioma);
             this.Controls.Add(this.lblEditora);
-            this.Controls.Add(this.cboEditora);
             this.Controls.Add(this.lblAutor);
-            this.Controls.Add(this.cboAutor);
             this.Controls.Add(this.txtEdicao);
             this.Controls.Add(this.lblEdicao);
             this.Controls.Add(this.txtTitulo);
@@ -504,22 +449,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtTitulo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEdicao.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAno.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cboAutor.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cboEditora.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cboIdioma.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cboPais.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pncCadastroLivros)).EndInit();
             this.pncCadastroLivros.ResumeLayout(false);
             this.pncCadastroLivros.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.luePais.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueIdioma.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueEditora.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueAutor.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -548,23 +484,14 @@
         private DevExpress.XtraEditors.LabelControl lblEdicao;
         private DevExpress.XtraEditors.TextEdit txtAno;
         private DevExpress.XtraEditors.LabelControl lblAno;
-        private DevExpress.XtraEditors.ComboBoxEdit cboAutor;
         private DevExpress.XtraEditors.LabelControl lblAutor;
         private DevExpress.XtraEditors.LabelControl lblEditora;
-        private DevExpress.XtraEditors.ComboBoxEdit cboEditora;
         private DevExpress.XtraEditors.LabelControl lblIdioma;
-        private DevExpress.XtraEditors.ComboBoxEdit cboIdioma;
         private DevExpress.XtraEditors.LabelControl lblPais;
-        private DevExpress.XtraEditors.ComboBoxEdit cboPais;
         private DevExpress.XtraEditors.PanelControl pncCadastroLivros;
-        private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider dxErrorProvider1;
-        private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider dxErrorProvider2;
-        private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider dxErrorProvider3;
-        private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider dxErrorProvider4;
-        private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider dxErrorProvider5;
-        private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider dxErrorProvider6;
-        private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider dxErrorProvider7;
-        private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider dxErrorProvider8;
-        private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider dxErrorProvider9;
+        private DevExpress.XtraEditors.LookUpEdit luePais;
+        private DevExpress.XtraEditors.LookUpEdit lueIdioma;
+        private DevExpress.XtraEditors.LookUpEdit lueEditora;
+        private DevExpress.XtraEditors.LookUpEdit lueAutor;
     }
 }

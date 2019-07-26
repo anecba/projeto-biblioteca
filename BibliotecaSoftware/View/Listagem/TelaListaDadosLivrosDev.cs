@@ -33,11 +33,11 @@ namespace BibliotecaSoftware.View.Listagem
 
         private void TbiAlterar_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
         {
-            //int codigoTitulo = Convert.ToInt32(grdvLivros.GetFocusedRowCellValue(clnCodigoTitulo));
-            //var livro = _listaLivroController.AlterarListaLivro(codigoTitulo);
-            //var frm = new TelaCadastroLivrosDev(livro);
-            //frm.ShowDialog();
-            //CarregarLivros();
+            int codigoTitulo = Convert.ToInt32(grdvLivros.GetFocusedRowCellValue(clnCodigoTitulo));
+            var livro = _listaLivroController.AlterarListaLivro(codigoTitulo);
+            var frm = new TelaCadastroLivrosDev(livro);
+            frm.ShowDialog();
+            CarregarLivros();
         }
 
         private void TbiApagar_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)

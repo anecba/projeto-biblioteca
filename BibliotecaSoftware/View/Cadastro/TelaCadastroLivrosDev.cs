@@ -24,6 +24,13 @@ namespace BibliotecaSoftware.View.Cadastro
         public TelaCadastroLivrosDev()
             => ExecutarConstrutorPadrao();
 
+        public TelaCadastroLivrosDev(Livro livro)
+        {
+            ExecutarConstrutorPadrao();
+            _livro = livro;
+            AtribuirModelParaView();
+        }
+
         private void ExecutarConstrutorPadrao()
         {
             InitializeComponent();
@@ -32,25 +39,25 @@ namespace BibliotecaSoftware.View.Cadastro
             _autorController = new AutorController();
             _editoraController = new EditoraController();
             _idiomaController = new IdiomaController();
-             //ARRUMAR
-            //cboAutor.DataSource = _autorController.ComboboxListar();
-            //cboEditora.DataSource = _editoraController.ComboboxListar();
-            //cboIdioma.DataSource = _idiomaController.ComboboxListar();
-            //cboPais.DataSource = _idiomaController.ComboboxListar();
+            //ARRUMAR
+            lueAutor.Properties.DataSource = _autorController.ComboboxListar();
+            lueEditora.Properties.DataSource = _editoraController.ComboboxListar();
+            lueIdioma.Properties.DataSource = _idiomaController.ComboboxListar();
+            luePais.Properties.DataSource = _idiomaController.ComboboxListar();
         }
 
         public void AtribuirModelParaView()
         {
             txtTitulo.Text = _livro.Titulo.NomeTitulo;
-            cboIdioma.EditValue = _livro.Idioma.CodigoIdioma;
-            cboPais.EditValue = _livro.Idioma.CodigoIdioma;
+            lueIdioma.SelectedText = Convert.ToString(_livro.Idioma.CodigoIdioma);
+            luePais.EditValue = _livro.Idioma.CodigoIdioma;
             txtEdicao.Text = _livro.Edicao.NumeroEdicao;
             txtAno.Text = _livro.Edicao.Ano.ToString();
             txtPaginas.Text = _livro.Edicao.QtdePagina.ToString();
             dteDatanascimento.DateTime = _livro.Edicao.DataLancamento;
             rtbDescricao.Text = _livro.Titulo.Descricao;
-            cboEditora.EditValue = _livro.Editora.CodigoEditora;
-            cboAutor.EditValue = _livro.Autor.CodigoAutor;
+            lueEditora.EditValue = _livro.Editora.CodigoEditora;
+            lueAutor.EditValue = _livro.Autor.CodigoAutor;
             txtCodTitulo.Text = _livro.Titulo.CodigoTitulo.ToString();
             txtCodEditora.Text = _livro.Editora.CodigoEditora.ToString();
         }
@@ -67,17 +74,17 @@ namespace BibliotecaSoftware.View.Cadastro
 
         private bool Validacao()
         {
-            if (string.IsNullOrWhiteSpace(cboIdioma.Text))
+            if (string.IsNullOrWhiteSpace(lueIdioma.Text))
             {
                 MessageBox.Show("O campo idioma precisa ser selecionado!", "Mensagem de Aviso!");
                 return false;
             }
-            if (string.IsNullOrWhiteSpace(cboEditora.Text))
+            if (string.IsNullOrWhiteSpace(lueEditora.Text))
             {
                 MessageBox.Show("O campo editora precisa ser selecionado!", "Mensagem de Aviso!");
                 return false;
             }
-            if (string.IsNullOrWhiteSpace(cboAutor.Text))
+            if (string.IsNullOrWhiteSpace(lueAutor.Text))
             {
                 MessageBox.Show("O campo nome precisa ser preenchido!", "Mensagem de Aviso!");
                 return false;
@@ -91,14 +98,14 @@ namespace BibliotecaSoftware.View.Cadastro
                 _livro.Titulo.CodigoTitulo = int.Parse(txtCodTitulo.Text);
 
             _livro.Titulo.NomeTitulo = txtTitulo.Text;
-            _livro.Edicao.CodigoIdioma = Convert.ToInt32(cboIdioma.EditValue);
+            _livro.Edicao.CodigoIdioma = Convert.ToInt32(lueIdioma.EditValue);
             _livro.Edicao.NumeroEdicao = txtEdicao.Text;
             _livro.Edicao.Ano = Convert.ToInt32(txtAno.Text);
             _livro.Edicao.QtdePagina = Convert.ToInt32(txtPaginas.Text);
             _livro.Edicao.DataLancamento = Convert.ToDateTime(dteDatanascimento.Text);
             _livro.Titulo.Descricao = rtbDescricao.Text;
-            _livro.Titulo.CodigoEditora = Convert.ToInt32(cboEditora.EditValue);
-            _livro.TituloAutor.CodigoAutor = Convert.ToInt32(cboAutor.EditValue);
+            _livro.Titulo.CodigoEditora = Convert.ToInt32(lueEditora.EditValue);
+            _livro.TituloAutor.CodigoAutor = Convert.ToInt32(lueAutor.EditValue);
         }
 
         private void TbiCancelar_ItemClick(object sender, TileItemEventArgs e)
