@@ -2,6 +2,7 @@
 using BibliotecaSoftware.Model;
 using DevExpress.XtraEditors;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace BibliotecaSoftware.Controller
@@ -18,6 +19,12 @@ namespace BibliotecaSoftware.Controller
         public Autor AlterarListaAutor(int codigoAutor)
         {
             var autor = _autorDao.Carregar(codigoAutor);
+            return autor;
+        }
+
+        public Autor AlterarListaAutor(IList<Autor> autores, int codigoAutor)
+        {
+            var autor = autores.Where(a => a.CodigoAutor == codigoAutor)?.FirstOrDefault<Autor>();
             return autor;
         }
 

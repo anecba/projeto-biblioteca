@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace BibliotecaSoftware.View.Listagem
 {
-    public partial class TelaListaDadosAutoresDev : DevExpress.XtraEditors.XtraForm
+    public partial class TelaListaDadosAutoresDev : XtraForm
     {
         private ListaAutorController _listaAutorController;
         public IList<Autor> _listaAutor;
@@ -34,7 +34,8 @@ namespace BibliotecaSoftware.View.Listagem
         private void TbiAlterar_ItemClick(object sender, TileItemEventArgs e)
         {
             var codigoAutor = Convert.ToInt32(grdvAutores.GetFocusedRowCellValue(clnCodigoAutor));
-            var autor = _listaAutorController.AlterarListaAutor(codigoAutor);
+            grdDados.DataSource = _listaAutor;
+            var autor = _listaAutorController.AlterarListaAutor(_listaAutor, codigoAutor);
             var telaCadastroAutoresDev = new TelaCadastroAutoresDev(autor);
             telaCadastroAutoresDev.ShowDialog();
             CarregarAutores();
@@ -59,8 +60,6 @@ namespace BibliotecaSoftware.View.Listagem
         }
 
         private void TbiCancelar_ItemClick(object sender, TileItemEventArgs e)
-        {
-            Close();
-        }
+            => Close();        
     }
 }

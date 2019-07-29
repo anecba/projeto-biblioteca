@@ -4,6 +4,7 @@ using FirebirdSql.Data.FirebirdClient;
 using System;
 using Dapper;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace BibliotecaSoftware.Dao
 {
@@ -74,26 +75,36 @@ namespace BibliotecaSoftware.Dao
         {
             using (FbConnection conexaoFireBird = Conexao.GetInstancia().GetConexao())
             {
-                IEnumerable<Autor> autorIEnumerable;
+                //IEnumerable<Autor> autorIEnumerable;
                 var autorModel = new Autor();
+                var listaAutor = new List<Autor>();
+
                 try
                 {
                     conexaoFireBird.Open();
-                    var sql = "SELECT CODIGOAUTOR, NOME  FROM AUTOR WHERE CODIGOAUTOR = @CODIGOAUTOR";
+                    listaAutor = Listar();
                     var cmd = new FbCommand
                     {
                         Connection = conexaoFireBird
                     };
-                    autorIEnumerable = cmd.Connection.Query<Autor>(sql, new { CODIGOAUTOR }).AsList();
-                    foreach (var autor in autorIEnumerable)
-                    {
-                        autorModel.CodigoAutor = autor.CodigoAutor;
-                        autorModel.Nome = autor.Nome;
-                        autorModel.DataNascimento = autor.DataNascimento;
-                        autorModel.Bibliografia = autor.Bibliografia;
-                        autorModel.Site = autor.Site;
-                        autorModel.Desabilitado = autor.Desabilitado;
-                    }
+
+                    //var retorno = listaAutor.Where(CodigoAutor = );
+
+                    //var sql = "SELECT CODIGOAUTOR, NOME  FROM AUTOR WHERE CODIGOAUTOR = @CODIGOAUTOR";
+                    //var cmd = new FbCommand
+                    //{
+                    //    Connection = conexaoFireBird
+                    //};
+                    //autorIEnumerable = cmd.Connection.Query<Autor>(sql, new { CODIGOAUTOR }).AsList();
+                    //foreach (var autor in autorIEnumerable)
+                    //{
+                    //    autorModel.CodigoAutor = autor.CodigoAutor;
+                    //    autorModel.Nome = autor.Nome;
+                    //    autorModel.DataNascimento = autor.DataNascimento;
+                    //    autorModel.Bibliografia = autor.Bibliografia;
+                    //    autorModel.Site = autor.Site;
+                    //    autorModel.Desabilitado = autor.Desabilitado;
+                    //}
                 }
                 catch (Exception e)
                 {
@@ -115,23 +126,31 @@ namespace BibliotecaSoftware.Dao
                 try
                 {
                     conexaoFireBird.Open();
-                    string mSQL = "SELECT * FROM AUTOR WHERE DESABILITADO = 'N' ORDER BY NOME ASC";
-                    FbCommand cmd = new FbCommand(mSQL, conexaoFireBird);
-                    var dr = cmd.ExecuteReader();
-
-                    while (dr.Read())
+                    var sql = "SELECT * FROM AUTOR WHERE DESABILITADO = 'N' ORDER BY NOME ASC";
+                    FbCommand cmd = new FbCommand
                     {
-                        var autorModel = new Autor
-                        {
-                            CodigoAutor = int.Parse(dr["CODIGOAUTOR"].ToString()),
-                            Nome = dr["NOME"].ToString(),
-                            DataNascimento = DateTime.Parse(dr["DATANASCIMENTO"].ToString()),
-                            Bibliografia = dr["BIBLIOGRAFIA"].ToString(),
-                            Site = dr["SITE"].ToString(),
-                            Desabilitado = char.Parse(dr["Desabilitado"].ToString())
-                        };
-                        retorno.Add(autorModel);
-                    }
+                        Connection = conexaoFireBird
+                    };
+
+                    retorno = cmd.Connection.Query<Autor>(sql).ToList();
+                    //conexaoFireBird.Open();
+                    //string mSQL = "SELECT * FROM AUTOR WHERE DESABILITADO = 'N' ORDER BY NOME ASC";
+                    //FbCommand cmd = new FbCommand(mSQL, conexaoFireBird);
+                    //var dr = cmd.ExecuteReader();
+
+                    //while (dr.Read())
+                    //{
+                    //    var autorModel = new Autor
+                    //    {
+                    //        CodigoAutor = int.Parse(dr["CODIGOAUTOR"].ToString()),
+                    //        Nome = dr["NOME"].ToString(),
+                    //        DataNascimento = DateTime.Parse(dr["DATANASCIMENTO"].ToString()),
+                    //        Bibliografia = dr["BIBLIOGRAFIA"].ToString(),
+                    //        Site = dr["SITE"].ToString(),
+                    //        Desabilitado = char.Parse(dr["Desabilitado"].ToString())
+                    //    };
+                    //    retorno.Add(autorModel);
+                    //}
                 }
                 catch (Exception e)
                 {
