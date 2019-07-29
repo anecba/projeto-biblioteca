@@ -47,7 +47,6 @@ namespace BibliotecaSoftware.View.Listagem
 
         private void TbiApagar_ItemClick(object sender, TileItemEventArgs e)
         {
-            //if (mostrarListarDadosEditorasDataGridView.SelectedRows.Count <= 0) return;
             var codigoEditora = Convert.ToInt32(grdvEditora.GetFocusedRowCellValue(clnCodigoEditora));
 
             if (_listaEditoraController.ApagarListaEditora(codigoEditora))
