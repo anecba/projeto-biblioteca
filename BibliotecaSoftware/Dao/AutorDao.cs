@@ -123,10 +123,8 @@ namespace BibliotecaSoftware.Dao
                         Connection = conexaoFireBird,
                         Transaction = transacao
                     };
-                    cmd.CommandText = @"select COUNT(codigoautor) from TITULO_AUTOR WHERE CODIGOAUTOR = @CODIGOAUTOR";
-                    cmd.Parameters.Add("@CODIGOAUTOR", FbDbType.Integer).Value = autorModel.CodigoAutor;
-
-                    var contador = Convert.ToInt32(cmd.ExecuteScalar());
+                    var sql = @"select COUNT(codigoautor) from TITULO_AUTOR WHERE CODIGOAUTOR = @CODIGOAUTOR";
+                    var contador = cmd.Connection.ExecuteScalar<int>(sql, autorModel, transacao);
 
                     if (contador > 0)
                     {
@@ -134,9 +132,9 @@ namespace BibliotecaSoftware.Dao
                         return deuCerto;
                     }
 
-                    cmd.CommandText = @"UPDATE AUTOR SET DESABILITADO = @DESABILITADO WHERE CODIGOAUTOR = @CODIGOAUTOR";
-                    cmd.Parameters.Add("@DESABILITADO", FbDbType.Char).Value = autorModel.Desativado.ToChar();
-                    cmd.ExecuteNonQuery();
+                    sql = @"UPDATE AUTOR SET DESABILITADO = @DESABILITADO WHERE CODIGOAUTOR = @CODIGOAUTOR";
+                    cmd.Connection.Execute(sql, autorModel, transacao);
+
                     deuCerto = true;
                 }
                 catch (Exception e)
