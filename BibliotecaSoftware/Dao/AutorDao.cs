@@ -70,29 +70,29 @@ namespace BibliotecaSoftware.Dao
             }
         }
 
-        internal Autor Carregar(int codigoAutor)
+        internal Autor Carregar(int CODIGOAUTOR)
         {
             using (FbConnection conexaoFireBird = Conexao.GetInstancia().GetConexao())
             {
+                IEnumerable<Autor> autorIEnumerable;
                 var autorModel = new Autor();
                 try
                 {
                     conexaoFireBird.Open();
-                    var mSQL = "SELECT * FROM AUTOR WHERE CODIGOAUTOR = @CODIGOAUTOR";
-                    var cmd = new FbCommand(mSQL, conexaoFireBird);
-                    cmd.Parameters.Add("@CODIGOAUTOR", codigoAutor);
-                    var dr = cmd.ExecuteReader();
-                    if (dr.Read())
+                    var sql = "SELECT CODIGOAUTOR, NOME  FROM AUTOR WHERE CODIGOAUTOR = @CODIGOAUTOR";
+                    var cmd = new FbCommand
                     {
-                        autorModel = new Autor
-                        {
-                            CodigoAutor = int.Parse(dr["CODIGOAUTOR"].ToString()),
-                            Nome = dr["NOME"].ToString(),
-                            DataNascimento = DateTime.Parse(dr["DATANASCIMENTO"].ToString()),
-                            Bibliografia = dr["BIBLIOGRAFIA"].ToString(),
-                            Site = dr["SITE"].ToString(),
-                            Desabilitado = char.Parse(dr["Desabilitado"].ToString())
-                        };
+                        Connection = conexaoFireBird
+                    };
+                    autorIEnumerable = cmd.Connection.Query<Autor>(sql, new { CODIGOAUTOR }).AsList();
+                    foreach (var autor in autorIEnumerable)
+                    {
+                        autorModel.CodigoAutor = autor.CodigoAutor;
+                        autorModel.Nome = autor.Nome;
+                        autorModel.DataNascimento = autor.DataNascimento;
+                        autorModel.Bibliografia = autor.Bibliografia;
+                        autorModel.Site = autor.Site;
+                        autorModel.Desabilitado = autor.Desabilitado;
                     }
                 }
                 catch (Exception e)
@@ -103,7 +103,7 @@ namespace BibliotecaSoftware.Dao
                 {
                     conexaoFireBird.Close();
                 }
-                return autorModel;
+                return autorModel;                
             }
         }
 
