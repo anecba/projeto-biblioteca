@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DevExpress.XtraEditors;
-using BibliotecaSoftware.Controller;
+﻿using BibliotecaSoftware.Controller;
 using BibliotecaSoftware.Model;
 using BibliotecaSoftware.View.Cadastro;
+using DevExpress.XtraEditors;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
 
 namespace BibliotecaSoftware.View.Listagem
 {

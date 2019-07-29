@@ -122,19 +122,16 @@ namespace BibliotecaSoftware.Dao
             using (FbConnection conexaoFireBird = Conexao.GetInstancia().GetConexao())
             {
                 conexaoFireBird.Open();
-                var transacao = conexaoFireBird.BeginTransaction();
-
+                var transaction = conexaoFireBird.BeginTransaction();
+                var cmd = new FbCommand
+                {
+                    Connection = conexaoFireBird,
+                    Transaction = transaction
+                };
                 try
                 {
-                    FbCommand cmd = new FbCommand
-                    {
-                        Connection = conexaoFireBird,
-                        Transaction = transacao
-                    };
-                    cmd.CommandText = @"select COUNT(codigoeditora) from TITULO WHERE CODIGOEDITORA = @CODIGOEDITORA";
-                    cmd.Parameters.Add("@CODIGOEDITORA", FbDbType.Integer).Value = editoraModel.CodigoEditora;
-
-                    var contador = Convert.ToInt32(cmd.ExecuteScalar());
+                    var sql= @"select COUNT(codigoeditora) from TITULO WHERE CODIGOEDITORA = @CODIGOEDITORA";
+                    var contador = cmd.Connection.ExecuteScalar<int>(sql, editoraModel, transaction);
 
                     if (contador > 0)
                     {
@@ -142,9 +139,9 @@ namespace BibliotecaSoftware.Dao
                         return deuCerto;
                     }
 
-                    cmd.CommandText = @"UPDATE EDITORA SET DESABILITADO = @DESABILITADO WHERE CODIGOEDITORA = @CODIGOEDITORA";
-                    cmd.Parameters.Add("@DESABILITADO", FbDbType.Char).Value = editoraModel.Desativado;
-                    cmd.ExecuteNonQuery();
+                    sql = @"UPDATE EDITORA SET DESABILITADO = @DESABILITADO WHERE CODIGOEDITORA = @CODIGOEDITORA";
+                    cmd.Connection.Execute(sql, editoraModel, transaction);
+
                     deuCerto = true;
                 }
                 catch (Exception e)
@@ -154,9 +151,9 @@ namespace BibliotecaSoftware.Dao
                 finally
                 {
                     if (deuCerto)
-                        transacao.Commit();
+                        transaction.Commit();
                     else
-                        transacao.Rollback();
+                        transaction.Rollback();
                     conexaoFireBird.Close();
                 }
                 return deuCerto;
