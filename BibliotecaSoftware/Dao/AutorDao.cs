@@ -32,24 +32,6 @@ namespace BibliotecaSoftware.Dao
                                 SITE = @SITE, DESABILITADO = @DESABILITADO WHERE CODIGOAUTOR = @CODIGOAUTOR";
 
                     cmd.Connection.Execute(mSQL, autorModel, transaction);
-                    //var mSQL = "";
-                    //if (0.Equals(autorModel.CodigoAutor))
-                    //    mSQL = "INSERT INTO AUTOR(NOME, DATANASCIMENTO, BIBLIOGRAFIA, SITE, DESABILITADO) " +
-                    //        "VALUES (@NOME, @DATANASCIMENTO, @BIBLIOGRAFIA, @SITE, @DESABILITADO)";
-                    //else
-                    //{
-                    //    mSQL = @"UPDATE AUTOR SET NOME = @NOME, DATANASCIMENTO = @DATANASCIMENTO, 
-                    //            BIBLIOGRAFIA = @BIBLIOGRAFIA,
-                    //            SITE = @SITE, DESABILITADO = @DESABILITADO WHERE CODIGOAUTOR = @CODIGOAUTOR";
-                    //    cmd.Parameters.Add("@CODIGOAUTOR", autorModel.CodigoAutor);
-                    //}
-                    //cmd.CommandText = mSQL;
-                    //cmd.Parameters.Add("@NOME", autorModel.Nome);
-                    //cmd.Parameters.Add("@DATANASCIMENTO", FbDbType.Date).Value = autorModel.DataNascimento;
-                    //cmd.Parameters.Add("@BIBLIOGRAFIA", autorModel.Bibliografia);
-                    //cmd.Parameters.Add("@SITE", autorModel.Site);
-                    //cmd.Parameters.Add("@DESABILITADO", FbDbType.Boolean).Value = autorModel.Desabilitado.ToChar();
-                    //cmd.ExecuteNonQuery();
 
                     deuCerto = true;
                 }
@@ -75,7 +57,6 @@ namespace BibliotecaSoftware.Dao
         {
             using (FbConnection conexaoFireBird = Conexao.GetInstancia().GetConexao())
             {
-                //IEnumerable<Autor> autorIEnumerable;
                 var autorModel = new Autor();
                 var listaAutor = new List<Autor>();
 
@@ -87,24 +68,6 @@ namespace BibliotecaSoftware.Dao
                     {
                         Connection = conexaoFireBird
                     };
-
-                    //var retorno = listaAutor.Where(CodigoAutor = );
-
-                    //var sql = "SELECT CODIGOAUTOR, NOME  FROM AUTOR WHERE CODIGOAUTOR = @CODIGOAUTOR";
-                    //var cmd = new FbCommand
-                    //{
-                    //    Connection = conexaoFireBird
-                    //};
-                    //autorIEnumerable = cmd.Connection.Query<Autor>(sql, new { CODIGOAUTOR }).AsList();
-                    //foreach (var autor in autorIEnumerable)
-                    //{
-                    //    autorModel.CodigoAutor = autor.CodigoAutor;
-                    //    autorModel.Nome = autor.Nome;
-                    //    autorModel.DataNascimento = autor.DataNascimento;
-                    //    autorModel.Bibliografia = autor.Bibliografia;
-                    //    autorModel.Site = autor.Site;
-                    //    autorModel.Desabilitado = autor.Desabilitado;
-                    //}
                 }
                 catch (Exception e)
                 {
@@ -133,24 +96,6 @@ namespace BibliotecaSoftware.Dao
                     };
 
                     retorno = cmd.Connection.Query<Autor>(sql).ToList();
-                    //conexaoFireBird.Open();
-                    //string mSQL = "SELECT * FROM AUTOR WHERE DESABILITADO = 'N' ORDER BY NOME ASC";
-                    //FbCommand cmd = new FbCommand(mSQL, conexaoFireBird);
-                    //var dr = cmd.ExecuteReader();
-
-                    //while (dr.Read())
-                    //{
-                    //    var autorModel = new Autor
-                    //    {
-                    //        CodigoAutor = int.Parse(dr["CODIGOAUTOR"].ToString()),
-                    //        Nome = dr["NOME"].ToString(),
-                    //        DataNascimento = DateTime.Parse(dr["DATANASCIMENTO"].ToString()),
-                    //        Bibliografia = dr["BIBLIOGRAFIA"].ToString(),
-                    //        Site = dr["SITE"].ToString(),
-                    //        Desabilitado = char.Parse(dr["Desabilitado"].ToString())
-                    //    };
-                    //    retorno.Add(autorModel);
-                    //}
                 }
                 catch (Exception e)
                 {

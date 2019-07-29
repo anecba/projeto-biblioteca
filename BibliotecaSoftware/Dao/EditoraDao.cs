@@ -1,4 +1,5 @@
 ﻿using BibliotecaSoftware.Model;
+using Dapper;
 using DevExpress.XtraEditors;
 using FirebirdSql.Data.FirebirdClient;
 using System;
@@ -15,28 +16,22 @@ namespace BibliotecaSoftware.Dao
             using (FbConnection conexaoFireBird = Conexao.GetInstancia().GetConexao())
             {
                 conexaoFireBird.Open();
-                var transacao = conexaoFireBird.BeginTransaction();
-
+                var transaction = conexaoFireBird.BeginTransaction();
+                var cmd = new FbCommand
+                {
+                    Connection = conexaoFireBird,
+                    Transaction = transaction
+                };
                 try
                 {
-                    var cmd = new FbCommand
-                    {
-                        Connection = conexaoFireBird,
-                        Transaction = transacao 
-                    };
-                    if (0.Equals(editoraModel.CodigoEditora))
-                        cmd.CommandText = "INSERT INTO EDITORA(NOME, DESABILITADO) VALUES (@NOME, @DESABILITADO)";
-                    else
-                    {
-                        cmd.CommandText = @"UPDATE EDITORA SET NOME = @NOME WHERE CODIGOEDITORA = @CODIGOEDITORA";
-                        cmd.Parameters.Add("@CODIGOEDITORA", editoraModel.CodigoEditora);
-                    }
+                    var mSQL = 0.Equals(editoraModel.CodigoEditora)
+                        ? @"INSERT INTO EDITORA(NOME, DESABILITADO) VALUES (@NOME, @DESABILITADO)"
+                        : @"UPDATE EDITORA SET NOME = @NOME, DESABILITADO = @DESABILITADO 
+                                WHERE CODIGOEDITORA = @CODIGOEDITORA";
 
-                    cmd.Parameters.Add("@NOME", editoraModel.Nome);
-                    cmd.Parameters.Add("@DESABILITADO", FbDbType.Boolean).Value = editoraModel.Desabilitado.ToChar();
-                    cmd.ExecuteNonQuery();
+                    cmd.Connection.Execute(mSQL, editoraModel, transaction);
 
-                    return deuCerto = true;
+                    deuCerto = true;
                 }
                 catch (Exception e)
                 {
@@ -45,9 +40,9 @@ namespace BibliotecaSoftware.Dao
                 finally
                 {
                     if (deuCerto)
-                        transacao.Commit();
+                        transaction.Commit();
                     else
-                        transacao.Rollback();
+                        transaction.Rollback();
                     conexaoFireBird.Close();
                 }
                 return deuCerto;
