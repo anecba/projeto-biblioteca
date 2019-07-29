@@ -40,22 +40,30 @@ namespace BibliotecaSoftware.View.Cadastro
 
         private void TbiConfirmar_ItemClick(object sender, TileItemEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtEditora.Text))
-            {
-                XtraMessageBox.Show("O campo nome precisa ser preenchido!", "Mensagem de Aviso!");
-                return;
-            }
-
+            if (!Validar()) return; 
             _editoraModel.Nome = txtEditora.Text;
-
-            if (_editoraController.GravarCadastroEditora(_editoraModel))
-            {
-                XtraMessageBox.Show("Gravado com sucesso!", "Mensagem de Confirmação");
-                Close();
-            }
+            GravarEditora();
         }
 
         private void TbiCancelar_ItemClick(object sender, TileItemEventArgs e)
             => Close();
+
+        private bool Validar()
+        {
+            if (string.IsNullOrWhiteSpace(txtEditora.Text))
+            {
+                XtraMessageBox.Show("O campo nome precisa ser preenchido!", "Mensagem de aviso!");
+                return false;
+            }
+
+            return true;
+        }
+
+        private void GravarEditora()
+        {
+            if (!_editoraController.GravarCadastroEditora(_editoraModel)) return;
+            XtraMessageBox.Show("Gravado com sucesso!", "Mensagem de confirmação");
+            Close();
+        }
     }
 }

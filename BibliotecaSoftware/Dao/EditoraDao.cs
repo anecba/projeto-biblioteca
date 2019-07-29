@@ -143,7 +143,7 @@ namespace BibliotecaSoftware.Dao
                     }
 
                     cmd.CommandText = @"UPDATE EDITORA SET DESABILITADO = @DESABILITADO WHERE CODIGOEDITORA = @CODIGOEDITORA";
-                    cmd.Parameters.Add("@DESABILITADO", FbDbType.Char).Value = editoraModel.Desabilitado.ToChar();
+                    cmd.Parameters.Add("@DESABILITADO", FbDbType.Char).Value = editoraModel.Desativado;
                     cmd.ExecuteNonQuery();
                     deuCerto = true;
                 }

@@ -21,10 +21,10 @@ namespace BibliotecaSoftware.Controller
 
         public bool ApagarListaEditora(int codigoEditora)
         {
-            Editora editora = new Editora
+            var editora = new Editora
             {
                 CodigoEditora = codigoEditora,
-                Desabilitado = true
+                Desativado = true
             };
 
             if (_editoraDao.Desabilitar(editora))
