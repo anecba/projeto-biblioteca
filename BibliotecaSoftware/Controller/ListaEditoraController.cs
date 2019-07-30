@@ -2,6 +2,7 @@
 using BibliotecaSoftware.Model;
 using DevExpress.XtraEditors;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace BibliotecaSoftware.Controller
@@ -16,6 +17,12 @@ namespace BibliotecaSoftware.Controller
         public Editora AlterarListaEditora(int codigoEditora)
         {
             var editora = _editoraDao.Carregar(codigoEditora);
+            return editora;
+        }
+
+        public Editora AlterarListaEditora(IList<Editora> editoras, int codigoEditora)
+        {
+            var editora = editoras.Where(a => a.CodigoEditora == codigoEditora)?.FirstOrDefault<Editora>();
             return editora;
         }
 

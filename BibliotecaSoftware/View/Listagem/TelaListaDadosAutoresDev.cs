@@ -43,9 +43,8 @@ namespace BibliotecaSoftware.View.Listagem
 
         private void TbiApagar_ItemClick(object sender, TileItemEventArgs e)
         {
-            if (XtraMessageBox.Show("Do you want to quit the application?", "Confirmation", MessageBoxButtons.YesNo) != DialogResult.No)
+            if (XtraMessageBox.Show("Você quer apagar este item?", "Confirmação", MessageBoxButtons.YesNo) != DialogResult.No)
             {
-                //if (grdvAutores.GetFocusedRowCellValue.SelectedRows.Count <= 0) return;
                 var codigoAutor = Convert.ToInt32(grdvAutores.GetFocusedRowCellValue(clnCodigoAutor));
 
                 if (_listaAutorController.ApagarListaAutor(codigoAutor))

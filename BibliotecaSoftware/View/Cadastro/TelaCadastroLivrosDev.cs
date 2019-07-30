@@ -32,7 +32,7 @@ namespace BibliotecaSoftware.View.Cadastro
             _autorController = new AutorController();
             _editoraController = new EditoraController();
             _idiomaController = new IdiomaController();
-            //ARRUMAR
+            
             lueAutor.Properties.DataSource = _autorController.ComboboxListar();
             lueEditora.Properties.DataSource = _editoraController.ComboboxListar();
             lueIdioma.Properties.DataSource = _idiomaController.ComboboxListar();

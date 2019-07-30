@@ -11,9 +11,7 @@ namespace BibliotecaSoftware.Controller
         private readonly AutorDao _autorDao;
 
         public ListaAutorController()
-        {
-            _autorDao = new AutorDao();
-        }
+            => _autorDao = new AutorDao();
 
         public Autor AlterarListaAutor(int codigoAutor)
         {

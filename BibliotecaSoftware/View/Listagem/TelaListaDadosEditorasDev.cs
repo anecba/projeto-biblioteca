@@ -34,7 +34,8 @@ namespace BibliotecaSoftware.View.Listagem
         private void TbiAlterar_ItemClick(object sender, TileItemEventArgs e)
         {
             var codigoEditora = Convert.ToInt32(grdvEditora.GetFocusedRowCellValue(clnCodigoEditora));
-            var editora = _listaEditoraController.AlterarListaEditora(codigoEditora);
+            grdDados.DataSource = _listaEditora;
+            var editora = _listaEditoraController.AlterarListaEditora(_listaEditora ,codigoEditora);
             var telaCadastroEditoras = new TelaCadastroEditorasDev(editora);
             telaCadastroEditoras.ShowDialog();
             CarregarEditoras();

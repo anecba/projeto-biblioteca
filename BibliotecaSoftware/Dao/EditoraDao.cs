@@ -4,6 +4,7 @@ using DevExpress.XtraEditors;
 using FirebirdSql.Data.FirebirdClient;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace BibliotecaSoftware.Dao
@@ -54,21 +55,16 @@ namespace BibliotecaSoftware.Dao
             using (FbConnection conexaoFireBird = Conexao.GetInstancia().GetConexao())
             {
                 var editoraModel = new Editora();
+                var listaEditora = new List<Editora>();
+
                 try
                 {
                     conexaoFireBird.Open();
-                    var mSQL = "SELECT * FROM EDITORA WHERE CODIGOEDITORA = @CODIGOEDITORA";
-                    var cmd = new FbCommand(mSQL, conexaoFireBird);
-                    cmd.Parameters.Add("@CODIGOEDITORA", codigoEditora);
-                    var dr = cmd.ExecuteReader();
-                    if (dr.Read())
+                    listaEditora = Listar();
+                    var cmd = new FbCommand
                     {
-                        editoraModel = new Editora()
-                        {
-                            CodigoEditora = int.Parse(dr["CODIGOEDITORA"].ToString()),
-                            Nome = dr["NOME"].ToString(),
-                        };
-                    }
+                        Connection = conexaoFireBird
+                    };
                 }
                 catch (Exception e)
                 {
@@ -90,19 +86,13 @@ namespace BibliotecaSoftware.Dao
                 try
                 {
                     conexaoFireBird.Open();
-                    string mSQL = "SELECT * FROM EDITORA WHERE DESABILITADO = 'N' ORDER BY NOME ASC";
-                    FbCommand cmd = new FbCommand(mSQL, conexaoFireBird);
-                    var dr = cmd.ExecuteReader();
-
-                    while (dr.Read())
+                    var sql = "SELECT * FROM EDITORA WHERE DESABILITADO = 'N' ORDER BY NOME ASC";
+                    FbCommand cmd = new FbCommand
                     {
-                        var editoraModel = new Editora()
-                        {
-                            CodigoEditora = int.Parse(dr["CODIGOEDITORA"].ToString()),
-                            Nome = dr["NOME"].ToString()
-                        };
-                        retorno.Add(editoraModel);
-                    }
+                        Connection = conexaoFireBird
+                    };
+
+                    retorno = cmd.Connection.Query<Editora>(sql).ToList();
                 }
                 catch (Exception e)
                 {
