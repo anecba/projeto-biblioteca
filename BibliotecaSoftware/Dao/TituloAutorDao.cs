@@ -1,4 +1,5 @@
 ﻿using BibliotecaSoftware.Model;
+using Dapper;
 using DevExpress.XtraEditors;
 using FirebirdSql.Data.FirebirdClient;
 using System;
@@ -15,44 +16,63 @@ namespace BibliotecaSoftware.Dao
             {
                 conexaoFireBird.Open();
                 var transacao = conexaoFireBird.BeginTransaction();
+                var cmd = new FbCommand
+                {
+                    Connection = conexaoFireBird,
+                    Transaction = transacao
+                };
 
                 try
                 {
-                    var cmd = new FbCommand
-                    {
-                        Connection = conexaoFireBird,
-                        CommandText = @"INSERT INTO TITULO (CODIGOEDITORA, NOMETITULO, DESCRICAO, DESABILITAR) 
-                                 values (@CODIGOEDITORA, @NOMETITULO, @DESCRICAO, @DESABILITAR) RETURNING CODIGOTITULO",
-                        Transaction = transacao
-                    };
+                    var sql = @"INSERT INTO TITULO (CODIGOEDITORA, NOMETITULO, DESCRICAO, DESABILITAR) 
+                                 values (@CODIGOEDITORA, @NOMETITULO, @DESCRICAO, @DESABILITAR) RETURNING CODIGOTITULO";                 
+                    tituloAutor.CodigoTitulo = cmd.Connection.ExecuteScalar<int>(sql, tituloModel, transacao);
 
-                    cmd.Parameters.Add("@CODIGOEDITORA", tituloModel.CodigoEditora);
-                    //cmd.Parameters["@CODIGOEDITORA"].Value = 5;
-                    cmd.Parameters.Add("@NOMETITULO", tituloModel.NomeTitulo);
-                    cmd.Parameters.Add("@DESCRICAO", tituloModel.Descricao);
-                    cmd.Parameters.Add("@DESABILITAR", FbDbType.Boolean).Value = tituloModel.Desabilitado.ToChar();
+                    sql = @"INSERT INTO EDICAO (CODIGOIDIOMA, ANO, DATA_LANCAMENTO, QTDE_PAGINAS, EDICAO) 
+                                 VALUES (@CODIGOIDIOMA, @ANO, @DATALANCAMENTO, @QTDEPAGINA, @NUMEROEDICAO) RETURNING CODIGOEDICAO";      
+                    tituloAutor.CodigoEdicao = cmd.Connection.ExecuteScalar<int>(sql, edicaoModel, transacao);
 
-                    tituloAutor.CodigoTitulo = Convert.ToInt32(cmd.ExecuteScalar());
-
-                    cmd.CommandText = @"INSERT INTO EDICAO (CODIGOIDIOMA, ANO, DATA_LANCAMENTO, QTDE_PAGINAS, EDICAO)
-                                 VALUES(@CODIGOIDIOMA, @ANO, @DATA_LANCAMENTO, @QTDE_PAGINAS, @EDICAO) RETURNING CODIGOEDICAO";
-
-                    cmd.Parameters.Add("@CODIGOIDIOMA", edicaoModel.CodigoIdioma);
-                    cmd.Parameters.Add("@ANO", edicaoModel.Ano);
-                    cmd.Parameters.Add("@DATA_LANCAMENTO", edicaoModel.DataLancamento);
-                    cmd.Parameters.Add("@QTDE_PAGINAS", edicaoModel.QtdePagina);
-                    cmd.Parameters.Add("@EDICAO", edicaoModel.NumeroEdicao);
-
-                    tituloAutor.CodigoEdicao = Convert.ToInt32(cmd.ExecuteScalar());
-
-                    cmd.CommandText = @"INSERT INTO TITULO_AUTOR (CODIGOAUTOR, CODIGOEDICAO, CODIGOTITULO)
+                    sql = @"INSERT INTO TITULO_AUTOR (CODIGOAUTOR, CODIGOEDICAO, CODIGOTITULO)
                             VALUES (@CODIGOAUTOR, @CODIGOEDICAO, @CODIGOTITULO)";
+                    cmd.Connection.Execute(sql, tituloAutor, transacao);
 
-                    cmd.Parameters.Add("@CODIGOAUTOR", tituloAutor.CodigoAutor);
-                    cmd.Parameters.Add("@CODIGOEDICAO", tituloAutor.CodigoEdicao);
-                    cmd.Parameters.Add("@CODIGOTITULO", tituloAutor.CodigoTitulo);
-                    cmd.ExecuteNonQuery();
                     deuCerto = true;
+
+                    //var cmd = new FbCommand
+                    //{
+                    //    Connection = conexaoFireBird,
+                    //    CommandText = @"INSERT INTO TITULO (CODIGOEDITORA, NOMETITULO, DESCRICAO, DESABILITAR) 
+                    //             values (@CODIGOEDITORA, @NOMETITULO, @DESCRICAO, @DESABILITAR) RETURNING CODIGOTITULO",
+                    //    Transaction = transacao
+                    //};
+
+                    //cmd.Parameters.Add("@CODIGOEDITORA", tituloModel.CodigoEditora);
+                    ////cmd.Parameters["@CODIGOEDITORA"].Value = 5;
+                    //cmd.Parameters.Add("@NOMETITULO", tituloModel.NomeTitulo);
+                    //cmd.Parameters.Add("@DESCRICAO", tituloModel.Descricao);
+                    //cmd.Parameters.Add("@DESABILITAR", FbDbType.Boolean).Value = tituloModel.Desabilitado.ToChar();
+
+                    //tituloAutor.CodigoTitulo = Convert.ToInt32(cmd.ExecuteScalar());
+
+                    //cmd.CommandText = @"INSERT INTO EDICAO (CODIGOIDIOMA, ANO, DATA_LANCAMENTO, QTDE_PAGINAS, EDICAO)
+                    //             VALUES(@CODIGOIDIOMA, @ANO, @DATA_LANCAMENTO, @QTDE_PAGINAS, @EDICAO) RETURNING CODIGOEDICAO";
+
+                    //cmd.Parameters.Add("@CODIGOIDIOMA", edicaoModel.CodigoIdioma);
+                    //cmd.Parameters.Add("@ANO", edicaoModel.Ano);
+                    //cmd.Parameters.Add("@DATA_LANCAMENTO", edicaoModel.DataLancamento);
+                    //cmd.Parameters.Add("@QTDE_PAGINAS", edicaoModel.QtdePagina);
+                    //cmd.Parameters.Add("@EDICAO", edicaoModel.NumeroEdicao);
+
+                    //tituloAutor.CodigoEdicao = Convert.ToInt32(cmd.ExecuteScalar());
+
+                    //cmd.CommandText = @"INSERT INTO TITULO_AUTOR (CODIGOAUTOR, CODIGOEDICAO, CODIGOTITULO)
+                    //        VALUES (@CODIGOAUTOR, @CODIGOEDICAO, @CODIGOTITULO)";
+
+                    //cmd.Parameters.Add("@CODIGOAUTOR", tituloAutor.CodigoAutor);
+                    //cmd.Parameters.Add("@CODIGOEDICAO", tituloAutor.CodigoEdicao);
+                    //cmd.Parameters.Add("@CODIGOTITULO", tituloAutor.CodigoTitulo);
+                    //cmd.ExecuteNonQuery();
+                    //deuCerto = true;
                 }
                 catch (Exception e)
                 {
@@ -92,7 +112,7 @@ namespace BibliotecaSoftware.Dao
                     cmd.Parameters.Add("@CODIGOEDITORA", tituloModel.CodigoEditora);
                     cmd.Parameters.Add("@NOMETITULO", tituloModel.NomeTitulo);
                     cmd.Parameters.Add("@DESCRICAO", tituloModel.Descricao);
-                    cmd.Parameters.Add("@DESABILITAR", FbDbType.Boolean).Value = tituloModel.Desabilitado.ToChar();
+                    cmd.Parameters.Add("@DESABILITAR", FbDbType.Boolean).Value = tituloModel.Desabilitar;
                     cmd.ExecuteNonQuery();
 
                     cmd.CommandText = @"UPDATE EDICAO SET CODIGOIDIOMA = @CODIGOIDIOMA, ANO = @ANO, 

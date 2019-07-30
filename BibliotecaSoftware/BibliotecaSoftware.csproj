@@ -116,7 +116,9 @@
     <Compile Include="Dao\TituloDao.cs" />
     <Compile Include="Model\Autor.cs" />
     <Compile Include="Dao\Conexao.cs" />
+    <Compile Include="Model\DapperMapping.cs" />
     <Compile Include="Model\Edicao.cs" />
+    <Compile Include="Model\EdicaoMap.cs" />
     <Compile Include="Model\Editora.cs" />
     <Compile Include="Model\Idioma.cs" />
     <Compile Include="Model\ListaLivro.cs" />

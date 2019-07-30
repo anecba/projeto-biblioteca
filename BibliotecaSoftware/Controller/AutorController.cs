@@ -9,9 +9,8 @@ namespace BibliotecaSoftware.Controller
         private readonly AutorDao _autorDao;
 
         public AutorController()
-        {
-            _autorDao = new AutorDao();
-        }
+            => _autorDao = new AutorDao();
+
         public bool GravarCadastroAutor(Autor autorModel)
            => _autorDao.Inserir(autorModel);
 
