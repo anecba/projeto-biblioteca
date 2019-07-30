@@ -122,6 +122,7 @@
     <Compile Include="Model\Editora.cs" />
     <Compile Include="Model\Idioma.cs" />
     <Compile Include="Model\ListaLivro.cs" />
+    <Compile Include="Model\ListaLivroMap.cs" />
     <Compile Include="Model\Livro.cs" />
     <Compile Include="Model\Titulo.cs" />
     <Compile Include="Model\TituloAutor.cs" />
