@@ -9,7 +9,7 @@ namespace BibliotecaSoftware.View.Listagem
 {
     public partial class TelaListaDadosLivrosDev : DevExpress.XtraEditors.XtraForm
     {
-        public IList<ListaLivro> _listaLivro;
+        public IList<Livro> _listaLivro;
         public ListaLivro _lista;
         public ListaLivroController _listaLivroController;
 
@@ -19,7 +19,7 @@ namespace BibliotecaSoftware.View.Listagem
         private void ExecutarConstrutorPadrao()
         {
             InitializeComponent();
-            _listaLivro = new List<ListaLivro>();
+            _listaLivro = new List<Livro>();
             _lista = new ListaLivro();
             _listaLivroController = new ListaLivroController();
             CarregarLivros();
@@ -34,7 +34,8 @@ namespace BibliotecaSoftware.View.Listagem
         private void TbiAlterar_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
         {
             int codigoTitulo = Convert.ToInt32(grdvLivros.GetFocusedRowCellValue(clnCodigoTitulo));
-            var livro = _listaLivroController.AlterarListaLivro(codigoTitulo);
+            grdDados.DataSource = _listaLivro;
+            var livro = _listaLivroController.AlterarListaLivro(_listaLivro, codigoTitulo);
             var frm = new TelaCadastroLivrosDev(livro);
             frm.ShowDialog();
             CarregarLivros();
@@ -54,7 +55,7 @@ namespace BibliotecaSoftware.View.Listagem
         private void TxtPesquisa_TextChanged(object sender, EventArgs e)
         {
             if (txtPesquisa.EditValue != null)
-                grdDados.DataSource = _listaLivro.Where(l => l.NomeTitulo.StartsWith(txtPesquisa.EditValue.ToString().Trim())).ToList();
+                grdDados.DataSource = _listaLivro.Where(l => l.Titulo.NomeTitulo.StartsWith(txtPesquisa.EditValue.ToString().Trim())).ToList();
         }
     }
 }

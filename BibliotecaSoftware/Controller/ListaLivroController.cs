@@ -1,11 +1,7 @@
 ﻿using BibliotecaSoftware.Model;
 using DevExpress.XtraEditors;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace BibliotecaSoftware.Controller
 {
@@ -20,6 +16,13 @@ namespace BibliotecaSoftware.Controller
 
         public Livro AlterarListaLivro(int codigoTitulo)
             => _livroDao.Carregar(codigoTitulo);
+
+        public Livro AlterarListaLivro(IList<Livro> titulos, int codigoTitulo)
+        {
+            var titulo = titulos.Where(a => a.Titulo.CodigoTitulo == codigoTitulo)?.FirstOrDefault<Livro>();
+            return titulo;
+        }
+            
 
         public bool ApagarListaLivro(int codigoTitulo)
         {
@@ -37,7 +40,7 @@ namespace BibliotecaSoftware.Controller
             return false;
         }
 
-        public List<ListaLivro> Carregar()
+        public List<Livro> Carregar()
             => _livroDao.Listar();
     }
 }

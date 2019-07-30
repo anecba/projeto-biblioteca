@@ -102,7 +102,7 @@
             // clnTitulo
             // 
             this.clnTitulo.Caption = "Título";
-            this.clnTitulo.FieldName = "NomeTitulo";
+            this.clnTitulo.FieldName = "Titulo.NomeTitulo";
             this.clnTitulo.MinWidth = 25;
             this.clnTitulo.Name = "clnTitulo";
             this.clnTitulo.OptionsColumn.AllowEdit = false;

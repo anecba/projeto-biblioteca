@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 public class LivroDao : Conexao
 {
-    public List<ListaLivro> Listar()
+    public List<Livro> Listar()
     {
         using (FbConnection conexaoFireBird = Conexao.GetInstancia().GetConexao())
         {
-            var retorno = new List<ListaLivro>();
+            var retorno = new List<Livro>();
             FbCommand cmd = new FbCommand
             {
                 Connection = conexaoFireBird
@@ -36,28 +36,7 @@ public class LivroDao : Conexao
                             INNER JOIN EDITORA ON TITULO.codigoeditora = EDITORA.codigoeditora
                             WHERE TITULO.desabilitar = 'N'";
 
-                retorno = cmd.Connection.Query<ListaLivro>(sql).ToList();
-
-                //var dr = cmd.ExecuteReader();
-
-                //while (dr.Read())
-                //{
-                //    var listaLivroModel = new ListaLivro
-                //    {
-                //        CodigoTitulo = int.Parse(dr["CODIGOTITULO"].ToString()),
-                //        NomeTitulo = dr["TITULO"].ToString(),
-                //        Descricao = dr["DESCRICAO"].ToString(),
-                //        NomeAutor = dr["AUTOR"].ToString(),
-                //        Lingua = dr["LINGUA"].ToString(),
-                //        Pais = dr["PAIS"].ToString(),
-                //        NumeroEdicao = dr["EDICAO"].ToString(),
-                //        Ano = int.Parse(dr["ANO"].ToString()),
-                //        QtdePagina = int.Parse(dr["QTDE_PAGINAS"].ToString()),
-                //        DataLancamento = DateTime.Parse(dr["DATA_LANCAMENTO"].ToString()),
-                //        NomeEditora = dr["EDITORA"].ToString()
-                //    };
-                //    retorno.Add(listaLivroModel);
-                //}
+                retorno = cmd.Connection.Query<Livro>(sql).ToList();
             }
             catch (Exception e)
             {
