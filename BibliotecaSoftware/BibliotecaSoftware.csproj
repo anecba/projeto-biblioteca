@@ -116,17 +116,21 @@
     <Compile Include="Dao\TituloDao.cs" />
     <Compile Include="Model\Autor.cs" />
     <Compile Include="Dao\Conexao.cs" />
+    <Compile Include="Model\AutorMap.cs" />
     <Compile Include="Model\DapperMapping.cs" />
     <Compile Include="Model\Edicao.cs" />
     <Compile Include="Model\EdicaoMap.cs" />
     <Compile Include="Model\Editora.cs" />
     <Compile Include="Model\EditoraMap.cs" />
     <Compile Include="Model\Idioma.cs" />
+    <Compile Include="Model\IdiomaMap.cs" />
     <Compile Include="Model\ListaLivro.cs" />
     <Compile Include="Model\ListaLivroMap.cs" />
     <Compile Include="Model\Livro.cs" />
     <Compile Include="Model\Titulo.cs" />
     <Compile Include="Model\TituloAutor.cs" />
+    <Compile Include="Model\TituloAutorMap.cs" />
+    <Compile Include="Model\TituloMap.cs" />
     <Compile Include="View\Biblioteca.cs">
       <SubType>Form</SubType>
     </Compile>

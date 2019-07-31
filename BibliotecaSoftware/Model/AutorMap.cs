@@ -8,12 +8,15 @@ using System.Threading.Tasks;
 
 namespace BibliotecaSoftware.Model
 {
-    public class EditoraMap : EntityMap<Editora>
+    public class AutorMap : EntityMap<Autor>
     {
-        public EditoraMap()
+        public AutorMap()
         {
-            Map(e => e.CodigoEditora).ToColumn("CodigoEditora", false);
+            Map(e => e.CodigoAutor).ToColumn("CodigoAutor", false);
             Map(e => e.Nome).ToColumn("Nome", false);
+            Map(e => e.DataNascimento).ToColumn("DataNascimento", false);
+            Map(e => e.Bibliografia).ToColumn("Bibliografia", false);
+            Map(e => e.Site).ToColumn("Site", false);
             Map(e => e.Desabilitado).ToColumn("Desabilitado", false);
         }
     }
