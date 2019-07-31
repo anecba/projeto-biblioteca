@@ -26,10 +26,10 @@ namespace BibliotecaSoftware.Controller
 
         public bool ApagarListaLivro(int codigoTitulo)
         {
-            var listaLivro = new ListaLivro
+            var listaLivro = new Titulo
             {
                 CodigoTitulo = codigoTitulo,
-                Desabilitado = true
+                Desativado = true
             };
 
             if (_livroDao.Desabilitar(listaLivro))

@@ -85,7 +85,7 @@ WHERE TITULO.desabilitar = 'N'";
         }
     }
 
-    public bool Desabilitar(ListaLivro listaLivroModel)
+    public bool Desabilitar(Titulo tituloModel)
     {
         var deuCerto = false;
         using (FbConnection conexaoFireBird = Conexao.GetInstancia().GetConexao())
@@ -101,8 +101,8 @@ WHERE TITULO.desabilitar = 'N'";
 
             try
             {
-                var sql = @"UPDATE TITULO SET DESABILITAR = @DESABILITAR WHERE CODIGOTITULO = @CODIGOTITULO";
-                cmd.Connection.Execute(sql, listaLivroModel, transacao);
+                var sql = @"UPDATE TITULO SET DESABILITAR = @Desabilitar WHERE CODIGOTITULO = @CodigoTitulo";
+                cmd.Connection.Execute(sql, tituloModel, transacao);
 
                 deuCerto = true;
             }
