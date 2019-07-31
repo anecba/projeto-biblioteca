@@ -120,6 +120,7 @@
     <Compile Include="Model\Edicao.cs" />
     <Compile Include="Model\EdicaoMap.cs" />
     <Compile Include="Model\Editora.cs" />
+    <Compile Include="Model\EditoraMap.cs" />
     <Compile Include="Model\Idioma.cs" />
     <Compile Include="Model\ListaLivro.cs" />
     <Compile Include="Model\ListaLivroMap.cs" />

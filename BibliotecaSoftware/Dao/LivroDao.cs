@@ -29,6 +29,7 @@ public class LivroDao : Conexao
 
                             FROM TITULO_AUTOR
 
+
                             INNER JOIN AUTOR ON TITULO_AUTOR.codigoautor = AUTOR.codigoautor
                             RIGHT JOIN TITULO ON TITULO_AUTOR.codigotitulo = TITULO.codigotitulo
                             RIGHT JOIN EDICAO ON TITULO_AUTOR.codigoedicao = EDICAO.codigoedicao
@@ -95,6 +96,7 @@ public class LivroDao : Conexao
             try
             {
                 conexaoFireBird.Open();
+
                 string mSQL = @"SELECT TITULO.codigotitulo, TITULO.nometitulo AS TITULO, AUTOR.nome AS AUTOR, 
                     IDIOMA.lingua, IDIOMA.pais, EDICAO.edicao, EDICAO.ano, 
                     EDICAO.qtde_paginas, EDICAO.data_lancamento, EDITORA.nome AS EDITORA, EDITORA.codigoeditora, IDIOMA.codigoidioma,
