@@ -15,7 +15,6 @@ namespace BibliotecaSoftware
             DapperMapping.Register();
             Application.Run(new TelaBibliotecaDev());
             //Application.Run(new TelaBibliotecaPrincipal());
-            
         }
     }
 }

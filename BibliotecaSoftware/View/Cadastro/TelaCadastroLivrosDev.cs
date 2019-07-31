@@ -103,5 +103,10 @@ namespace BibliotecaSoftware.View.Cadastro
 
         private void TbiCancelar_ItemClick(object sender, TileItemEventArgs e)
             => Close();
+
+        private void TelaCadastroLivrosDev_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

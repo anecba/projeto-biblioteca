@@ -9,9 +9,9 @@ namespace BibliotecaSoftware.View.Listagem
 {
     public partial class TelaListaDadosLivrosDev : DevExpress.XtraEditors.XtraForm
     {
-        public IList<Livro> _listaLivro;
-        public ListaLivro _lista;
-        public ListaLivroController _listaLivroController;
+        private IEnumerable<Livro> _listaLivro;
+        private ListaLivro _lista;
+        private ListaLivroController _listaLivroController;
 
         public TelaListaDadosLivrosDev()
             => ExecutarConstrutorPadrao();
@@ -27,7 +27,7 @@ namespace BibliotecaSoftware.View.Listagem
 
         private void CarregarLivros()
         {
-            _listaLivro = _listaLivroController.Carregar();
+            _listaLivro = _listaLivroController.Listar();
             grdDados.DataSource = _listaLivro;
         }
 

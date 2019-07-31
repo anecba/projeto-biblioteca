@@ -10,7 +10,6 @@ namespace BibliotecaSoftware.Model
         public string Lingua { get; set; }
         public string Pais { get; set; }
         public string Descricao { get; set; }
-        //public bool Desabilitado { get; set; }
 
         private char _desabilitado = 'N';
 
@@ -35,5 +34,6 @@ namespace BibliotecaSoftware.Model
                 Desabilitar = _desativado.ToChar();
             }
         }
+
     }
 }

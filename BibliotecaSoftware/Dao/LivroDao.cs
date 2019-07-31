@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 public class LivroDao : Conexao
 {
-    public List<Livro> Listar()
+    public IEnumerable<Livro> Listar()
     {
         using (FbConnection conexaoFireBird = Conexao.GetInstancia().GetConexao())
         {
@@ -22,40 +22,24 @@ public class LivroDao : Conexao
             try
             {
                 conexaoFireBird.Open();
-                //var sql = @"SELECT TITULO.codigotitulo, TITULO.nometitulo, AUTOR.nome AS AUTOR, 
-                //    IDIOMA.lingua, IDIOMA.pais, EDICAO.edicao, EDICAO.ano, 
-                //    EDICAO.qtde_paginas, EDICAO.data_lancamento, EDITORA.nome AS EDITORA, 
-                //    TITULO.descricao 
-
-                //            FROM TITULO_AUTOR
-
-
-                //            INNER JOIN AUTOR ON TITULO_AUTOR.codigoautor = AUTOR.codigoautor
-                //            RIGHT JOIN TITULO ON TITULO_AUTOR.codigotitulo = TITULO.codigotitulo
-                //            RIGHT JOIN EDICAO ON TITULO_AUTOR.codigoedicao = EDICAO.codigoedicao
-                //            INNER JOIN IDIOMA ON  EDICAO.codigoidioma = IDIOMA.codigoidioma
-                //            INNER JOIN EDITORA ON TITULO.codigoeditora = EDITORA.codigoeditora
-                //            WHERE TITULO.desabilitar = 'N'";
-
 
                 var sql = @"SELECT distinct *
-FROM TITULO_AUTOR
-RIGHT JOIN TITULO ON TITULO_AUTOR.codigotitulo = TITULO.codigotitulo
-INNER JOIN AUTOR ON TITULO_AUTOR.codigoautor = AUTOR.codigoautor
-RIGHT JOIN EDICAO ON TITULO_AUTOR.codigoedicao = EDICAO.codigoedicao
-INNER JOIN EDITORA ON TITULO.codigoeditora = EDITORA.codigoeditora
-INNER JOIN IDIOMA ON  EDICAO.codigoidioma = IDIOMA.codigoidioma
-WHERE TITULO.desabilitar = 'N'";
+                FROM TITULO_AUTOR
+                RIGHT JOIN TITULO ON TITULO_AUTOR.codigotitulo = TITULO.codigotitulo
+                INNER JOIN AUTOR ON TITULO_AUTOR.codigoautor = AUTOR.codigoautor
+                RIGHT JOIN EDICAO ON TITULO_AUTOR.codigoedicao = EDICAO.codigoedicao
+                INNER JOIN EDITORA ON TITULO.codigoeditora = EDITORA.codigoeditora
+                INNER JOIN IDIOMA ON  EDICAO.codigoidioma = IDIOMA.codigoidioma
+                WHERE TITULO.desabilitar = 'N'";
 
                 var result = cmd.Connection.Query<Livro, Titulo, Autor, Edicao, Editora, Idioma, Livro>(sql, (l, t, a, e, ed, i) =>
-                 {
-                     Livro livro;
-                     if (!retorno.TryGetValue(l.CodigoLivro, out livro))
-                     {
-                         livro = l;
-                         retorno.Add(l.CodigoLivro, l);
-                     }
-                     if (t != null)
+                {
+                    if (!retorno.TryGetValue(l.CodigoLivro, out Livro livro))
+                    {
+                        livro = l;
+                        retorno.Add(l.CodigoLivro, l);
+                    }
+                    if (t != null)
                          livro.Titulo = t;
 
                      if (a != null)
@@ -95,7 +79,6 @@ WHERE TITULO.desabilitar = 'N'";
             var cmd = new FbCommand
             {
                 Connection = conexaoFireBird,
-               
                 Transaction = transacao
             };
 
@@ -124,7 +107,7 @@ WHERE TITULO.desabilitar = 'N'";
 
     internal Livro Carregar(int codigoTitulo)
     {
-        using ( FbConnection conexaoFireBird = Conexao.GetInstancia().GetConexao())
+        using (FbConnection conexaoFireBird = Conexao.GetInstancia().GetConexao())
         {
             var listaLivroRetorno = new Livro();
             try

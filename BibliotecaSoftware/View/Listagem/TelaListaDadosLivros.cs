@@ -8,7 +8,7 @@ namespace BibliotecaSoftware.View.Listagem
 {
     public partial class TelaListaDadosLivros : Form
     {
-        public IList<Livro> _listaLivro; 
+        public IEnumerable<Livro> _listaLivro; 
         public Livro _lista;
         public ListaLivroController _listaLivroController;
 
@@ -24,11 +24,6 @@ namespace BibliotecaSoftware.View.Listagem
             _lista = new Livro();
             _listaLivroController = new ListaLivroController();
             Carregar();
-        }
-
-        private void PesquisaTelaListarDadosLivrosBotao_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void AlterarTelaListarDadosLivrosBotao_Click(object sender, EventArgs e)
@@ -53,7 +48,7 @@ namespace BibliotecaSoftware.View.Listagem
 
         private void Carregar()
         {
-            _listaLivro = _listaLivroController.Carregar();
+            _listaLivro = _listaLivroController.Listar();
             mostrarListarDadosLivrosDataGridView.DataSource = _listaLivro;
         } 
     }

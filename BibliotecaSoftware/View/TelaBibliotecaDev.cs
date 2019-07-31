@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DevExpress.XtraEditors;
-using BibliotecaSoftware.View.Cadastro;
+﻿using BibliotecaSoftware.View.Cadastro;
 using BibliotecaSoftware.View.Listagem;
 
 namespace BibliotecaSoftware.View
@@ -51,9 +41,6 @@ namespace BibliotecaSoftware.View
         }
 
         private void BarbtnListaLivros_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            TelaListaDadosLivrosDev telaListaDadosLivrosDev = new TelaListaDadosLivrosDev();
-            telaListaDadosLivrosDev.ShowDialog();
-        }
+            => new TelaListaDadosLivrosDev().ShowDialog();
     }
 }

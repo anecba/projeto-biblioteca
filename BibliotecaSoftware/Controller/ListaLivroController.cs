@@ -17,12 +17,11 @@ namespace BibliotecaSoftware.Controller
         public Livro AlterarListaLivro(int codigoTitulo)
             => _livroDao.Carregar(codigoTitulo);
 
-        public Livro AlterarListaLivro(IList<Livro> titulos, int codigoTitulo)
+        public Livro AlterarListaLivro(IEnumerable<Livro> titulos, int codigoTitulo)
         {
             var titulo = titulos.Where(a => a.Titulo.CodigoTitulo == codigoTitulo)?.FirstOrDefault<Livro>();
             return titulo;
         }
-            
 
         public bool ApagarListaLivro(int codigoTitulo)
         {
@@ -40,7 +39,7 @@ namespace BibliotecaSoftware.Controller
             return false;
         }
 
-        public List<Livro> Carregar()
+        public IEnumerable<Livro> Listar()
             => _livroDao.Listar();
     }
 }

@@ -104,7 +104,6 @@
             this.pesquisaTelaListarDadosLivrosBotao.Text = "Pesquisar";
             this.pesquisaTelaListarDadosLivrosBotao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.pesquisaTelaListarDadosLivrosBotao.UseVisualStyleBackColor = true;
-            this.pesquisaTelaListarDadosLivrosBotao.Click += new System.EventHandler(this.PesquisaTelaListarDadosLivrosBotao_Click);
             // 
             // mostrarListarDadosLivrosDataGridView
             // 
