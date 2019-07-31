@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.TileItemElement tileItemElement4 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaListaDadosLivrosDev));
-            DevExpress.XtraEditors.TileItemElement tileItemElement5 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement6 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement3 = new DevExpress.XtraEditors.TileItemElement();
             this.grdDados = new DevExpress.XtraGrid.GridControl();
             this.grdvLivros = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.clnCodigoTitulo = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -90,7 +90,7 @@
             // clnCodigoTitulo
             // 
             this.clnCodigoTitulo.Caption = "Cód.";
-            this.clnCodigoTitulo.FieldName = "CodigoTitulo";
+            this.clnCodigoTitulo.FieldName = "CodigoLivro";
             this.clnCodigoTitulo.MinWidth = 25;
             this.clnCodigoTitulo.Name = "clnCodigoTitulo";
             this.clnCodigoTitulo.OptionsColumn.AllowEdit = false;
@@ -138,7 +138,7 @@
             // clnPais
             // 
             this.clnPais.Caption = "País";
-            this.clnPais.FieldName = "Iidoma.Pais";
+            this.clnPais.FieldName = "Idioma.Pais";
             this.clnPais.MinWidth = 25;
             this.clnPais.Name = "clnPais";
             this.clnPais.OptionsColumn.AllowEdit = false;
@@ -162,7 +162,7 @@
             // clnAno
             // 
             this.clnAno.Caption = "Ano";
-            this.clnAno.FieldName = "Idioma.Ano";
+            this.clnAno.FieldName = "Edicao.Ano";
             this.clnAno.MinWidth = 25;
             this.clnAno.Name = "clnAno";
             this.clnAno.OptionsColumn.AllowEdit = false;
@@ -241,10 +241,10 @@
             // tbiCancelar
             // 
             this.tbiCancelar.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            tileItemElement4.Text = "Cancelar";
-            tileItemElement4.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.tbiCancelar.Elements.Add(tileItemElement4);
+            tileItemElement1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            tileItemElement1.Text = "Cancelar";
+            tileItemElement1.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            this.tbiCancelar.Elements.Add(tileItemElement1);
             this.tbiCancelar.Id = 1;
             this.tbiCancelar.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.tbiCancelar.Name = "tbiCancelar";
@@ -253,11 +253,11 @@
             // tbiApagar
             // 
             this.tbiApagar.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
-            tileItemElement5.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
-            tileItemElement5.Text = "Apagar";
-            tileItemElement5.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.tbiApagar.Elements.Add(tileItemElement5);
+            tileItemElement2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            tileItemElement2.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
+            tileItemElement2.Text = "Apagar";
+            tileItemElement2.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            this.tbiApagar.Elements.Add(tileItemElement2);
             this.tbiApagar.Id = 0;
             this.tbiApagar.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.tbiApagar.Name = "tbiApagar";
@@ -286,10 +286,10 @@
             // tbiAlterar
             // 
             this.tbiAlterar.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
-            tileItemElement6.Text = "Alterar";
-            tileItemElement6.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.tbiAlterar.Elements.Add(tileItemElement6);
+            tileItemElement3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
+            tileItemElement3.Text = "Alterar";
+            tileItemElement3.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            this.tbiAlterar.Elements.Add(tileItemElement3);
             this.tbiAlterar.Id = 5;
             this.tbiAlterar.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.tbiAlterar.Name = "tbiAlterar";

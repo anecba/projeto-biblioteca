@@ -15,6 +15,7 @@ namespace BibliotecaSoftware.Model
                 config.AddMap(new IdiomaMap());
                 config.AddMap(new TituloMap());
                 config.AddMap(new TituloAutorMap());
+                config.AddMap(new LivroMap());
             });
         }
     }

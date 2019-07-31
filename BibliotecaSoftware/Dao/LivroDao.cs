@@ -14,7 +14,7 @@ public class LivroDao : Conexao
     {
         using (FbConnection conexaoFireBird = Conexao.GetInstancia().GetConexao())
         {
-            var retorno = new List<Livro>();
+            var retorno = new Dictionary<int, Livro>();
             FbCommand cmd = new FbCommand
             {
                 Connection = conexaoFireBird
@@ -22,22 +22,56 @@ public class LivroDao : Conexao
             try
             {
                 conexaoFireBird.Open();
-                var sql = @"SELECT TITULO.codigotitulo, TITULO.nometitulo AS TITULO, AUTOR.nome AS AUTOR, 
-                    IDIOMA.lingua, IDIOMA.pais, EDICAO.edicao, EDICAO.ano, 
-                    EDICAO.qtde_paginas, EDICAO.data_lancamento, EDITORA.nome AS EDITORA, 
-                    TITULO.descricao 
+                //var sql = @"SELECT TITULO.codigotitulo, TITULO.nometitulo, AUTOR.nome AS AUTOR, 
+                //    IDIOMA.lingua, IDIOMA.pais, EDICAO.edicao, EDICAO.ano, 
+                //    EDICAO.qtde_paginas, EDICAO.data_lancamento, EDITORA.nome AS EDITORA, 
+                //    TITULO.descricao 
 
-                            FROM TITULO_AUTOR
+                //            FROM TITULO_AUTOR
 
 
-                            INNER JOIN AUTOR ON TITULO_AUTOR.codigoautor = AUTOR.codigoautor
-                            RIGHT JOIN TITULO ON TITULO_AUTOR.codigotitulo = TITULO.codigotitulo
-                            RIGHT JOIN EDICAO ON TITULO_AUTOR.codigoedicao = EDICAO.codigoedicao
-                            INNER JOIN IDIOMA ON  EDICAO.codigoidioma = IDIOMA.codigoidioma
-                            INNER JOIN EDITORA ON TITULO.codigoeditora = EDITORA.codigoeditora
-                            WHERE TITULO.desabilitar = 'N'";
+                //            INNER JOIN AUTOR ON TITULO_AUTOR.codigoautor = AUTOR.codigoautor
+                //            RIGHT JOIN TITULO ON TITULO_AUTOR.codigotitulo = TITULO.codigotitulo
+                //            RIGHT JOIN EDICAO ON TITULO_AUTOR.codigoedicao = EDICAO.codigoedicao
+                //            INNER JOIN IDIOMA ON  EDICAO.codigoidioma = IDIOMA.codigoidioma
+                //            INNER JOIN EDITORA ON TITULO.codigoeditora = EDITORA.codigoeditora
+                //            WHERE TITULO.desabilitar = 'N'";
 
-                retorno = cmd.Connection.Query<Livro>(sql).ToList();
+
+                var sql = @"SELECT distinct *
+FROM TITULO_AUTOR
+RIGHT JOIN TITULO ON TITULO_AUTOR.codigotitulo = TITULO.codigotitulo
+INNER JOIN AUTOR ON TITULO_AUTOR.codigoautor = AUTOR.codigoautor
+RIGHT JOIN EDICAO ON TITULO_AUTOR.codigoedicao = EDICAO.codigoedicao
+INNER JOIN EDITORA ON TITULO.codigoeditora = EDITORA.codigoeditora
+INNER JOIN IDIOMA ON  EDICAO.codigoidioma = IDIOMA.codigoidioma
+WHERE TITULO.desabilitar = 'N'";
+
+                var result = cmd.Connection.Query<Livro, Titulo, Autor, Edicao, Editora, Idioma, Livro>(sql, (l, t, a, e, ed, i) =>
+                 {
+                     Livro livro;
+                     if (!retorno.TryGetValue(l.CodigoLivro, out livro))
+                     {
+                         livro = l;
+                         retorno.Add(l.CodigoLivro, l);
+                     }
+                     if (t != null)
+                         livro.Titulo = t;
+
+                     if (a != null)
+                         livro.Autor = a;
+
+                     if (e != null)
+                         livro.Edicao = e;
+
+                     if (ed != null)
+                         livro.Editora = ed;
+
+                     if (i != null)
+                         livro.Idioma = i;
+
+                     return livro;
+                 }, splitOn: "CodigoTitulo, CodigoAutor, CodigoEdicao, CodigoEditora, CodigoIdioma").ToList();
             }
             catch (Exception e)
             {
@@ -47,7 +81,7 @@ public class LivroDao : Conexao
             {
                 conexaoFireBird.Close();
             }
-            return retorno;
+            return retorno.Values.ToList();
         }
     }
 
