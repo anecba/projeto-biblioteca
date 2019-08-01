@@ -31,14 +31,14 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(telaListaDadosEditoras));
             this.mostrarListarDadosEditorasDataGridView = new System.Windows.Forms.DataGridView();
+            this.clnCodigoEditora = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.editoraBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblListaDeEditoras = new System.Windows.Forms.Label();
             this.alterarTelaListarDadosBotao = new System.Windows.Forms.Button();
             this.fecharTelaListarDadosBotao = new System.Windows.Forms.Button();
             this.apagarTelaListarDadosBotao = new System.Windows.Forms.Button();
             this.pesquisaTelaListarDadosBotao = new System.Windows.Forms.Button();
-            this.clnCodigoEditora = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.editoraBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.mostrarListarDadosEditorasDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.editoraBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -59,6 +59,25 @@
             this.mostrarListarDadosEditorasDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.mostrarListarDadosEditorasDataGridView.Size = new System.Drawing.Size(658, 216);
             this.mostrarListarDadosEditorasDataGridView.TabIndex = 3;
+            // 
+            // clnCodigoEditora
+            // 
+            this.clnCodigoEditora.DataPropertyName = "CodigoEditora";
+            this.clnCodigoEditora.HeaderText = "Cód.";
+            this.clnCodigoEditora.Name = "clnCodigoEditora";
+            this.clnCodigoEditora.Width = 50;
+            // 
+            // nomeDataGridViewTextBoxColumn
+            // 
+            this.nomeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "Nome";
+            this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
+            this.nomeDataGridViewTextBoxColumn.MinimumWidth = 200;
+            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
+            // 
+            // editoraBindingSource
+            // 
+            this.editoraBindingSource.DataSource = typeof(BibliotecaSoftware.Model.Editora);
             // 
             // lblListaDeEditoras
             // 
@@ -121,25 +140,6 @@
             this.pesquisaTelaListarDadosBotao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.pesquisaTelaListarDadosBotao.UseVisualStyleBackColor = true;
             this.pesquisaTelaListarDadosBotao.Click += new System.EventHandler(this.PesquisaTelaListarDadosBotao_Click);
-            // 
-            // clnCodigoEditora
-            // 
-            this.clnCodigoEditora.DataPropertyName = "CodigoEditora";
-            this.clnCodigoEditora.HeaderText = "Cód.";
-            this.clnCodigoEditora.Name = "clnCodigoEditora";
-            this.clnCodigoEditora.Width = 50;
-            // 
-            // nomeDataGridViewTextBoxColumn
-            // 
-            this.nomeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "Nome";
-            this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
-            this.nomeDataGridViewTextBoxColumn.MinimumWidth = 200;
-            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
-            // 
-            // editoraBindingSource
-            // 
-            this.editoraBindingSource.DataSource = typeof(BibliotecaSoftware.Model.Editora);
             // 
             // telaListaDadosEditoras
             // 

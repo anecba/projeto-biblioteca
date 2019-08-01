@@ -1,7 +1,10 @@
 ﻿using BibliotecaSoftware.Model;
+using Dapper;
+using DevExpress.XtraEditors;
 using FirebirdSql.Data.FirebirdClient;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace BibliotecaSoftware.Dao
@@ -14,39 +17,33 @@ namespace BibliotecaSoftware.Dao
             using (FbConnection conexaoFireBird = Conexao.GetInstancia().GetConexao())
             {
                 conexaoFireBird.Open();
-                var transacao = conexaoFireBird.BeginTransaction();
-
+                var transaction = conexaoFireBird.BeginTransaction();
+                var cmd = new FbCommand
+                {
+                    Connection = conexaoFireBird,
+                    Transaction = transaction
+                };
                 try
                 {
-                    var cmd = new FbCommand
-                    {
-                        Connection = conexaoFireBird,
-                        Transaction = transacao 
-                    };
-                    if (0.Equals(editoraModel.CodigoEditora))
-                        cmd.CommandText = "INSERT INTO EDITORA(NOME, DESABILITADO) VALUES (@NOME, @DESABILITADO)";
-                    else
-                    {
-                        cmd.CommandText = @"UPDATE EDITORA SET NOME = @NOME WHERE CODIGOEDITORA = @CODIGOEDITORA";
-                        cmd.Parameters.Add("@CODIGOEDITORA", editoraModel.CodigoEditora);
-                    }
+                    var mSQL = 0.Equals(editoraModel.CodigoEditora)
+                        ? @"INSERT INTO EDITORA(NOME, DESABILITADO) VALUES (@NOME, @DESABILITADO)"
+                        : @"UPDATE EDITORA SET NOME = @NOME, DESABILITADO = @DESABILITADO 
+                                WHERE CODIGOEDITORA = @CODIGOEDITORA";
 
-                    cmd.Parameters.Add("@NOME", editoraModel.Nome);
-                    cmd.Parameters.Add("@DESABILITADO", FbDbType.Boolean).Value = editoraModel.Desabilitado.ToChar();
-                    cmd.ExecuteNonQuery();
+                    cmd.Connection.Execute(mSQL, editoraModel, transaction);
 
-                    return deuCerto = true;
+                    deuCerto = true;
                 }
                 catch (Exception e)
                 {
-                    MessageBox.Show(e.Message);
+                    XtraMessageBox.Show(e.Message);
                 }
                 finally
                 {
                     if (deuCerto)
-                        transacao.Commit();
+                        transaction.Commit();
                     else
-                        transacao.Rollback();
+                        transaction.Rollback();
                     conexaoFireBird.Close();
                 }
                 return deuCerto;
@@ -58,25 +55,20 @@ namespace BibliotecaSoftware.Dao
             using (FbConnection conexaoFireBird = Conexao.GetInstancia().GetConexao())
             {
                 var editoraModel = new Editora();
+                var listaEditora = new List<Editora>();
+
                 try
                 {
                     conexaoFireBird.Open();
-                    var mSQL = "SELECT * FROM EDITORA WHERE CODIGOEDITORA = @CODIGOEDITORA";
-                    var cmd = new FbCommand(mSQL, conexaoFireBird);
-                    cmd.Parameters.Add("@CODIGOEDITORA", codigoEditora);
-                    var dr = cmd.ExecuteReader();
-                    if (dr.Read())
+                    listaEditora = Listar();
+                    var cmd = new FbCommand
                     {
-                        editoraModel = new Editora()
-                        {
-                            CodigoEditora = int.Parse(dr["CODIGOEDITORA"].ToString()),
-                            Nome = dr["NOME"].ToString(),
-                        };
-                    }
+                        Connection = conexaoFireBird
+                    };
                 }
                 catch (Exception e)
                 {
-                    MessageBox.Show(e.Message);
+                    XtraMessageBox.Show(e.Message);
                 }
                 finally
                 {
@@ -94,23 +86,17 @@ namespace BibliotecaSoftware.Dao
                 try
                 {
                     conexaoFireBird.Open();
-                    string mSQL = "SELECT * FROM EDITORA WHERE DESABILITADO = 'N' ORDER BY NOME ASC";
-                    FbCommand cmd = new FbCommand(mSQL, conexaoFireBird);
-                    var dr = cmd.ExecuteReader();
-
-                    while (dr.Read())
+                    var sql = "SELECT * FROM EDITORA WHERE DESABILITADO = 'N' ORDER BY NOME ASC";
+                    FbCommand cmd = new FbCommand
                     {
-                        var editoraModel = new Editora()
-                        {
-                            CodigoEditora = int.Parse(dr["CODIGOEDITORA"].ToString()),
-                            Nome = dr["NOME"].ToString()
-                        };
-                        retorno.Add(editoraModel);
-                    }
+                        Connection = conexaoFireBird
+                    };
+
+                    retorno = cmd.Connection.Query<Editora>(sql).ToList();
                 }
                 catch (Exception e)
                 {
-                    MessageBox.Show(e.Message);
+                    XtraMessageBox.Show(e.Message);
                 }
                 finally
                 {
@@ -126,41 +112,38 @@ namespace BibliotecaSoftware.Dao
             using (FbConnection conexaoFireBird = Conexao.GetInstancia().GetConexao())
             {
                 conexaoFireBird.Open();
-                var transacao = conexaoFireBird.BeginTransaction();
-
+                var transaction = conexaoFireBird.BeginTransaction();
+                var cmd = new FbCommand
+                {
+                    Connection = conexaoFireBird,
+                    Transaction = transaction
+                };
                 try
                 {
-                    FbCommand cmd = new FbCommand
-                    {
-                        Connection = conexaoFireBird,
-                        Transaction = transacao
-                    };
-                    cmd.CommandText = @"select COUNT(codigoeditora) from TITULO WHERE CODIGOEDITORA = @CODIGOEDITORA";
-                    cmd.Parameters.Add("@CODIGOEDITORA", FbDbType.Integer).Value = editoraModel.CodigoEditora;
-
-                    var contador = Convert.ToInt32(cmd.ExecuteScalar());
+                    var sql= @"select COUNT(codigoeditora) from TITULO WHERE CODIGOEDITORA = @CODIGOEDITORA";
+                    var contador = cmd.Connection.ExecuteScalar<int>(sql, editoraModel, transaction);
 
                     if (contador > 0)
                     {
-                        MessageBox.Show("Esta editora não pode ser desabilitada por possuir livros cadastrados.", "Mensagem de Notificação");
+                        XtraMessageBox.Show("Esta editora não pode ser desabilitada por possuir livros cadastrados.", "Mensagem de Notificação");
                         return deuCerto;
                     }
 
-                    cmd.CommandText = @"UPDATE EDITORA SET DESABILITADO = @DESABILITADO WHERE CODIGOEDITORA = @CODIGOEDITORA";
-                    cmd.Parameters.Add("@DESABILITADO", FbDbType.Char).Value = editoraModel.Desabilitado.ToChar();
-                    cmd.ExecuteNonQuery();
+                    sql = @"UPDATE EDITORA SET DESABILITADO = @DESABILITADO WHERE CODIGOEDITORA = @CODIGOEDITORA";
+                    cmd.Connection.Execute(sql, editoraModel, transaction);
+
                     deuCerto = true;
                 }
                 catch (Exception e)
                 {
-                    MessageBox.Show(e.Message);
+                    XtraMessageBox.Show(e.Message);
                 }
                 finally
                 {
                     if (deuCerto)
-                        transacao.Commit();
+                        transaction.Commit();
                     else
-                        transacao.Rollback();
+                        transaction.Rollback();
                     conexaoFireBird.Close();
                 }
                 return deuCerto;

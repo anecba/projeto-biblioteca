@@ -1,5 +1,6 @@
 ﻿using BibliotecaSoftware.Controller;
 using BibliotecaSoftware.Model;
+using DevExpress.XtraEditors;
 using System;
 using System.Windows.Forms;
 
@@ -34,7 +35,7 @@ namespace BibliotecaSoftware.View
         {
             if (string.IsNullOrWhiteSpace(nomeCadastroEditorasCaixatexto.Text))
             {
-                MessageBox.Show("O campo nome precisa ser preenchido!","Mensagem de Aviso!");
+                XtraMessageBox.Show("O campo nome precisa ser preenchido!","Mensagem de Aviso!");
                 return;
             }
 
@@ -42,7 +43,7 @@ namespace BibliotecaSoftware.View
 
             if (_editoraController.GravarCadastroEditora(_editoraModel))
             {
-                MessageBox.Show("Gravado com sucesso!", "Mensagem de Confirmação");
+                XtraMessageBox.Show("Gravado com sucesso!", "Mensagem de Confirmação");
                 Close();
             }
         }

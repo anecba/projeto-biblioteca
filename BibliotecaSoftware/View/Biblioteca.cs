@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using BibliotecaSoftware.View;
+using BibliotecaSoftware.View.Cadastro;
 using BibliotecaSoftware.View.ControleLivros;
 using BibliotecaSoftware.View.Listagem;
 
@@ -21,7 +22,7 @@ namespace BibliotecaSoftware
 
         private void AutoresCadBibliotecaMenuitem_Click(object sender, EventArgs e)
         {
-            telaCadastroAutores telaCadastroAutores = new telaCadastroAutores();
+            var telaCadastroAutores = new telaCadastroAutores();
             telaCadastroAutores.Show();
         }
 

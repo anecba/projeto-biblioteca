@@ -1,8 +1,10 @@
 ﻿using BibliotecaSoftware.Model;
-using System;
+using DevExpress.XtraEditors;
 using FirebirdSql.Data.FirebirdClient;
+using System;
+using Dapper;
 using System.Collections.Generic;
-using System.Windows.Forms;
+using System.Linq;
 
 namespace BibliotecaSoftware.Dao
 {
@@ -22,29 +24,20 @@ namespace BibliotecaSoftware.Dao
                 };
                 try
                 {
-                    var mSQL = "";
-                    if (0.Equals(autorModel.CodigoAutor))
-                        mSQL = "INSERT INTO AUTOR(NOME, DATANASCIMENTO, BIBLIOGRAFIA, SITE, DESABILITADO) " +
-                            "VALUES (@NOME, @DATANASCIMENTO, @BIBLIOGRAFIA, @SITE, @DESABILITADO)";
-                    else
-                    {
-                        mSQL = @"UPDATE AUTOR SET NOME = @NOME, DATANASCIMENTO = @DATANASCIMENTO, 
+                    var mSQL = 0.Equals(autorModel.CodigoAutor)
+                        ? @"INSERT INTO AUTOR(NOME, DATANASCIMENTO, BIBLIOGRAFIA, SITE, DESABILITADO)
+                            VALUES (@NOME, @DATANASCIMENTO, @BIBLIOGRAFIA, @SITE, @DESABILITADO)"
+                        : @"UPDATE AUTOR SET NOME = @NOME, DATANASCIMENTO = @DATANASCIMENTO, 
                                 BIBLIOGRAFIA = @BIBLIOGRAFIA,
                                 SITE = @SITE, DESABILITADO = @DESABILITADO WHERE CODIGOAUTOR = @CODIGOAUTOR";
-                        cmd.Parameters.Add("@CODIGOAUTOR", autorModel.CodigoAutor);
-                    }
-                    cmd.CommandText = mSQL;
-                    cmd.Parameters.Add("@NOME", autorModel.Nome);
-                    cmd.Parameters.Add("@DATANASCIMENTO", FbDbType.Date).Value = autorModel.DataNascimento;
-                    cmd.Parameters.Add("@BIBLIOGRAFIA", autorModel.Bibliografia);
-                    cmd.Parameters.Add("@SITE", autorModel.Site);
-                    cmd.Parameters.Add("@DESABILITADO", FbDbType.Boolean).Value = autorModel.Desabilitado.ToChar();
-                    cmd.ExecuteNonQuery();
+
+                    cmd.Connection.Execute(mSQL, autorModel, transaction);
+
                     deuCerto = true;
                 }
                 catch (Exception e)
                 {
-                    MessageBox.Show(e.Message);
+                    XtraMessageBox.Show(e.Message);
                 }
                 finally
                 {
@@ -60,39 +53,31 @@ namespace BibliotecaSoftware.Dao
             }
         }
 
-        internal Autor Carregar(int codigoAutor)
+        internal Autor Carregar(int CODIGOAUTOR)
         {
             using (FbConnection conexaoFireBird = Conexao.GetInstancia().GetConexao())
             {
                 var autorModel = new Autor();
+                var listaAutor = new List<Autor>();
+
                 try
                 {
                     conexaoFireBird.Open();
-                    var mSQL = "SELECT * FROM AUTOR WHERE CODIGOAUTOR = @CODIGOAUTOR";
-                    var cmd = new FbCommand(mSQL, conexaoFireBird);
-                    cmd.Parameters.Add("@CODIGOAUTOR", codigoAutor);
-                    var dr = cmd.ExecuteReader();
-                    if (dr.Read())
+                    listaAutor = Listar();
+                    var cmd = new FbCommand
                     {
-                        autorModel = new Autor
-                        {
-                            CodigoAutor = int.Parse(dr["CODIGOAUTOR"].ToString()),
-                            Nome = dr["NOME"].ToString(),
-                            DataNascimento = DateTime.Parse(dr["DATANASCIMENTO"].ToString()),
-                            Bibliografia = dr["BIBLIOGRAFIA"].ToString(),
-                            Site = dr["SITE"].ToString(),
-                        };
-                    }
+                        Connection = conexaoFireBird
+                    };
                 }
                 catch (Exception e)
                 {
-                    MessageBox.Show(e.Message);
+                    XtraMessageBox.Show(e.Message);
                 }
                 finally
                 {
                     conexaoFireBird.Close();
                 }
-                return autorModel;
+                return autorModel;                
             }
         }
 
@@ -104,26 +89,17 @@ namespace BibliotecaSoftware.Dao
                 try
                 {
                     conexaoFireBird.Open();
-                    string mSQL = "SELECT * FROM AUTOR WHERE DESABILITADO = 'N' ORDER BY NOME ASC";
-                    FbCommand cmd = new FbCommand(mSQL, conexaoFireBird);
-                    var dr = cmd.ExecuteReader();
-
-                    while (dr.Read())
+                    var sql = "SELECT * FROM AUTOR WHERE DESABILITADO = 'N' ORDER BY NOME ASC";
+                    FbCommand cmd = new FbCommand
                     {
-                        var autorModel = new Autor
-                        {
-                            CodigoAutor = int.Parse(dr["CODIGOAUTOR"].ToString()),
-                            Nome = dr["NOME"].ToString(),
-                            DataNascimento = DateTime.Parse(dr["DATANASCIMENTO"].ToString()),
-                            Bibliografia = dr["BIBLIOGRAFIA"].ToString(),
-                            Site = dr["SITE"].ToString()
-                        };
-                        retorno.Add(autorModel);
-                    }
+                        Connection = conexaoFireBird
+                    };
+
+                    retorno = cmd.Connection.Query<Autor>(sql).ToList();
                 }
                 catch (Exception e)
                 {
-                    MessageBox.Show(e.Message);
+                    XtraMessageBox.Show(e.Message);
                 }
                 finally
                 {
@@ -147,25 +123,23 @@ namespace BibliotecaSoftware.Dao
                         Connection = conexaoFireBird,
                         Transaction = transacao
                     };
-                    cmd.CommandText = @"select COUNT(codigoautor) from TITULO_AUTOR WHERE CODIGOAUTOR = @CODIGOAUTOR";
-                    cmd.Parameters.Add("@CODIGOAUTOR", FbDbType.Integer).Value = autorModel.CodigoAutor;
-
-                    var contador = Convert.ToInt32(cmd.ExecuteScalar());
+                    var sql = @"select COUNT(codigoautor) from TITULO_AUTOR WHERE CODIGOAUTOR = @CODIGOAUTOR";
+                    var contador = cmd.Connection.ExecuteScalar<int>(sql, autorModel, transacao);
 
                     if (contador > 0)
                     {
-                        MessageBox.Show("Este autor não pode ser desabilitado por possuir livros cadastrados.", "Mensagem de Notificação");
+                        XtraMessageBox.Show("Este autor não pode ser desabilitado por possuir livros cadastrados.", "Mensagem de Notificação");
                         return deuCerto;
                     }
 
-                    cmd.CommandText = @"UPDATE AUTOR SET DESABILITADO = @DESABILITADO WHERE CODIGOAUTOR = @CODIGOAUTOR";
-                    cmd.Parameters.Add("@DESABILITADO", FbDbType.Char).Value = autorModel.Desabilitado.ToChar();
-                    cmd.ExecuteNonQuery();
+                    sql = @"UPDATE AUTOR SET DESABILITADO = @DESABILITADO WHERE CODIGOAUTOR = @CODIGOAUTOR";
+                    cmd.Connection.Execute(sql, autorModel, transacao);
+
                     deuCerto = true;
                 }
                 catch (Exception e)
                 {
-                    MessageBox.Show(e.Message);
+                    XtraMessageBox.Show(e.Message);
                 }
                 finally
                 {

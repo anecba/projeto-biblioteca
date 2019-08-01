@@ -1,6 +1,8 @@
 ﻿using BibliotecaSoftware.Dao;
 using BibliotecaSoftware.Model;
+using DevExpress.XtraEditors;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace BibliotecaSoftware.Controller
@@ -10,9 +12,7 @@ namespace BibliotecaSoftware.Controller
         private readonly EditoraDao _editoraDao;
 
         public ListaEditoraController()
-        {
-            _editoraDao = new EditoraDao();
-        }
+            => _editoraDao = new EditoraDao();
 
         public Editora AlterarListaEditora(int codigoEditora)
         {
@@ -20,17 +20,23 @@ namespace BibliotecaSoftware.Controller
             return editora;
         }
 
+        public Editora AlterarListaEditora(IList<Editora> editoras, int codigoEditora)
+        {
+            var editora = editoras.Where(a => a.CodigoEditora == codigoEditora)?.FirstOrDefault<Editora>();
+            return editora;
+        }
+
         public bool ApagarListaEditora(int codigoEditora)
         {
-            Editora editora = new Editora
+            var editora = new Editora
             {
                 CodigoEditora = codigoEditora,
-                Desabilitado = true
+                Desativado = true
             };
 
             if (_editoraDao.Desabilitar(editora))
             {
-                MessageBox.Show("Operação realizada com sucesso!!", "Mensagem de Notificação");
+                XtraMessageBox.Show("Operação realizada com sucesso!!", "Mensagem de Notificação");
                 return true;
             }
             return false;

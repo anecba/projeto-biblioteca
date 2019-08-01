@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -36,10 +51,26 @@
     <ApplicationIcon>1055108-64.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup />
+  <PropertyGroup>
+    <StartupObject>BibliotecaSoftware.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Dapper, Version=1.60.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Dapper.1.60.6\lib\net451\Dapper.dll</HintPath>
     </Reference>
+    <Reference Include="Dapper.FluentMap, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.FluentMap.1.6.0\lib\net451\Dapper.FluentMap.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v19.1.Core, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v19.1.Core, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -85,13 +116,21 @@
     <Compile Include="Dao\TituloDao.cs" />
     <Compile Include="Model\Autor.cs" />
     <Compile Include="Dao\Conexao.cs" />
+    <Compile Include="Model\AutorMap.cs" />
+    <Compile Include="Model\DapperMapping.cs" />
     <Compile Include="Model\Edicao.cs" />
+    <Compile Include="Model\EdicaoMap.cs" />
     <Compile Include="Model\Editora.cs" />
+    <Compile Include="Model\EditoraMap.cs" />
     <Compile Include="Model\Idioma.cs" />
+    <Compile Include="Model\IdiomaMap.cs" />
     <Compile Include="Model\ListaLivro.cs" />
+    <Compile Include="Model\ListaLivroMap.cs" />
     <Compile Include="Model\Livro.cs" />
     <Compile Include="Model\Titulo.cs" />
     <Compile Include="Model\TituloAutor.cs" />
+    <Compile Include="Model\TituloAutorMap.cs" />
+    <Compile Include="Model\TituloMap.cs" />
     <Compile Include="View\Biblioteca.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,11 +145,23 @@
     <Compile Include="View\Cadastro\TelaCadastroAutores.Designer.cs">
       <DependentUpon>TelaCadastroAutores.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Cadastro\TelaCadastroAutoresDev.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Cadastro\TelaCadastroAutoresDev.Designer.cs">
+      <DependentUpon>TelaCadastroAutoresDev.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Cadastro\TelaCadastroEditoras.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\Cadastro\TelaCadastroEditoras.Designer.cs">
       <DependentUpon>TelaCadastroEditoras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Cadastro\TelaCadastroEditorasDev.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Cadastro\TelaCadastroEditorasDev.Designer.cs">
+      <DependentUpon>TelaCadastroEditorasDev.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Cadastro\TelaCadastroLivros.cs">
       <SubType>Form</SubType>
@@ -118,11 +169,23 @@
     <Compile Include="View\Cadastro\TelaCadastroLivros.Designer.cs">
       <DependentUpon>TelaCadastroLivros.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Cadastro\TelaCadastroLivrosDev.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Cadastro\TelaCadastroLivrosDev.Designer.cs">
+      <DependentUpon>TelaCadastroLivrosDev.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Listagem\TelaListaDadosAutores.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\Listagem\TelaListaDadosAutores.Designer.cs">
       <DependentUpon>TelaListaDadosAutores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Listagem\TelaListaDadosAutoresDev.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Listagem\TelaListaDadosAutoresDev.Designer.cs">
+      <DependentUpon>TelaListaDadosAutoresDev.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Listagem\TelaListaDadosEditoras.cs">
       <SubType>Form</SubType>
@@ -130,12 +193,31 @@
     <Compile Include="View\Listagem\TelaListaDadosEditoras.Designer.cs">
       <DependentUpon>TelaListaDadosEditoras.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Listagem\TelaListaDadosEditorasDev.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Listagem\TelaListaDadosEditorasDev.Designer.cs">
+      <DependentUpon>TelaListaDadosEditorasDev.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Listagem\TelaListaDadosLivros.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\Listagem\TelaListaDadosLivros.Designer.cs">
       <DependentUpon>TelaListaDadosLivros.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Listagem\TelaListaDadosLivrosDev.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Listagem\TelaListaDadosLivrosDev.Designer.cs">
+      <DependentUpon>TelaListaDadosLivrosDev.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaBibliotecaDev.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaBibliotecaDev.Designer.cs">
+      <DependentUpon>TelaBibliotecaDev.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -152,20 +234,41 @@
     <EmbeddedResource Include="View\Cadastro\TelaCadastroAutores.resx">
       <DependentUpon>TelaCadastroAutores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Cadastro\TelaCadastroAutoresDev.resx">
+      <DependentUpon>TelaCadastroAutoresDev.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Cadastro\TelaCadastroEditoras.resx">
       <DependentUpon>TelaCadastroEditoras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Cadastro\TelaCadastroEditorasDev.resx">
+      <DependentUpon>TelaCadastroEditorasDev.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Cadastro\TelaCadastroLivros.resx">
       <DependentUpon>TelaCadastroLivros.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Cadastro\TelaCadastroLivrosDev.resx">
+      <DependentUpon>TelaCadastroLivrosDev.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Listagem\TelaListaDadosAutores.resx">
       <DependentUpon>TelaListaDadosAutores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Listagem\TelaListaDadosAutoresDev.resx">
+      <DependentUpon>TelaListaDadosAutoresDev.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Listagem\TelaListaDadosEditoras.resx">
       <DependentUpon>TelaListaDadosEditoras.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Listagem\TelaListaDadosEditorasDev.resx">
+      <DependentUpon>TelaListaDadosEditorasDev.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Listagem\TelaListaDadosLivros.resx">
       <DependentUpon>TelaListaDadosLivros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Listagem\TelaListaDadosLivrosDev.resx">
+      <DependentUpon>TelaListaDadosLivrosDev.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaBibliotecaDev.resx">
+      <DependentUpon>TelaBibliotecaDev.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\BibliotecaSoftware.Model.Autor.datasource" />
@@ -209,6 +312,18 @@
     <None Include="Resources\106236-24.png" />
     <None Include="Resources\106236-32.png" />
     <None Include="Resources\searchIcon2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

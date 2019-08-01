@@ -1,26 +1,34 @@
 ﻿using BibliotecaSoftware;
 using BibliotecaSoftware.Model;
+using Dapper;
+using DevExpress.XtraEditors;
 using FirebirdSql.Data.FirebirdClient;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 public class LivroDao : Conexao
 {
-    public List<ListaLivro> Listar()
+    public List<Livro> Listar()
     {
         using (FbConnection conexaoFireBird = Conexao.GetInstancia().GetConexao())
         {
-            var retorno = new List<ListaLivro>();
+            var retorno = new List<Livro>();
+            FbCommand cmd = new FbCommand
+            {
+                Connection = conexaoFireBird
+            };
             try
             {
                 conexaoFireBird.Open();
-                string mSQL = @"SELECT TITULO.codigotitulo, TITULO.nometitulo AS TITULO, AUTOR.nome AS AUTOR, 
+                var sql = @"SELECT TITULO.codigotitulo, TITULO.nometitulo AS TITULO, AUTOR.nome AS AUTOR, 
                     IDIOMA.lingua, IDIOMA.pais, EDICAO.edicao, EDICAO.ano, 
                     EDICAO.qtde_paginas, EDICAO.data_lancamento, EDITORA.nome AS EDITORA, 
                     TITULO.descricao 
 
                             FROM TITULO_AUTOR
+
 
                             INNER JOIN AUTOR ON TITULO_AUTOR.codigoautor = AUTOR.codigoautor
                             RIGHT JOIN TITULO ON TITULO_AUTOR.codigotitulo = TITULO.codigotitulo
@@ -29,31 +37,11 @@ public class LivroDao : Conexao
                             INNER JOIN EDITORA ON TITULO.codigoeditora = EDITORA.codigoeditora
                             WHERE TITULO.desabilitar = 'N'";
 
-                FbCommand cmd = new FbCommand(mSQL, conexaoFireBird);
-                var dr = cmd.ExecuteReader();
-
-                while (dr.Read())
-                {
-                    var listaLivroModel = new ListaLivro
-                    {
-                        CodigoTitulo = int.Parse(dr["CODIGOTITULO"].ToString()),
-                        NomeTitulo = dr["TITULO"].ToString(),
-                        Descricao = dr["DESCRICAO"].ToString(),
-                        NomeAutor = dr["AUTOR"].ToString(),
-                        Lingua = dr["LINGUA"].ToString(),
-                        Pais = dr["PAIS"].ToString(),
-                        NumeroEdicao = dr["EDICAO"].ToString(),
-                        Ano = int.Parse(dr["ANO"].ToString()),
-                        QtdePagina = int.Parse(dr["QTDE_PAGINAS"].ToString()),
-                        DataLancamento = DateTime.Parse(dr["DATA_LANCAMENTO"].ToString()),
-                        NomeEditora = dr["EDITORA"].ToString()
-                    };
-                    retorno.Add(listaLivroModel);
-                }
+                retorno = cmd.Connection.Query<Livro>(sql).ToList();
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message);
+                XtraMessageBox.Show(e.Message);
             }
             finally
             {
@@ -70,24 +58,23 @@ public class LivroDao : Conexao
         {
             conexaoFireBird.Open();
             var transacao = conexaoFireBird.BeginTransaction();
+            var cmd = new FbCommand
+            {
+                Connection = conexaoFireBird,
+               
+                Transaction = transacao
+            };
 
             try
             {
-                var cmd = new FbCommand
-                {
-                    Connection = conexaoFireBird,
-                    CommandText = @"UPDATE TITULO SET DESABILITAR = @DESABILITAR WHERE CODIGOTITULO = @CODIGOTITULO",
-                    Transaction = transacao
-                };
-               
-                cmd.Parameters.Add("@CODIGOTITULO", FbDbType.Integer).Value = listaLivroModel.CodigoTitulo;
-                cmd.Parameters.Add("@DESABILITAR", FbDbType.Char).Value = listaLivroModel.Desabilitado.ToChar();
-                cmd.ExecuteNonQuery();
+                var sql = @"UPDATE TITULO SET DESABILITAR = @DESABILITAR WHERE CODIGOTITULO = @CODIGOTITULO";
+                cmd.Connection.Execute(sql, listaLivroModel, transacao);
+
                 deuCerto = true;
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message);
+                XtraMessageBox.Show(e.Message);
             }
             finally
             {
@@ -109,6 +96,7 @@ public class LivroDao : Conexao
             try
             {
                 conexaoFireBird.Open();
+
                 string mSQL = @"SELECT TITULO.codigotitulo, TITULO.nometitulo AS TITULO, AUTOR.nome AS AUTOR, 
                     IDIOMA.lingua, IDIOMA.pais, EDICAO.edicao, EDICAO.ano, 
                     EDICAO.qtde_paginas, EDICAO.data_lancamento, EDITORA.nome AS EDITORA, EDITORA.codigoeditora, IDIOMA.codigoidioma,
@@ -166,7 +154,7 @@ public class LivroDao : Conexao
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message);
+                XtraMessageBox.Show(e.Message);
             }
             finally
             {

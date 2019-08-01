@@ -1,7 +1,8 @@
 ﻿using BibliotecaSoftware.Dao;
 using BibliotecaSoftware.Model;
+using DevExpress.XtraEditors;
 using System.Collections.Generic;
-using System.Windows.Forms;
+using System.Linq;
 
 namespace BibliotecaSoftware.Controller
 {
@@ -10,13 +11,17 @@ namespace BibliotecaSoftware.Controller
         private readonly AutorDao _autorDao;
 
         public ListaAutorController()
-        {
-            _autorDao = new AutorDao();
-        }
+            => _autorDao = new AutorDao();
 
         public Autor AlterarListaAutor(int codigoAutor)
         {
             var autor = _autorDao.Carregar(codigoAutor);
+            return autor;
+        }
+
+        public Autor AlterarListaAutor(IList<Autor> autores, int codigoAutor)
+        {
+            var autor = autores.Where(a => a.CodigoAutor == codigoAutor)?.FirstOrDefault<Autor>();
             return autor;
         }
 
@@ -25,12 +30,12 @@ namespace BibliotecaSoftware.Controller
             var autor = new Autor
             {
                 CodigoAutor = codigoAutor,
-                Desabilitado = true
+                Desativado = true
             };
 
             if (_autorDao.Desabilitar(autor))
             {
-                MessageBox.Show("Operação realizada com sucesso!!", "Mensagem de Notificação");
+                XtraMessageBox.Show("Operação realizada com sucesso!!", "Mensagem de Notificação");
                 return true;
             }
             return false;

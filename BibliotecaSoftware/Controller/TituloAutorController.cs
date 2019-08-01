@@ -1,5 +1,6 @@
 ﻿using BibliotecaSoftware.Dao;
 using BibliotecaSoftware.Model;
+using DevExpress.XtraEditors;
 using System.Windows.Forms;
 
 namespace BibliotecaSoftware.Controller
@@ -12,7 +13,6 @@ namespace BibliotecaSoftware.Controller
         public TituloAutorController()
         {
             _tituloAutorDao = new TituloAutorDao();
-
         }
 
         public bool GravarCadastroTitulo(Livro livroModel)
@@ -21,16 +21,15 @@ namespace BibliotecaSoftware.Controller
             {
                 if (_tituloAutorDao.Inserir(livroModel.TituloAutor, livroModel.Titulo, livroModel.Edicao))
                 {
-                    MessageBox.Show("Gravado com sucesso!", "Mensagem de Confirmação");
+                    XtraMessageBox.Show("Gravado com sucesso!", "Mensagem de Confirmação");
                     return true;
                 }
             }
-
             else
             {
                 if (_tituloAutorDao.Alterar(livroModel.Titulo, livroModel.Edicao, livroModel.TituloAutor))
                 {
-                    MessageBox.Show("Gravado com sucesso!", "Mensagem de Confirmação");
+                    XtraMessageBox.Show("Gravado com sucesso!", "Mensagem de Confirmação");
                     return true;
                 }
             }
